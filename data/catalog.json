@@ -1,0 +1,20 @@
+[
+{"sku":"OC-001","name":"Organic Bananas x6","price":1.35,"category":"fruit","allergens":[],"merchant":"Ocado"},
+{"sku":"OC-002","name":"Free Range Eggs x12","price":3.75,"category":"dairy","allergens":["egg"],"merchant":"Ocado"},
+{"sku":"OC-003","name":"Semi-Skimmed Milk 2L","price":1.65,"category":"dairy","allergens":["milk"],"merchant":"Ocado"},
+{"sku":"OC-004","name":"Wholemeal Bread 800g","price":1.40,"category":"bakery","allergens":["gluten"],"merchant":"Ocado"},
+{"sku":"OC-005","name":"Chicken Breast Fillets 650g","price":5.50,"category":"meat","allergens":[],"merchant":"Ocado"},
+{"sku":"OC-006","name":"Basmati Rice 1kg","price":2.20,"category":"pantry","allergens":[],"merchant":"Ocado"},
+{"sku":"OC-007","name":"Broccoli 350g","price":0.89,"category":"vegetables","allergens":[],"merchant":"Ocado"},
+{"sku":"OC-008","name":"Cherry Tomatoes 250g","price":1.10,"category":"vegetables","allergens":[],"merchant":"Ocado"},
+{"sku":"OC-009","name":"Mixed Nut Granola 500g","price":3.50,"category":"pantry","allergens":["nuts"],"merchant":"Ocado"},
+{"sku":"OC-010","name":"Peanut Butter 340g","price":2.25,"category":"pantry","allergens":["peanuts","nuts"],"merchant":"Ocado"},
+{"sku":"OC-011","name":"Rioja Red Wine 75cl","price":8.50,"category":"alcohol","allergens":["sulphites"],"merchant":"Ocado"},
+{"sku":"OC-012","name":"Greek Yoghurt 500g","price":2.10,"category":"dairy","allergens":["milk"],"merchant":"Ocado"},
+{"sku":"OC-013","name":"Scottish Salmon Fillets x4","price":16.00,"category":"fish","allergens":["fish"],"merchant":"Ocado"},
+{"sku":"OC-014","name":"Pasta Penne 500g","price":0.95,"category":"pantry","allergens":["gluten"],"merchant":"Ocado"},
+{"sku":"OC-015","name":"Apples Pink Lady x4","price":2.40,"category":"fruit","allergens":[],"merchant":"Ocado"},
+{"sku":"OC-016","name":"Olive Oil 500ml","price":4.50,"category":"pantry","allergens":[],"merchant":"Ocado"},
+{"sku":"MK-001","name":"Lager 4 x 440ml","price":5.00,"category":"alcohol","allergens":["gluten"],"merchant":"CornerShop"},
+{"sku":"OC-017","name":"Spinach 240g","price":1.50,"category":"vegetables","allergens":[],"merchant":"Ocado"}
+]
