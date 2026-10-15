@@ -7,6 +7,7 @@ import { decide, POLICY } from "./policy.js";
 import { memory } from "./memory.js";
 import { mountRestaurant } from "./restaurant.js";
 import { mountTwilio } from "./twilio.js";
+import { mountMcp } from "./mcp.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -28,6 +29,7 @@ app.post("/stripe/webhook", express.raw({ type: "application/json" }), async (re
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+mountMcp(app);
 mountTwilio(app as any, BASE, PORT);
 mountRestaurant(app as any, stripe, BASE);
 
