@@ -26,6 +26,7 @@ function out(j: any) {
 export function buildMcp() {
   const s = new McpServer({ name: "sally-heysalad", version: "1.0.0" });
   s.tool("restock", "Restock the kitchen. Sally auto-pays items within policy (Stripe test mode) and holds over-threshold items for human approval.", {}, async () => out(await call("POST", "/demo/restock")));
+  s.tool("shop", "Autonomous Waitrose grocery shop: Sally picks the best-match product per list line, auto-pays up to £25 (S1, Stripe test) and holds the rest for approval (R2).", { list: z.array(z.string()).optional().describe("grocery lines; default = Sally's weekly W18 list") }, async ({ list }) => out(await call("POST", "/demo/shop", list ? { list } : {})));
   s.tool("book_table", "Book a table. Groups at/over the policy size get a Stripe deposit Payment Link.", { text: z.string().describe("e.g. 'Table for 6 Saturday 8pm, name Ada'") }, async ({ text }) => out(await call("POST", "/demo/booking", { text })));
   s.tool("pay_supplier_invoice", "Pay the Bidfood supplier invoice after a 3-way PO check. Mismatches wait for a human.", { mismatch: z.boolean().optional() }, async ({ mismatch }) => out(await call("POST", "/demo/invoice", { mismatch: !!mismatch })));
   s.tool("prepare_invoice", "Prepare a DRAFT Stripe invoice to a customer (nothing sent).", { customer: z.string(), amount: z.number().positive().describe("GBP"), desc: z.string().optional() }, async (a) => out(await call("POST", "/demo/outinvoice", a)));

@@ -63,12 +63,12 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
   app.post("/r/:id/approve", async (req, res) => {
     const r = memory.get(req.params.id); if (!r || need(res)) return;
     if (r.status !== "awaiting_human") return res.redirect(`/r/${r.id}`);
-    if (r.demo === "restock") {
+    if (r.demo === "restock" || r.demo === "shop") {
       const items = r.decisions.filter((d: any) => d.status === "needs_approval");
       const amt = items.reduce((s: number, d: any) => s + d.price, 0);
       items.forEach((d: any) => { d.status = "human_approved"; d.reason += " — approved by Peter"; });
       log(r, "human_approved", { approver: "Peter", clause: "R2", amount: amt });
-      r.stripe.approved = await payPI(r, amt, "Sally restock (human-approved items)");
+      r.stripe.approved = await payPI(r, amt, r.demo === "shop" ? "Sally Waitrose shop (human-approved)" : "Sally restock (human-approved items)");
       r.total = Math.round((r.total + amt) * 100) / 100;
       log(r, "payment_succeeded", r.stripe.approved);
     } else if (r.demo === "invoice") {

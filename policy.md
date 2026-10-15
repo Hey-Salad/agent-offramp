@@ -24,3 +24,4 @@ Sally may build a basket on her own, but **never pays**. Payment is off-ramped t
 - **I3** Invoices up to £250 are paid automatically.
 - **I4** Outgoing customer invoices: Sally prepares a DRAFT; up to **£500** she may send it, over £500 waits for human approval. Stripe test mode only; customer email is a test address.
 - **E1** Emails (e.g. shopping list) are drafts only. Sally never sends email.
+- **S1** Autonomous grocery shop (Waitrose): Sally picks the best-match product per list line and auto-pays up to **£25** per shop; the rest waits for human approval (R2). Stripe test mode only.

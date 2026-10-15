@@ -113,11 +113,15 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 .wave i{width:3px;height:6px;background:#fff;border-radius:2px;animation:wv .9s ease-in-out infinite}.wave i:nth-child(2){animation-delay:.1s}.wave i:nth-child(3){animation-delay:.2s}.wave i:nth-child(4){animation-delay:.3s}.wave i:nth-child(5){animation-delay:.4s}
 @keyframes wv{50%{height:20px}}
 .mail{background:#fff;border-radius:12px;padding:10px 12px;margin-top:8px;font-size:12px;white-space:pre-wrap;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.sw{border:1px solid #000;border-radius:16px;padding:14px;margin:8px 0;background:#fff;max-width:720px;box-sizing:border-box;width:100%}@media(max-width:600px){.sw .gr{grid-template-columns:repeat(3,1fr)}.sw .tot{font-size:18px}}.sw .hd{display:flex;align-items:center;gap:10px;font-weight:700}.sw .stt{font-size:13px;color:#666;font-weight:400}.sw .tot{margin-left:auto;font-size:22px}
+.sw .gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin-top:12px}.sw .pd{border:1px solid #e5e5e5;border-radius:12px;padding:8px;text-align:center;font-size:11px;line-height:1.25;transition:all .4s}.sw .pd .e{font-size:28px}.sw .pd b{display:block;font-size:12px}
+.sw .pd.pick{border-color:#000;transform:scale(1.06)}.sw .lbl{font-size:12px;color:#666;margin-top:4px}.sw .pd.in{opacity:.45;transform:scale(.9)}.sw .bk{display:flex;flex-wrap:wrap;gap:4px;min-height:38px;margin-top:12px;padding:8px;border:1px dashed #000;border-radius:12px}.sw .bk span{font-size:22px;animation:drop .45s ease-out}.sw .bk span.h{outline:2px dashed #999;border-radius:6px}
+@keyframes drop{from{transform:translateY(-30px) scale(1.6);opacity:0}to{transform:none;opacity:1}}.sw .res{margin-top:12px;font-size:14px}
 </style></head><body><div class="app">
 <section class="chat">
 <header><img class="logo" src="/heysalad-logo-black.svg" alt="HeySalad"><h1>Sally</h1><span>Stripe test mode</span></header>
 <div id="log"><div class="msg sally"><span class="tag">Sally</span>Hi, I'm Sally. What do you need?</div></div>
-<div class="dock"><div class="chips"><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
+<div class="dock"><div class="chips"><button class="chip">Do the Waitrose shop</button><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
 <form id="f"><span class="wave"><i></i><i></i><i></i><i></i><i></i></span><input id="q" placeholder="Message Sally…" autocomplete="off"><button type="button" id="mic" aria-label="Talk to Sally"><span class="ring"></span><span class="ring r2"></span><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button><button id="send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></form></div>
 </section>
 </div>
@@ -132,10 +136,10 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 </aside></div><button id="brief" aria-label="Briefcase"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5v2M3 12.5h18M11 12.5v1.5h2v-1.5"/></svg><span class="bd" id="bd"></span></button><div id="toast"></div>
 <script>
 const $=s=>document.querySelector(s),log=$('#log'),seen=new Set(),mine=new Set();let first=true;
-const due=r=>r.demo==='restock'?(r.decisions||[]).filter(d=>d.status==='needs_approval').reduce((s,d)=>s+d.price,0):r.total;
+const due=r=>(r.demo==='restock'||r.demo==='shop')?(r.decisions||[]).filter(d=>d.status==='needs_approval').reduce((s,d)=>s+d.price,0):r.total;
 const gbp=n=>'£'+Number(n||0).toFixed(2),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const linkify=s=>esc(s).replace(/(https?:\/\/\S+)/g,'<a href="$1" target="_blank">link</a>');
-let autoOpened=0;const CL={R1:'Restock cap £150/week',R2:'Items over £25 need you',R3:'Waitrose, Bidfood, Brakes only',R4:'No alcohol',H1:'6+ guests: £10/head deposit',H2:'Allergies go to staff',I1:'Approved suppliers only',I2:'Must match the PO',I3:'Auto-pay up to £250','R1-R4':'Within all restock rules'};
+let autoOpened=0;const CL={R1:'Restock cap £150/week',R2:'Items over £25 need you',R3:'Waitrose, Bidfood, Brakes only',R4:'No alcohol',H1:'6+ guests: £10/head deposit',H2:'Allergies go to staff',I1:'Approved suppliers only',I2:'Must match the PO',I3:'Auto-pay up to £250','R1-R4':'Within all restock rules',S1:'Shop auto-pay up to £25',S2:'Only products in the catalog'};
 function openP(d,el){if(!d)return;document.querySelectorAll('.co.sel').forEach(x=>x.classList.remove('sel'));el&&el.classList.add('sel');const r=d.r,st=d.st;
  const cls=[...new Set((d.items||[]).map(i=>i.clause).filter(Boolean))];const sl=r.stripe||{};const link=sl.paymentLink?.url||sl.invoiceUrl||sl.hostedInvoiceUrl||(sl.checkoutUrl)||'';
  $('#pc').innerHTML=`<div class="pn"><div class="av">${esc(d.name[0])}</div><div><div style="font-weight:700;font-size:18px">${esc(d.name)}</div><div style="font-size:13px;color:#666">${esc(r.demo||'')} · ${esc(r.channel||'chat')}</div></div></div>
@@ -155,9 +159,19 @@ const tick='<span class="paid"><span class="tick"><svg viewBox="0 0 12 12"><path
 const PILL={paid:['Paid','ok'],auto_paid:['Paid','ok'],approved:['Paid','ok'],awaiting_human:['Needs approval',''],needs_approval:['Needs approval',''],blocked:['Blocked','mute'],awaiting_diner:['Link sent',''],staff:['Sent to staff',''],draft:['Draft','mute'],sent:['Sent','ok'],listed:['Listed','mute'],escalated:['Sent to staff','']};
 const pill=st=>{const [t,c]=PILL[st]||[String(st).replace(/_/g,' '),''];return `<span class="pill ${c}">${t}</span>`};
 function co(name,amt,st,act,lines,det){const c=add(`<div class="top"><div class="av">${esc(name[0])}</div><div><div class="nm">${esc(name)}</div><div class="sub">${gbp(amt)} ${pill(st)}</div></div><div class="act">${act||''}</div></div>${lines?`<details><summary>Details</summary><div class="dd">${lines}</div></details>`:''}`,'co');c.onclick=e=>{if(e.target.closest('button,a,summary'))return;openP(det,c)};c._d=det;return c}
+async function shopWindow(r,ap){let cat=[];try{cat=await (await fetch('/api/catalog')).json()}catch{}
+ const ds=r.decisions||[];const w=add(`<div class="hd"><span>🛒 Shop window</span><span class="stt">Sally is choosing…</span><span class="tot">£0.00</span></div><div class="lbl">Shop window: products from Sally's Waitrose run, payment in Stripe test mode</div><div class="gr">${cat.map(c=>`<div class="pd" data-sku="${esc(c.sku)}"><div class="e">${esc(c.emoji)}</div><b>${gbp(c.price)}</b>${esc(c.name)}<div style="color:#999">${esc(c.pack)}</div></div>`).join('')}</div><div class="bk"></div><div class="res"></div>`,'sw');
+ const stt=w.querySelector('.stt'),tot=w.querySelector('.tot'),bk=w.querySelector('.bk');let t=0;
+ for(const d of ds){const el=w.querySelector(`.pd[data-sku="${d.sku}"]`);stt.textContent='Sally is choosing… '+(d.line||d.name);if(el){el.classList.add('pick');el.scrollIntoView({block:'nearest'})}
+  await new Promise(z=>setTimeout(z,220));if(el){el.classList.remove('pick');el.classList.add('in')}
+  const sp=document.createElement('span');sp.textContent=d.emoji||'🛒';sp.title=`${d.name} ${gbp(d.price)} · ${d.clause}: ${d.reason}`;if(d.status==='needs_approval')sp.className='h';bk.appendChild(sp);t+=d.price||0;tot.textContent=gbp(t)}
+ const held=ds.filter(d=>d.status==='needs_approval'),paid=r.stripe?.auto;stt.textContent=r.status==='awaiting_human'?'Waiting for you':'Done';
+ w.querySelector('.res').innerHTML=(paid?`${tick} Paid <b>${gbp(paid.amount)}</b> automatically (S1: up to £25) · <a target="_blank" href="${esc(paid.receiptUrl||'/r/'+r.id)}">Stripe receipt</a><br>`:'')+(held.length&&r.status==='awaiting_human'?`⏸ ${held.length} items <b>${gbp(due(r))}</b> held (R2: over the £25 threshold) ${ap}`:r.stripe?.approved?`${tick} Approved and paid ${gbp(r.stripe.approved.amount)}`:'')+` · <a href="/r/${r.id}">Audit</a>`;
+ openP({name:'Waitrose shop',amt:t,st:r.status,items:ds,r},null)}
 function card(r){
   if(!r)return;const ds=r.decisions||[];const ln=d=>`<div><span>${esc(d.name||d.clause)}</span><span>${d.price!=null?gbp(d.price)+' · ':''}${esc(d.clause||'')}</span></div>`;
   const ap=`<button class="btn" data-ap="${r.id}">Approve ${gbp(due(r))}</button>`;
+  if(r.demo==='shop'){shopWindow(r,ap);return}
   if(r.demo==='restock'){const g={};ds.forEach(d=>(g[d.supplier||'Other']??=[]).push(d));
     for(const [n,items] of Object.entries(g)){const st=items.some(d=>d.status==='blocked')&&items.every(d=>d.status==='blocked')?'blocked':items.some(d=>d.status==='needs_approval')&&r.status==='awaiting_human'?'awaiting_human':r.status==='paid'||items.some(d=>d.status==='auto_paid'||d.status==='approved')?'paid':items[0].status;
       const amt=items.filter(d=>d.status!=='blocked').reduce((s,d)=>s+d.price,0)||items.reduce((s,d)=>s+d.price,0);
@@ -177,7 +191,7 @@ function bindAp(r){document.querySelectorAll(`[data-ap="${r.id}"]`).forEach(b=>b
     add('<span class="tag">Sally</span>Paid '+gbp(amt)+(j.demo==='restock'?' (restock total '+gbp(j.total)+')':'')+'.','msg sally');autoOpened=0;card({...j,url:'/r/'+j.id});poll()})}
 async function send(text){if(!text.trim())return;autoOpened=0;add(esc(text),'msg me');const t=add('<i></i><i></i><i></i>','typing');
   const j=await (await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({text})})).json();
-  t.remove();if(j.record)mine.add(j.record.id);add('<span class="tag">Sally</span>'+(j.record?({restock:'Here\'s the restock.',booking:'Deposit link ready.',invoice:'Invoice checked.'}[j.record.demo]||linkify(j.reply)):linkify(j.reply)),'msg sally');speak(j.reply);if(j.record)card(j.record);else if(/allerg/i.test(text)){const det={name:'Guest booking',amt:0,st:'staff',items:[{name:'Allergy mentioned',clause:'H2',reason:'Allergen requests always go to a human'}],r:{id:'',demo:'booking',channel:'chat',stripe:{}}};const c=co('Guest booking',0,'staff','',`<div><span>Allergy mentioned</span><span>H2</span></div>`,det);openP(det,c)}poll();return j}
+  t.remove();if(j.record)mine.add(j.record.id);add('<span class="tag">Sally</span>'+(j.record?({shop:'Watch me shop.',restock:'Here\'s the restock.',booking:'Deposit link ready.',invoice:'Invoice checked.'}[j.record.demo]||linkify(j.reply)):linkify(j.reply)),'msg sally');speak(j.reply);if(j.record)card(j.record);else if(/allerg/i.test(text)){const det={name:'Guest booking',amt:0,st:'staff',items:[{name:'Allergy mentioned',clause:'H2',reason:'Allergen requests always go to a human'}],r:{id:'',demo:'booking',channel:'chat',stripe:{}}};const c=co('Guest booking',0,'staff','',`<div><span>Allergy mentioned</span><span>H2</span></div>`,det);openP(det,c)}poll();return j}
 $('#f').onsubmit=e=>{e.preventDefault();send($('#q').value);$('#q').value=''};
 document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>send(c.textContent));
 async function poll(){try{const j=await (await fetch('/api/feed')).json();count($('#moved'),j.moved);const na=j.records.filter(r=>r.status==='awaiting_human').length;$('#bd').textContent=na?na+' to approve':(j.moved?gbp(j.moved):'');
@@ -191,7 +205,7 @@ poll();setInterval(poll,2000);
 let voiceOn=false,rt=null,idle=null,sr=null;const mic=$('#mic');
 function setLive(on){voiceOn=on;mic.classList.toggle('on',on);$('#f').classList.toggle('live',on);$('#q').placeholder=on?'Listening…':'Message Sally…'}
 function speak(t){if(!voiceOn||rt||!t||!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(t.replace(/https?:\S+/g,''));u.lang='en-GB';const v=speechSynthesis.getVoices().find(v=>v.lang==='en-GB');if(v)u.voice=v;speechSynthesis.speak(u)}
-const T2C={restock:()=>'restock',book_table:a=>`table for ${a.guests||2} ${a.when||''} ${a.notes||''}`,pay_supplier_invoice:()=>'pay the Bidfood invoice',
+const T2C={shop:()=>'waitrose shop',restock:()=>'restock',book_table:a=>`table for ${a.guests||2} ${a.when||''} ${a.notes||''}`,pay_supplier_invoice:()=>'pay the Bidfood invoice',
  prepare_invoice:a=>`prepare an invoice for ${a.customer} ${a.amount_gbp} for ${a.item||'catering'}`,send_invoice:()=>'send the invoice',email_shopping_list_draft:()=>'email me the shopping list',
  approve:async()=>{const j=await (await fetch('/api/feed')).json();const r=j.records.find(r=>r.status==='awaiting_human');return r?'yes '+r.id:'nothing to approve'}};
 function bump(){clearTimeout(idle);idle=setTimeout(stopVoice,120000)}

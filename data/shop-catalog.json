@@ -1,0 +1,249 @@
+{
+ "source": "Sally Waitrose run W18, 15 Oct 2026, run cc7fd05e-d56c-480b-8cd9-f7717016fe70",
+ "total": 71.92,
+ "items": [
+  {
+   "sku": "WR01",
+   "line": "1 litre whole milk",
+   "name": "Essential British Free Range Whole Milk 2 Pints",
+   "price": 1.25,
+   "pack": "1 litre",
+   "emoji": "\ud83e\udd5b",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR02",
+   "line": "12 medium free range eggs",
+   "name": "Duchy Organic 12 Medium Eggs",
+   "price": 5.5,
+   "pack": "12",
+   "emoji": "\ud83e\udd5a",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR03",
+   "line": "sourdough loaf",
+   "name": "GAIL's Sourdough",
+   "price": 4.85,
+   "pack": "each",
+   "emoji": "\ud83c\udf5e",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR04",
+   "line": "4 chicken thighs",
+   "name": "No.1 British Free Range Chicken Thighs",
+   "price": 4.32,
+   "pack": "4",
+   "emoji": "\ud83c\udf57",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR05",
+   "line": "400g pork sausages",
+   "name": "No.1 British Free Range 6 Pork Sausages",
+   "price": 5.3,
+   "pack": "400g",
+   "emoji": "\ud83c\udf2d",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR06",
+   "line": "2 sweet potatoes",
+   "name": "Duchy Organic Sweet Potatoes",
+   "price": 3.0,
+   "pack": "2",
+   "emoji": "\ud83e\udd54",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR07",
+   "line": "red onions",
+   "name": "Waitrose Red Onions",
+   "price": 1.0,
+   "pack": "each",
+   "emoji": "\ud83e\uddc5",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR08",
+   "line": "courgettes x2",
+   "name": "Waitrose Courgettes",
+   "price": 4.4,
+   "pack": "each",
+   "emoji": "\ud83d\uded2",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR09",
+   "line": "mushrooms 250g",
+   "name": "Waitrose British Chestnut Mushrooms",
+   "price": 1.15,
+   "pack": "250g",
+   "emoji": "\ud83c\udf44",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR10",
+   "line": "avocados",
+   "name": "Duchy Organic Avocado",
+   "price": 1.45,
+   "pack": "each",
+   "emoji": "\ud83e\udd51",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR11",
+   "line": "limes",
+   "name": "Essential Limes 5s",
+   "price": 1.4,
+   "pack": "each",
+   "emoji": "\ud83c\udf4b",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR12",
+   "line": "strawberries 400g",
+   "name": "Waitrose Strawberries",
+   "price": 3.7,
+   "pack": "400g",
+   "emoji": "\ud83e\uded0",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR13",
+   "line": "blueberries 150g",
+   "name": "Waitrose Blueberries",
+   "price": 2.5,
+   "pack": "150g",
+   "emoji": "\ud83e\uded0",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR14",
+   "line": "natural yoghurt 500g",
+   "name": "Yeo Valley Organic Natural Yogurts",
+   "price": 2.85,
+   "pack": "500g",
+   "emoji": "\ud83e\udd5b",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR15",
+   "line": "mature cheddar 350g",
+   "name": "Essential Mature Cheddar Cheese Strength 4",
+   "price": 2.7,
+   "pack": "350g",
+   "emoji": "\ud83e\uddc0",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR16",
+   "line": "unsalted butter 250g",
+   "name": "Essential Unsalted Butter",
+   "price": 2.0,
+   "pack": "250g",
+   "emoji": "\ud83e\uddc8",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR17",
+   "line": "penne pasta 500g",
+   "name": "De Cecco Pasta Penne Rigate",
+   "price": 1.3,
+   "pack": "500g",
+   "emoji": "\ud83c\udf5d",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR18",
+   "line": "jasmine rice 1kg",
+   "name": "Waitrose Thai Hom Mali Rice",
+   "price": 3.0,
+   "pack": "1kg",
+   "emoji": "\ud83c\udf5a",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR19",
+   "line": "2 tins coconut milk",
+   "name": "Essential Reduced Fat Coconut Milk",
+   "price": 2.5,
+   "pack": "2",
+   "emoji": "\ud83e\udd5b",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR20",
+   "line": "chickpeas 400g tin",
+   "name": "Essential Chickpeas in Water",
+   "price": 0.55,
+   "pack": "400g",
+   "emoji": "\ud83d\uded2",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR21",
+   "line": "passata 500g",
+   "name": "Cirio Passata",
+   "price": 1.4,
+   "pack": "500g",
+   "emoji": "\ud83d\uded2",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR22",
+   "line": "granola 500g",
+   "name": "Waitrose Low Sugar Nutty Granola Breakfast Cereal",
+   "price": 2.65,
+   "pack": "500g",
+   "emoji": "\ud83d\uded2",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR23",
+   "line": "honey 340g",
+   "name": "Rowse Runny Honey Squeezy",
+   "price": 2.0,
+   "pack": "340g",
+   "emoji": "\ud83d\uded2",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR24",
+   "line": "ground coffee 227g",
+   "name": "Waitrose Fairtrade Italian Style Ground Coffee",
+   "price": 3.85,
+   "pack": "227g",
+   "emoji": "\u2615",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR25",
+   "line": "tea bags 80",
+   "name": "Clipper Organic Fairtrade 80 Tea Bags",
+   "price": 4.5,
+   "pack": "each",
+   "emoji": "\ud83c\udf75",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR26",
+   "line": "frozen garden peas 1kg",
+   "name": "Essential Frozen British Garden Peas",
+   "price": 2.0,
+   "pack": "1kg",
+   "emoji": "\ud83d\uded2",
+   "store": "Waitrose"
+  },
+  {
+   "sku": "WR27",
+   "line": "washing up liquid 450ml",
+   "name": "Essential Washing Up Liquid Citrus",
+   "price": 0.8,
+   "pack": "450ml",
+   "emoji": "\ud83d\uded2",
+   "store": "Waitrose"
+  }
+ ]
+}

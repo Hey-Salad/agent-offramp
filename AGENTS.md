@@ -14,6 +14,7 @@ Sally is a policy-bound money agent. You send plain language; Sally decides with
 | POST | `/sms`, `/voice` | Twilio webhooks |
 
 ## Intents `/api/chat` understands
+- `waitrose shop` (or `shop`, `grocery`) → Demo 4 Shop: best-match picks from data/shop-catalog.json (W18), auto-pay up to £25 (S1), rest held (R2) → `awaiting_human`; POST /demo/shop `{list?:string[]}`, GET /api/catalog, MCP tool `shop`
 - `restock` → basket, auto-pay within policy, held items → `awaiting_human`
 - `table for N <when>` → deposit Payment Link if N ≥ 6, else confirmed; allergy words → staff
 - `invoice` (add `mismatch` to test I2) → PO check, pay Stripe invoice

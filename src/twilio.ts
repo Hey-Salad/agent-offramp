@@ -74,6 +74,13 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
       if (v.status === "confirmed") return `Sally: booked, no deposit needed (H1: under 6 guests). ${v.url}`;
       return `Sally: deposit £${v.total.toFixed(2)} (H1: £10/head for 6+). Pay: ${v.stripe.paymentLink.url}`;
     }
+    if (/waitrose|grocer|shop window|autonomous|weekly shop|\bshop for\b|^shop$/i.test(t)) {
+      const v = await call("/demo/shop");
+      tag(v.id, sid, channel, from, t);
+      const held = v.decisions.filter((d: any) => d.status === "needs_approval");
+      const heldGBP = held.reduce((s: number, d: any) => s + d.price, 0);
+      return `Sally: picked ${v.decisions.length} Waitrose items. Paid £${v.total.toFixed(2)} within S1 (auto-pay up to £25).` + (held.length ? ` ${held.length} item(s) £${heldGBP.toFixed(2)} wait for you (R2). Reply YES ${v.id} to pay.` : "") + ` ${v.url}`;
+    }
     if (/restock|do the shop|shopping/i.test(t)) {
       const v = await call("/demo/restock");
       tag(v.id, sid, channel, from, t);
@@ -97,7 +104,7 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     const key = process.env.OPENAI_API_KEY; if (!key || !t) return null;
     try {
       const r = await fetch("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { authorization: `Bearer ${key}`, "content-type": "application/json" }, signal: AbortSignal.timeout(6000),
-        body: JSON.stringify({ model: "gpt-4o-mini", temperature: 0, max_tokens: 40, messages: [{ role: "system", content: "Rewrite the user's request as exactly one of: 'restock' | 'pay the invoice' | 'table for N <day> <time>' | 'prepare an invoice for <customer> <amount> for <item>' | 'send the invoice' | 'email me the shopping list' | 'none'. Output only the command." }, { role: "user", content: t }] }) });
+        body: JSON.stringify({ model: "gpt-4o-mini", temperature: 0, max_tokens: 40, messages: [{ role: "system", content: "Rewrite the user's request as exactly one of: 'restock' | 'waitrose shop' | 'pay the invoice' | 'table for N <day> <time>' | 'prepare an invoice for <customer> <amount> for <item>' | 'send the invoice' | 'email me the shopping list' | 'none'. Output only the command." }, { role: "user", content: t }] }) });
       const out = String((await r.json() as any).choices?.[0]?.message?.content || "").trim();
       aiUsed++; return out && out !== "none" ? out : null;
     } catch { return null; }
@@ -123,6 +130,7 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
   // OpenAI Realtime (WebRTC): mint a short-lived client secret. The key never leaves the server.
   // Tools only map speech to router commands; the browser calls /api/chat so policy runs here.
   const TOOLS = [
+    ["shop", "Do the Waitrose grocery shop autonomously (shop window): pick best matches, auto-pay up to £25, hold the rest", {}],
     ["restock", "Restock the kitchen (do the shopping) within policy R1-R4", {}],
     ["book_table", "Book a table", { guests: { type: "integer" }, when: { type: "string" }, notes: { type: "string", description: "allergies etc" } }],
     ["pay_supplier_invoice", "Check and pay the Bidfood supplier invoice", {}],
