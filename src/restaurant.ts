@@ -170,6 +170,7 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
   app.get("/audit", (_q, res) => res.send(auditPage()));
   app.get("/classic", (_q, res) => res.send(homePage()));
   app.get("/", (_q, res) => res.sendFile("chat.html", { root: "public" }));
+  app.get("/heysalad-mark.svg", (_q, res) => res.sendFile("heysalad-mark.svg", { root: "public" }));
   app.get("/heysalad-logo-black.svg", (_q, res) => res.sendFile("heysalad-logo-black.svg", { root: "public" }));
 }
 

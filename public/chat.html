@@ -62,6 +62,7 @@ details[open] .dd{animation:in .3s ease both}.dd{padding-bottom:12px}
 @keyframes slide{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
 @keyframes dot{0%,80%,100%{opacity:.3}40%{opacity:1}}@keyframes draw{to{stroke-dashoffset:0}}
 @media(max-width:820px){.app{display:block;height:auto}.chat{height:auto;border-right:0}#log{min-height:50vh}aside{border-top:1px solid #eee}}
+.msg.sally,.typing{position:relative;margin-left:40px;overflow:visible}.msg.sally::before,.typing::before{content:'';position:absolute;left:-40px;bottom:0;width:30px;height:30px;background:url(/heysalad-mark.svg) center/contain no-repeat}
 </style></head><body><div class="app">
 <section class="chat">
 <header><img class="logo" src="/heysalad-logo-black.svg" alt="HeySalad"><h1>Sally</h1><span>Stripe test mode</span></header>
@@ -81,6 +82,7 @@ details[open] .dd{animation:in .3s ease both}.dd{padding-bottom:12px}
 <div id="panel"><button class="x" aria-label="Close">✕</button><div id="pc"></div></div><div id="toast"></div>
 <script>
 const $=s=>document.querySelector(s),log=$('#log'),seen=new Set(),mine=new Set();let first=true;
+const due=r=>r.demo==='restock'?(r.decisions||[]).filter(d=>d.status==='needs_approval').reduce((s,d)=>s+d.price,0):r.total;
 const gbp=n=>'£'+Number(n||0).toFixed(2),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const linkify=s=>esc(s).replace(/(https?:\/\/\S+)/g,'<a href="$1" target="_blank">link</a>');
 let autoOpened=0;const CL={R1:'Restock cap £150/week',R2:'Items over £25 need you',R3:'Waitrose, Bidfood, Brakes only',R4:'No alcohol',H1:'6+ guests: £10/head deposit',H2:'Allergies go to staff',I1:'Approved suppliers only',I2:'Must match the PO',I3:'Auto-pay up to £250','R1-R4':'Within all restock rules'};
@@ -91,10 +93,10 @@ function openP(d,el){if(!d)return;document.querySelectorAll('.co.sel').forEach(x
  <h4>Items</h4>${(d.items||[]).map(i=>`<div class="it"><span>${esc(i.name||i.clause)}</span><span>${i.price!=null?gbp(i.price):''} ${i.status?pill(i.status):''}</span></div>`).join('')||'<div class="it">—</div>'}
  <h4>Why (policy applied)</h4>${cls.map(c=>`<div class="why"><b>${c}</b>${esc(CL[c]||'')}</div>`).join('')}${(d.items||[]).filter(i=>i.reason).map(i=>`<div class="why" style="color:#666">${esc(i.name||'')}: ${esc(i.reason)}</div>`).join('')}
  <h4>Stripe</h4><div class="why">${link?`<a target="_blank" href="${esc(link)}">Open in Stripe</a> · `:''}<a href="/r/${r.id}">Full record</a> <code style="color:#999;font-size:11px">${esc(r.id)}</code></div>
- <div style="margin-top:18px">${st==='awaiting_human'?`<button class="btn" data-ap="${r.id}">Approve ${gbp(r.total)}</button>`:/paid|approved/.test(st)?tick+' <b>Paid</b>':''}</div>`;
+ <div style="margin-top:18px">${st==='awaiting_human'?`<button class="btn" data-ap="${r.id}">Approve ${gbp(due(r))}</button>`:/paid|approved/.test(st)?tick+' <b>Paid</b>':''}</div>`;
  bindAp(r);$('#panel').classList.add('open')}
 $('#panel .x').onclick=()=>{$('#panel').classList.remove('open');document.querySelectorAll('.co.sel').forEach(x=>x.classList.remove('sel'))};
-function toast(t,cb){const e=$('#toast');e.textContent=t;e.classList.add('on');e.onclick=cb;setTimeout(()=>e.classList.remove('on'),4000)}
+function toast(t,cb){const e=$('#toast');e.textContent=t;e.classList.add('on');e.onclick=cb;setTimeout(()=>e.classList.remove('on'),6000)}
 function add(html,cls){const d=document.createElement('div');d.className=cls;d.innerHTML=html;log.appendChild(d);log.scrollTop=1e9;return d}
 function count(el,to){const from=parseFloat(el.dataset.v||0),t0=performance.now();el.dataset.v=to;(function f(t){const k=Math.min(1,(t-t0)/700);el.textContent=gbp(from+(to-from)*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)}
 const tick='<span class="paid"><span class="tick"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg></span></span>';
@@ -103,7 +105,7 @@ const pill=st=>{const [t,c]=PILL[st]||[String(st).replace(/_/g,' '),''];return `
 function co(name,amt,st,act,lines,det){const c=add(`<div class="top"><div class="av">${esc(name[0])}</div><div><div class="nm">${esc(name)}</div><div class="sub">${gbp(amt)} ${pill(st)}</div></div><div class="act">${act||''}</div></div>${lines?`<details><summary>Details</summary><div class="dd">${lines}</div></details>`:''}`,'co');c.onclick=e=>{if(e.target.closest('button,a,summary'))return;openP(det,c)};c._d=det;return c}
 function card(r){
   if(!r)return;const ds=r.decisions||[];const ln=d=>`<div><span>${esc(d.name||d.clause)}</span><span>${d.price!=null?gbp(d.price)+' · ':''}${esc(d.clause||'')}</span></div>`;
-  const ap=`<button class="btn" data-ap="${r.id}">Approve</button>`;
+  const ap=`<button class="btn" data-ap="${r.id}">Approve ${gbp(due(r))}</button>`;
   if(r.demo==='restock'){const g={};ds.forEach(d=>(g[d.supplier||'Other']??=[]).push(d));
     for(const [n,items] of Object.entries(g)){const st=items.some(d=>d.status==='blocked')&&items.every(d=>d.status==='blocked')?'blocked':items.some(d=>d.status==='needs_approval')&&r.status==='awaiting_human'?'awaiting_human':r.status==='paid'||items.some(d=>d.status==='auto_paid'||d.status==='approved')?'paid':items[0].status;
       const amt=items.filter(d=>d.status!=='blocked').reduce((s,d)=>s+d.price,0)||items.reduce((s,d)=>s+d.price,0);
@@ -113,19 +115,19 @@ function card(r){
     if(r.status==='awaiting_diner'&&r.stripe?.paymentLink)act=`<a class="btn" target="_blank" href="${r.stripe.paymentLink.url}">Open link</a>`;
     const c=co(name,r.total,r.status,act,ds.map(ln).join('')+`<div><a href="${r.url}">Full record</a></div>`,{name,amt:r.total,st:r.status,items:ds,r});openP(c._d,c)}
   bindAp(r)}
-function bindAp(r){document.querySelectorAll(`[data-ap="${r.id}"]`).forEach(b=>b.onclick=async()=>{document.querySelectorAll(`[data-ap="${r.id}"]`).forEach(x=>{x.disabled=true;x.textContent='Paying…'});
+function bindAp(r){document.querySelectorAll(`[data-ap="${r.id}"]`).forEach(b=>b.onclick=async()=>{const amt=due(r);document.querySelectorAll(`[data-ap="${r.id}"]`).forEach(x=>{x.disabled=true;x.textContent='Paying…'});
     const j=await (await fetch('/r/'+r.id+'/approve',{method:'POST',headers:{accept:'application/json'}})).json();
-    add('<span class="tag">Sally</span>Paid. '+gbp(j.total)+'.','msg sally');autoOpened=0;card({...j,url:'/r/'+j.id});poll()})}
+    add('<span class="tag">Sally</span>Paid '+gbp(amt)+(j.demo==='restock'?' (restock total '+gbp(j.total)+')':'')+'.','msg sally');autoOpened=0;card({...j,url:'/r/'+j.id});poll()})}
 async function send(text){if(!text.trim())return;autoOpened=0;add(esc(text),'msg me');const t=add('<i></i><i></i><i></i>','typing');
   const j=await (await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({text})})).json();
-  t.remove();if(j.record)mine.add(j.record.id);add('<span class="tag">Sally</span>'+(j.record?({restock:'Here\'s the restock.',booking:'Deposit link ready.',invoice:'Invoice checked.'}[j.record.demo]||linkify(j.reply)):linkify(j.reply)),'msg sally');card(j.record);poll()}
+  t.remove();if(j.record)mine.add(j.record.id);add('<span class="tag">Sally</span>'+(j.record?({restock:'Here\'s the restock.',booking:'Deposit link ready.',invoice:'Invoice checked.'}[j.record.demo]||linkify(j.reply)):linkify(j.reply)),'msg sally');if(j.record)card(j.record);else if(/allerg/i.test(text)){const det={name:'Guest booking',amt:0,st:'staff',items:[{name:'Allergy mentioned',clause:'H2',reason:'Allergen requests always go to a human'}],r:{id:'',demo:'booking',channel:'chat',stripe:{}}};const c=co('Guest booking',0,'staff','',`<div><span>Allergy mentioned</span><span>H2</span></div>`,det);openP(det,c)}poll()}
 $('#f').onsubmit=e=>{e.preventDefault();send($('#q').value);$('#q').value=''};
 document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>send(c.textContent));
 async function poll(){try{const j=await (await fetch('/api/feed')).json();count($('#moved'),j.moved);
   const feed=$('#feed');feed.innerHTML=j.lines.map(l=>`<div><span class="ch">${esc(l.channel)}</span><b>${esc(l.event.replace(/_/g,' '))}</b>${l.amount!=null?' · '+gbp(l.amount):''}<em>${esc(l.why||l.demo)}</em></div>`).join('');
-  for(const r of j.records){if(seen.has(r.id))continue;seen.add(r.id);
+  for(const r of j.records){const k=r.id+':'+r.channel;if(seen.has(k))continue;seen.add(k);
     if(!first&&!mine.has(r.id)&&(r.channel==='sms'||r.channel==='voice')){add(`<span class="tag">${r.channel==='sms'?'Text':'Call'} from a phone</span>${esc(r.request)}`,'msg me');
       const full=await (await fetch('/api/records/'+r.id)).json();toast(`New ${r.channel==='sms'?'text':'call'}: ${r.request||''}`);card({...full,url:'/r/'+r.id})}}
-  first=false}catch(e){}}
+  first=false}catch(e){console.error("poll",e)}}
 poll();setInterval(poll,2000);
 </script></body></html>
