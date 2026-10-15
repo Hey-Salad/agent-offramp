@@ -6,6 +6,7 @@ import fs from "node:fs";
 import { decide, POLICY } from "./policy.js";
 import { memory } from "./memory.js";
 import { mountRestaurant } from "./restaurant.js";
+import { mountTwilio } from "./twilio.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -27,6 +28,7 @@ app.post("/stripe/webhook", express.raw({ type: "application/json" }), async (re
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+mountTwilio(app as any, BASE, PORT);
 mountRestaurant(app as any, stripe, BASE);
 
 function createRun(text: string, channel: string, from = "demo") {
@@ -39,7 +41,7 @@ function createRun(text: string, channel: string, from = "demo") {
   return r;
 }
 async function sms(to: string, body: string) {
-  const { TWILIO_ACCOUNT_SID: sid, TWILIO_AUTH_TOKEN: tok, TWILIO_FROM: from } = process.env;
+  const { TWILIO_ACCOUNT_SID: sid, TWILIO_AUTH_TOKEN: tok, TWILIO_PHONE_NUMBER: from } = process.env;
   if (!sid || !tok || !from || !to || to === "demo") return false;
   const r = await fetch(`https://api.twilio.com/2010-04-01/Accounts/${sid}/Messages.json`, { method: "POST", headers: { Authorization: "Basic " + Buffer.from(`${sid}:${tok}`).toString("base64") }, body: new URLSearchParams({ To: to, From: from, Body: body }) });
   return r.ok;
