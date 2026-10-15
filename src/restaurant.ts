@@ -170,6 +170,7 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
   app.get("/audit", (_q, res) => res.send(auditPage()));
   app.get("/classic", (_q, res) => res.send(homePage()));
   app.get("/", (_q, res) => res.sendFile("chat.html", { root: "public" }));
+  app.get("/heysalad-logo-black.svg", (_q, res) => res.sendFile("heysalad-logo-black.svg", { root: "public" }));
 }
 
 export const css = `body{font-family:system-ui;background:#fff8f6;color:#1f1416;max-width:900px;margin:auto;padding:24px}h1,h2{color:#ed4c4c}.card{background:#fff;border:2px solid #faa09a;border-radius:18px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}button,.btn{background:#ed4c4c;color:#fff8f6;border:0;border-radius:999px;padding:12px 22px;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}.ghost{background:#faa09a;color:#1f1416}table{width:100%;border-collapse:collapse}td,th{padding:6px;border-bottom:1px solid #faa09a;text-align:left;font-size:14px}.blocked{color:#ed4c4c;text-decoration:line-through}.pill{border-radius:999px;background:#faa09a;padding:2px 10px;font-size:12px}a{color:#ed4c4c}pre{white-space:pre-wrap;font-size:12px}input{padding:10px;border:2px solid #faa09a;border-radius:999px;width:70%}`;
