@@ -40,6 +40,8 @@ export function buildMcp() {
     return { content: [{ type: "text" as const, text: sum }, { type: "text" as const, text: JSON.stringify(list, null, 2) }] };
   });
   s.tool("get_policy", "Sally's spending policy (policy.md).", {}, async () => ({ content: [{ type: "text" as const, text: String(await call("GET", "/policy")) }] }));
+  s.tool("remember", "Save a shopping preference, past order or spending decision to Sally's Cognee memory.", { text: z.string().describe("e.g. 'Peter prefers oat milk; weekly grocery budget £60'") }, async ({ text }) => { const j: any = await call("POST", "/api/memory/remember", { text }); return { content: [{ type: "text" as const, text: j?.ok ? `Remembered${j.cognee ? " in Cognee" : " locally"}.` : `Could not remember: ${j?.error || j}` }] }; });
+  s.tool("recall", "Ask Sally's Cognee memory before planning a shop or explaining a spend (preferences, past orders, past decisions).", { query: z.string() }, async ({ query }) => { const j: any = await call("POST", "/api/memory/recall", { query }); return { content: [{ type: "text" as const, text: `Sally remembers${j?.cognee ? " (Cognee)" : ""}: ${j?.answer ?? j}` }] }; });
   return s;
 }
 

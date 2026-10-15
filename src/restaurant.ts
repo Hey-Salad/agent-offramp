@@ -3,7 +3,7 @@ import type { Express } from "express";
 import Stripe from "stripe";
 import crypto from "node:crypto";
 import fs from "node:fs";
-import { memory } from "./memory.js";
+import { memory, recall } from "./memory.js";
 import { stripeWrite } from "./toolkit.js";
 
 export const RPOLICY = {
@@ -208,12 +208,13 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
 
   // Shared views
   const view = (r: any) => ({ id: r.id, demo: r.demo, status: r.status, total: r.total, url: `${BASE}/r/${r.id}`, why: `${BASE}/r/${r.id}/why`, stripe: r.stripe, outInvoice: r.outInvoice, emailDraft: r.emailDraft, decisions: r.decisions, audit: r.audit });
-  app.get("/r/:id/why", (req, res) => {
+  app.get("/r/:id/why", async (req, res) => {
     const r = memory.get(req.params.id); if (!r) return res.status(404).json({ error: "not found" });
     const q = String(req.query.q || "").toLowerCase();
     const d = q && r.decisions.find((x: any) => (x.sku || "").toLowerCase() === q || x.name.toLowerCase().includes(q));
     if (d) return res.json({ answer: `${d.name} (${gbp(d.price)}): ${d.status.replace("_", " ")} under ${d.clause}: ${d.reason}.`, decision: d });
-    res.json({ answer: `Sally (${r.demo}) moved ${gbp(r.total)}; status ${r.status}. Every line cites a clause in policy.md.`, decisions: r.decisions, stripe: r.stripe, audit: r.audit });
+    const mem: any = await Promise.race([recall(`Past spending decisions similar to ${r.demo} ${gbp(r.total)}`), new Promise(ok => setTimeout(() => ok(null), 4000))]);
+    res.json({ remembers: mem?.answer, answer: `Sally (${r.demo}) moved ${gbp(r.total)}; status ${r.status}. Every line cites a clause in policy.md.`, decisions: r.decisions, stripe: r.stripe, audit: r.audit });
   });
   app.get("/r/:id", (req, res) => { const r = memory.get(req.params.id); r ? res.send(recordPage(r)) : res.status(404).send("Not found"); });
   app.get("/audit", (_q, res) => res.send(auditPage()));

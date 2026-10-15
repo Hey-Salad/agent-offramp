@@ -126,6 +126,7 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 </style></head><body><div class="app">
 <section class="chat">
 <header><img class="logo" src="/heysalad-logo-black.svg" alt="HeySalad"><h1>Sally</h1><span>Stripe test mode</span></header>
+<div id="mem" style="font-size:12px;color:#ed4c4c;padding:4px 16px;display:none"></div>
 <div id="log"><div class="msg sally"><span class="tag">Sally</span>Hi, I'm Sally. What do you need?</div></div>
 <div class="dock"><div class="chips"><button class="chip">Do the Waitrose shop</button><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
 <form id="f"><span class="wave"><i></i><i></i><i></i><i></i><i></i></span><input id="q" placeholder="Message Sally…" autocomplete="off"><button type="button" id="mic" aria-label="Talk to Sally"><span class="ring"></span><span class="ring r2"></span><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button><button id="send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></form></div>
@@ -234,4 +235,5 @@ function startSpeech(){const SR=window.SpeechRecognition||window.webkitSpeechRec
  sr=new SR();sr.lang='en-GB';sr.interimResults=true;sr.onresult=e=>{const r=e.results[e.results.length-1];$('#q').value=r[0].transcript;if(r.isFinal){$('#q').value='';send(r[0].transcript)}};
  sr.onend=()=>{if(voiceOn&&sr&&!rt)try{sr.start()}catch{}};sr.start();bump()}
 mic.onclick=async()=>{if(voiceOn)return stopVoice();setLive(true);try{await startRealtime()}catch(e){console.warn('realtime unavailable, using browser speech',e);startSpeech()}};
-</script></body></html>
+</script><script>fetch('/api/memory/status').then(r=>r.json()).then(j=>{if(!j.cognee&&!j.latest)return;const e=document.getElementById('mem');e.textContent='🧠 Sally remembers'+(j.cognee?' (Cognee)':'')+(j.latest?': '+j.latest.slice(0,110):': your preferences, orders and decisions');e.style.display='block'}).catch(()=>{})</script>
+</body></html>

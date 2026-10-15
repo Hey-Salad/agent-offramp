@@ -4,7 +4,8 @@ import type { Express } from "express";
 import Stripe from "stripe";
 import crypto from "node:crypto";
 import fs from "node:fs";
-import { memory } from "./memory.js";
+import { memory, recall } from "./memory.js";
+const quick = (q: string) => Promise.race([recall(q), new Promise<any>(ok => setTimeout(() => ok(null), 4000))]);
 
 export const SHOP = { autoPayGBP: 25, store: "Waitrose" };
 export function catalog(): any[] { try { return JSON.parse(fs.readFileSync("data/shop-catalog.json", "utf8")).items; } catch { return []; } }
@@ -28,6 +29,8 @@ export function mountShop(app: Express, stripe: Stripe | null, BASE: string) {
     const list: string[] = Array.isArray(req.body?.list) && req.body.list.length ? req.body.list.map(String) : cat.map(c => c.line);
     const r: any = { id: "shop_" + crypto.randomBytes(4).toString("hex"), demo: "shop", createdAt: now(), agent: "Sally", request: `Do the ${SHOP.store} shop (${list.length} lines)`, list, decisions: [], total: 0, status: "new", stripe: {}, audit: [] };
     log(r, "list_received", { lines: list.length, store: SHOP.store });
+    const mem = await quick("What are the shopper's grocery preferences, budget and recent orders?");
+    if (mem?.answer) { r.remembers = mem.answer; log(r, "memory_recalled", { source: mem.cognee ? "cognee" : "local", text: mem.answer.slice(0, 300) }); }
     let auto = 0;
     for (const line of list) {
       const m = bestMatch(line, cat);
