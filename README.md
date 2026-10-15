@@ -72,7 +72,7 @@ sequenceDiagram
 | **Payment Links** | ✅ Built | Booking deposits for 6+ (`restaurant.ts`) |
 | **Invoicing** | ✅ Built | Supplier invoices created, finalised and paid, plus customer invoices drafted and sent (`restaurant.ts`) |
 | **Agent toolkit / MCP** | ✅ Built | `@stripe/agent-toolkit` plus Sally's 16 tools at `/mcp` (`mcp.ts`, `toolkit.ts`) |
-| **Issuing** (virtual cards) | 🟡 Code built, account pending | `stripe-extra.ts`: virtual card with spending controls mirroring policy.md (£50/auth, grocery MCCs, no liquor) plus a real-time `issuing_authorization.request` approve/decline. Issuing isn't enabled on our test account yet, so card creation fails gracefully and the policy decisions run locally |
+| **Issuing** (virtual cards) | ✅ Built | `issue_card`: Sally's virtual card on an Issuing-for-Connect connected account, with spending controls mirroring policy.md (£50 per authorisation, £200 weekly, grocery and restaurants only). Verified with test authorisations: £12 grocery approved, £80 and a liquor store declined by Stripe. An `issuing_authorization.request` webhook applies the same rules. Uses `STRIPE_ISSUING_KEY` (falls back to `STRIPE_SECRET_KEY`) |
 | **Connect** | ✅ Built | Venue connected account plus a destination charge with a HeySalad application fee (`pay_venue`) |
 | **Billing** | ✅ Built | Sally Plus £9/month via Products, Prices and Subscriptions (`subscribe_sally_plus`) |
 | **Shared payment tokens** | ✅ Built | Scoped, expiring SPT charged via PaymentIntent (`pay_with_shared_token`). In test mode the grant comes from Stripe's test helper |

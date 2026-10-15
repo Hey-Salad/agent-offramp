@@ -11,6 +11,9 @@ import { remember } from "./memory.js";
 
 const key = process.env.STRIPE_SECRET_KEY || "";
 export const stripeX = key.startsWith("sk_test_") ? new Stripe(key, { timeout: 25000 }) : null;
+// Issuing may live on a separate test account (STRIPE_ISSUING_KEY); falls back to STRIPE_SECRET_KEY. Test keys only.
+const ikey = process.env.STRIPE_ISSUING_KEY || key;
+export const stripeI = ikey.startsWith("sk_test_") ? new Stripe(ikey, { timeout: 25000 }) : null;
 const FILE = "data/stripe-extra.json";
 const st: any = fs.existsSync(FILE) ? JSON.parse(fs.readFileSync(FILE, "utf8")) : {};
 const persist = () => { try { fs.writeFileSync(FILE, JSON.stringify(st, null, 2)); } catch {} };
@@ -22,8 +25,7 @@ const notEnabled = (e: any) => /not set up to use Issuing|not enabled|Issuing/i.
 // Spending controls = policy.md: per-authorization cap (POLICY.maxCapGBP), grocery MCCs only, alcohol-only stores blocked.
 export const ISSUING_CONTROLS = {
   spending_limits: [{ amount: p(POLICY.maxCapGBP), interval: "per_authorization" as const }, { amount: p(200), interval: "weekly" as const }],
-  allowed_categories: ["grocery_stores_supermarkets", "eating_places_restaurants", "miscellaneous_food_stores"] as any,
-  blocked_categories: ["package_stores_beer_wine_and_liquor"] as any,
+  allowed_categories: ["grocery_stores_supermarkets", "eating_places_restaurants"] as any, // liquor stores therefore declined
 };
 // Real-time authorization decision (issuing_authorization.request webhook): same rules as the policy engine.
 export function decideAuthorization(a: { amount: number; currency?: string; merchant_data?: { category?: string; name?: string } }) {
@@ -33,23 +35,56 @@ export function decideAuthorization(a: { amount: number; currency?: string; merc
   if (gbp > POLICY.maxCapGBP) return { approved: false, clause: "P2", reason: `£${gbp.toFixed(2)} is over the £${POLICY.maxCapGBP} cap; needs a human` };
   return { approved: true, clause: "P1", reason: `£${gbp.toFixed(2)} within policy` };
 }
+// Issuing-for-Connect platforms can only issue on a connected account: create one for Sally (test KYC data), fund it, issue there.
+async function issuingAccount(): Promise<string | undefined> {
+  if (process.env.STRIPE_ISSUING_ACCOUNT) return process.env.STRIPE_ISSUING_ACCOUNT;
+  if (st.issuingAccount) return st.issuingAccount;
+  const now = Math.floor(Date.now() / 1000), ip = "8.8.8.8";
+  const a = await stripeI!.accounts.create({ type: "custom", country: "GB", email: "sally@heysalad.app", business_type: "individual",
+    capabilities: { card_issuing: { requested: true }, transfers: { requested: true } },
+    business_profile: { mcc: "5411", url: "https://heysalad.io", product_description: "Sally agent spend (test)" },
+    individual: { first_name: "Sally", last_name: "HeySalad", email: "sally@heysalad.app", phone: "+447700900000", dob: { day: 1, month: 1, year: 1901 }, address: { line1: "address_full_match", city: "London", postal_code: "EC1A 1BB", country: "GB" } },
+    tos_acceptance: { date: now, ip }, settings: { card_issuing: { tos_acceptance: { date: now, ip } } } as any });
+  st.issuingAccount = a.id; persist();
+  await stripeI!.accounts.update(a.id, { business_profile: { annual_revenue: { amount: 10000000, currency: "gbp", fiscal_year_end: `${new Date().getFullYear() - 1}-12-31` }, estimated_worker_count: 5 } as any,
+    external_account: { object: "bank_account", country: "GB", currency: "gbp", account_number: "00012345", routing_number: "108800" } as any });
+  for (let i = 0; i < 20; i++) { const r = await stripeI!.accounts.retrieve(a.id); if (r.capabilities?.card_issuing === "active") break; await new Promise(ok => setTimeout(ok, 1500)); }
+  return a.id;
+}
 export async function issueCard() {
-  if (!stripeX) return { ok: false, error: "Stripe test key missing" };
+  if (!stripeI) return { ok: false, error: "Stripe test key missing" };
   try {
     if (st.card) return { ok: true, reused: true, ...st.card };
-    const ch = await stripeX.issuing.cardholders.create({ type: "individual", name: "Sally HeySalad", email: "sally@heysalad.app", individual: { first_name: "Sally", last_name: "HeySalad" } as any, billing: { address: { line1: "1 Test St", city: "London", postal_code: "EC1A 1BB", country: "GB" } } });
-    const c = await stripeX.issuing.cards.create({ cardholder: ch.id, currency: "gbp", type: "virtual", status: "active", spending_controls: ISSUING_CONTROLS });
-    st.card = { cardholder: ch.id, card: c.id, last4: c.last4, controls: ISSUING_CONTROLS }; persist();
+    const mk = async (acct?: string) => {
+      const o: any = acct ? { stripeAccount: acct } : undefined, now = Math.floor(Date.now() / 1000);
+      const ch = await stripeI!.issuing.cardholders.create({ type: "individual", name: "Sally HeySalad", email: "sally@heysalad.app", phone_number: "+447700900000",
+        individual: { first_name: "Sally", last_name: "HeySalad", dob: { day: 1, month: 1, year: 1990 }, card_issuing: { user_terms_acceptance: { date: now, ip: "8.8.8.8" } } } as any,
+        billing: { address: { line1: "1 Test St", city: "London", postal_code: "EC1A 1BB", country: "GB" } } }, o);
+      const c = await stripeI!.issuing.cards.create({ cardholder: ch.id, currency: "gbp", type: "virtual", status: "active", spending_controls: ISSUING_CONTROLS }, o);
+      return { account: acct, cardholder: ch.id, card: c.id, last4: c.last4, status: c.status, controls: ISSUING_CONTROLS };
+    };
+    let out;
+    try { out = await mk(process.env.STRIPE_ISSUING_ACCOUNT); }
+    catch (e: any) {
+      if (!/connected accounts|missing requirements/i.test(String(e?.message))) throw e;
+      const acct = await issuingAccount();
+      for (let i = 0; ; i++) { // capability activation can lag a few seconds in test mode
+        try { out = await mk(acct); break; } catch (e2: any) { if (i >= 8 || !/missing requirements/i.test(String(e2?.message))) throw e2; await new Promise(ok => setTimeout(ok, 5000)); }
+      }
+    }
+    // Test mode: fund the Issuing balance (£500 test money) so authorizations can be approved.
+    if (out.account) await stripeI.rawRequest("POST", "/v1/test_helpers/issuing/fund_balance", { amount: 50000, currency: "gbp" }, { stripeAccount: out.account } as any).then(() => new Promise(ok => setTimeout(ok, 4000))).catch(() => {});
+    st.card = out; persist();
     return { ok: true, ...st.card };
-  } catch (e: any) { return { ...err(e), enabled: !notEnabled(e), hint: notEnabled(e) ? "Issuing is not enabled on this Stripe test account: enable it at dashboard.stripe.com/test/issuing. Spending controls + auth decisions still run locally." : undefined, controls: ISSUING_CONTROLS }; }
+  } catch (e: any) { return { ...err(e), enabled: !notEnabled(e), hint: notEnabled(e) ? "Issuing is not enabled on this Stripe test account: set STRIPE_ISSUING_KEY to a test key from an Issuing-enabled account." : undefined, controls: ISSUING_CONTROLS }; }
 }
-// Simulate a card purchase (test helper) so the auth webhook / controls decide it.
+// Simulate a card purchase (Stripe test helper): Stripe's spending controls decide on the real card; policy decision shown alongside.
 export async function testAuthorization(amountGBP: number, category = "grocery_stores_supermarkets") {
   const local = decideAuthorization({ amount: p(amountGBP), currency: "gbp", merchant_data: { category } });
-  if (!stripeX || !st.card) return { ok: true, simulated: "policy-only", decision: local };
+  if (!stripeI || !st.card) return { ok: true, simulated: "policy-only", decision: local };
   try {
-    const a: any = await (stripeX as any).testHelpers.issuing.authorizations.create({ card: st.card.card, amount: p(amountGBP), currency: "gbp", merchant_data: { category, name: "Ocado" } });
-    return { ok: true, authorization: a.id, approved: a.approved, decision: local };
+    const a: any = await (stripeI as any).testHelpers.issuing.authorizations.create({ card: st.card.card, amount: p(amountGBP), currency: "gbp", merchant_data: { category, name: "Ocado" } }, st.card.account ? { stripeAccount: st.card.account } : undefined);
+    return { ok: true, authorization: a.id, approved: a.approved, stripeReason: a.request_history?.[0]?.reason, decision: local };
   } catch (e: any) { return { ...err(e), decision: local }; }
 }
 
