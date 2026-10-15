@@ -1,48 +1,31 @@
-# 🥗 Off-Ramp — open-source agent off-ramping for Stripe
+# 🥗 Sally for restaurants (HeySalad Off-Ramp)
 
-**Agents shop. Humans pay. Every pound explained.**
+One agent for a restaurant. A written policy (`policy.md`). Real money moving in **Stripe test mode**. Every pound explained.
 
-AI agents can now pick what to buy, but handing them a card is scary. **Off-Ramp** is the moment an agent *stops*: it builds a basket under a written policy, then hands a human a ready-to-approve Stripe Checkout with every line justified. After payment you have a Stripe PaymentIntent, an Invoice, a receipt and a full audit trail — linked to each other by metadata.
+## 3 one-click demos
+1. **Restock** (spend): Sally restocks the kitchen (real Waitrose basket + Bidfood items). Within policy she pays automatically (PaymentIntent). Items over £25 wait for a human: tap **Approve & pay**. Wrong supplier / alcohol are blocked with the clause.
+2. **Host booking** (collect): "Table for 6 Saturday 8pm". Rule H1: 6+ guests pay £10/head, so Sally creates a £60 Stripe **Payment Link**. No human raised the bill. Diner pays with 4242.
+3. **Supplier invoice** (spend + collect): Sally checks the Bidfood invoice against PO-1042 (supplier, amount, limit), creates a finalized Stripe **Invoice** (hosted page + PDF) and pays it. A mismatched invoice waits for a human.
 
-Demoed with **Sally**, HeySalad's shopping agent. Built for Briefcase × Stripe hackathon (Oct 2026). Stripe **test mode only** — the server refuses live keys.
+Every result has Stripe IDs/links, an audit trail, and a **Why?** button. `/audit` lists every pound with its reason.
 
-## Flow
 ```mermaid
 flowchart LR
-  A[📞 Call / SMS to Twilio<br/>or POST /simulate] --> B[Sally parses request<br/>cap, allergens]
-  B --> C[Basket from catalog<br/>under policy.md]
-  C --> D[Decision record per line<br/>clause + evidence]
-  D --> E[OFF-RAMP: /approve/:id<br/>Sally cannot pay]
-  E -->|human approves| F[Stripe Checkout<br/>test mode + invoice_creation]
-  F --> G[Paid: PaymentIntent, Invoice,<br/>Receipt, approver logged]
-  G --> H[/why/:id — explain every pound/]
+  T[Trigger: restock / booking / supplier invoice] --> S[Sally applies policy.md]
+  S -->|within policy| P[Stripe test: PaymentIntent / Payment Link / Invoice]
+  S -->|over threshold or mismatch| H[Human approval page]
+  H --> P
+  S -->|breaks a rule| B[Blocked + clause]
+  P --> A[Audit record + Why?]
+  B --> A
 ```
-
-## Policy (`policy.md`)
-P1 weekly cap £40 (max £50) · P2 single item > £15 needs human tick · P3 no alcohol · P4 allergen rules (“no nuts”) · P5 allowed merchants Ocado/Waitrose · P6 agent never moves money · P7 every line gets a decision record.
 
 ## Run
 ```bash
 npm install
-cp .env.example .env   # add your sk_test_ key
-npm run dev            # http://localhost:3000
+echo "STRIPE_SECRET_KEY=sk_test_..." > .env   # test keys only; live keys are refused
+npm run dev   # http://localhost:3000
 ```
-- Open `/`, click **Ask Sally**, review, **Approve & pay**, use card `4242 4242 4242 4242`.
-- API: `POST /simulate {"text":"Weekly shop under £40, no nuts","from":"+44..."}`
-- Twilio: point Voice webhook to `PUBLIC_URL/twilio/voice`, Messaging to `PUBLIC_URL/twilio/sms` (use a tunnel such as `cloudflared tunnel --url localhost:3000`).
-- Stripe webhook (optional): `stripe listen --forward-to localhost:3000/stripe/webhook`.
+Optional: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM` for SMS/voice at `/twilio/sms` and `/twilio/voice`. The original grocery off-ramp is still at `/shop`.
 
-## Endpoints
-| | |
-|---|---|
-| `POST /simulate` | trigger a run |
-| `POST /twilio/voice`, `/twilio/sms` | phone triggers; SMS reply carries the approval link |
-| `GET /approve/:id` | human approval environment |
-| `POST /approve/:id` | creates Checkout Session (with invoice) |
-| `GET /why/:id?sku=` | “why did you pay / block this?” |
-| `GET /api/records/:id` | full audit JSON |
-
-## Memory
-`src/memory.ts` exposes a `CogneeMemory` adapter: local JSON is the source of truth; if `COGNEE_URL`/`COGNEE_API_KEY` are set, records are also pushed to Cognee.
-
-MIT licensed.
+MIT licence.

@@ -5,6 +5,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import { decide, POLICY } from "./policy.js";
 import { memory } from "./memory.js";
+import { mountRestaurant } from "./restaurant.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -26,6 +27,7 @@ app.post("/stripe/webhook", express.raw({ type: "application/json" }), async (re
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+mountRestaurant(app as any, stripe, BASE);
 
 function createRun(text: string, channel: string, from = "demo") {
   const d = decide(text);
@@ -204,7 +206,7 @@ app.get("/why/:id", (req, res) => {
   res.json({ answer: `Sally spent ${gbp(r.total)} of a ${gbp(r.cap)} cap on ${r.decisions.filter((x: any) => x.status === "approved").length} items. Status: ${r.status}. ${r.approver ? `Approved by ${r.approver.name}.` : "Awaiting human approval."} ${r.stripe.paymentIntent ? `Stripe PaymentIntent ${r.stripe.paymentIntent}, invoice ${r.stripe.invoiceId}.` : ""}`, audit: r.audit });
 });
 app.get("/policy", (_q, res) => res.type("text/plain").send(fs.readFileSync("policy.md", "utf8")));
-app.get("/", (_q, res) => res.send(home()));
+app.get("/shop", (_q, res) => res.send(home()));
 app.post("/", (req, res) => { const r = createRun(req.body.text, "web"); res.redirect(`/approve/${r.id}`); });
 
 const css = `body{font-family:system-ui;background:#fff8f6;color:#1f1416;max-width:860px;margin:auto;padding:24px}h1{color:#ed4c4c}.card{background:#fff;border:2px solid #faa09a;border-radius:14px;padding:16px;margin:12px 0}table{width:100%;border-collapse:collapse}td,th{padding:6px;border-bottom:1px solid #faa09a;text-align:left;font-size:14px}.approved{color:#1f1416}.blocked{color:#ed4c4c;text-decoration:line-through}.needs_approval{color:#b8573f}button,.btn{background:#ed4c4c;color:#fff8f6;border:0;border-radius:10px;padding:12px 20px;font-size:16px;cursor:pointer;text-decoration:none}.bar{height:14px;background:#faa09a;border-radius:7px}.fill{height:14px;background:#ed4c4c;border-radius:7px}pre{white-space:pre-wrap;font-size:12px}a{color:#ed4c4c}input[type=text]{width:70%;padding:10px;border:2px solid #faa09a;border-radius:8px}`;
