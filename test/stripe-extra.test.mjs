@@ -1,0 +1,25 @@
+// Stripe Issuing / Connect / Billing / Shared payment tokens against the real TEST account. Server must be running.
+const base = process.env.SALLY_URL || "http://localhost:3000";
+let ok = 0, fail = 0, notes = [];
+const t = (n, c, info = "") => { console.log((c ? "PASS " : "FAIL ") + n + (info ? "  " + info : "")); c ? ok++ : fail++; };
+const post = async (p, b = {}) => (await fetch(base + p, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(b) })).json();
+const card = await post("/api/issuing/card");
+t("issuing: card issued, or graceful 'not enabled' with policy controls", card.ok ? !!card.card : (card.enabled === false && !!card.controls), card.ok ? card.card : "Issuing not enabled on account");
+const big = await post("/api/issuing/test-auth", { amount: 80 });
+t("issuing: £80 auth declined by policy (P2)", big.decision?.approved === false && big.decision?.clause === "P2");
+const small = await post("/api/issuing/test-auth", { amount: 12 });
+t("issuing: £12 grocery auth approved", small.decision?.approved === true);
+const v = await post("/api/connect/venue");
+t("connect: venue connected account exists", v.ok && /^acct_/.test(v.account), `${v.account} transfers=${v.transfers}`);
+const pv = await post("/api/connect/pay", { amount: 60 });
+t("connect: destination charge succeeds, or venue still verifying", pv.ok ? pv.status === "succeeded" : /verifying/.test(pv.error || ""), pv.paymentIntent || pv.error);
+const sub = await post("/api/billing/subscribe");
+t("billing: Sally Plus subscription active", sub.ok && sub.status === "active", sub.subscription);
+const spt = await post("/api/spt/pay", { amount: 9.6 });
+t("spt: shared payment token charge succeeded", spt.ok && /^spt_/.test(spt.token) && spt.status === "succeeded", spt.paymentIntent);
+const over = await post("/api/spt/pay", { amount: 99 });
+t("spt: over-limit refused before Stripe", over.ok === false && over.clause === "P2");
+const r = await fetch(base + "/mcp", { method: "POST", headers: { "content-type": "application/json", accept: "application/json, text/event-stream" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "tools/list", params: {} }) });
+const s = await r.text(); const line = s.split("\n").find(l => l.startsWith("data:")); const n = JSON.parse(line ? line.slice(5) : s).result.tools.length;
+t("mcp: 16 tools", n === 16, String(n));
+console.log(`${ok}/${ok + fail} passed`); process.exit(fail ? 1 : 0);

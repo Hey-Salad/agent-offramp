@@ -7,7 +7,7 @@
   <a href="https://drive.google.com/file/d/1ZCSo90Dt93hS0RibHrhlArkdVBAGAlqh/view"><img src="https://img.shields.io/badge/%E2%96%B6%20Demo%20video-1%3A59-ed4c4c?style=for-the-badge" alt="Demo video"></a>
   <a href="https://peter-36009--agent-offramp-web.us-east.modal.run"><img src="https://img.shields.io/badge/Live%20app-Modal-ed4c4c?style=for-the-badge" alt="Live app"></a>
   <img src="https://img.shields.io/badge/Stripe-test%20mode-635bff?style=for-the-badge" alt="Stripe test mode">
-  <img src="https://img.shields.io/badge/MCP-10%20tools-111?style=for-the-badge" alt="MCP">
+  <img src="https://img.shields.io/badge/MCP-16%20tools-111?style=for-the-badge" alt="MCP">
 </p>
 
 Sally restocks the kitchen, takes deposits, pays supplier invoices and shops real grocers in her own cloud browser. She works by chat, SMS, voice or any MCP client. Every action passes a written spending policy **before** Stripe is touched. Anything over the limit waits for a human, and every pound gets an audit trail that cites the policy clause behind it.
@@ -23,7 +23,7 @@ Sally restocks the kitchen, takes deposits, pays supplier invoices and shops rea
 | 📤 **Bill customers** | Drafts and sends invoices. Over £500 needs approval | Invoicing |
 | 🤖 **Autonomous shop** | Shops Ocado and Waitrose live in a Modal cloud browser, basket only | n/a |
 | 🧠 **Memory** | Remembers preferences, past orders and spend decisions with Cognee | n/a |
-| 🔌 **Use Sally in your AI** | 10 tools over MCP (`/mcp`) for Claude, Cursor, ChatGPT and more | Agent toolkit |
+| 🔌 **Use Sally in your AI** | 16 tools over MCP (`/mcp`) for Claude, Cursor, ChatGPT and more | Agent toolkit |
 | 🔍 **Explains every pound** | `/audit`, `/r/:id/why` and a live audit panel | IDs on every line |
 
 ## Architecture
@@ -72,10 +72,10 @@ sequenceDiagram
 | **Payment Links** | ✅ Built | Booking deposits for 6+ (`restaurant.ts`) |
 | **Invoicing** | ✅ Built | Supplier invoices created, finalised and paid, plus customer invoices drafted and sent (`restaurant.ts`) |
 | **Agent toolkit / MCP** | ✅ Built | `@stripe/agent-toolkit` plus Sally's 10 tools at `/mcp` (`mcp.ts`, `toolkit.ts`) |
-| **Issuing** (virtual cards) | 🛣️ Roadmap | Per-task cards with policy-scoped limits |
-| **Connect** | 🛣️ Roadmap | Pay suppliers as connected accounts |
-| **Billing** | 🛣️ Roadmap | Subscriptions for Sally plans |
-| **Shared payment tokens** | 🛣️ Roadmap | Agentic checkout at grocers |
+| **Issuing** (virtual cards) | 🟡 Code built, account pending | `stripe-extra.ts`: virtual card with spending controls mirroring policy.md (£50/auth, grocery MCCs, no liquor) plus a real-time `issuing_authorization.request` approve/decline. Issuing isn't enabled on our test account yet, so card creation fails gracefully and the policy decisions run locally |
+| **Connect** | ✅ Built | Venue connected account plus a destination charge with a HeySalad application fee (`pay_venue`) |
+| **Billing** | ✅ Built | Sally Plus £9/month via Products, Prices and Subscriptions (`subscribe_sally_plus`) |
+| **Shared payment tokens** | ✅ Built | Scoped, expiring SPT charged via PaymentIntent (`pay_with_shared_token`). In test mode the grant comes from Stripe's test helper |
 
 Stripe test mode only: `sk_test_` is enforced at deploy.
 

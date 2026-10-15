@@ -9,6 +9,7 @@ import { mountRestaurant } from "./restaurant.js";
 import { mountTwilio } from "./twilio.js";
 import { mountMcp } from "./mcp.js";
 import { mountShop } from "./shop.js";
+import { mountStripeExtra, decideAuthorization, stripeX } from "./stripe-extra.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -25,12 +26,17 @@ app.post("/stripe/webhook", express.raw({ type: "application/json" }), async (re
     const secret = process.env.STRIPE_WEBHOOK_SECRET;
     const ev = secret && stripe ? stripe.webhooks.constructEvent(req.body, req.headers["stripe-signature"] as string, secret) : JSON.parse(req.body.toString());
     if (ev.type === "checkout.session.completed") await markPaid(ev.data.object.id, "webhook");
+    if (ev.type === "issuing_authorization.request" && stripeX) { // real-time auth: same rules as policy.md
+      const a = ev.data.object, d = decideAuthorization(a);
+      await (d.approved ? stripeX.issuing.authorizations.approve(a.id) : stripeX.issuing.authorizations.decline(a.id, { metadata: { clause: d.clause, reason: d.reason } }));
+    }
     res.json({ received: true });
   } catch (e: any) { res.status(400).send(e.message); }
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 mountMcp(app);
+mountStripeExtra(app);
 // Cognee memory: preferences, past orders and spend decisions.
 app.post("/api/memory/remember", async (req, res) => { const t = String(req.body?.text || "").slice(0, 4000); if (!t) return res.status(400).json({ error: "text required" }); res.json(await remember(t)); });
 app.post("/api/memory/recall", async (req, res) => { const q = String(req.body?.query || "").slice(0, 1000); if (!q) return res.status(400).json({ error: "query required" }); res.json(await recall(q)); });
