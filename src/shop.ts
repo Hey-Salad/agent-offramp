@@ -19,6 +19,8 @@ const gbp = (n: number) => `£${n.toFixed(2)}`;
 
 export function mountShop(app: Express, stripe: Stripe | null, BASE: string) {
   const log = (r: any, event: string, data: any = {}) => { r.audit.push({ at: now(), event, ...data }); memory.save(r); };
+  // Only the live-view URL is exposed here; never add secrets.
+  app.get("/api/config", (_q, res) => res.json({ liveViewUrl: process.env.SALLY_LIVE_VIEW_URL || null }));
   app.get("/api/catalog", (_q, res) => res.json(catalog()));
   app.post("/demo/shop", async (req, res) => {
     if (!stripe) return res.status(500).send("STRIPE_SECRET_KEY (sk_test_) not set");

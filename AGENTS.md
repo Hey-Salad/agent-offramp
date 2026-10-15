@@ -30,6 +30,8 @@ Sally is a policy-bound money agent. You send plain language; Sally decides with
 curl -s localhost:3000/api/chat -H 'content-type: application/json' -d '{"text":"Table for 6 Saturday 8pm"}'
 ```
 
+- `GET /api/config` → `{liveViewUrl}` from env `SALLY_LIVE_VIEW_URL` (noVNC view of Sally's cloud browser; the only value exposed)
+
 ## New commands (chat, SMS, voice share one router)
 - `prepare an invoice for <customer> <amount> for <item>` → DRAFT Stripe invoice (POST /demo/outinvoice)
 - `send the invoice` → finalize + send latest draft (POST /r/:id/send); over £500 → `awaiting_human` (I4), approve with `YES <id>` or POST /r/:id/approve
