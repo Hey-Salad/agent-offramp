@@ -25,6 +25,7 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     return r.json() as Promise<any>;
   }
   let lastId = "";
+  let aiUsed = 0;
   const tag = (id: string, sid: string, channel: string, from: string, text: string) => {
     lastId = id;
     const r = memory.get(id); if (!r) return;
@@ -42,7 +43,27 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
       if (r.status !== "awaiting_human") return `Sally: ${r.id} is ${r.status}, nothing to approve.`;
       const v = await call(`/r/${r.id}/approve`);
       tag(r.id, sid, channel, from, t);
+      if (r.demo === "outinvoice") return `Sally: approved and sent invoice £${r.total.toFixed(2)} (test mode). ${v.stripe.sent.hostedUrl}`;
       return `Sally: approved and paid. ${r.id} total £${v.total.toFixed(2)}. Receipt: ${v.url}`;
+    }
+    const prep = t.match(/(?:prepare|create|draft|make|raise)\b.*?invoice\s+(?:for|to)\s+(.+?)\s+(?:£\s*)?(\d+(?:\.\d{1,2})?)\s*(?:pounds|gbp|quid)?(?:\s+for\s+(.+))?$/i);
+    if (prep) {
+      const v = await call("/demo/outinvoice", { customer: prep[1].replace(/[,.]$/, ""), amount: Number(prep[2]), desc: prep[3] || "Catering" });
+      tag(v.id, sid, channel, from, t);
+      return `Sally: draft invoice ${prep[1]} £${v.total.toFixed(2)} ready (I4${v.total > 500 ? ": over £500, needs your approval to send" : ""}). Say "send the invoice" to send.`;
+    }
+    if (/send\b.*invoice/i.test(t)) {
+      const d = memory.all().find((r: any) => r.demo === "outinvoice" && r.status === "draft");
+      if (!d) return "Sally: there's no draft invoice. Say 'prepare an invoice for Acme 120 for catering'.";
+      const v = await call(`/r/${d.id}/send`);
+      tag(v.id, sid, channel, from, t);
+      if (v.status === "awaiting_human") return `Sally: invoice £${v.total.toFixed(2)} is over £500 (I4). Reply YES ${v.id} to send.`;
+      return `Sally: sent invoice £${v.total.toFixed(2)} to ${d.outInvoice.customer} (test mode). ${v.stripe.sent.hostedUrl}`;
+    }
+    if (/(email|send)\b.*(shopping|restock)\s*list/i.test(t)) {
+      const v = await call("/demo/shoplist");
+      tag(v.id, sid, channel, from, t);
+      return `Sally: shopping list drafted as an email, ${v.decisions.length} items £${v.total.toFixed(2)}. Draft only, not sent.`;
     }
     if (/table|book/i.test(t)) {
       if (ALLERGENS.test(t)) {
@@ -53,20 +74,33 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
       if (v.status === "confirmed") return `Sally: booked, no deposit needed (H1: under 6 guests). ${v.url}`;
       return `Sally: deposit £${v.total.toFixed(2)} (H1: £10/head for 6+). Pay: ${v.stripe.paymentLink.url}`;
     }
-    if (/restock/i.test(t)) {
+    if (/restock|do the shop|shopping/i.test(t)) {
       const v = await call("/demo/restock");
       tag(v.id, sid, channel, from, t);
       const held = v.decisions.filter((d: any) => d.status === "needs_approval");
       const heldGBP = held.reduce((s: number, d: any) => s + d.price, 0);
       return `Sally: paid £${v.stripe.auto.amount.toFixed(2)} within R1-R4. ${held.length} item(s) £${heldGBP.toFixed(2)} over £25 wait for you (R2). Reply YES ${v.id} to pay. ${v.url}`;
     }
-    if (/invoice/i.test(t)) {
+    if (/invoice/i.test(t) && !/prepare|create|draft|send/i.test(t)) {
       const v = await call("/demo/invoice", { mismatch: /mismatch|wrong|extra/i.test(t) ? 1 : 0 });
       tag(v.id, sid, channel, from, t);
       if (v.status === "paid") return `Sally: paid Bidfood £${v.total.toFixed(2)}, matches PO-1042 (I1-I3). Invoice: ${v.stripe.invoice.hostedUrl}`;
       return `Sally: invoice £${v.total.toFixed(2)} doesn't match PO-1042 (I2). Reply YES ${v.id} to pay anyway. ${v.url}`;
     }
-    return "Sally here! Text: 'table for 6 Saturday 8pm', 'restock', or 'invoice'.";
+    const ai = await aiIntent(t);
+    if (ai && ai !== t) return route(ai, sid, channel, from);
+    return "Sally here! Try: 'table for 6 Saturday 8pm', 'restock', 'pay the invoice', 'prepare an invoice for Acme 120 for catering', 'send the invoice', or 'email me the shopping list'.";
+  }
+  // Optional: if OPENAI_API_KEY is set, rewrite an unmatched phrase into one canonical command.
+  // The model only picks the words; amounts and limits still come from policy + the router.
+  async function aiIntent(t: string): Promise<string | null> {
+    const key = process.env.OPENAI_API_KEY; if (!key || !t) return null;
+    try {
+      const r = await fetch("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { authorization: `Bearer ${key}`, "content-type": "application/json" }, signal: AbortSignal.timeout(6000),
+        body: JSON.stringify({ model: "gpt-4o-mini", temperature: 0, max_tokens: 40, messages: [{ role: "system", content: "Rewrite the user's request as exactly one of: 'restock' | 'pay the invoice' | 'table for N <day> <time>' | 'prepare an invoice for <customer> <amount> for <item>' | 'send the invoice' | 'email me the shopping list' | 'none'. Output only the command." }, { role: "user", content: t }] }) });
+      const out = String((await r.json() as any).choices?.[0]?.message?.content || "").trim();
+      aiUsed++; return out && out !== "none" ? out : null;
+    } catch { return null; }
   }
 
   async function send(to: string, body: string) {
@@ -84,7 +118,29 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     try { reply = await route(text, "CHAT_" + Date.now(), "chat", "web"); }
     catch (e: any) { reply = "Sally: something went wrong, a human will follow up."; console.error(e.message); }
     const r = lastId ? memory.get(lastId) : null;
-    res.json({ reply: reply.replace(/^Sally:\s*/, ""), record: r ? { id: r.id, demo: r.demo, status: r.status, total: r.total, decisions: r.decisions, stripe: r.stripe, url: `/r/${r.id}` } : null });
+    res.json({ reply: reply.replace(/^Sally:\s*/, ""), record: r ? { id: r.id, demo: r.demo, status: r.status, total: r.total, decisions: r.decisions, stripe: r.stripe, outInvoice: r.outInvoice, emailDraft: r.emailDraft, url: `/r/${r.id}` } : null });
+  });
+  // OpenAI Realtime (WebRTC): mint a short-lived client secret. The key never leaves the server.
+  // Tools only map speech to router commands; the browser calls /api/chat so policy runs here.
+  const TOOLS = [
+    ["restock", "Restock the kitchen (do the shopping) within policy R1-R4", {}],
+    ["book_table", "Book a table", { guests: { type: "integer" }, when: { type: "string" }, notes: { type: "string", description: "allergies etc" } }],
+    ["pay_supplier_invoice", "Check and pay the Bidfood supplier invoice", {}],
+    ["prepare_invoice", "Prepare a DRAFT invoice to a customer", { customer: { type: "string" }, amount_gbp: { type: "number" }, item: { type: "string" } }],
+    ["send_invoice", "Send the latest draft invoice", {}],
+    ["email_shopping_list_draft", "Draft (never send) an email of the shopping list", {}],
+    ["approve", "Approve the item waiting for approval, only when the user explicitly says approve/yes", {}],
+  ].map(([name, description, props]: any) => ({ type: "function", name, description, parameters: { type: "object", properties: props } }));
+  app.post("/api/realtime/session", async (_req, res) => {
+    const key = process.env.OPENAI_API_KEY; if (!key) return res.status(503).json({ error: "no realtime" });
+    try {
+      const r = await fetch("https://api.openai.com/v1/realtime/client_secrets", { method: "POST", headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
+        body: JSON.stringify({ expires_after: { anchor: "created_at", seconds: 120 }, session: { type: "realtime", model: "gpt-realtime", audio: { output: { voice: "marin" } }, tools: TOOLS, tool_choice: "auto",
+          instructions: "You are Sally, HeySalad's restaurant money agent. British English. Keep replies to one short sentence. Always use a tool for actions; never invent amounts, policy decides. After a tool returns, say its result briefly." } }) });
+      const j: any = await r.json();
+      if (!j.value) { console.error("realtime session failed", r.status); return res.status(502).json({ error: "session failed" }); }
+      aiUsed++; res.json({ value: j.value, model: "gpt-realtime" });
+    } catch (e: any) { res.status(502).json({ error: "session failed" }); }
   });
   app.get("/api/feed", (_req, res) => {
     const today = new Date().toISOString().slice(0, 10);

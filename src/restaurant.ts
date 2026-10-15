@@ -8,7 +8,7 @@ import { stripeWrite } from "./toolkit.js";
 
 export const RPOLICY = {
   weeklyCapGBP: 150, approvalThresholdGBP: 25, licensedForAlcohol: false,
-  approvedSuppliers: ["Waitrose", "Bidfood", "Brakes"], depositGroupSize: 6, depositPerHeadGBP: 10, invoiceLimitGBP: 250,
+  approvedSuppliers: ["Waitrose", "Bidfood", "Brakes"], depositGroupSize: 6, depositPerHeadGBP: 10, invoiceLimitGBP: 250, outInvoiceApprovalGBP: 500, testCustomerEmail: "test+demo@heysalad.ai",
 };
 const W18 = "data/w18-basket.json";
 const fallback = [{ product: "Whole Milk 2 Pints", pence: 125 }, { product: "12 Free Range Eggs", pence: 550 }, { product: "Sourdough", pence: 485 }];
@@ -74,6 +74,9 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
     } else if (r.demo === "invoice") {
       log(r, "human_approved", { approver: "Peter", clause: "I2", note: "Mismatch accepted by human" });
       await payInvoice(r);
+    } else if (r.demo === "outinvoice") {
+      log(r, "human_approved", { approver: "Peter", clause: "I4", amount: r.total });
+      await sendOut(r); return req.headers.accept?.includes("json") ? res.json(view(r)) : res.redirect(`/r/${r.id}`);
     }
     r.status = "paid"; memory.save(r);
     req.headers.accept?.includes("json") ? res.json(view(r)) : res.redirect(`/r/${r.id}`);
@@ -157,8 +160,54 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
     res.json(view(r));
   });
 
+  // 4) OUTGOING INVOICE (I4): prepare a DRAFT, then send. Over £500 waits for a human. Test mode only:
+  // Stripe does not email customers from test mode; the customer is always a test address.
+  app.post("/demo/outinvoice", async (req, res) => {
+    if (need(res)) return;
+    const customer = String(req.body?.customer || "Demo customer").slice(0, 60), amount = Math.round(Number(req.body?.amount || 0) * 100) / 100, desc = String(req.body?.desc || "Catering").slice(0, 80);
+    if (!(amount > 0)) return res.status(400).json({ error: "amount required" });
+    const r: any = rec("outinvoice", `Prepare invoice for ${customer} ${gbp(amount)} for ${desc}`);
+    r.outInvoice = { customer, email: RPOLICY.testCustomerEmail, desc, amount };
+    r.total = amount; r.decisions = [{ name: desc, price: amount, status: "draft", clause: "I4", reason: amount > RPOLICY.outInvoiceApprovalGBP ? `Over ${gbp(RPOLICY.outInvoiceApprovalGBP)}: needs your approval before sending` : `Up to ${gbp(RPOLICY.outInvoiceApprovalGBP)}: Sally may send` }];
+    log(r, "invoice_requested", r.outInvoice);
+    const cp = { name: customer, email: RPOLICY.testCustomerEmail, description: "Sally demo (test mode)" };
+    const cust: any = await stripeWrite("PostCustomers", cp, () => stripe!.customers.create(cp));
+    const ip = { customer: cust.id, currency: "gbp", collection_method: "send_invoice", days_until_due: 7, description: `${desc} (HeySalad, test mode)`, metadata: { record: r.id } };
+    const inv: any = await stripeWrite("PostInvoices", ip, () => stripe!.invoices.create(ip as any));
+    const lp = { customer: cust.id, invoice: inv.id, currency: "gbp", amount: p(amount), description: desc };
+    await stripeWrite("PostInvoiceitems", lp, () => (stripe!.invoiceItems as any).create(lp));
+    r.stripe.draft = { id: inv.id, customer: cust.id, status: "draft", amount };
+    log(r, "stripe_tool", { tools: ["PostCustomers", "PostInvoices", "PostInvoiceitems"], via: inv._via });
+    r.status = "draft"; log(r, "invoice_drafted", { clause: "I4", amount, note: "Draft only, nothing sent" });
+    res.json(view(r));
+  });
+  async function sendOut(r: any) {
+    let inv: any = await stripe!.invoices.finalizeInvoice(r.stripe.draft.id);
+    inv = await stripe!.invoices.sendInvoice(inv.id);
+    r.stripe.sent = { id: inv.id, status: inv.status, hostedUrl: inv.hosted_invoice_url, pdf: inv.invoice_pdf, amount: inv.amount_due / 100, to: r.outInvoice.email };
+    r.decisions.forEach((d: any) => (d.status = "sent"));
+    r.status = "sent"; log(r, "invoice_sent", { ...r.stripe.sent, note: "Stripe test mode: no real email is delivered" });
+  }
+  app.post("/r/:id/send", async (req, res) => {
+    const r = memory.get(req.params.id); if (!r || need(res)) return;
+    if (r.demo !== "outinvoice" || r.status !== "draft") return res.json(view(r));
+    if (r.total > RPOLICY.outInvoiceApprovalGBP && !req.body?.approved) { r.status = "awaiting_human"; log(r, "off_ramp", { clause: "I4", note: `Over ${gbp(RPOLICY.outInvoiceApprovalGBP)}: human must approve sending`, url: `${BASE}/r/${r.id}` }); return res.json(view(r)); }
+    await sendOut(r); res.json(view(r));
+  });
+
+  // 5) SHOPPING LIST EMAIL: DRAFT preview only. Never sends.
+  app.post("/demo/shoplist", (_q, res) => {
+    const items = restockList().filter(i => i.category !== "alcohol" && RPOLICY.approvedSuppliers.includes(i.supplier));
+    const r: any = rec("shoplist", "Email me the shopping list");
+    r.decisions = items.map(i => ({ name: i.name, price: i.price, supplier: i.supplier, status: "listed", clause: "R3" }));
+    r.total = Math.round(items.reduce((s, i) => s + i.price, 0) * 100) / 100;
+    r.emailDraft = { label: "Draft", to: "peter@heysalad.ai", subject: `Shopping list (${items.length} items, ${gbp(r.total)})`, body: items.map(i => `- ${i.name} (${i.supplier}) ${gbp(i.price)}`).join("\n") };
+    r.status = "draft"; log(r, "email_drafted", { note: "Draft only, not sent", to: r.emailDraft.to });
+    res.json({ ...view(r), emailDraft: r.emailDraft });
+  });
+
   // Shared views
-  const view = (r: any) => ({ id: r.id, demo: r.demo, status: r.status, total: r.total, url: `${BASE}/r/${r.id}`, why: `${BASE}/r/${r.id}/why`, stripe: r.stripe, decisions: r.decisions, audit: r.audit });
+  const view = (r: any) => ({ id: r.id, demo: r.demo, status: r.status, total: r.total, url: `${BASE}/r/${r.id}`, why: `${BASE}/r/${r.id}/why`, stripe: r.stripe, outInvoice: r.outInvoice, emailDraft: r.emailDraft, decisions: r.decisions, audit: r.audit });
   app.get("/r/:id/why", (req, res) => {
     const r = memory.get(req.params.id); if (!r) return res.status(404).json({ error: "not found" });
     const q = String(req.query.q || "").toLowerCase();

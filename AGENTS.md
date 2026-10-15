@@ -28,3 +28,11 @@ Sally is a policy-bound money agent. You send plain language; Sally decides with
 ```bash
 curl -s localhost:3000/api/chat -H 'content-type: application/json' -d '{"text":"Table for 6 Saturday 8pm"}'
 ```
+
+## New commands (chat, SMS, voice share one router)
+- `prepare an invoice for <customer> <amount> for <item>` → DRAFT Stripe invoice (POST /demo/outinvoice)
+- `send the invoice` → finalize + send latest draft (POST /r/:id/send); over £500 → `awaiting_human` (I4), approve with `YES <id>` or POST /r/:id/approve
+- `email me the shopping list` → email DRAFT card only (POST /demo/shoplist), never sent (E1)
+- `do the shopping` = `restock`
+- Voice: POST /api/realtime/session → ephemeral OpenAI Realtime secret; tools map to the commands above.
+Unmatched text may be rewritten to a command by OpenAI if OPENAI_API_KEY is set; amounts/limits always come from policy.

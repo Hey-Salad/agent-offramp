@@ -22,3 +22,5 @@ Sally may build a basket on her own, but **never pays**. Payment is off-ramped t
 - **I1** Supplier invoices only from approved suppliers.
 - **I2** Invoice total must match the purchase order exactly; any mismatch waits for a human.
 - **I3** Invoices up to £250 are paid automatically.
+- **I4** Outgoing customer invoices: Sally prepares a DRAFT; up to **£500** she may send it, over £500 waits for human approval. Stripe test mode only; customer email is a test address.
+- **E1** Emails (e.g. shopping list) are drafts only. Sally never sends email.

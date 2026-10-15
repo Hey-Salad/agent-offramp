@@ -33,3 +33,8 @@ Requests are signature-checked when `TWILIO_AUTH_TOKEN` is set. Phone triggers a
 
 ## For other agents
 See [AGENTS.md](AGENTS.md): `POST /api/chat {"text": "..."}`.
+
+## Voice (talk to Sally)
+Tap the mic in the composer. With `OPENAI_API_KEY` set, the browser opens an **OpenAI Realtime** (`gpt-realtime`, WebRTC) session using a 2-minute ephemeral secret from `POST /api/realtime/session`; the key never leaves the server. The model only picks a tool (`restock`, `book_table`, `pay_supplier_invoice`, `prepare_invoice`, `send_invoice`, `email_shopping_list_draft`, `approve`); the browser runs it through `/api/chat`, so policy and Stripe calls stay server-side. Sessions auto-stop after 2 minutes idle. Without a key it falls back to the browser Web Speech API (en-GB) + speechSynthesis.
+
+Try: "prepare an invoice for Acme Ltd £120 for catering", "send the invoice", "do the shopping", "email me the shopping list" (draft only, never sent).
