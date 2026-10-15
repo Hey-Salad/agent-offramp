@@ -167,7 +167,7 @@ async function shopWindow(r,ap){let cat=[];try{cat=await (await fetch('/api/cata
   const sp=document.createElement('span');sp.textContent=d.emoji||'🛒';sp.title=`${d.name} ${gbp(d.price)} · ${d.clause}: ${d.reason}`;if(d.status==='needs_approval')sp.className='h';bk.appendChild(sp);t+=d.price||0;tot.textContent=gbp(t)}
  const held=ds.filter(d=>d.status==='needs_approval'),paid=r.stripe?.auto;stt.textContent=r.status==='awaiting_human'?'Waiting for you':'Done';
  w.querySelector('.res').innerHTML=(paid?`${tick} Paid <b>${gbp(paid.amount)}</b> automatically (S1: up to £25) · <a target="_blank" href="${esc(paid.receiptUrl||'/r/'+r.id)}">Stripe receipt</a><br>`:'')+(held.length&&r.status==='awaiting_human'?`⏸ ${held.length} items <b>${gbp(due(r))}</b> held (R2: over the £25 threshold) ${ap}`:r.stripe?.approved?`${tick} Approved and paid ${gbp(r.stripe.approved.amount)}`:'')+` · <a href="/r/${r.id}">Audit</a>`;
- openP({name:'Waitrose shop',amt:t,st:r.status,items:ds,r},null)}
+ if(innerWidth>700)openP({name:'Waitrose shop',amt:t,st:r.status,items:ds,r},null)}
 function card(r){
   if(!r)return;const ds=r.decisions||[];const ln=d=>`<div><span>${esc(d.name||d.clause)}</span><span>${d.price!=null?gbp(d.price)+' · ':''}${esc(d.clause||'')}</span></div>`;
   const ap=`<button class="btn" data-ap="${r.id}">Approve ${gbp(due(r))}</button>`;
