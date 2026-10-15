@@ -8,6 +8,7 @@ import { memory } from "./memory.js";
 import { mountRestaurant } from "./restaurant.js";
 import { mountTwilio } from "./twilio.js";
 import { mountMcp } from "./mcp.js";
+import { mountShop } from "./shop.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -31,6 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 mountMcp(app);
 mountTwilio(app as any, BASE, PORT);
+mountShop(app as any, stripe, BASE);
 mountRestaurant(app as any, stripe, BASE);
 
 function createRun(text: string, channel: string, from = "demo") {

@@ -14,6 +14,7 @@ Sally is a policy-bound money agent. You send plain language; Sally decides with
 | POST | `/sms`, `/voice` | Twilio webhooks |
 
 ## Intents `/api/chat` understands
+- `waitrose shop` (or `shop`, `grocery`) → Demo 4 Shop: best-match picks from data/shop-catalog.json (W18), auto-pay up to £25 (S1), rest held (R2) → `awaiting_human`; POST /demo/shop `{list?:string[]}`, GET /api/catalog, MCP tool `shop`
 - `restock` → basket, auto-pay within policy, held items → `awaiting_human`
 - `table for N <when>` → deposit Payment Link if N ≥ 6, else confirmed; allergy words → staff
 - `invoice` (add `mismatch` to test I2) → PO check, pay Stripe invoice
@@ -28,6 +29,8 @@ Sally is a policy-bound money agent. You send plain language; Sally decides with
 ```bash
 curl -s localhost:3000/api/chat -H 'content-type: application/json' -d '{"text":"Table for 6 Saturday 8pm"}'
 ```
+
+- `GET /api/config` → `{liveViewUrl}` from env `SALLY_LIVE_VIEW_URL` (noVNC view of Sally's cloud browser; the only value exposed)
 
 ## New commands (chat, SMS, voice share one router)
 - `prepare an invoice for <customer> <amount> for <item>` → DRAFT Stripe invoice (POST /demo/outinvoice)
