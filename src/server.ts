@@ -4,7 +4,7 @@ import Stripe from "stripe";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import { decide, POLICY } from "./policy.js";
-import { memory } from "./memory.js";
+import { memory, remember, recall, cogneeOn, recentMemories } from "./memory.js";
 import { mountRestaurant } from "./restaurant.js";
 import { mountTwilio } from "./twilio.js";
 import { mountMcp } from "./mcp.js";
@@ -31,6 +31,10 @@ app.post("/stripe/webhook", express.raw({ type: "application/json" }), async (re
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 mountMcp(app);
+// Cognee memory: preferences, past orders and spend decisions.
+app.post("/api/memory/remember", async (req, res) => { const t = String(req.body?.text || "").slice(0, 4000); if (!t) return res.status(400).json({ error: "text required" }); res.json(await remember(t)); });
+app.post("/api/memory/recall", async (req, res) => { const q = String(req.body?.query || "").slice(0, 1000); if (!q) return res.status(400).json({ error: "query required" }); res.json(await recall(q)); });
+app.get("/api/memory/status", (_q, res) => res.json({ cognee: cogneeOn(), latest: recentMemories[0]?.text || null, count: recentMemories.length }));
 mountTwilio(app as any, BASE, PORT);
 mountShop(app as any, stripe, BASE);
 mountRestaurant(app as any, stripe, BASE);
