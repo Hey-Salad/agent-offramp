@@ -65,11 +65,27 @@ sequenceDiagram
 ```
 
 ## Stripe features used
-- **Checkout / Payment Links**: booking deposits
-- **Invoicing**: paying supplier invoices and drafting or sending customer invoices
-- **Agent toolkit / MCP**: built on [`@stripe/agent-toolkit`](https://github.com/stripe/ai), with Sally exposed as an MCP server
+| Feature | Status | Where in the code |
+|---|---|---|
+| **Payments** (PaymentIntents) | ✅ Built | Restock auto-pay and approved items, autonomous shop (`restaurant.ts`, `shop.ts`) |
+| **Checkout** | ✅ Built | `checkout.sessions.create` for approvals and payments (`server.ts`) |
+| **Payment Links** | ✅ Built | Booking deposits for 6+ (`restaurant.ts`) |
+| **Invoicing** | ✅ Built | Supplier invoices created, finalised and paid, plus customer invoices drafted and sent (`restaurant.ts`) |
+| **Agent toolkit / MCP** | ✅ Built | `@stripe/agent-toolkit` plus Sally's 10 tools at `/mcp` (`mcp.ts`, `toolkit.ts`) |
+| **Issuing** (virtual cards) | 🛣️ Roadmap | Per-task cards with policy-scoped limits |
+| **Connect** | 🛣️ Roadmap | Pay suppliers as connected accounts |
+| **Billing** | 🛣️ Roadmap | Subscriptions for Sally plans |
+| **Shared payment tokens** | 🛣️ Roadmap | Agentic checkout at grocers |
 
-Test mode only (`sk_test_` is enforced at deploy).
+Stripe test mode only: `sk_test_` is enforced at deploy.
+
+## How we built it
+- **Stack:** Node 20 + TypeScript (Express via `tsx`), with one chat UI (`public/chat.html`). Twilio handles SMS and voice, and OpenAI Realtime handles talking to Sally.
+- **Policy engine:** `policy.md` rules (R1–R4, H1, I1–I4, S1) run in code **before** any Stripe call. Amounts come from policy and the basket, never the model, and anything over a limit goes to human approval.
+- **Stripe test mode:** real test objects (PaymentIntents, Checkout Sessions, Payment Links, Customers, Invoices), with webhooks confirming payment.
+- **Audit log:** every decision is appended with its policy clause and Stripe ID, shown live in the panel, at `/audit` and at `/r/:id/why`.
+- **MCP:** Sally is an MCP server (stdio + Streamable HTTP `/mcp`) with 10 tools: restock, book_table, pay_supplier_invoice, prepare_invoice, send_invoice, email_shopping_list_draft, approve, get_audit, get_policy and shop. Every tool calls Sally's own API, so the policy can't be bypassed.
+- **Modal:** the app runs on Modal (`modal_app.py`, with a volume-backed `data/`). Sally's cloud browser is a Modal sandbox running Playwright Chromium, the Sally extension and a noVNC live view, which shop Ocado and Waitrose basket-only.
 
 ## Cognee memory
 Sally stores shopping preferences, past orders and spending decisions in [Cognee](https://cognee.ai) and recalls them when she plans a shop or explains a spend. Set `COGNEE_API_KEY` and `COGNEE_BASE_URL` (your tenant URL). Without them, Sally falls back to her local store, so the demo never blocks.
