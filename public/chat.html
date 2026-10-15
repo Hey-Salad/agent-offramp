@@ -64,7 +64,7 @@ function add(html,cls){const d=document.createElement('div');d.className=cls;d.i
 function count(el,to){const from=parseFloat(el.dataset.v||0),t0=performance.now();el.dataset.v=to;(function f(t){const k=Math.min(1,(t-t0)/700);el.textContent=gbp(from+(to-from)*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)}
 const tick='<span class="paid"><span class="tick"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg></span>Paid in Stripe</span>';
 function card(r){
-  if(!r)return;const rows=(r.decisions||[]).map(d=>`<div class="row ${d.status}"><span>${esc(d.name)}</span><span>${gbp(d.price)} <small>${esc(d.status.replace('_',' '))} · ${d.clause}</small></span></div>`).join('');
+  if(!r)return;const ds=r.decisions||[],auto=ds.filter(d=>d.status==='auto_paid');const rows=(auto.length>3?`<div class="row"><span>${auto.length} items within policy</span><span>${gbp(auto.reduce((s,d)=>s+d.price,0))} <small>auto paid · R1-R4</small></span></div>`:'')+(auto.length>3?ds.filter(d=>d.status!=='auto_paid'):ds).map(d=>`<div class="row ${d.status}"><span>${esc(d.name)}</span><span>${gbp(d.price)} <small>${esc(d.status.replace('_',' '))} · ${d.clause}</small></span></div>`).join('');
   const title={restock:'Basket',booking:'Deposit',invoice:'Invoice'}[r.demo]||r.demo;let act='';
   if(r.status==='awaiting_human')act=`<button class="btn" data-ap="${r.id}">Approve &amp; pay</button>`;
   if(r.status==='awaiting_diner'&&r.stripe.paymentLink)act=`<a class="btn" target="_blank" href="${r.stripe.paymentLink.url}">Open deposit link</a>`;
