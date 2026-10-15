@@ -64,9 +64,10 @@ app.post("/twilio/voice/result", async (req, res) => {
 });
 
 // 2) Off-ramp: human approval
-app.get("/approve/:id", (req, res) => {
-  const r = memory.get(req.params.id);
+app.get("/approve/:id", async (req, res) => {
+  let r = memory.get(req.params.id);
   if (!r) return res.status(404).send("Not found");
+  if (r.status === "paid" && !r.stripe?.invoiceUrl) r = (await ensureInvoice(r)) || r;
   res.send(page(r));
 });
 app.post("/approve/:id", async (req, res) => {
@@ -91,17 +92,96 @@ app.post("/approve/:id", async (req, res) => {
   log(r, "checkout_session_created", { session: session.id });
   res.redirect(303, session.url!);
 });
+async function sleep(ms: number) { return new Promise(r => setTimeout(r, ms)); }
+
+/** Checkout invoice_creation attaches the invoice asynchronously — retry then fall back to list. */
+function invoiceFromSession(session: any): any {
+  const raw = session?.invoice;
+  if (!raw) return null;
+  return typeof raw === "string" ? raw : raw;
+}
+async function hydrateInvoice(inv: any) {
+  if (!stripe || !inv) return null;
+  if (typeof inv === "string") return stripe.invoices.retrieve(inv);
+  if (!inv.hosted_invoice_url || !inv.invoice_pdf) return stripe.invoices.retrieve(inv.id);
+  return inv;
+}
+async function resolveInvoice(sessionId: string, retries = 5) {
+  if (!stripe) return { session: null as any, invoice: null as any };
+  let session: any = await stripe.checkout.sessions.retrieve(sessionId, { expand: ["invoice", "payment_intent.latest_charge"] });
+  let inv: any = invoiceFromSession(session);
+  for (let i = 0; !inv && i < retries; i++) {
+    await sleep(1000);
+    session = await stripe.checkout.sessions.retrieve(sessionId, { expand: ["invoice", "payment_intent.latest_charge"] });
+    inv = invoiceFromSession(session);
+  }
+  if (!inv) {
+    const piId = typeof session.payment_intent === "string" ? session.payment_intent : session.payment_intent?.id;
+    const customer = typeof session.customer === "string" ? session.customer : session.customer?.id;
+    const offrampId = session.metadata?.offramp_id;
+    const listed = await stripe.invoices.list({ limit: 20, ...(customer ? { customer } : {}) });
+    for (const cand of listed.data) {
+      const full: any = await stripe.invoices.retrieve(cand.id);
+      const pi = typeof full.payment_intent === "string" ? full.payment_intent : full.payment_intent?.id;
+      if ((piId && pi === piId) || (offrampId && full.metadata?.offramp_id === offrampId)) { inv = full; break; }
+    }
+  }
+  inv = await hydrateInvoice(inv);
+  return { session, invoice: inv };
+}
+
+async function applyInvoice(r: any, inv: any) {
+  if (!inv) return false;
+  const before = r.stripe.invoiceId;
+  r.stripe.invoiceId = inv.id;
+  r.stripe.invoiceUrl = inv.hosted_invoice_url || r.stripe.invoiceUrl;
+  r.stripe.invoicePdf = inv.invoice_pdf || r.stripe.invoicePdf;
+  if (r.stripe.invoiceId !== before) {
+    log(r, "invoice_attached", { invoiceId: r.stripe.invoiceId, invoiceUrl: r.stripe.invoiceUrl, invoicePdf: r.stripe.invoicePdf });
+    return true;
+  }
+  memory.save(r);
+  return false;
+}
+
 async function markPaid(sessionId: string, via: string) {
   if (!stripe) return;
-  const s = await stripe.checkout.sessions.retrieve(sessionId, { expand: ["payment_intent.latest_charge", "invoice"] });
+  const { session: s, invoice: inv } = await resolveInvoice(sessionId);
   const r = memory.get(s.metadata?.offramp_id || "");
-  if (!r || r.status === "paid" || s.payment_status !== "paid") return r;
-  const pi: any = s.payment_intent, inv: any = s.invoice;
+  if (!r || s.payment_status !== "paid") return r;
+  const pi: any = s.payment_intent;
+  const wasPaid = r.status === "paid";
   r.status = "paid";
-  r.stripe = { ...r.stripe, paymentIntent: pi?.id, chargeId: pi?.latest_charge?.id, receiptUrl: pi?.latest_charge?.receipt_url, invoiceId: inv?.id, invoiceUrl: inv?.hosted_invoice_url, invoicePdf: inv?.invoice_pdf, amountTotal: (s.amount_total || 0) / 100 };
-  log(r, "payment_succeeded", { via, ...r.stripe });
+  r.stripe = {
+    ...r.stripe,
+    checkoutSessionId: s.id,
+    paymentIntent: typeof pi === "string" ? pi : pi?.id,
+    chargeId: typeof pi === "object" ? pi?.latest_charge?.id || (typeof pi?.latest_charge === "string" ? pi.latest_charge : undefined) : r.stripe.chargeId,
+    receiptUrl: typeof pi === "object" ? pi?.latest_charge?.receipt_url || r.stripe.receiptUrl : r.stripe.receiptUrl,
+    amountTotal: (s.amount_total || 0) / 100,
+  };
+  if (inv) {
+    r.stripe.invoiceId = inv.id;
+    r.stripe.invoiceUrl = inv.hosted_invoice_url;
+    r.stripe.invoicePdf = inv.invoice_pdf;
+  }
+  if (!wasPaid) log(r, "payment_succeeded", { via, ...r.stripe });
+  else if (inv && !r.audit.some((a: any) => a.event === "invoice_attached" && a.invoiceId === inv.id)) {
+    log(r, "invoice_attached", { via, invoiceId: inv.id, invoiceUrl: inv.hosted_invoice_url, invoicePdf: inv.invoice_pdf });
+  } else memory.save(r);
   return r;
 }
+
+async function ensureInvoice(r: any) {
+  if (!stripe || r.status !== "paid" || r.stripe?.invoiceUrl) return r;
+  const sessionId = r.stripe?.checkoutSessionId;
+  if (!sessionId) return r;
+  // Lazy path: shorter retry; markPaid already waited up to ~5s on redirect/webhook.
+  const { invoice: inv } = await resolveInvoice(sessionId, 2);
+  if (inv) await applyInvoice(r, inv);
+  return r;
+}
+
 app.get("/paid/:id", async (req, res) => {
   if (req.query.session_id) await markPaid(String(req.query.session_id), "redirect");
   res.redirect(`/approve/${req.params.id}`);
@@ -109,7 +189,12 @@ app.get("/paid/:id", async (req, res) => {
 
 // 3) Explain every pound
 app.get("/api/records", (_q, res) => res.json(memory.all()));
-app.get("/api/records/:id", (req, res) => res.json(memory.get(req.params.id) || { error: "not found" }));
+app.get("/api/records/:id", async (req, res) => {
+  let r = memory.get(req.params.id);
+  if (!r) return res.json({ error: "not found" });
+  if (r.status === "paid" && !r.stripe?.invoiceUrl) r = (await ensureInvoice(r)) || r;
+  res.json(r);
+});
 app.get("/why/:id", (req, res) => {
   const r = memory.get(req.params.id);
   if (!r) return res.status(404).json({ error: "not found" });
@@ -132,7 +217,10 @@ function home() {
 function page(r: any) {
   const pct = Math.min(100, (r.total / r.cap) * 100);
   const rows = r.decisions.map((d: any) => `<tr class="${d.status}"><td>${d.status === "needs_approval" && r.status !== "paid" ? `<input type="checkbox" name="extra" value="${d.sku}" form="ap">` : ""}</td><td>${esc(d.item)}</td><td>${gbp(d.price)}</td><td>${d.status.replace("_", " ")}</td><td>${d.clause}</td><td><a href="#" onclick="why('${d.sku}');return false">Why?</a></td></tr>`).join("");
-  const paid = r.status === "paid" ? `<div class="card"><h2>✅ Paid ${gbp(r.stripe.amountTotal)}</h2><p>Approved by <b>${esc(r.approver?.name)}</b> at ${r.approver?.at}</p><p>PaymentIntent: <code>${r.stripe.paymentIntent}</code><br>Invoice: <a href="${r.stripe.invoiceUrl}" target=_blank>${r.stripe.invoiceId}</a> (<a href="${r.stripe.invoicePdf}">PDF</a>)<br>Receipt: <a href="${r.stripe.receiptUrl}" target=_blank>view</a></p></div>`
+  const invLine = r.stripe?.invoiceUrl
+    ? `Invoice: <a href="${esc(r.stripe.invoiceUrl)}" target=_blank>${esc(r.stripe.invoiceId)}</a>${r.stripe.invoicePdf ? ` (<a href="${esc(r.stripe.invoicePdf)}" target=_blank>PDF</a>)` : ""}`
+    : "";
+  const paid = r.status === "paid" ? `<div class="card"><h2>✅ Paid ${gbp(r.stripe.amountTotal)}</h2><p>Approved by <b>${esc(r.approver?.name)}</b> at ${r.approver?.at}</p><p>PaymentIntent: <code>${esc(r.stripe.paymentIntent || "")}</code>${invLine ? `<br>${invLine}` : ""}<br>Receipt: ${r.stripe.receiptUrl ? `<a href="${esc(r.stripe.receiptUrl)}" target=_blank>view</a>` : "—"}</p></div>`
     : `<form id="ap" method="post" class="card"><p>Sally has stopped. She can't pay — you can.</p>Approver: <input type="text" name="approver" value="Peter" style="width:200px"> <button>Approve &amp; pay with Stripe</button><p style="font-size:12px">Tick flagged (P2) items above to include them. Test card 4242 4242 4242 4242.</p></form>`;
   return `<!doctype html><title>Approve ${r.id}</title><style>${css}</style><h1>Sally needs your OK</h1>
 <div class="card"><b>Request</b> (${r.channel}): “${esc(r.request)}”<br>Allergen rules: ${r.allergens.join(", ") || "none"}<p>${gbp(r.total)} of ${gbp(r.cap)} weekly cap</p><div class="bar"><div class="fill" style="width:${pct}%"></div></div></div>
