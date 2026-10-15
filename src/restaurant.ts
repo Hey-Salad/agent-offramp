@@ -4,6 +4,7 @@ import Stripe from "stripe";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import { memory } from "./memory.js";
+import { stripeWrite } from "./toolkit.js";
 
 export const RPOLICY = {
   weeklyCapGBP: 150, approvalThresholdGBP: 25, licensedForAlcohol: false,
@@ -93,8 +94,11 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
     const amt = size * RPOLICY.depositPerHeadGBP;
     r.total = amt;
     r.decisions.push({ name: `Deposit: ${size} × ${gbp(RPOLICY.depositPerHeadGBP)}`, price: amt, status: "requested", clause: "H1", reason: `Groups of ${RPOLICY.depositGroupSize}+ pay ${gbp(RPOLICY.depositPerHeadGBP)}/head deposit` });
-    const price = await stripe!.prices.create({ currency: "gbp", unit_amount: p(amt), product_data: { name: `HeySalad table deposit (${size} guests)` } });
-    const link = await stripe!.paymentLinks.create({ line_items: [{ price: price.id, quantity: 1 }], metadata: { record: r.id }, payment_intent_data: { metadata: { record: r.id } }, invoice_creation: { enabled: true }, after_completion: { type: "redirect", redirect: { url: `${BASE}/r/${r.id}/paid` } } });
+    const pp = { currency: "gbp", unit_amount: p(amt), product_data: { name: `HeySalad table deposit (${size} guests)` } };
+    const price = await stripeWrite("PostPrices", pp, () => stripe!.prices.create(pp));
+    const lp: any = { line_items: [{ price: price.id, quantity: 1 }], metadata: { record: r.id }, payment_intent_data: { metadata: { record: r.id } }, invoice_creation: { enabled: true }, after_completion: { type: "redirect", redirect: { url: `${BASE}/r/${r.id}/paid` } } };
+    const link = await stripeWrite("PostPaymentLinks", lp, () => stripe!.paymentLinks.create(lp));
+    log(r, "stripe_tool", { tools: ["PostPrices", "PostPaymentLinks"], via: link._via });
     r.stripe.paymentLink = { id: link.id, url: link.url };
     r.status = "awaiting_diner";
     log(r, "deposit_requested", { clause: "H1", amount: amt, paymentLink: link.url, note: "No human raised this bill" });
@@ -119,10 +123,12 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
   const PO = { po: "PO-1042", supplier: "Bidfood", amount: 184.6 };
   async function payInvoice(r: any) {
     const inv0 = r.invoice;
-    const cust = await stripe!.customers.create({ name: `HeySalad (bill from ${inv0.supplier})`, metadata: { record: r.id } });
+    const cp = { name: `HeySalad (bill from ${inv0.supplier})`, metadata: { record: r.id } };
+    const cust = await stripeWrite("PostCustomers", cp, () => stripe!.customers.create(cp));
     const pm = await stripe!.paymentMethods.attach("pm_card_visa", { customer: cust.id });
     let inv = await stripe!.invoices.create({ customer: cust.id, currency: "gbp", collection_method: "charge_automatically", default_payment_method: pm.id, auto_advance: false, description: `${inv0.supplier} ${inv0.number} against ${inv0.po}`, metadata: { record: r.id, po: inv0.po } });
-    for (const l of inv0.lines) await (stripe!.invoiceItems as any).create({ customer: cust.id, invoice: inv.id, currency: "gbp", amount: p(l.amount), description: l.desc });
+    for (const l of inv0.lines) { const ip = { customer: cust.id, invoice: inv.id, currency: "gbp", amount: p(l.amount), description: l.desc }; await stripeWrite("PostInvoiceitems", ip, () => (stripe!.invoiceItems as any).create(ip)); }
+    log(r, "stripe_tool", { tools: ["PostCustomers", "PostInvoiceitems"], via: cust._via });
     inv = await stripe!.invoices.finalizeInvoice(inv.id!);
     inv = await stripe!.invoices.pay(inv.id!, { payment_method: pm.id });
     r.stripe.invoice = { id: inv.id, status: inv.status, hostedUrl: inv.hosted_invoice_url, pdf: inv.invoice_pdf, amount: inv.amount_paid / 100 };
@@ -162,7 +168,8 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
   });
   app.get("/r/:id", (req, res) => { const r = memory.get(req.params.id); r ? res.send(recordPage(r)) : res.status(404).send("Not found"); });
   app.get("/audit", (_q, res) => res.send(auditPage()));
-  app.get("/", (_q, res) => res.send(homePage()));
+  app.get("/classic", (_q, res) => res.send(homePage()));
+  app.get("/", (_q, res) => res.sendFile("chat.html", { root: "public" }));
 }
 
 export const css = `body{font-family:system-ui;background:#fff8f6;color:#1f1416;max-width:900px;margin:auto;padding:24px}h1,h2{color:#ed4c4c}.card{background:#fff;border:2px solid #faa09a;border-radius:18px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}button,.btn{background:#ed4c4c;color:#fff8f6;border:0;border-radius:999px;padding:12px 22px;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}.ghost{background:#faa09a;color:#1f1416}table{width:100%;border-collapse:collapse}td,th{padding:6px;border-bottom:1px solid #faa09a;text-align:left;font-size:14px}.blocked{color:#ed4c4c;text-decoration:line-through}.pill{border-radius:999px;background:#faa09a;padding:2px 10px;font-size:12px}a{color:#ed4c4c}pre{white-space:pre-wrap;font-size:12px}input{padding:10px;border:2px solid #faa09a;border-radius:999px;width:70%}`;

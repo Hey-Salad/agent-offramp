@@ -1,0 +1,91 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sally · money agent for restaurants</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#fff;color:#000;-webkit-font-smoothing:antialiased}
+.app{display:grid;grid-template-columns:1fr 360px;height:100vh}
+header{padding:20px 28px;border-bottom:1px solid #eee;display:flex;align-items:baseline;gap:12px}
+header h1{font-size:20px;margin:0;font-weight:700;letter-spacing:-.02em}header span{color:#777;font-size:13px}
+.chat{display:flex;flex-direction:column;min-height:0;border-right:1px solid #eee}
+#log{flex:1;overflow:auto;padding:28px;display:flex;flex-direction:column;gap:14px}
+.msg{max-width:78%;padding:12px 16px;border-radius:18px;line-height:1.45;font-size:15px;animation:in .35s ease both;word-wrap:break-word}
+.me{align-self:flex-end;background:#000;color:#fff;border-bottom-right-radius:6px}
+.sally{align-self:flex-start;background:#f4f4f4;border-bottom-left-radius:6px}
+.sally a{color:#000}
+.tag{display:block;font-size:11px;color:#888;margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+.card{align-self:flex-start;width:min(440px,90%);border:1px solid #e5e5e5;border-radius:16px;padding:16px;animation:in .4s ease both;background:#fff}
+.card h3{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:#555}
+.row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:5px 0;border-bottom:1px solid #f2f2f2}
+.row small{color:#888}.row.blocked span:first-child{text-decoration:line-through;color:#999}.row.needs_approval span:first-child{font-weight:600}
+.total{font-size:26px;font-weight:700;margin:10px 0 4px;letter-spacing:-.02em}
+.btn{display:inline-block;background:#000;color:#fff;border:1px solid #000;border-radius:999px;padding:10px 18px;font:600 14px inherit;font-family:inherit;cursor:pointer;text-decoration:none;margin:8px 8px 0 0;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}.btn.alt{background:#fff;color:#000}.btn:disabled{opacity:.4}
+.paid{display:inline-flex;align-items:center;gap:8px;font-weight:600;margin-top:10px}
+.tick{width:22px;height:22px;border-radius:50%;background:#000;display:grid;place-items:center}
+.tick svg{width:12px;stroke:#fff;stroke-width:3;fill:none;stroke-dasharray:20;stroke-dashoffset:20;animation:draw .5s .1s ease forwards}
+.typing{align-self:flex-start;background:#f4f4f4;border-radius:18px;padding:14px 16px;display:flex;gap:4px}
+.typing i{width:6px;height:6px;border-radius:50%;background:#999;animation:dot 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 28px 12px}
+.chip{border:1px solid #000;background:#fff;border-radius:999px;padding:8px 14px;font:14px inherit;font-family:inherit;cursor:pointer}.chip:hover{background:#000;color:#fff}
+form{display:flex;gap:10px;padding:16px 28px 24px;border-top:1px solid #eee}
+input{flex:1;border:1px solid #ccc;border-radius:999px;padding:12px 18px;font:15px inherit;font-family:inherit;outline:none}input:focus{border-color:#000}
+aside{overflow:auto;padding:24px;background:#fafafa}
+aside h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;margin:22px 0 10px}aside h2:first-child{margin-top:0}
+.moved{font-size:40px;font-weight:700;letter-spacing:-.03em}
+ol{margin:0;padding-left:0;list-style:none;font-size:13px}ol li{padding:5px 0;border-bottom:1px solid #eee}ol b{display:inline-block;width:30px}
+.feed div{font-size:13px;padding:8px 0;border-bottom:1px solid #eee;animation:slide .4s ease both}
+.feed em{display:block;color:#777;font-style:normal;font-size:12px;margin-top:2px}.feed code{font-size:11px;color:#999}
+.ch{display:inline-block;border:1px solid #000;border-radius:4px;font-size:10px;padding:0 4px;margin-right:4px;text-transform:uppercase}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes slide{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
+@keyframes dot{0%,80%,100%{opacity:.3}40%{opacity:1}}@keyframes draw{to{stroke-dashoffset:0}}
+@media(max-width:820px){.app{display:block;height:auto}.chat{height:auto;border-right:0}#log{min-height:50vh}aside{border-top:1px solid #eee}}
+</style></head><body><div class="app">
+<section class="chat">
+<header><h1>Sally</h1><span>Open-source money agent for restaurants · Stripe test mode</span></header>
+<div id="log"><div class="msg sally"><span class="tag">Sally</span>Hi, I'm Sally. Text, call or chat with me. I act within your policy, and every pound lands in Stripe with a reason.</div></div>
+<div class="chips"><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
+<form id="f"><input id="q" placeholder="Message Sally…" autocomplete="off"><button class="btn" style="margin:0">Send</button></form>
+</section>
+<aside>
+<h2>Money moved today</h2><div class="moved" id="moved">£0.00</div>
+<h2>Policy</h2><ol>
+<li><b>R1</b>Restock cap £150/week; within it Sally pays</li><li><b>R2</b>Items over £25 wait for you</li>
+<li><b>R3</b>Approved suppliers: Waitrose, Bidfood, Brakes</li><li><b>R4</b>No alcohol (no licence on file)</li>
+<li><b>H1</b>6+ guests: £10/head deposit link</li><li><b>H2</b>Allergy requests go to staff</li>
+<li><b>I1</b>Invoices from approved suppliers only</li><li><b>I2</b>Must match the PO exactly</li><li><b>I3</b>Auto-pay up to £250</li></ol>
+<h2>Live audit</h2><div class="feed" id="feed"></div>
+</aside></div>
+<script>
+const $=s=>document.querySelector(s),log=$('#log'),seen=new Set(),mine=new Set();let first=true;
+const gbp=n=>'£'+Number(n||0).toFixed(2),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const linkify=s=>esc(s).replace(/(https?:\/\/\S+)/g,'<a href="$1" target="_blank">link</a>');
+function add(html,cls){const d=document.createElement('div');d.className=cls;d.innerHTML=html;log.appendChild(d);log.scrollTop=1e9;return d}
+function count(el,to){const from=parseFloat(el.dataset.v||0),t0=performance.now();el.dataset.v=to;(function f(t){const k=Math.min(1,(t-t0)/700);el.textContent=gbp(from+(to-from)*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)}
+const tick='<span class="paid"><span class="tick"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg></span>Paid in Stripe</span>';
+function card(r){
+  if(!r)return;const rows=(r.decisions||[]).map(d=>`<div class="row ${d.status}"><span>${esc(d.name)}</span><span>${gbp(d.price)} <small>${esc(d.status.replace('_',' '))} · ${d.clause}</small></span></div>`).join('');
+  const title={restock:'Basket',booking:'Deposit',invoice:'Invoice'}[r.demo]||r.demo;let act='';
+  if(r.status==='awaiting_human')act=`<button class="btn" data-ap="${r.id}">Approve &amp; pay</button>`;
+  if(r.status==='awaiting_diner'&&r.stripe.paymentLink)act=`<a class="btn" target="_blank" href="${r.stripe.paymentLink.url}">Open deposit link</a>`;
+  if(r.status==='paid')act=tick;
+  if(r.stripe?.invoice?.hostedUrl)act+=` <a class="btn alt" target="_blank" href="${r.stripe.invoice.hostedUrl}">Stripe invoice</a>`;
+  const c=add(`<h3>${title} · ${esc(r.status.replace('_',' '))}</h3>${rows}<div class="total">${gbp(0)}</div>${act} <a class="btn alt" href="${r.url}">Why?</a>`,'card');
+  count(c.querySelector('.total'),r.total);
+  const b=c.querySelector('[data-ap]');if(b)b.onclick=async()=>{b.disabled=true;b.textContent='Paying…';
+    const j=await (await fetch('/r/'+r.id+'/approve',{method:'POST',headers:{accept:'application/json'}})).json();
+    add('<span class="tag">Sally</span>Approved by you. Paid the rest in Stripe. Total '+gbp(j.total)+'.','msg sally');card({...j,url:'/r/'+j.id});poll()};
+}
+async function send(text){if(!text.trim())return;add(esc(text),'msg me');const t=add('<i></i><i></i><i></i>','typing');
+  const j=await (await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({text})})).json();
+  t.remove();if(j.record)mine.add(j.record.id);add('<span class="tag">Sally</span>'+linkify(j.reply),'msg sally');card(j.record);poll()}
+$('#f').onsubmit=e=>{e.preventDefault();send($('#q').value);$('#q').value=''};
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>send(c.textContent));
+async function poll(){try{const j=await (await fetch('/api/feed')).json();count($('#moved'),j.moved);
+  const feed=$('#feed');feed.innerHTML=j.lines.map(l=>`<div><span class="ch">${esc(l.channel)}</span><b>${esc(l.event.replace(/_/g,' '))}</b>${l.amount!=null?' · '+gbp(l.amount):''}<em>${esc(l.why||l.demo)}</em><code>${l.id}</code></div>`).join('');
+  for(const r of j.records){if(seen.has(r.id))continue;seen.add(r.id);
+    if(!first&&!mine.has(r.id)&&(r.channel==='sms'||r.channel==='voice')){add(`<span class="tag">${r.channel==='sms'?'Text':'Call'} from a phone</span>${esc(r.request)}`,'msg me');
+      const full=await (await fetch('/api/records/'+r.id)).json();card({...full,url:'/r/'+r.id})}}
+  first=false}catch(e){}}
+poll();setInterval(poll,2000);
+</script></body></html>

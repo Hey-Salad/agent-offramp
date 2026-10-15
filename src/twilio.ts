@@ -24,7 +24,9 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     if (!r.ok) throw new Error(`${path} -> ${r.status}`);
     return r.json() as Promise<any>;
   }
+  let lastId = "";
   const tag = (id: string, sid: string, channel: string, from: string, text: string) => {
+    lastId = id;
     const r = memory.get(id); if (!r) return;
     r.channel = channel; r.audit.push({ at: new Date().toISOString(), event: "twilio_trigger", channel, sid, from: mask(from), text }); memory.save(r);
   };
@@ -73,6 +75,27 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     const m = await twilio(sid, tok).messages.create({ to, from, body });
     return m.sid;
   }
+
+  // Web chat: same router as /sms, JSON in/out.
+  app.post("/api/chat", async (req, res) => {
+    const text = String(req.body?.text || "");
+    lastId = "";
+    let reply: string;
+    try { reply = await route(text, "CHAT_" + Date.now(), "chat", "web"); }
+    catch (e: any) { reply = "Sally: something went wrong, a human will follow up."; console.error(e.message); }
+    const r = lastId ? memory.get(lastId) : null;
+    res.json({ reply: reply.replace(/^Sally:\s*/, ""), record: r ? { id: r.id, demo: r.demo, status: r.status, total: r.total, decisions: r.decisions, stripe: r.stripe, url: `/r/${r.id}` } : null });
+  });
+  app.get("/api/feed", (_req, res) => {
+    const today = new Date().toISOString().slice(0, 10);
+    const rs = memory.all().filter((r: any) => r.demo);
+    const paidIn = (r: any) => (r.stripe?.auto?.amount || 0) + (r.stripe?.approved?.amount || 0) + (r.stripe?.invoice?.amount || 0) + (r.status === "paid" && r.demo === "booking" ? r.total : 0);
+    const moved = rs.filter((r: any) => r.createdAt.startsWith(today)).reduce((s: number, r: any) => s + paidIn(r), 0);
+    const why = (a: any) => (a.tools ? `${a.via === "agent-toolkit" ? "Stripe Agent Toolkit" : "Stripe SDK"}: ${a.tools.join(", ")}` : "") || a.note || a.reason || (a.clause ? `Policy ${a.clause}` : "") || (a.text ? `“${a.text}”` : "");
+    const lines = rs.slice(0, 15).flatMap((r: any) => r.audit.map((a: any) => ({ id: r.id, demo: r.demo, at: a.at, event: a.event, channel: a.channel || r.channel || "web", amount: a.amount ?? a.autoPay ?? null, why: why(a) })))
+      .sort((a: any, b: any) => b.at.localeCompare(a.at)).slice(0, 40);
+    res.json({ moved: Math.round(moved * 100) / 100, lines, records: rs.slice(0, 15).map((r: any) => ({ id: r.id, demo: r.demo, status: r.status, total: r.total, channel: r.channel || "web", request: r.request, createdAt: r.createdAt })) });
+  });
 
   app.post("/sms", verify, async (req, res) => {
     let reply: string;

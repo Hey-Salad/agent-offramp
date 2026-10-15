@@ -18,6 +18,7 @@ Sally may build a basket on her own, but **never pays**. Payment is off-ramped t
 - **R3** Approved suppliers only: Waitrose, Bidfood, Brakes.
 - **R4** No alcohol unless a premises licence is on file (it isn't).
 - **H1** Bookings of 6+ guests pay a £10/head deposit via a Stripe Payment Link. No human raises the bill.
+- **H2** Any booking that mentions an allergy goes to a member of staff, not the agent.
 - **I1** Supplier invoices only from approved suppliers.
 - **I2** Invoice total must match the purchase order exactly; any mismatch waits for a human.
 - **I3** Invoices up to £250 are paid automatically.

@@ -1,31 +1,35 @@
-# 🥗 Sally for restaurants (HeySalad Off-Ramp)
+# Sally — open-source money agent for restaurants
 
-One agent for a restaurant. A written policy (`policy.md`). Real money moving in **Stripe test mode**. Every pound explained.
+**Text, call or chat; Sally acts within your policy, and every pound lands in Stripe with a reason.**
 
-## 3 one-click demos
-1. **Restock** (spend): Sally restocks the kitchen (real Waitrose basket + Bidfood items). Within policy she pays automatically (PaymentIntent). Items over £25 wait for a human: tap **Approve & pay**. Wrong supplier / alcohol are blocked with the clause.
-2. **Host booking** (collect): "Table for 6 Saturday 8pm". Rule H1: 6+ guests pay £10/head, so Sally creates a £60 Stripe **Payment Link**. No human raised the bill. Diner pays with 4242.
-3. **Supplier invoice** (spend + collect): Sally checks the Bidfood invoice against PO-1042 (supplier, amount, limit), creates a finalized Stripe **Invoice** (hosted page + PDF) and pays it. A mismatched invoice waits for a human.
+Built on **Stripe Agent Toolkit — [github.com/stripe/ai](https://github.com/stripe/ai)** (`@stripe/agent-toolkit`, MIT). Stripe test mode only. MIT licensed.
 
-Every result has Stripe IDs/links, an audit trail, and a **Why?** button. `/audit` lists every pound with its reason.
+## 3 demos (type them in the chat, or text/call the Twilio number)
+1. **Restock the kitchen** — Sally builds the basket, pays what is within policy (R1–R4), holds anything over £25 (R2), blocks alcohol and unapproved suppliers. Tap **Approve & pay** (or text `YES <id>`) for the rest.
+2. **Table for 6 Saturday 8pm** — groups of 6+ get a £10/head deposit Stripe Payment Link (H1). No human raises the bill. Allergy mentions go to staff.
+3. **Pay the Bidfood invoice** — Sally checks supplier + purchase order (I1–I3), then creates and pays a Stripe invoice. Mismatches wait for a human.
 
-```mermaid
-flowchart LR
-  T[Trigger: restock / booking / supplier invoice] --> S[Sally applies policy.md]
-  S -->|within policy| P[Stripe test: PaymentIntent / Payment Link / Invoice]
-  S -->|over threshold or mismatch| H[Human approval page]
-  H --> P
-  S -->|breaks a rule| B[Blocked + clause]
-  P --> A[Audit record + Why?]
-  B --> A
-```
+## How it maps to judging
+| Criterion | Where |
+|---|---|
+| Money moves in Stripe test mode | PaymentIntents, Payment Links, Customers, Invoices + invoice items: real test objects |
+| Autonomy within policy | `policy.md` rules run in code **before** any Stripe call; amounts come from policy, never the model; over-limit → human |
+| Explains every pound | Live audit panel, `/r/:id/why`, `/audit`, every line cites a clause |
+| Product & creativity | One agent across chat, SMS and voice for a real restaurant |
 
-## Run
+## Quickstart
 ```bash
 npm install
-echo "STRIPE_SECRET_KEY=sk_test_..." > .env   # test keys only; live keys are refused
-npm run dev   # http://localhost:3000
+cp .env.example .env   # STRIPE_SECRET_KEY=sk_test_...
+npm run dev            # http://localhost:3000
 ```
-Optional: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM` for SMS/voice at `/twilio/sms` and `/twilio/voice`. The original grocery off-ramp is still at `/shop`.
 
-MIT licence.
+## Twilio (SMS + voice)
+Set `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_PHONE_NUMBER`, `PUBLIC_URL` in `.env`. On the number in the Twilio console:
+- Messaging webhook: `POST {PUBLIC_URL}/sms`
+- Voice webhook: `POST {PUBLIC_URL}/voice`
+
+Requests are signature-checked when `TWILIO_AUTH_TOKEN` is set. Phone triggers appear live in the web chat.
+
+## For other agents
+See [AGENTS.md](AGENTS.md): `POST /api/chat {"text": "..."}`.
