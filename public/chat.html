@@ -89,14 +89,31 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 #panel .it,#panel .why{background:#f5f5f5;border-radius:14px;padding:8px 12px;margin:6px 0}
 .av{border-radius:50%}
 @media(max-width:820px){#panel{top:auto;right:0;bottom:0;height:78vh;border-radius:28px 28px 0 0}}
+/* v2: dock composer + briefcase */
+.app{display:block}.chat{height:100vh}#log{padding-bottom:190px;max-width:860px;width:100%;margin:0 auto}
+.dock{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);width:min(680px,calc(100% - 120px));z-index:15;display:flex;flex-direction:column;align-items:center;gap:10px}
+.dock .chips{padding:0;justify-content:center}.dock .chip{font-size:13px;padding:6px 12px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.07)}
+#f{width:100%;display:flex;align-items:center;gap:8px;background:#141414;border-radius:30px;padding:8px 8px 8px 22px;box-shadow:0 14px 40px rgba(0,0,0,.22);transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+#f:focus-within{transform:scale(1.03);box-shadow:0 18px 50px rgba(0,0,0,.3)}
+#q{background:transparent!important;box-shadow:none!important;color:#fff;padding:12px 0;font-size:16px}#q::placeholder{color:#9a9a9a}
+#send{width:46px;height:46px;border-radius:50%;border:0;background:#fff;display:grid;place-items:center;cursor:pointer;flex:none;transition:transform .15s}#send:hover{transform:scale(1.08)}#send svg{width:20px;height:20px;stroke:#000;stroke-width:2.4;fill:none}
+#brief{position:fixed;right:26px;bottom:30px;width:60px;height:60px;border-radius:50%;border:0;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.16);cursor:pointer;z-index:25;display:grid;place-items:center;transition:transform .2s}
+#brief:hover{transform:scale(1.06)}#brief svg{width:26px;height:26px;stroke:#000;stroke-width:1.8;fill:none}
+#brief .bd{position:absolute;top:-6px;right:-10px;background:#ed4c4c;color:#fff;font:700 11px inherit;font-family:inherit;border-radius:999px;padding:3px 7px;white-space:nowrap;transition:transform .3s}
+#brief .bd:empty{display:none}#brief.pulse{animation:pulse .7s ease 2}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18);box-shadow:0 0 0 12px rgba(0,0,0,.06)}}
+#panel{top:auto!important;bottom:100px;right:26px;height:min(680px,calc(100vh - 124px))!important;transform-origin:calc(100% - 30px) calc(100% + 70px);transform:scale(.08)!important;opacity:0;pointer-events:none;transition:transform .42s cubic-bezier(.2,.8,.2,1),opacity .3s}
+#panel.open{transform:none!important;opacity:1;pointer-events:auto}#panel aside{padding:18px 0 0}
+@media(max-width:820px){.dock{width:calc(100% - 100px);left:16px;transform:none}#brief{right:16px;bottom:24px}#panel{right:0;bottom:0;width:100%;height:80vh!important;transform-origin:calc(100% - 46px) 100%;border-radius:28px 28px 0 0}}
 </style></head><body><div class="app">
 <section class="chat">
 <header><img class="logo" src="/heysalad-logo-black.svg" alt="HeySalad"><h1>Sally</h1><span>Stripe test mode</span></header>
 <div id="log"><div class="msg sally"><span class="tag">Sally</span>Hi, I'm Sally. What do you need?</div></div>
-<div class="chips"><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
-<form id="f"><input id="q" placeholder="Message Sally…" autocomplete="off"><button class="btn" style="margin:0">Send</button></form>
+<div class="dock"><div class="chips"><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
+<form id="f"><input id="q" placeholder="Message Sally…" autocomplete="off"><button id="send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></form></div>
 </section>
-<aside>
+</div>
+<div id="panel"><button class="x" aria-label="Close">✕</button><div id="pc"></div><aside>
 <div class="lbl">Money moved today</div><div class="moved" id="moved">£0.00</div>
 <details><summary>Policy</summary><div class="dd"><ol>
 <li><b>R1</b>Restock cap £150/week</li><li><b>R2</b>Items over £25 need you</li>
@@ -104,8 +121,7 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 <li><b>H1</b>6+ guests: £10/head deposit</li><li><b>H2</b>Allergies go to staff</li>
 <li><b>I1</b>Approved suppliers only</li><li><b>I2</b>Must match the PO</li><li><b>I3</b>Auto-pay up to £250</li></ol></div></details>
 <details><summary>Audit trail</summary><div class="dd feed" id="feed"></div></details>
-</aside></div>
-<div id="panel"><button class="x" aria-label="Close">✕</button><div id="pc"></div></div><div id="toast"></div>
+</aside></div><button id="brief" aria-label="Briefcase"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5v2M3 12.5h18M11 12.5v1.5h2v-1.5"/></svg><span class="bd" id="bd"></span></button><div id="toast"></div>
 <script>
 const $=s=>document.querySelector(s),log=$('#log'),seen=new Set(),mine=new Set();let first=true;
 const due=r=>r.demo==='restock'?(r.decisions||[]).filter(d=>d.status==='needs_approval').reduce((s,d)=>s+d.price,0):r.total;
@@ -120,7 +136,9 @@ function openP(d,el){if(!d)return;document.querySelectorAll('.co.sel').forEach(x
  <h4>Why (policy applied)</h4>${cls.map(c=>`<div class="why"><b>${c}</b>${esc(CL[c]||'')}</div>`).join('')}${(d.items||[]).filter(i=>i.reason).map(i=>`<div class="why" style="color:#666">${esc(i.name||'')}: ${esc(i.reason)}</div>`).join('')}
  <h4>Stripe</h4><div class="why">${link?`<a target="_blank" href="${esc(link)}">Open in Stripe</a> · `:''}<a href="/r/${r.id}">Full record</a> <code style="color:#999;font-size:11px">${esc(r.id)}</code></div>
  <div style="margin-top:18px">${st==='awaiting_human'?`<button class="btn" data-ap="${r.id}">Approve ${gbp(due(r))}</button>`:/paid|approved/.test(st)?tick+' <b>Paid</b>':''}</div>`;
- bindAp(r);$('#panel').classList.add('open')}
+ bindAp(r);pulse()}
+function pulse(){const b=$('#brief');b.classList.remove('pulse');void b.offsetWidth;b.classList.add('pulse');$('#panel').classList.add('open')}
+$('#brief').onclick=()=>{const p=$('#panel');if(p.classList.contains('open'))$('#panel .x').click();else{if(!$('#pc').innerHTML)$('#pc').innerHTML='<div style="font-weight:700;font-size:18px;margin:4px 0 6px">Briefcase</div>';p.classList.add('open')}};
 $('#panel .x').onclick=()=>{$('#panel').classList.remove('open');document.querySelectorAll('.co.sel').forEach(x=>x.classList.remove('sel'))};
 function toast(t,cb){const e=$('#toast');e.textContent=t;e.classList.add('on');e.onclick=cb;setTimeout(()=>e.classList.remove('on'),6000)}
 function add(html,cls){const d=document.createElement('div');d.className=cls;d.innerHTML=html;log.appendChild(d);log.scrollTop=1e9;return d}
@@ -149,7 +167,7 @@ async function send(text){if(!text.trim())return;autoOpened=0;add(esc(text),'msg
   t.remove();if(j.record)mine.add(j.record.id);add('<span class="tag">Sally</span>'+(j.record?({restock:'Here\'s the restock.',booking:'Deposit link ready.',invoice:'Invoice checked.'}[j.record.demo]||linkify(j.reply)):linkify(j.reply)),'msg sally');if(j.record)card(j.record);else if(/allerg/i.test(text)){const det={name:'Guest booking',amt:0,st:'staff',items:[{name:'Allergy mentioned',clause:'H2',reason:'Allergen requests always go to a human'}],r:{id:'',demo:'booking',channel:'chat',stripe:{}}};const c=co('Guest booking',0,'staff','',`<div><span>Allergy mentioned</span><span>H2</span></div>`,det);openP(det,c)}poll()}
 $('#f').onsubmit=e=>{e.preventDefault();send($('#q').value);$('#q').value=''};
 document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>send(c.textContent));
-async function poll(){try{const j=await (await fetch('/api/feed')).json();count($('#moved'),j.moved);
+async function poll(){try{const j=await (await fetch('/api/feed')).json();count($('#moved'),j.moved);const na=j.records.filter(r=>r.status==='awaiting_human').length;$('#bd').textContent=na?na+' to approve':(j.moved?gbp(j.moved):'');
   const feed=$('#feed');feed.innerHTML=j.lines.map(l=>`<div><span class="ch">${esc(l.channel)}</span><b>${esc(l.event.replace(/_/g,' '))}</b>${l.amount!=null?' · '+gbp(l.amount):''}<em>${esc(l.why||l.demo)}</em></div>`).join('');
   for(const r of j.records){const k=r.id+':'+r.channel;if(seen.has(k))continue;seen.add(k);
     if(!first&&!mine.has(r.id)&&(r.channel==='sms'||r.channel==='voice')){add(`<span class="tag">${r.channel==='sms'?'Text':'Call'} from a phone</span>${esc(r.request)}`,'msg me');
