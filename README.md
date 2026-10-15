@@ -71,7 +71,7 @@ sequenceDiagram
 | **Checkout** | ✅ Built | `checkout.sessions.create` for approvals and payments (`server.ts`) |
 | **Payment Links** | ✅ Built | Booking deposits for 6+ (`restaurant.ts`) |
 | **Invoicing** | ✅ Built | Supplier invoices created, finalised and paid, plus customer invoices drafted and sent (`restaurant.ts`) |
-| **Agent toolkit / MCP** | ✅ Built | `@stripe/agent-toolkit` plus Sally's 10 tools at `/mcp` (`mcp.ts`, `toolkit.ts`) |
+| **Agent toolkit / MCP** | ✅ Built | `@stripe/agent-toolkit` plus Sally's 16 tools at `/mcp` (`mcp.ts`, `toolkit.ts`) |
 | **Issuing** (virtual cards) | 🟡 Code built, account pending | `stripe-extra.ts`: virtual card with spending controls mirroring policy.md (£50/auth, grocery MCCs, no liquor) plus a real-time `issuing_authorization.request` approve/decline. Issuing isn't enabled on our test account yet, so card creation fails gracefully and the policy decisions run locally |
 | **Connect** | ✅ Built | Venue connected account plus a destination charge with a HeySalad application fee (`pay_venue`) |
 | **Billing** | ✅ Built | Sally Plus £9/month via Products, Prices and Subscriptions (`subscribe_sally_plus`) |
@@ -84,7 +84,7 @@ Stripe test mode only: `sk_test_` is enforced at deploy.
 - **Policy engine:** `policy.md` rules (R1–R4, H1, I1–I4, S1) run in code **before** any Stripe call. Amounts come from policy and the basket, never the model, and anything over a limit goes to human approval.
 - **Stripe test mode:** real test objects (PaymentIntents, Checkout Sessions, Payment Links, Customers, Invoices), with webhooks confirming payment.
 - **Audit log:** every decision is appended with its policy clause and Stripe ID, shown live in the panel, at `/audit` and at `/r/:id/why`.
-- **MCP:** Sally is an MCP server (stdio + Streamable HTTP `/mcp`) with 10 tools: restock, book_table, pay_supplier_invoice, prepare_invoice, send_invoice, email_shopping_list_draft, approve, get_audit, get_policy and shop. Every tool calls Sally's own API, so the policy can't be bypassed.
+- **MCP:** Sally is an MCP server (stdio + Streamable HTTP `/mcp`) with 16 tools: restock, book_table, pay_supplier_invoice, prepare_invoice, send_invoice, email_shopping_list_draft, approve, get_audit, get_policy, shop, remember, recall, issue_card, pay_venue, subscribe_sally_plus and pay_with_shared_token. Every tool calls Sally's own API, so the policy can't be bypassed.
 - **Modal:** the app runs on Modal (`modal_app.py`, with a volume-backed `data/`). Sally's cloud browser is a Modal sandbox running Playwright Chromium, the Sally extension and a noVNC live view, which shop Ocado and Waitrose basket-only.
 
 ## Cognee memory
