@@ -9,7 +9,7 @@ import { mountRestaurant } from "./restaurant.js";
 import { mountTwilio } from "./twilio.js";
 import { mountMcp } from "./mcp.js";
 import { mountShop } from "./shop.js";
-import { mountStripeExtra, decideAuthorization, stripeX } from "./stripe-extra.js";
+import { mountStripeExtra, decideAuthorization, stripeX, stripeI } from "./stripe-extra.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -26,9 +26,9 @@ app.post("/stripe/webhook", express.raw({ type: "application/json" }), async (re
     const secret = process.env.STRIPE_WEBHOOK_SECRET;
     const ev = secret && stripe ? stripe.webhooks.constructEvent(req.body, req.headers["stripe-signature"] as string, secret) : JSON.parse(req.body.toString());
     if (ev.type === "checkout.session.completed") await markPaid(ev.data.object.id, "webhook");
-    if (ev.type === "issuing_authorization.request" && stripeX) { // real-time auth: same rules as policy.md
+    if (ev.type === "issuing_authorization.request" && stripeI) { // real-time auth: same rules as policy.md
       const a = ev.data.object, d = decideAuthorization(a);
-      await (d.approved ? stripeX.issuing.authorizations.approve(a.id) : stripeX.issuing.authorizations.decline(a.id, { metadata: { clause: d.clause, reason: d.reason } }));
+      await (d.approved ? stripeI.issuing.authorizations.approve(a.id) : stripeI.issuing.authorizations.decline(a.id, { metadata: { clause: d.clause, reason: d.reason } }));
     }
     res.json({ received: true });
   } catch (e: any) { res.status(400).send(e.message); }
