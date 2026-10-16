@@ -148,7 +148,7 @@ function paymentsPage() {
   const rows = records().flatMap(r => paymentsOf(r).map(p => ({ r, p })));
   const spt = (extraState().spts || []).map((s: any) => `<tr><td>Shared token checkout<br><span class="muted">${when(s.at)}</span></td><td class="r">${gbp(s.amount)}</td><td>${status(s.status)}</td><td class="hide-m">${obj(s.paymentIntent)}</td><td></td></tr>`).join("");
   const body = rows.map(({ r, p }) => `<tr><td><a href="/r/${r.id}">${esc(name(r))}</a><br><span class="muted">${when(r.createdAt)} · ${esc(p.kind)}</span></td><td class="r">${gbp(p.amount)}</td><td>${status(p.status)}</td><td class="hide-m">${obj(p.pi)}</td><td><a class="btn soft" href="/receipt/${r.id}?pi=${esc(p.pi)}">Receipt</a></td></tr>`).join("");
-  return layout("Payments", `<h1>Payments</h1><p class="sub">Every Payment Intent Sally created, with its receipt.</p><div class="card scroll"><table><tr><th>What</th><th class="r">Amount</th><th>Status</th><th class="hide-m">Stripe</th><th></th></tr>${body + spt || `<tr><td colspan=5 class="empty">No payments yet. Ask Sally to restock in <a href="/">Chat</a>.</td></tr>`}</table></div>${stripeOutput([...rows.map(({ p }) => ({ id: p.pi, label: "Payment Intent" })), ...(extraState().spts || []).map((x: any) => ({ id: x.paymentIntent, label: "Payment Intent (shared token)" }))])}`, "/payments", records().flatMap(bookEntries));
+  return layout("Payments", `<h1>Payments</h1><p class="sub">Every Payment Intent Sally created, with its receipt.</p><div class="card scroll"><table><tr><th>What</th><th class="r">Amount</th><th>Status</th><th class="hide-m">Stripe</th><th></th></tr>${body + spt || `<tr><td colspan=5 class="empty">No payments yet. Ask Sally to restock in <a href="/">Chat</a>.</td></tr>`}</table></div>${stripeOutput([...(extraState().spts || []).slice(-2).reverse().map((x: any) => ({ id: x.paymentIntent, label: "Payment Intent (shared payment token)" })), ...rows.map(({ p }) => ({ id: p.pi, label: "Payment Intent" }))])}`, "/payments", records().flatMap(bookEntries));
 }
 function receiptPage(r: any, pi?: string) {
   const p = paymentsOf(r).find(x => !pi || x.pi === pi) || paymentsOf(r)[0];
@@ -202,7 +202,7 @@ export function recordPage(r: any) {
   return layout(r.id, `<h1>${esc(name(r))} · ${gbp(r.total)} ${status(r.status)}</h1><p class="sub">“${esc(r.request)}” · ${when(r.createdAt)}</p>
 <div class="card">${money || `<span class="empty">No Stripe object yet.</span>`}</div>${act}${dinr}
 <div class="card scroll"><table><tr><th>Line</th><th class="r">£</th><th>Decision</th><th>Clause</th><th></th></tr>${rows}</table><p id="w" class="muted"></p></div>
-${stripeOutput([...pays.map(p => ({ id: p.pi, label: "Payment Intent + Charge" })), { id: inv?.id, label: "Invoice" }, { id: r.stripe?.paymentLink?.id, label: "Payment Link" }, { id: r.stripe?.sessionId || r.stripe?.session, label: "Checkout Session" }])}<div class="card"><h2>Audit trail</h2><pre>${esc(JSON.stringify(r.audit, null, 2))}</pre></div>
+${stripeOutput([...pays.map(p => ({ id: p.pi, label: "Payment Intent + Charge" })), { id: inv?.id, label: "Invoice" }, { id: r.stripe?.paymentLink?.id, label: "Payment Link" }, { id: r.stripe?.sessionId || r.stripe?.session || r.stripe?.payment?.checkoutSession, label: "Checkout Session" }])}<div class="card"><h2>Audit trail</h2><pre>${esc(JSON.stringify(r.audit, null, 2))}</pre></div>
 <script>async function why(q){const j=await (await fetch('/r/${r.id}/why?q='+encodeURIComponent(q))).json();w.textContent='Sally: '+j.answer}</script>`, "/payments", bookEntries(r));
 }
 
