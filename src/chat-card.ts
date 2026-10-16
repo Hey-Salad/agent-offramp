@@ -6,7 +6,7 @@ import {POLICY} from './policy.js';
 // Fixed, documented test scenarios. Unrecognised spending requests never go to AI.
 export function cardCommand(text: string) {
  if (!/\b(card|ocado|off[- ]licence|off[- ]license)\b/i.test(text)||!/\b(spend|pay|try|purchase|test)\b/i.test(text))return null;
- if (/[€$]|\b(?:usd|eur|dollars|euros)\b/i.test(text))return {unsupported:true} as const;
+ if (!/£|\b(?:gbp|pounds)\b/i.test(text)||/[€$¥]|\b(?:usd|eur|cad|aud|jpy|chf|zar|dollars|euros|yen)\b/i.test(text))return {unsupported:true} as const;
  const n=text.match(/(?:£\s*)?(\d+(?:\.\d{1,2})?)(?![\d.])\s*(?:pounds|gbp)?/i);const amount=n?Number(n[1]):NaN;
  const off=/off[- ]licen[cs]e/i.test(text);
  if(!off&&!/\bocado\b/i.test(text))return {unsupported:true} as const;

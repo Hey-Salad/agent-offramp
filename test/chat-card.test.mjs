@@ -10,7 +10,7 @@ const {cardCommand,runCardChat,stripeCardAttempt}=await import('../src/chat-card
 const {memory}=await import('../src/memory.ts');
 try{
  assert.equal(cardCommand('restock'),null);assert.equal(cardCommand('prepare an invoice for Acme 120 for catering'),null);
- for(const input of ['spend £81 at Ocado','spend £800 at Ocado','pay £12 at an off-licence','try spending eighty on the card','spend $80 at Ocado','spend £80.999 at Ocado','spend £80 on the card at Amazon'])assert.equal(cardCommand(input).unsupported,true);
+ for(const input of ['spend £81 at Ocado','spend £800 at Ocado','pay £12 at an off-licence','try spending eighty on the card','spend $80 at Ocado','spend 80 CAD at Ocado','spend £80 CAD at Ocado','spend £80.999 at Ocado','spend £80 on the card at Amazon'])assert.equal(cardCommand(input).unsupported,true);
  const c=cardCommand('Spend £80 at Ocado');assert.deepEqual(c,{amount:80,merchant:'Ocado',category:'grocery_stores_supermarkets'});
  const fake=async command=>({proof:{id:'iauth_test',object:'issuing.authorization',status:'closed',approved:false,amount:command.amount*100,currency:'gbp',livemode:false,last4:'0005',client_secret:'SECRET_SENTINEL'},limitGBP:50});
  const declined=await runCardChat(c,'Spend £80 at Ocado','chat',fake);

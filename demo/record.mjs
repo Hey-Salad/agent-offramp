@@ -4,38 +4,19 @@ import {execFileSync} from 'node:child_process';
 import {chromium} from 'playwright';
 import {scenes} from './scenes.mjs';
 import {cardHTML} from './cards.mjs';
+import {chatDecline} from './chat-card-record.mjs';
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 // Node's monotonic clock survives the hosted app's post-action page reload.
 const stamp=async()=>performance.now()/1000;
 export async function hostedSetup(context){
- const css=await fs.readFile('demo/hosted-issuing.css','utf8');
+ const css=await fs.readFile('demo/walkthrough.css','utf8');
  await context.addInitScript(css=>{document.addEventListener('DOMContentLoaded',()=>{const s=document.createElement('style');s.textContent=css;document.head.appendChild(s)},{once:true})},css);
 }
 export async function hostedDecline(page){
- // Read the genuine response before the app's immediate reload destroys it.
- // Fulfil with the original response, without changing any bytes or status.
- let resolveResult;
- const response=new Promise(r=>{resolveResult=r});
- await page.route('**/api/issuing/test-auth',async route=>{
-  const original=await route.fetch();resolveResult(await original.json());await route.fulfill({response:original});
- });
- await page.getByRole('button',{name:'£80 at Ocado',exact:true}).click({delay:120});
- const result=await response;
- if(!result.ok||result.simulated||result.approved!==false||!result.authorization?.startsWith('iauth_'))throw Error('Real hosted card decline required');
- await page.waitForLoadState('domcontentloaded');
- // The button reloads after the POST. Wait for the new authorization to exist.
- const ob=page.locator('.ob[data-sid="'+result.authorization+'"]');await ob.waitFor({state:'attached',timeout:30000});
- const details=ob.locator('xpath=..');await details.locator(':scope > summary').click({delay:120});
- await page.waitForFunction(id=>document.querySelector('.ob[data-sid="'+id+'"]')?._j?.objects?.some(o=>o.id===id),result.authorization,{timeout:60000});
- const proof=await ob.evaluate((el,id)=>el._j.objects.find(o=>o.id===id),result.authorization);
- if(proof.livemode!==false||proof.approved!==false||proof.amount!==8000)throw Error('Hosted decline readback mismatch');
- await details.evaluate(el=>el.scrollIntoView({block:'start',behavior:'instant'}));
- await page.evaluate(()=>window.scrollBy(0,-110));
- await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
- const selected=Object.fromEntries(['id','status','approved','amount','currency','livemode'].map(k=>[k,proof[k]]));
- selected.decline_reason=proof.request_history?.[0]?.reason;
- return {reply:'£80 declined by Stripe Issuing',proof:selected,audit:{via:'hosted-card-button'}};
+ const result=await chatDecline(page,1200);
+ return {reply:'£80 declined in the original Sally chat',proof:result.proof,audit:result.audit};
 }
+
 async function marker(page){
  await page.evaluate(()=>{let d=document.createElement('div');d.id='capture-marker';d.style='position:fixed;inset:0;background:#000;z-index:2147483647';document.body.appendChild(d)});
  await sleep(500);
@@ -53,7 +34,7 @@ export async function record(root,localURL,resume=false,onlyScene=null){
   const hosted=i===5;if(hosted)await hostedSetup(context);
   const page=await context.newPage();page.setDefaultTimeout(60000);
   if(i===0||i===10){await page.setContent(await cardHTML(i===10));await page.evaluate(()=>document.fonts.ready)}
-  else {let url=hosted?new URL('/card',process.env.APP_URL).href:new URL('/agent9?scene='+i,localURL).href;await page.goto(url,{waitUntil:'networkidle'});}
+  else {let url=hosted?new URL('/',process.env.APP_URL).href:new URL('/agent9?scene='+i,localURL).href;await page.goto(url,{waitUntil:'networkidle'});}
   await page.mouse.move(1600,1050);await sleep(300);
   const start=await marker(page);let action=start,proof=start,result=null;
   if(i>0&&i<10){await sleep(1000);action=await stamp(page);

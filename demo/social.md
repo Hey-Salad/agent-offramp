@@ -8,7 +8,7 @@
 | 74.73–83.73s | A six-guest chat request becomes a £60 deposit link, then opens customer checkout. |
 | 97.23–104.10s | The checked supplier invoice opens a paid Stripe invoice with line items and receipt downloads. |
 
-**Selected: Issuing.** The usable card scene itself is 27.267–32.333s, only 5.067 seconds. To make a readable eight-second cycle without including adjacent products, begin with one second of its genuine decline proof (30.133–31.133s), then replay the complete scene retimed to seven seconds. It ends on the same stable proof view it starts on. The hard cut to the card setup is inside the loop; the wrap boundary has matching UI. No reverse action, fabricated result, captions, animated zoom or audio.
+**Selected: Issuing, now shown through the original chat.** The user subsequently preferred the chat interface and requested deployment of real card spending there. The source is the fresh hosted recording in `demo/work/chat-card/chat-card.mp4`, with measured phases in its `beats.json`: request typed → real declined response → click Stripe output → verified authorization. The eight-second loop uses a 1s proof lead-in, 0.6s before typing, 1.4s typing/result transition, 1.2s clear reply, 0.8s opening proof, and 3s proof. Each phase uses its real measured source timestamps; no UI is fabricated. It starts and ends on the same completed chat/proof view. No captions, animated zoom or audio.
 
 Constant crops centre on the content at x=1076: GIF and square video use 1080×1080 from x=536, y=0; the landscape X video uses 1440×810 from x=356, y=0. The £80 declined row and `approved: false` remain visible. GIF uses explicit palettegen/paletteuse, 192 colours, Sierra dithering and infinite looping. The white footage is opaque, so its text remains legible against either GitHub theme.
 
@@ -24,14 +24,14 @@ Rebuild from the existing combined demo: `npm run demo:social`. It does not call
 - [x] README alt text exact, hero below logo/tagline, readable in light/dark — rendered before/after screenshots.
 - [x] Changes pushed to PR #10 branch; no merge.
 
-Validation: `node demo/social.mjs` and `node demo/social-verify.mjs` passed **596 checks**. All **600 decoded frames** were covered (580 distinct PNGs after exact duplicate detection). No full card number, key or client-secret value was detected. First/last-frame mean RGB error is below 0.10/255 for every format, with no pixel-channel difference above 15/255 in the downscaled boundary comparison. Visual review confirms stable proof views and the £80 decline remains readable.
+Validation: `npm run demo:social` passed **566 checks**. All **600 decoded frames** were covered (550 distinct images after exact duplicate detection). No full card number, key or client-secret value was detected. Boundary comparisons and visual review confirm matching completed chat/proof views.
 
 | Export | Dimensions | Frame rate | Duration | Bytes |
 | --- | --- | --- | --- | ---: |
-| `agent9.gif` | 1200×1200 | 15 fps (120 frames / 8s) | 8.00s | 1,698,537 |
-| `agent9-x.mp4` | 1280×720 | 30 fps | 8.00s | 218,946 |
-| `agent9-square.mp4` | 1080×1080 | 30 fps | 8.00s | 314,349 |
+| `agent9.gif` | 1200×1200 | 15 fps | 8.00s | 618,838 |
+| `agent9-x.mp4` | 1280×720 | 30 fps | 8.00s | 73,557 |
+| `agent9-square.mp4` | 1080×1080 | 30 fps | 8.00s | 104,593 |
 
-GIF centisecond timing alternates six/seven-centisecond frame delays, totaling 8s at 15 effective fps; ffprobe's GIF `avg_frame_rate` reports 50/3, while its `r_frame_rate` and the decoded frame-count/runtime ratio are 15. Verification uses the actual frame-count/runtime ratio, not that unreliable GIF average field.
+The GIF's 120 decoded frames / 8 seconds give 15 effective fps, using the format's six/seven-centisecond frame delays. Validation uses frame count / runtime rather than ffprobe's unreliable GIF average-rate field.
 
 README preview reproduction: `node demo/readme-preview.mjs --before=ee7a8f2`. Four screenshots under `demo/out/gif-proof/` show before/after in both themes, with theme-correct logos and the complete 720px hero. The renderer uses GitHub's Markdown API with local theme framing. `npm run lint` and module syntax checks pass.

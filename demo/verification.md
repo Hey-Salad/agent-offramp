@@ -1,5 +1,13 @@
 # Agent 9 verification
 
+## Hosted chat-card update
+
+The user explicitly requested deployment of card spending in the original chat. The app was deployed from PR #10 to its existing Modal test endpoint, with the exact commit verified through `/api/build`. No local Issuing key was used and no PR was merged. A fresh hosted request **Spend £80 at Ocado** returned a real `iauth_`, status `closed`, `approved: false`, GBP 8000 and `livemode: false`; the actual card's £50 controls were verified before authorization. The response says **Declined · No money taken**, and inline Stripe output exposes only selected safe fields plus the last four digits.
+
+`npm run test:chat-card` checks deterministic parsing, foreign-currency refusal, real-object validation, no fake decline on missing credentials, authorization wording, secret minimization, persistent audit and concurrent response isolation. Its missing-key browser check makes no Stripe calls. Type checks and Agent 9 tests pass. Hosted read-only UI checks: 63/63.
+
+The Issuing scene in the overview and combined video now uses this chat recording. Both full-video runtimes and voice timestamps are unchanged. `npm run demo -- --edit-only` rebuilds the 59.133s overview and 108.100s combined formats from the real saved sources. The social GIF/X clips are rebuilt by `npm run demo:social`; see [social evidence](social.md) for all-frame checks, sizes and light/dark README screenshots. Previous card-page proof is superseded by the new chat proof.
+
 ## Combined chat-first cut — 16 October 2026
 
 The final `npm run demo -- --combine-only` run passed **332 checks** and exported both formats at **108.100 seconds**. The longer runtime follows the user's subsequent request to combine the overview with step-by-step original chat journeys. The original 59.133-second overview remains under the ignored `demo/out/overview/`.

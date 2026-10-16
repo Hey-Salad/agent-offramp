@@ -174,12 +174,12 @@
     "product": "Issuing",
     "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-05.mp4",
-      "markerEnd": 1.866667,
+      "source": "demo/work/chat-card/chat-card.mp4",
+      "markerEnd": 2.566667,
       "beforeStart": 0,
-      "actionStart": 1.0017768749999902,
-      "proofStart": 4.830730750000001,
-      "end": 10.831054457999997
+      "actionStart": 1.0030268339999995,
+      "proofStart": 5.561817833999999,
+      "end": 9.569638916999999
     },
     "edit": {
       "scene": 5,
@@ -196,15 +196,16 @@
       "line": "Issuing keeps your agent within budget."
     },
     "proof": {
-      "id": "iauth_1UR1McLvLGMlREYZZSVpe9jE",
+      "id": "iauth_1UR2dQLvLGMlREYZw4FR0Nr8",
+      "object": "issuing.authorization",
       "status": "closed",
       "approved": false,
       "amount": 8000,
       "currency": "gbp",
       "livemode": false,
-      "decline_reason": "authorization_controls",
+      "last4": "0005",
       "execution": {
-        "via": "hosted-card-button"
+        "via": "hosted-original-chat"
       }
     }
   },

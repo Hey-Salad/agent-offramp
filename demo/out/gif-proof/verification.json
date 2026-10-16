@@ -1,6 +1,6 @@
 {
   "decodedFrames": 600,
-  "distinctFramesScanned": 580,
+  "distinctFramesScanned": 550,
   "checks": [
     {
       "name": "agent9.gif dimensions, eight seconds, fps and byte limit",
@@ -463,10 +463,6 @@
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-101.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-gif/frame-102.png no keys, PAN or client secret",
       "ok": true
     },
@@ -619,31 +615,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-020.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-x-mp4/frame-021.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-022.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-023.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-025.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-026.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-029.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -691,11 +663,11 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-042.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-041.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-043.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-042.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -707,7 +679,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-047.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-046.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -739,43 +711,15 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-055.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-056.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-057.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-059.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-060.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-062.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-063.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-064.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-067.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-x-mp4/frame-068.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-069.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-070.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -827,10 +771,6 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-083.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-x-mp4/frame-084.png no keys, PAN or client secret",
       "ok": true
     },
@@ -840,14 +780,6 @@
     },
     {
       "name": "agent9-x-mp4/frame-086.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-087.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-088.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -900,6 +832,10 @@
     },
     {
       "name": "agent9-x-mp4/frame-101.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-102.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -1067,27 +1003,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-144.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-x-mp4/frame-145.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-146.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-147.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-148.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-149.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -1192,10 +1108,6 @@
     },
     {
       "name": "agent9-x-mp4/frame-175.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-176.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -1363,6 +1275,10 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-218.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-219.png no keys, PAN or client secret",
       "ok": true
     },
@@ -1375,7 +1291,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-223.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-222.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -1387,11 +1303,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-227.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-228.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-226.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -1403,15 +1315,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-231.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-232.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-233.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-234.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -1424,6 +1328,10 @@
     },
     {
       "name": "agent9-x-mp4/frame-237.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-240.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -2011,14 +1919,6 @@
       "ok": true
     },
     {
-      "name": "agent9-square-mp4/frame-147.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-square-mp4/frame-148.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-square-mp4/frame-149.png no keys, PAN or client secret",
       "ok": true
     },
@@ -2255,10 +2155,6 @@
       "ok": true
     },
     {
-      "name": "agent9-square-mp4/frame-208.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-square-mp4/frame-209.png no keys, PAN or client secret",
       "ok": true
     },
@@ -2315,10 +2211,6 @@
       "ok": true
     },
     {
-      "name": "agent9-square-mp4/frame-223.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-square-mp4/frame-224.png no keys, PAN or client secret",
       "ok": true
     },
@@ -2335,10 +2227,6 @@
       "ok": true
     },
     {
-      "name": "agent9-square-mp4/frame-228.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
       "name": "agent9-square-mp4/frame-229.png no keys, PAN or client secret",
       "ok": true
     },
@@ -2347,15 +2235,7 @@
       "ok": true
     },
     {
-      "name": "agent9-square-mp4/frame-231.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-square-mp4/frame-232.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-square-mp4/frame-233.png no keys, PAN or client secret",
+      "name": "agent9-square-mp4/frame-234.png no keys, PAN or client secret",
       "ok": true
     },
     {
@@ -2390,18 +2270,18 @@
   "loopBoundaries": [
     {
       "file": "agent9.gif",
-      "meanAbsoluteRGBError": 0.06587565104166666,
-      "largeDifferenceFraction": 0
+      "meanAbsoluteRGBError": 0.0462890625,
+      "largeDifferenceFraction": 0.000029296875
     },
     {
       "file": "agent9-x.mp4",
-      "meanAbsoluteRGBError": 0.06695963541666666,
-      "largeDifferenceFraction": 0
+      "meanAbsoluteRGBError": 0.03683268229166667,
+      "largeDifferenceFraction": 0.000009765625
     },
     {
       "file": "agent9-square.mp4",
-      "meanAbsoluteRGBError": 0.09655598958333333,
-      "largeDifferenceFraction": 0
+      "meanAbsoluteRGBError": 0.05804361979166667,
+      "largeDifferenceFraction": 0.000029296875
     }
   ],
   "security": "Every decoded frame covered by exact-image deduplication and OCR; no key, full card number, client secret or known credential/app-origin value detected. Raw OCR stays ignored."

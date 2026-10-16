@@ -1,11 +1,13 @@
 {
-  "source": "demo/out/agent9-demo.mp4",
+  "source": "demo/work/chat-card/chat-card.mp4",
   "selectedSource": {
-    "start": 27.266666666666666,
-    "end": 32.33333333333333,
-    "proofVisibleAt": 29.833333333333332
+    "captureOffset": 2.566667,
+    "actionStart": 1.0030268339999995,
+    "responseVisibleAt": 3.7697230420000003,
+    "stripeOpenAt": 5.370846166999998,
+    "proofVisibleAt": 5.561817833999999
   },
-  "edit": "1s proof lead-in + full Issuing scene retimed to 7s; fixed crops, no overlays, no audio",
+  "edit": "Original chat: proof lead-in, request, real reply, expand Stripe output, proof. Measured phase retiming to 8s; no overlays or audio.",
   "exports": [
     {
       "file": "agent9.gif",
@@ -13,7 +15,7 @@
       "height": 1200,
       "fps": 15,
       "seconds": 8,
-      "bytes": 1698537,
+      "bytes": 618838,
       "audio": false,
       "codec": "gif"
     },
@@ -23,7 +25,7 @@
       "height": 720,
       "fps": 30,
       "seconds": 8,
-      "bytes": 218946,
+      "bytes": 73557,
       "audio": false,
       "codec": "h264"
     },
@@ -33,7 +35,7 @@
       "height": 1080,
       "fps": 30,
       "seconds": 8,
-      "bytes": 314349,
+      "bytes": 104593,
       "audio": false,
       "codec": "h264"
     }

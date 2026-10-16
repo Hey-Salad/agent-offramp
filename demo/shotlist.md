@@ -70,3 +70,7 @@ Acceptance before publishing: preserve every original nine-product clip and its 
 ### Chat-first steering, before replacement capture
 
 The user clarified that the demo should happen in the original **chat interface**. Replace record-page starts with real typed chat requests: `restock`, `table for 6 Saturday 8pm`, `prepare an invoice for Agent Nine Demo 120 for catering`, and `pay the Bidfood invoice`. Capture each actual response, then follow its real Receipt / Open link / Full record controls to the hosted documents. Existing deterministic policy permits the automatic test restock and matched supplier invoice; never approve the held restock, send the customer draft, or pay the deposit checkout. The walkthrough now makes fresh test examples through the original chat; discard the earlier two incomplete record-page captures. Each journey is continuously recorded and then split using its measured stage timestamps.
+
+### Hosted chat card update
+
+The user's later direction replaces the standalone card page with the original chat: **Spend £80 at Ocado** → plain-English declined response → expand inline **Stripe output**. The committed `demo/chat-card.md` plan preceded capture. The server verifies the actual existing test-card controls and retrieves the real authorization before claiming the result. This update is deployed only to the existing test app, explicitly requested by the user. The social loop and Issuing scene in both full-video formats now use this real hosted chat recording. No local Issuing key or merge.

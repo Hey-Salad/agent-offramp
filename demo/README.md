@@ -10,7 +10,7 @@ Set these environment variables, or put them in the ignored `demo/.env` (chmod 6
 
 - `STRIPE_SECRET_KEY`: an `sk_test_` key with Payments, Checkout, Payment Links, Invoicing, Connect, Billing, shared-payment test helpers and Agent Toolkit access.
 - `ELEVENLABS_API_KEY`: access to Jessica Gallagher (Irish), voice ID `DbwWo4rVEd5NrejHYUnm`, model `eleven_multilingual_v2`.
-- `APP_URL`: the existing hosted **test-mode** app, used for the Issuing scene and the original-interface chat walkthrough. Its server must already have an active test card, £50 spending limit, the £80 test authorization button and a working Stripe output panel. This URL is never rendered or logged.
+- `APP_URL`: the existing hosted **test-mode** app, used for the Issuing scene and the original-interface chat walkthrough. Its server must already have an active test card, £50 spending limit, the original chat card command and inline Stripe output. This URL is never rendered or logged.
 
 The other eight scenes run on an automatically started local app with an ephemeral port. The runner explicitly enables AGENT9_DEMO=1; the additional workspace is otherwise disabled. Its fixed commands and timestamped audit records follow recording rule D1 in policy.md. The local child gets only its test Stripe key; no Issuing, messaging or Cognee credentials. No hosted deployment occurs. The command prepares Connect's test venue and waits up to five minutes for its transfers capability to activate. If verification remains pending, it fails clearly; rerun when Stripe finishes verification. No simulated decline or Toolkit SDK fallback is accepted. Unavailable features fail the build.
 
@@ -65,3 +65,5 @@ The walkthrough types four real requests in the original hosted Chat: restock; t
 ## Social exports
 
 `npm run demo:social` builds and checks the eight-second Issuing loop from the combined recording: `demo/out/agent9.gif`, `agent9-x.mp4`, and `agent9-square.mp4`. The small social files are committed for README/X use; full-length video and private captures remain ignored. See [candidate choices and verification](social.md). The GIF is embedded near the top of the repository README. Theme previews and all-frame security checks are under `demo/out/gif-proof/`.
+
+The hosted Issuing scene now uses the original chat (`Spend £80 at Ocado`) rather than the standalone card page, following the user's later direction. `demo/chat-card-record.mjs` captures a separate chat journey and actual response/proof timestamps. Social exports prefer that verified source when present. The full overview and combined video also use the chat recording for Issuing; their lengths and voice timings stay unchanged. See [chat-card deployment and checks](chat-card.md).
