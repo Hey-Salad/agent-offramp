@@ -44,3 +44,7 @@ Provider character timestamps identify the first product phoneme. The extraction
 Run `npm run lint`, `npm run test:agent9`, and the existing read-only UI tests against a running test app (`SALLY_URL=… node test/ui.test.mjs`). The existing full `npm test` also performs local Issuing actions; it is intentionally not used for this recording because Issuing is explicitly assigned to the hosted app.
 
 Only the plan, source/assets, proof frames, timing JSON, verification evidence and proof table belong in the PR. Voice caches, raw recordings, final MP4s and credentials stay ignored. Add selected generated evidence explicitly with `git add -f`, after checking it for secrets. Do not merge or deploy as part of the video build.
+
+## Original-interface journeys
+
+See [the browser-driver walkthrough](walkthrough.md) for real receipts, invoices, deposit checkout, exact click paths, screenshots and the draft-detail display issue found during exploration. Working test URLs are kept in the ignored local walkthrough guide.
