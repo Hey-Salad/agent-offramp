@@ -1,0 +1,15 @@
+/* Presentation only: no Stripe values, states or text are changed.
+   Limit the long history to its newest real row/object for legibility. */
+body,body.shell,.sb,.sb a.it.on,.tm,code,.pill,.card,pre{background:#fff!important;color:#171717!important}
+*{border-color:#ddd!important;animation:none!important;transition:none!important}
+main{width:580px!important;max-width:580px!important;margin:24px auto!important;padding:0!important}
+main>h1{font-size:30px!important}main>.sub{font-size:17px!important}
+main>.card{padding:16px!important}main>.card.scroll{overflow:visible!important}
+main table{table-layout:fixed;width:100%!important}main table tr:nth-child(n+3){display:none}
+main table th:last-child,main table td:last-child{display:none}
+main .so .ob{display:none!important}main .so .ob:nth-of-type(3){display:block!important}
+.so .oh{font-size:15px!important}.so .oh code{font-size:15px!important;overflow-wrap:anywhere}
+.so .oh .pl{display:none!important}
+.so pre.j{font:15px/1.55 ui-monospace,SFMono-Regular,monospace!important;white-space:pre-wrap!important;overflow-wrap:anywhere;max-height:750px!important}
+.bcw{display:none!important}
+.sb a.it{border-left-color:transparent!important}.sb a.it.on{border-left-color:#171717!important}

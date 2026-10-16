@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {commandIndex, requireTestObject, AGENT9_COMMANDS} from '../src/agent9.ts';
+import {stripeWriteRequired} from '../src/toolkit.ts';
+assert.equal(commandIndex('refund everything'),-1);
+assert.equal(commandIndex({text:'restock'}),-1);
+assert.equal(commandIndex('  RESTOCK  '),0);
+assert.equal(new Set(AGENT9_COMMANDS).size,9);
+for(const object of [{id:'pi_live',livemode:true},{id:'pi_unknown'},{livemode:false},null]) assert.throws(()=>requireTestObject(object));
+const previous=process.env.STRIPE_SECRET_KEY;process.env.STRIPE_SECRET_KEY='sk_live_REJECT_TEST_SENTINEL';
+await assert.rejects(()=>stripeWriteRequired('PostInvoices',{}),/test key required/);
+if(previous===undefined)delete process.env.STRIPE_SECRET_KEY;else process.env.STRIPE_SECRET_KEY=previous;
+console.log('PASS unsupported chat requests, unverifiable/live objects and live-key Toolkit writes fail closed');

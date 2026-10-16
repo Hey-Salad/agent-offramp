@@ -6,10 +6,22 @@ let tk: any = null;
 async function kit() {
   if (tk || !process.env.STRIPE_SECRET_KEY) return tk;
   try { tk = await createStripeAgentToolkit({ secretKey: process.env.STRIPE_SECRET_KEY, configuration: {} }); }
-  catch (e: any) { console.error("agent-toolkit unavailable:", e.message); }
+  catch { console.error("agent-toolkit unavailable"); }
   return tk;
 }
 export const toolkitLog: { op: string; via: string; at: string }[] = [];
+/** Required-tool execution: never label an SDK fallback as Agent Toolkit. */
+export async function stripeWriteRequired(op: string, params: any): Promise<any> {
+  if (!process.env.STRIPE_SECRET_KEY?.startsWith("sk_test_")) throw new Error("Stripe test key required");
+  const k = await kit();
+  if (!k) throw new Error("Agent Toolkit unavailable");
+  const text = await k.mcpClient.callTool("stripe_api_write", { stripe_api_operation_id: op, parameters: params });
+  let out: any;
+  try { out = JSON.parse(text); } catch { throw new Error("Agent Toolkit returned no JSON object"); }
+  if (!out?.id || out.livemode === true) throw new Error("Agent Toolkit returned no test object");
+  toolkitLog.push({ op, via: "agent-toolkit", at: new Date().toISOString() });
+  return { ...out, _via: "agent-toolkit" };
+}
 /** Call a Stripe API write via the Agent Toolkit's stripe_api_write tool; fall back to the SDK. */
 export async function stripeWrite<T = any>(op: string, params: any, fallback: () => Promise<T>): Promise<T & { _via?: string }> {
   const k = await kit();
@@ -17,7 +29,7 @@ export async function stripeWrite<T = any>(op: string, params: any, fallback: ()
     try {
       const out = JSON.parse(await k.mcpClient.callTool("stripe_api_write", { stripe_api_operation_id: op, parameters: params }));
       if (out?.id) { toolkitLog.push({ op, via: "agent-toolkit", at: new Date().toISOString() }); return Object.assign(out, { _via: "agent-toolkit" }); }
-    } catch (e: any) { console.error(`toolkit ${op} failed, using SDK:`, e.message); }
+    } catch { console.error(`toolkit ${op} failed, using SDK`); }
   }
   const r: any = await fallback();
   toolkitLog.push({ op, via: "stripe-sdk", at: new Date().toISOString() });

@@ -1,0 +1,384 @@
+[
+  {
+    "scene": 0,
+    "product": "Opening",
+    "target": "rendered-html",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-00.mp4",
+      "markerEnd": 0.933333,
+      "beforeStart": 0,
+      "actionStart": 0,
+      "proofStart": 0,
+      "end": 6.5010411249999995
+    },
+    "edit": {
+      "scene": 0,
+      "product": "Opening",
+      "target": "rendered-html",
+      "start": 0,
+      "end": 6,
+      "duration": 6,
+      "voiceStart": 0,
+      "productNamedAt": 0,
+      "proofVisibleAt": null,
+      "stripePrefix": null,
+      "status": null,
+      "line": "Agent 9 gives your agent a financial operating system, built on the Stripe tools every business should use."
+    },
+    "proof": null
+  },
+  {
+    "scene": 1,
+    "product": "PaymentIntents",
+    "target": "local-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-01.mp4",
+      "markerEnd": 1.233333,
+      "beforeStart": 0,
+      "actionStart": 1.0009488330000007,
+      "proofStart": 3.009766625000001,
+      "end": 9.010263832999998
+    },
+    "edit": {
+      "scene": 1,
+      "product": "PaymentIntents",
+      "target": "local-test-app",
+      "start": 6,
+      "end": 11.2,
+      "duration": 5.2,
+      "voiceStart": 8.566666666666666,
+      "productNamedAt": 8.566666666666666,
+      "proofVisibleAt": 8.566666666666666,
+      "stripePrefix": "pi_",
+      "status": "succeeded",
+      "line": "PaymentIntents confirms your supplier payment."
+    },
+    "proof": {
+      "id": "pi_3UR1LlRBii4S4KdW0w19ZCjX",
+      "status": "succeeded",
+      "amount": 9682,
+      "currency": "gbp",
+      "livemode": false
+    }
+  },
+  {
+    "scene": 2,
+    "product": "Checkout",
+    "target": "local-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-02.mp4",
+      "markerEnd": 1.266667,
+      "beforeStart": 0,
+      "actionStart": 1.0018637920000018,
+      "proofStart": 2.0451746250000014,
+      "end": 8.046807957999999
+    },
+    "edit": {
+      "scene": 2,
+      "product": "Checkout",
+      "target": "local-test-app",
+      "start": 11.2,
+      "end": 16.53333333333333,
+      "duration": 5.333333333333333,
+      "voiceStart": 13.766666666666666,
+      "productNamedAt": 13.766666666666666,
+      "proofVisibleAt": 13.766666666666666,
+      "stripePrefix": "cs_test_",
+      "status": "open",
+      "line": "Checkout prepares your customer's secure payment."
+    },
+    "proof": {
+      "id": "cs_test_a1JIavf8Ub69eIe3NlAxHbve6XbN3nvdCLAA2g4SJ6IHX6ZSGyrM9ZP6uu",
+      "status": "open",
+      "payment_status": "unpaid",
+      "amount_total": 3250,
+      "currency": "gbp",
+      "livemode": false
+    }
+  },
+  {
+    "scene": 3,
+    "product": "Payment Links",
+    "target": "local-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-03.mp4",
+      "markerEnd": 1.266667,
+      "beforeStart": 0,
+      "actionStart": 1.0006463749999952,
+      "proofStart": 4.354243707999991,
+      "end": 10.355417290999995
+    },
+    "edit": {
+      "scene": 3,
+      "product": "Payment Links",
+      "target": "local-test-app",
+      "start": 16.53333333333333,
+      "end": 21.833333333333332,
+      "duration": 5.3,
+      "voiceStart": 19.099999999999998,
+      "productNamedAt": 19.099999999999998,
+      "proofVisibleAt": 19.099999999999998,
+      "stripePrefix": "plink_",
+      "status": "active",
+      "line": "Payment Links prepares your booking deposits."
+    },
+    "proof": {
+      "id": "plink_1UR1MBRBii4S4KdWaEWF3pZv",
+      "active": true,
+      "currency": "gbp",
+      "livemode": false
+    }
+  },
+  {
+    "scene": 4,
+    "product": "Invoicing",
+    "target": "local-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-04.mp4",
+      "markerEnd": 1.266667,
+      "beforeStart": 0,
+      "actionStart": 1.000998999999993,
+      "proofStart": 4.070841249999994,
+      "end": 10.072800624999992
+    },
+    "edit": {
+      "scene": 4,
+      "product": "Invoicing",
+      "target": "local-test-app",
+      "start": 21.833333333333332,
+      "end": 27.266666666666666,
+      "duration": 5.433333333333334,
+      "voiceStart": 24.4,
+      "productNamedAt": 24.4,
+      "proofVisibleAt": 24.4,
+      "stripePrefix": "in_",
+      "status": "draft",
+      "line": "Invoicing turns completed work into bills."
+    },
+    "proof": {
+      "id": "in_1UR1MNRBii4S4KdWjwSzdC1H",
+      "status": "draft",
+      "total": 12000,
+      "currency": "gbp",
+      "livemode": false
+    }
+  },
+  {
+    "scene": 5,
+    "product": "Issuing",
+    "target": "hosted-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-05.mp4",
+      "markerEnd": 1.866667,
+      "beforeStart": 0,
+      "actionStart": 1.0017768749999902,
+      "proofStart": 4.830730750000001,
+      "end": 10.831054457999997
+    },
+    "edit": {
+      "scene": 5,
+      "product": "Issuing",
+      "target": "hosted-test-app",
+      "start": 27.266666666666666,
+      "end": 32.33333333333333,
+      "duration": 5.066666666666666,
+      "voiceStart": 29.833333333333332,
+      "productNamedAt": 29.833333333333332,
+      "proofVisibleAt": 29.833333333333332,
+      "stripePrefix": "iauth_",
+      "status": "closed",
+      "line": "Issuing keeps your agent within budget."
+    },
+    "proof": {
+      "id": "iauth_1UR1McLvLGMlREYZZSVpe9jE",
+      "status": "closed",
+      "approved": false,
+      "amount": 8000,
+      "currency": "gbp",
+      "livemode": false,
+      "decline_reason": "authorization_controls",
+      "execution": {
+        "via": "hosted-card-button"
+      }
+    }
+  },
+  {
+    "scene": 6,
+    "product": "Connect",
+    "target": "local-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-06.mp4",
+      "markerEnd": 1.233333,
+      "beforeStart": 0,
+      "actionStart": 1.0003933339999946,
+      "proofStart": 6.628216417000004,
+      "end": 12.629425749999996
+    },
+    "edit": {
+      "scene": 6,
+      "product": "Connect",
+      "target": "local-test-app",
+      "start": 32.33333333333333,
+      "end": 37.53333333333333,
+      "duration": 5.2,
+      "voiceStart": 34.9,
+      "productNamedAt": 34.9,
+      "proofVisibleAt": 34.9,
+      "stripePrefix": "pi_",
+      "status": "succeeded",
+      "line": "Connect pays partners and records fees."
+    },
+    "proof": {
+      "id": "pi_3UR1MqRBii4S4KdW19Qxfybn",
+      "status": "succeeded",
+      "amount": 6000,
+      "currency": "gbp",
+      "livemode": false,
+      "destination": "acct_1UR18uIaqRBZsLdQ",
+      "transfer": "tr_3UR1MqRBii4S4KdW12Vc0cKD",
+      "transfer_amount": 7964,
+      "transfer_currency": "usd",
+      "application_fee_amount": 300
+    }
+  },
+  {
+    "scene": 7,
+    "product": "Billing",
+    "target": "local-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-07.mp4",
+      "markerEnd": 1.266667,
+      "beforeStart": 0,
+      "actionStart": 1.0011772919999942,
+      "proofStart": 5.269195874999994,
+      "end": 11.270397583999994
+    },
+    "edit": {
+      "scene": 7,
+      "product": "Billing",
+      "target": "local-test-app",
+      "start": 37.53333333333333,
+      "end": 43.03333333333333,
+      "duration": 5.5,
+      "voiceStart": 40.1,
+      "productNamedAt": 40.1,
+      "proofVisibleAt": 40.1,
+      "stripePrefix": "sub_",
+      "status": "active",
+      "line": "Billing starts your customer's recurring subscription."
+    },
+    "proof": {
+      "id": "sub_1UR1N7RBii4S4KdW3eFYFSR6",
+      "status": "active",
+      "livemode": false,
+      "price": "price_1UR18xRBii4S4KdWvJilcw3C",
+      "interval": "month",
+      "latest_invoice": "in_1UR1N7RBii4S4KdWbE0aekKw"
+    }
+  },
+  {
+    "scene": 8,
+    "product": "Shared payment tokens",
+    "target": "local-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-08.mp4",
+      "markerEnd": 1.266667,
+      "beforeStart": 0,
+      "actionStart": 1.0007242500000046,
+      "proofStart": 2.940414957999991,
+      "end": 8.941370750000004
+    },
+    "edit": {
+      "scene": 8,
+      "product": "Shared payment tokens",
+      "target": "local-test-app",
+      "start": 43.03333333333333,
+      "end": 48.83333333333333,
+      "duration": 5.8,
+      "voiceStart": 45.6,
+      "productNamedAt": 45.6,
+      "proofVisibleAt": 45.6,
+      "stripePrefix": "pi_",
+      "status": "succeeded",
+      "line": "Shared payment tokens keep card details private."
+    },
+    "proof": {
+      "id": "pi_3UR1NMRBii4S4KdW1zsrK2IW",
+      "status": "succeeded",
+      "amount": 960,
+      "currency": "gbp",
+      "livemode": false,
+      "token_id": "spt_1UR1NLRBii4S4KdWgQjWKIrC",
+      "token_limit_gbp": 50
+    }
+  },
+  {
+    "scene": 9,
+    "product": "Agent Toolkit",
+    "target": "local-test-app",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-09.mp4",
+      "markerEnd": 1.266667,
+      "beforeStart": 0,
+      "actionStart": 1.0014001250000035,
+      "proofStart": 4.006484374999999,
+      "end": 10.007601791999988
+    },
+    "edit": {
+      "scene": 9,
+      "product": "Agent Toolkit",
+      "target": "local-test-app",
+      "start": 48.83333333333333,
+      "end": 55.133333333333326,
+      "duration": 6.3,
+      "voiceStart": 51.4,
+      "productNamedAt": 51.4,
+      "proofVisibleAt": 51.4,
+      "stripePrefix": "in_",
+      "status": "draft",
+      "line": "Agent Toolkit creates invoices through Stripe's tools."
+    },
+    "proof": {
+      "id": "in_1UR1NYRBii4S4KdWRZ4GJNkr",
+      "status": "draft",
+      "total": 7500,
+      "currency": "gbp",
+      "livemode": false,
+      "execution": {
+        "via": "agent-toolkit",
+        "operations": [
+          "PostInvoices",
+          "PostInvoiceitems"
+        ]
+      }
+    }
+  },
+  {
+    "scene": 10,
+    "product": "Closing",
+    "target": "rendered-html",
+    "capture": {
+      "source": "demo/work/agent9/raw/scene-10.mp4",
+      "markerEnd": 0.8,
+      "beforeStart": 0,
+      "actionStart": 0,
+      "proofStart": 0,
+      "end": 4.500219167000012
+    },
+    "edit": {
+      "scene": 10,
+      "product": "Closing",
+      "target": "rendered-html",
+      "start": 55.133333333333326,
+      "end": 59.133333333333326,
+      "duration": 4,
+      "voiceStart": 55.133333333333326,
+      "productNamedAt": 55.133333333333326,
+      "proofVisibleAt": null,
+      "stripePrefix": null,
+      "status": null,
+      "line": "Agent 9. Give your agent a financial operating system."
+    },
+    "proof": null
+  }
+]

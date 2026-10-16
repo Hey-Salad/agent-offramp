@@ -1,0 +1,74 @@
+[
+  {
+    "file": "01-paymentintents-vertical.png",
+    "text": "@ HeySalad\n\nStripe test mode\n\nPaymentintents\n\nYour agent's financial operating system.\n\nAsk Sally\n\nrestock\n\nSally paid your supplier within your rules.\n\nStripe output\n\n\"id\": “\"pi_3URILIRBii4S4KdWow19ZCjX\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 9682,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "01-paymentintents.png",
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nPaymentintents\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nrestock\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally paid your supplier within your rules.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n__3UR1L1LRBii4S4KdWaw19ZCjX\",\n\n“status'\n\nsucceeded\",\n\n\"\n\namoun:\n\n: 9682,\n\n\"currency\"\n\n\"gbp\",\n\n“Livemode\"\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "02-checkout-vertical.png",
+    "text": "@ HeySalad\n\nStripe test mode\n\nCheckout\n\nYour agent's financial operating system.\n\nAsk Sally\n\ncreate a checkout for the kitchen order\n\nSally prepared a secure checkout. Payment is pending.\n\nStripe output\n\n\"id\":\n\n“cs_test_alJlavf8Ub69eIe3N LAxHbve6XbN3nvdCLAA2g4SJ6IHX6\n\nZSGyrM9ZP6uu\",\n\n\"status\": \"open\",\n\n“payment_status\": \"unpaid\",\n\n“amount_total\": 3250,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "02-checkout.png",
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nCheckout\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ncreate a checkout for the kitchen order\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared a secure checkout. Payment is pending\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n“cs_test_alJIavf8Ub69eTe3N LAxHbve6XbN3nvdCLAA2g4SJ6IHX6\n\nZsGyrm9ZP6uu\",\n\n\"status\"\n\n\"open\",\n\n“payment_status\"\n\n\"unpaid\",\n\n\"amount_tota\n\n3250,\n\n\"currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "03-payment-links-vertical.png",
+    "text": "@ HeySalad\n\nStripe test mode\n\nPayment Links\n\nYour agent's financial operating system.\n\nAsk Sally\n\ntable for 6 Saturday 8pm\n\nSally prepared a deposit link for six guests.\n\nStripe output\n\n\"id\": \"plink_1URIMBRBii4S4KdWaEWF3pZv\",\n\n\"active\":\n\ntrue,\n\n“currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "03-payment-links.png",
+    "text": "@ HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nPayment Links\n\n01 Paymentintents\n\nYour agent's financial operating system\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ntable for 6 Saturday 8pm\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared a deposit link for six guests.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\n™pLink_1URIMBRBii4S4KdWaEWF3pZv\"\n\nactive’\n\ntrue,\n\ncurrency’\n\ngbp\",\n\n“Livemode\":\n\nfalse\n\nReal Stripe test objects, No real money.\n"
+  },
+  {
+    "file": "04-invoicing-vertical.png",
+    "text": "@ HeySalad\n\nStripe test mode\n\nInvoicing\n\nYour agent's financial operating system.\n\nAsk Sally\n\nprepare an invoice for Agent Nine Demo 120 for catering\n\nSally prepared your draft invoice. No email sent.\n\nStripe output\n\n\"id\": “in_1URIMNRBii4S4KdWjwSzdC1H\",\n\n\"status\": \"draft\",\n\n\"total\": 12000,\n\n“currency\": \"gbp\",\n\n\"“Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "04-invoicing.png",
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nInvoicing\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nprepare an invoice for Agent Nine Demo 120 for catering\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared your draft invoice. No email sent.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n|_1URIMNRBii4S4KdWjwSzdC1H\",\n\n“status'\n\ndraft\",\n\n“total\": 12000,\n\n\"currency\"\n\n“gbp\",\n\n“Livemode\"\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "05-issuing-vertical.png",
+    "text": "Authorisations\n\nMERCHANT\n\nAMOUNT RESULT\n\nWHY\n\nOcado\n\n£80.00\n\ndeclined\n\nP2 - £80.00 is over\n\ngrocery stores\n\nthe £50 cap;\n\nsupermarkets : 16\n\nneeds a human\n\nOct, 02:59\n\nvy Stripe output\n\n12 objects\n\nAuthorisation iauth_1URIMcLVLGMLREYZZSVpe9jE\n\n// issuing.authorization\n\n{\n\n\"id\": “iauth_1URIMcLvLGMLREYZZSVpe9jE\",\n\n\"object\": \"“issuing.authorization\",\n\n\"status\": \"closed\",\n\n“amount\": 8000,\n\n\"currency\": “gbp\",\n\n“created\": \"2026-10-16T02:59:22.000Z\",\n\n“Livemode\":\n\nfalse,\n\n“amount_details\": {\n\n“atm_fee\": null,\n\n“cashback_amount\": @\n\nyy\n\n“approved\": false,\n\n“authorization_method\": \"online\",\n\n“balance_transactions\":\n\nOl,\n\n\"card\": {\n\n\"id\": “ic_1UQv1ldLvLGMLREYZaUdr8Ube\",\n\n“object\": “issuing.card\",\n\n“brand\": \"Visa\",\n\n“cancellation_reason\": null,\n\n“cardholder”: {\n\n\"id\": “ich_1UQv1dLvLGMLREYZZ8U250Pf\",\n\n“object\": \"issuing.cardholder\",\n\n\"billing\": {\n\n\"address\": {\n\n\"city\": “London\",\n\n“country\": \"GB\",\n\n\"Linel\": \"1 Test St\",\n\n“Line2\": null,\n\n“postal_code\": \"EC1A 1BB\",\n"
+  },
+  {
+    "file": "05-issuing.png",
+    "text": "@Heysalad\n\nAgent 9\n\nGive your agent a financial\n\noperating system,\n\nAuthori\n\ntions\n\nWHY\n\nDB Chat\n\nMERCHANT\n\nAMOUNT\n\nRESULT\n\nMONEY\n\nOcado\n\n£80.00\n\ndeclined\n\nP2- £80.00 is over\n\ngrocery stores\n\nthe £50 cap;\n\n88 Overview\n\nsupermarkets - 16\n\nneeds a human\n\nOct, 02:59\n\n$ Payments\n\n(e Card\n\nB Invoices\n\nStripe output\n\n12 objects\n\nPLATFORM\n\nAuthorisation iauth_1URIMcLvLGMLREYZZSVpe9jE\n\nC Billing\n\n// issuing.authorization\n\n% Connect\n\nt\n\n@ Audit\n\n\"id\"\n\n“dauth_1URIMcLvLGMLREYZZSVpe9jE\",\n\n\"object\": \"issuing. authorization\"\n\n“statu:\n\n“closed”\n\n\"\n\n‘amount\n\n8000,\n\n“currency”\n\n“gbp\",\n\nreated\n\n\"2026-10-16T02:59: 22.0002\",\n\n“Livemode\"\n\nfalse,\n\nt\n\n“amount_detail\n\n“atm_fee\n\nnull,\n\n“cashback_amount\"\n\nty\n\n\"approved\": false,\n\n0\n\n0\n\n“authorization_method™\n\n‘online’\n\nOo,\n\n“palance_transactions\"\n\n“card!\n\nci\n\n“id\n\n“ic_1UQv1dLvLGMLREYZaUdr8Ube\" ,\n\n“object”\n\n“issuing. card\",\n\n“brand\n\n\"Visa\",\n\n“cancellation_reason\n\nnull,\n\n“cardholder\n\n{\n\n\"id\n\n\"ich_1UQv1dLVLGMLREYZZ8U250Pf\",\n\n“object\n\n“issuing.cardholder\",\n\nbilling\"\n\n“address\n\n‘i\n\n\"\n\ncity\n\nLondon’\n\nountry’\n\nGB\",\n\n“Linel’\n\n\"1 Test St\",\n\n“Line2\":\n\nnull\n\n“postal_code\n\n“ECIA 1B\n"
+  },
+  {
+    "file": "06-connect-vertical.png",
+    "text": "@ HeySalad\n\nStripe test mode\n\nConnect\n\nYour agent's financial operating system.\n\nAsk Sally\n\npay the venue sixty pounds\n\nSally paid the venue and recorded your platform fee.\n\nStripe output\n\n\"id\": \"pi_3URIMqRBii4S4KdW19Qxfybn\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 6000,\n\n\"currency\": \"gbp\",\n\n“Livemode\": false,\n\n\"destination\": \"acct_1UR18uIaqRBZsLdQ\",\n\n\"transfer\": \"tr_3URIMqRBii4S4kKdW12Vc@cKD\",\n\n“transfer_amount\": 7964,\n\n“transfer_currency\": \"usd\",\n\n“application_fee_amount\": 300\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "06-connect.png",
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nConnect\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\npay the venue sixty pounds\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally paid the venue and recorded your platform fee.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n_3URIMgRBii4S4KdW190xfybn\",\n\n“status'\n\nsucceeded\",\n\n“amoun\n\n: 6000,\n\n\"currency\"\n\n“gbp\",\n\nlivemode\"\n\nfalse,\n\n“destination\"\n\n\"acct_1UR18uIaqRBZsLdQ\",\n\n\"transfer\": '\n\nr_3URIMqRBii4S4KdW12VcOcKD\",\n\n“trans fer_amoun\n\n7964,\n\n\"trans fer_currency'\n\n\"usd\",\n\n“application_fee_amount\"\n\n300\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "07-billing-vertical.png",
+    "text": "@ HeySalad\n\nStripe test mode\n\nBilling\n\nYour agent's financial operating system.\n\nAsk Sally\n\nstart a Sally Plus subscription\n\nSally started your customer's monthly subscription.\n\nStripe output\n\n\"id\": \"sub_1URIN7RBii4S4KdW3eFYFSR6\",\n\n\"status\": \"active\",\n\n“Livemode\": false,\n\n\"price\": \"price_1UR18xRBii4S4KdWvJilcw3C\",\n\n\"interval\": \"month\",\n\n\"Latest_invoice\": \"in_1UR1IN7RBii4S4KdWbEQaekKw\"\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "07-billing.png",
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nBilling\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nstart a Sally Plus subscription\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally started your customer's monthly subscription.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\nub_1URIN7RBii4S4KdW3eFYFSR6\",\n\n“status'\n\nactive\",\n\n“Livemode\": false,\n\n“price”\n\nrice_1UR18xRBii4S4KdWvJilcw3C\",\n\ninterval\"\n\njonth\"\n\n“lLatest_invoice\"\n\nin_1UR1N7RBii4S4KdWbE@aekKw\"\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "08-shared-payment-tokens-vertical.png",
+    "text": "@ HeySalad\n\nStripe test mode\n\nShared payment tokens\n\nYour agent's financial operating system.\n\nAsk Sally\n\npay nine pounds sixty with a shared payment token\n\nSally paid with a scoped token, without card details.\n\nStripe output\n\n\"id\": \"pi_3URINMRBii4S4KdW1zsrk2IW\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 960,\n\n\"currency\": \"gbp\",\n\n“Livemode\": false,\n\n“token_id\": \"spt_1URINLRBii4S4KdWgQjWKIrC\",\n\n“token_Limit_gbp\": 50\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "08-shared-payment-tokens.png",
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nShared payment tokens\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\npay nine pounds sixty with a shared payment token\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally paid with a scoped token, without card details.\n\n08 Shared payment\n\ntokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n__3URINMRBii4S4KdW1zsrkK2IW\",\n\n“status'\n\nsucceeded\",\n\n\"\n\namoun:\n\n: 960,\n\n\"currency\"\n\n“gbp\",\n\nLivemode\"\n\nfalse,\n\n\"token_id\n\n\"spt_1URINLRBii4S4KdWgQjWKIrc\",\n\n“token_Limit_gbp\": 5\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "09-agent-toolkit-vertical.png",
+    "text": "@ HeySalad\n\nStripe test mode\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\nAsk Sally\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\nSally prepared your draft invoice. No email sent.\n\nStripe output\n\n\"id\": \"in_1URINYRBii4S4KdWRZ4GJNkr\",\n\n\"status\": \"draft\",\n\n\"total\": 7500,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nvia: agent-toolkit PostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
+  },
+  {
+    "file": "09-agent-toolkit.png",
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared your draft invoice. No email sent.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n|_1URINYRBii4S4KdWRZ4GINkr\",\n\n“status'\n\ndraft\",\n\n\"total\": 7500,\n\n\"currency\"\n\n“gbp\",\n\n“Livemode\"\n\nfalse\n\nvia: agent-toolkit PostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
+  }
+]
