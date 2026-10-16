@@ -1,8 +1,12 @@
 import fs from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { WORK, lines, ff, probe, assert, json } from './lib.mjs';
-export function narrationConfig() {
-  return { provider: 'elevenlabs', model: 'eleven_multilingual_v2', voice: process.env.ELEVENLABS_VOICE_NAME || 'Megan', voiceId: process.env.ELEVENLABS_VOICE_ID || '45Ax8wdajmGTaLOJAJwK', syntheticVoice: true, speed: 1 };
+import { WORK, PROFILE, lines, ff, probe, assert, json } from './lib.mjs';
+export function narrationConfig(profile = PROFILE, env = process.env) {
+  const irish = profile === 'irish';
+  return { provider: 'elevenlabs', model: 'eleven_multilingual_v2',
+    voice: irish ? 'Jessica Gallagher (Irish)' : env.ELEVENLABS_VOICE_NAME || 'Megan',
+    voiceId: irish ? 'DbwWo4rVEd5NrejHYUnm' : env.ELEVENLABS_VOICE_ID || '45Ax8wdajmGTaLOJAJwK',
+    accent: irish ? 'irish' : 'british', syntheticVoice: true, speed: 1 };
 }
 export async function voice() {
   const durations = [], config = narrationConfig();

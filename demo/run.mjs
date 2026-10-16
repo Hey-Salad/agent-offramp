@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import fs from 'node:fs/promises';
-import { ROOT, OUT, WORK, validateEnv, timeline, json, command } from './lib.mjs';
+import { ROOT, OUT, WORK, validateEnv, timeline, json, command, prepareOutput } from './lib.mjs';
 import { voice, narrationConfig } from './voice.mjs';
 import { record } from './record.mjs';
 import { fontCSS, edit } from './edit.mjs';
@@ -9,16 +9,16 @@ dotenv.config({ path: `${ROOT}/demo/.env`, quiet: true });
 try {
   const origin = validateEnv(process.env);
   for (const bin of ['ffmpeg', 'ffprobe', 'tesseract']) command(bin, [bin === 'tesseract' ? '--version' : '-version']);
-  await fs.rm(OUT, { recursive: true, force: true }); await fs.mkdir(OUT, { recursive: true });
+  await prepareOutput();
   await fs.mkdir(WORK, { recursive: true }); await fontCSS();
   console.log(`Generating/caching eight ${narrationConfig().voice} voice lines with ElevenLabs.`);
   const cuts = timeline(await voice());
   const captures = [];
   for (const format of ['landscape', 'vertical']) captures.push(await record(origin, format));
-  await json(`${OUT}/beats.json`, { schema: 3, captions: false, audioPlaybackRate: 1, ...narrationConfig(), fps: 30, timeline: cuts, captures: captures.map(({ video, ...c }) => c) });
+  await json(`${OUT}/beats.json`, { schema: 4, captions: false, audioPlaybackRate: 1, ...narrationConfig(), fps: 30, timeline: cuts, captures: captures.map(({ video, ...c }) => c) });
   console.log('Rendering both formats from measured capture and narration timestamps.');
   await edit(captures, cuts); await verify(origin, cuts);
-  console.log('Exports and automated evidence are in demo/out. Review all two-second frames and listen before publishing.');
+  console.log(`Exports and automated evidence are in ${OUT}. Review all two-second frames and listen before publishing.`);
 } catch (e) {
   // Playwright/network exceptions can contain APP_URL, requests or credentials. Never print them.
   let message = String(e?.message || 'Demo failed.');

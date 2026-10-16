@@ -25,3 +25,12 @@ Inspect every image under `demo/out/frames/{landscape,vertical}` and play both M
 Tests: `npm run demo:test` covers configuration safety and timing without API calls, including the invariant that narration stays at 1×. `npm run lint` runs existing app type checks. `npm run demo` is the real media integration gate.
 
 API contracts: [ElevenLabs speech](https://elevenlabs.io/docs/api-reference/text-to-speech/convert), [OpenAI transcription](https://developers.openai.com/api/reference/resources/audio/subresources/transcriptions/methods/create).
+
+## British and Irish comparison
+
+`npm run demo` keeps Megan as the default British voice and writes the original `demo/out/sally-demo.mp4` and vertical companion. Run `npm run demo:irish` for the fixed **Jessica Gallagher (Irish)** preset, at natural 1× speed with the same walkthrough and no captions. Its slightly longer Sally introduction keeps this faster voice within 30–40 seconds without stretching audio. This writes:
+
+- `demo/out/irish/sally-demo-irish.mp4`
+- `demo/out/irish/sally-demo-irish-vertical.mp4`
+
+Irish recordings, audio cache, beat timestamps, frame samples and reports are isolated under `demo/work/irish/` and `demo/out/irish/`. Rebuilding either profile preserves the other profile's outputs. The Irish preset takes precedence over generic voice ID/name overrides so comparison runs consistently use Jessica. Each full run still makes the documented Stripe test-mode operations. Reviewed Irish PR evidence lives in `demo/evidence/irish/`; the original British evidence remains in `demo/evidence/`.

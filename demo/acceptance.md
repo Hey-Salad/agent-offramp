@@ -26,3 +26,20 @@ The follow-up request supersedes the original caption requirement: remove captio
 - Final decoded narration is identical in both formats. Whisper shot alignment passed within 750ms and the normalized script matches exactly (0% word error). Sterling notation is normalized to its spoken form; a regression test covers £25, £80 and £10. These are automated audio checks, not a claim of human listening.
 - Real test-mode restocks, £32.50 approvals and both Stripe-backed declines passed in both capture runs. Metadata and six PR frames were regenerated.
 - `npm run demo:test` passed 4/4; `npm run lint`, all demo syntax checks and whitespace/privacy checks passed. Configuration remains ignored and secrets were never displayed.
+
+## Irish comparison acceptance (registered before rebuild)
+
+- [x] `npm run demo:irish` generates Jessica Gallagher's Irish narration at speed 1 and builds both formats without captions.
+- [x] Comparison outputs, work files and evidence use an isolated Irish directory; Megan's existing MP4 hashes remain unchanged.
+- [x] Both Irish exports run 30–40 seconds and pass the real capture, audio/video, transcription and frame-review gates.
+- [x] Fresh Irish evidence added to the existing PR without replacing the verified British evidence or merging.
+
+
+## Observed evidence — Irish comparison
+
+- `npm run demo:irish` exited 0 with Jessica Gallagher (Irish), `eleven_multilingual_v2`, speech speed 1 and playback rate 1. The faster voice uses a slightly longer Sally introduction to retain 30–40 seconds without stretching audio.
+- Both fresh Irish streams start at zero and end at 30.700000 seconds; 1920×1080 and 1080×1920 exports pass A/V, silence/freeze and Stripe test-mode capture assertions.
+- All 32 two-second frames passed OCR and were visually inspected in contact sheets: no captions, login pages or target URLs. Six Irish review frames and actual beat timestamps are saved separately in `demo/evidence/irish/`.
+- Final AAC alignment passed within 750ms. Both formats decode to identical narration; ASR word error is 1% (licence/license spelling).
+- Both original Megan MP4 SHA-256 values still match the committed British manifest byte for byte. A cleanup regression test also proves rebuilding the default output cannot erase an Irish comparison directory.
+- `npm run demo:test` passed 6/6. App type checks, all demo syntax checks and whitespace/privacy checks passed. Audio verification is automated, not a claim of human listening.

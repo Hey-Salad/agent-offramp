@@ -1,10 +1,10 @@
 import fs from 'node:fs/promises';
 import { alignment } from './alignment.mjs';
-import { OUT, ff, probe, command, assert, json } from './lib.mjs';
+import { OUT, VIDEO_STEM, ff, probe, command, assert, json } from './lib.mjs';
 export async function verify(origin, timeline) {
   const report = { status: 'automated checks passed; human visual/audio review required', duration: timeline.at(-1).end, checks: [], samples: [] };
   for (const format of ['landscape', 'vertical']) {
-    const name = `sally-demo${format === 'vertical' ? '-vertical' : ''}`;
+    const name = `${VIDEO_STEM}${format === 'vertical' ? '-vertical' : ''}`;
     const file = `${OUT}/${name}.mp4`, info = probe(file), v = info.streams.find(s => s.codec_type === 'video'), a = info.streams.find(s => s.codec_type === 'audio');
     assert(v && a, 'Both video and narration streams are required.');
     assert(Number(v.start_time) === 0 && Number(a.start_time) === 0, 'Voice and video must start at zero.');
@@ -31,7 +31,7 @@ export async function verify(origin, timeline) {
   // Six small, reviewable attachments: three frames from each rendered output.
   await fs.mkdir(`${OUT}/pr`, { recursive: true });
   for (const format of ['landscape', 'vertical']) {
-    const name = `sally-demo${format === 'vertical' ? '-vertical' : ''}`;
+    const name = `${VIDEO_STEM}${format === 'vertical' ? '-vertical' : ''}`;
     for (const [i, id] of ['basket', 'declines', 'slate'].entries()) {
       const line = timeline.find(b => b.id === id);
       ff(['-ss', String(line.end - Math.min(0.4, line.duration / 4)), '-i', `${OUT}/${name}.mp4`, '-frames:v', '1', '-vf', 'scale=960:-2', `${OUT}/pr/${format}-${i + 1}-${id}.png`]);

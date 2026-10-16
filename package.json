@@ -9,7 +9,8 @@
     "lint": "tsc --noEmit --skipLibCheck --module nodenext --moduleResolution nodenext --target es2022 --resolveJsonModule --noImplicitAny false src/ui.ts src/stripe-extra.ts src/mcp.ts",
     "test": "node test/ui.test.mjs && node test/stripe-extra.test.mjs",
     "demo": "node demo/run.mjs",
-    "demo:test": "node --test demo/pipeline.test.mjs"
+    "demo:test": "node --test demo/pipeline.test.mjs",
+    "demo:irish": "node demo/run.mjs --irish"
   },
   "keywords": [],
   "author": "",

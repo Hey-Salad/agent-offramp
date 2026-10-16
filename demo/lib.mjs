@@ -2,10 +2,17 @@ import { spawnSync } from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 export const ROOT = path.resolve(import.meta.dirname, '..');
-export const WORK = path.join(ROOT, 'demo/work');
-export const OUT = path.join(ROOT, 'demo/out');
+export const PROFILE = process.argv.includes('--irish') ? 'irish' : 'british';
+export const WORK = path.join(ROOT, 'demo/work', PROFILE === 'irish' ? 'irish' : '');
+export const OUT = path.join(ROOT, 'demo/out', PROFILE === 'irish' ? 'irish' : '');
+export const VIDEO_STEM = PROFILE === 'irish' ? 'sally-demo-irish' : 'sally-demo';
+export async function prepareOutput(dir = OUT, stem = VIDEO_STEM) {
+  await fs.mkdir(dir, { recursive: true });
+  const owned = [`${stem}.mp4`, `${stem}-vertical.mp4`, 'beats.json', 'verification.json', 'audio-alignment.json', 'frames', 'pr'];
+  await Promise.all(owned.map(name => fs.rm(path.join(dir, name), { recursive: true, force: true })));
+}
 export const lines = [
-  ['hook', 'Save time and money. I gave my AI a credit card.'],
+  ['hook', PROFILE === 'irish' ? 'Save time and money. Meet Sally, my AI shopping agent. I gave her a credit card.' : 'Save time and money. I gave my AI a credit card.'],
   ['basket', 'Sally restocks the kitchen, pays Waitrose, and holds anything that needs my approval.'],
   ['approve', "This item is over twenty-five pounds, so she asks me first. One click, and it's paid."],
   ['attempt', 'Then I tried eighty pounds at Ocado, and ten pounds at an off-licence.'],

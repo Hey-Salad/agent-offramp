@@ -1,6 +1,10 @@
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { narrationConfig } from './voice.mjs';
 import test from 'node:test';
 import { strict as assert } from 'node:assert';
-import { timeline, validateEnv, lines } from './lib.mjs';
+import { timeline, validateEnv, lines, prepareOutput } from './lib.mjs';
 import { normalize } from './alignment.mjs';
 const env = { APP_URL: 'https://example.invalid', OPENAI_API_KEY: 'test-only', ELEVENLABS_API_KEY: 'test-only' };
 test('configuration rejects missing credentials, credentials in URLs, dashboard and live Stripe keys', () => {
@@ -28,4 +32,24 @@ test('spoken sterling amounts compare equally with transcription currency notati
   assert.equal(normalize('£25'), normalize('twenty-five pounds'));
   assert.equal(normalize('£80'), normalize('eighty pounds'));
   assert.equal(normalize('£10'), normalize('ten pounds'));
+});
+
+test('Irish preset uses Jessica at natural speed while British retains Megan', () => {
+  assert.equal(narrationConfig('irish', {}).voice, 'Jessica Gallagher (Irish)');
+  assert.equal(narrationConfig('irish', {}).accent, 'irish');
+  assert.equal(narrationConfig('irish', {}).speed, 1);
+  assert.equal(narrationConfig('british', {}).voice, 'Megan');
+});
+test('rebuilding the British export preserves Irish comparisons and unrelated files', async () => {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'sally-demo-'));
+  try {
+    await fs.mkdir(path.join(dir, 'irish'));
+    await fs.writeFile(path.join(dir, 'irish', 'sally-demo-irish.mp4'), 'comparison');
+    await fs.writeFile(path.join(dir, 'sally-demo.mp4'), 'old output');
+    await fs.writeFile(path.join(dir, 'notes.txt'), 'keep');
+    await prepareOutput(dir, 'sally-demo');
+    assert.equal(await fs.readFile(path.join(dir, 'irish', 'sally-demo-irish.mp4'), 'utf8'), 'comparison');
+    assert.equal(await fs.readFile(path.join(dir, 'notes.txt'), 'utf8'), 'keep');
+    assert.equal(await fs.stat(path.join(dir, 'sally-demo.mp4')).catch(() => null), null);
+  } finally { await fs.rm(dir, { recursive: true, force: true }); }
 });

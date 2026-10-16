@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';
-import { WORK, OUT, ROOT, ff, assert } from './lib.mjs';
+import { WORK, OUT, VIDEO_STEM, ROOT, ff, assert } from './lib.mjs';
 export async function fontCSS() {
   const data = (await fs.readFile(`${ROOT}/demo/fonts/Figtree.ttf`)).toString('base64');
   const css = `@font-face{font-family:Figtree;src:url(data:font/ttf;base64,${data});font-weight:300 900;font-style:normal}`;
@@ -26,7 +26,7 @@ export async function edit(captures, timeline) {
     const list = `${WORK}/${capture.format}/concat.txt`;
     // Paths are generated under this repo; ffmpeg concat escaping still handles apostrophes.
     await fs.writeFile(list, parts.map(p => `file '${p.replaceAll("'", "'\\''")}'`).join('\n'));
-    const output = `${OUT}/sally-demo${vertical ? '-vertical' : ''}.mp4`;
+    const output = `${OUT}/${VIDEO_STEM}${vertical ? '-vertical' : ''}.mp4`;
     ff(['-copyts', '-f', 'concat', '-safe', '0', '-i', list, '-c:v', 'copy', '-c:a', 'aac', '-af', 'aresample=async=1:first_pts=0', '-b:a', '160k', '-avoid_negative_ts', 'disabled', '-movflags', '+faststart', output]);
   }
 }

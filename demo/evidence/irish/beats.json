@@ -1,0 +1,263 @@
+{
+  "schema": 4,
+  "captions": false,
+  "audioPlaybackRate": 1,
+  "provider": "elevenlabs",
+  "model": "eleven_multilingual_v2",
+  "voice": "Jessica Gallagher (Irish)",
+  "voiceId": "DbwWo4rVEd5NrejHYUnm",
+  "accent": "irish",
+  "syntheticVoice": true,
+  "speed": 1,
+  "fps": 30,
+  "timeline": [
+    {
+      "id": "hook",
+      "text": "Save time and money. Meet Sally, my AI shopping agent. I gave her a credit card.",
+      "start": 0,
+      "end": 5.266666666666667,
+      "duration": 5.266666666666667,
+      "voiceDuration": 5.247688,
+      "playbackRate": 1
+    },
+    {
+      "id": "basket",
+      "text": "Sally restocks the kitchen, pays Waitrose, and holds anything that needs my approval.",
+      "start": 5.266666666666667,
+      "end": 9.533333333333333,
+      "duration": 4.266666666666667,
+      "voiceDuration": 4.249896,
+      "playbackRate": 1
+    },
+    {
+      "id": "approve",
+      "text": "This item is over twenty-five pounds, so she asks me first. One click, and it's paid.",
+      "start": 9.533333333333333,
+      "end": 14.8,
+      "duration": 5.2666666666666675,
+      "voiceDuration": 5.260729,
+      "playbackRate": 1
+    },
+    {
+      "id": "attempt",
+      "text": "Then I tried eighty pounds at Ocado, and ten pounds at an off-licence.",
+      "start": 14.8,
+      "end": 18.666666666666668,
+      "duration": 3.866666666666667,
+      "voiceDuration": 3.858542,
+      "playbackRate": 1
+    },
+    {
+      "id": "declines",
+      "text": "Both declined, by the card itself. The spending limits stay in place.",
+      "start": 18.666666666666668,
+      "end": 23,
+      "duration": 4.333333333333332,
+      "voiceDuration": 4.320708,
+      "playbackRate": 1
+    },
+    {
+      "id": "receipt",
+      "text": "Every payment has a receipt, so I can see where my money went.",
+      "start": 23,
+      "end": 26.266666666666666,
+      "duration": 3.2666666666666657,
+      "voiceDuration": 3.2425,
+      "playbackRate": 1
+    },
+    {
+      "id": "audit",
+      "text": "Every decision shows the rule behind it.",
+      "start": 26.266666666666666,
+      "end": 28.366666666666667,
+      "duration": 2.1000000000000014,
+      "voiceDuration": 2.067375,
+      "playbackRate": 1
+    },
+    {
+      "id": "slate",
+      "text": "Give your AI a card it can't misuse.",
+      "start": 28.366666666666667,
+      "end": 30.7,
+      "duration": 2.333333333333332,
+      "voiceDuration": 2.302792,
+      "playbackRate": 1
+    }
+  ],
+  "captures": [
+    {
+      "format": "landscape",
+      "clock": "Monotonic action clock aligned to blackdetect marker; 25fps capture resolution",
+      "syncEnd": 3.28,
+      "beats": [
+        {
+          "id": "hook",
+          "start": 3.2828665419999994,
+          "end": 4.042263374999999,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 0
+        },
+        {
+          "id": "basket",
+          "start": 4.04232075,
+          "end": 8.486360667,
+          "focus": {
+            "x": 707.5,
+            "y": 507.9375
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "approve",
+          "start": 8.487249709,
+          "end": 12.049506667,
+          "focus": {
+            "x": 707.5,
+            "y": 776.0625
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "attempt",
+          "start": 12.049547042,
+          "end": 17.49191775,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "declines",
+          "start": 17.491993792,
+          "end": 22.383930375,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "receipt",
+          "start": 22.383957374999998,
+          "end": 29.367663084,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "audit",
+          "start": 29.367750291999997,
+          "end": 33.9323075,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "slate",
+          "start": 33.93232925,
+          "end": 35.660405250000004,
+          "focus": {
+            "x": 960,
+            "y": 367.15625
+          },
+          "resultHoldSeconds": 1.7
+        }
+      ]
+    },
+    {
+      "format": "vertical",
+      "clock": "Monotonic action clock aligned to blackdetect marker; 25fps capture resolution",
+      "syncEnd": 2.8,
+      "beats": [
+        {
+          "id": "hook",
+          "start": 2.8008881670000045,
+          "end": 3.502042792,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 0
+        },
+        {
+          "id": "basket",
+          "start": 3.502072208000005,
+          "end": 7.9982377080000004,
+          "focus": {
+            "x": 931.25,
+            "y": 507.9375
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "approve",
+          "start": 7.998286500000002,
+          "end": 11.597498417,
+          "focus": {
+            "x": 931.25,
+            "y": 776.0625
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "attempt",
+          "start": 11.597551500000002,
+          "end": 16.950376708000004,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "declines",
+          "start": 16.950423333000007,
+          "end": 21.621877792000006,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "receipt",
+          "start": 21.621916333,
+          "end": 28.612522707999997,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "audit",
+          "start": 28.61254266700001,
+          "end": 33.071861375,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "slate",
+          "start": 33.071879042000006,
+          "end": 34.791682208000005,
+          "focus": {
+            "x": 960,
+            "y": 367.15625
+          },
+          "resultHoldSeconds": 1.7
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 import fs from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { OUT, WORK, ff, assert, json } from './lib.mjs';
+import { OUT, VIDEO_STEM, WORK, ff, assert, json } from './lib.mjs';
 export const normalize = text => text.toLowerCase().replace(/£\s*(80|25|10)\b/g, '$1 pounds').replace(/-/g, ' ').replace(/80/g, 'eighty').replace(/25/g, 'twenty five').replace(/10/g, 'ten').replace(/[^a-z\s]/g, '').replace(/\s+/g, ' ').trim();
 export async function alignment(timeline) {
   // Decode the exported AAC, rather than trusting the pre-mux narration files.
   const audio = `${WORK}/final-voice.wav`;
-  ff(['-i', `${OUT}/sally-demo.mp4`, '-vn', '-ar', '16000', '-ac', '1', audio]);
+  ff(['-i', `${OUT}/${VIDEO_STEM}.mp4`, '-vn', '-ar', '16000', '-ac', '1', audio]);
   const pcm = await fs.readFile(audio);
   const hash = createHash('sha256').update(pcm).digest('hex');
   const cache = `${WORK}/transcript-${hash}.json`;
@@ -45,7 +45,7 @@ export async function alignment(timeline) {
     assert(first && last && Math.abs(first.start - line.start) < 0.75 && Math.abs(last.end - line.end) < 0.75, `Shot/audio boundary mismatch for ${line.id}.`);
     boundaries.push({ id: line.id, shotStart: line.start, speechStart: first.start, shotEnd: line.end, speechEnd: last.end });
   }
-  ff(['-i', `${OUT}/sally-demo-vertical.mp4`, '-vn', '-ar', '16000', '-ac', '1', `${WORK}/vertical-voice.wav`]);
+  ff(['-i', `${OUT}/${VIDEO_STEM}-vertical.mp4`, '-vn', '-ar', '16000', '-ac', '1', `${WORK}/vertical-voice.wav`]);
   assert(createHash('sha256').update(await fs.readFile(`${WORK}/vertical-voice.wav`)).digest('hex') === hash, 'Portrait narration differs from landscape.');
   const result = { method: 'Whisper word timestamps from final decoded AAC; <=5% word error, line boundaries within 750ms; identical audio in both exports', wordErrorRate, differences, boundaries };
   await json(`${OUT}/audio-alignment.json`, result); return result;
