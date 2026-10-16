@@ -57,8 +57,17 @@ export async function verify(out,root=path.resolve("demo/work/agent9")){
   const text=run('tesseract',[path.join(out,'proof',name),'stdout','--psm','11']);
   check(name+' no login or visible app URL',!/https?:\/\/|modal\.run|localhost|sign in|log in|login|dashboard\.stripe\.com/i.test(text));
   const idx=Number(name.slice(0,2));const p=beats[idx].proof;
+  // OCR sometimes inserts a glyph in random IDs (I/l/1 especially). Require
+  // >=95% complete-ID recognition, plus exact persisted readback checks, rather
+  // than treating OCR transcription as a byte-for-byte Stripe identity check.
+  const normalize=s=>s.replace(/[^a-z0-9]/gi,'').toLowerCase().replace(/[il1]/g,'1');
+  const expectedID=normalize(p.id);
+  const distance=(needle,haystack)=>{let row=new Array(haystack.length+1).fill(0);for(let i=1;i<=needle.length;i++){const next=[i];for(let j=1;j<=haystack.length;j++)next[j]=Math.min(next[j-1]+1,row[j]+1,row[j-1]+(needle[i-1]===haystack[j-1]?0:1));row=next}return Math.min(...row)};
+  const alternate=run('tesseract',[path.join(out,'proof',name),'stdout','--psm','6']);
+  const idDistance=Math.min(distance(expectedID,normalize(text)),distance(expectedID,normalize(alternate)));
+  check(name+' complete Stripe id visible (95% OCR, exact readback checked separately)',idDistance<=Math.floor(expectedID.length*.05));
   check(name+' readable status',new RegExp(idx===3?'true':p.status,'i').test(text));
-  ocr.push({file:name,text});
+  ocr.push({file:name,text,alternate,idDistance,identityCheck:"Exact persisted readback compared by nine-chat-check.mjs; OCR visibility allows I/l/1 ambiguity and <=5% transcription error"});
  }
  await fs.writeFile(out+'/qa/proof-ocr.json',JSON.stringify(ocr,null,2));
  const samples=[];
@@ -82,7 +91,7 @@ export async function verify(out,root=path.resolve("demo/work/agent9")){
  // Bounded parallelism keeps review of every two-second frame reasonably quick.
  for(let start=0;start<samples.length;start+=4){
   const batch=await Promise.all(samples.slice(start,start+4).map(async s=>({file:path.relative(out,s.file),text:(await exec('tesseract',[s.file,'stdout','--psm','11'],{maxBuffer:1e6})).stdout})));
-  for(const s of batch){check(s.file+' no login or visible app URL',!/https?:\/\/|modal\.run|localhost|sign in|log in|login|dashboard\.stripe\.com/i.test(s.text));qaOCR.push(s)}
+  for(const s of batch){check(s.file+' no login or visible app URL',!/https?:\/\/|modal\.run|localhost|sign in|log in|login|dashboard\.stripe\.com/i.test(s.text));check(s.file+' no secrets or full card numbers',!/(?:sk|rk)_(?:live|test)_[a-zA-Z0-9]{12,}|whsec_[A-Za-z0-9]+|(?:pi|seti)_[A-Za-z0-9]+_secret_[A-Za-z0-9]+|client_secret|(?<![A-Za-z0-9])(?:\d[ -]?){12,18}\d(?![A-Za-z0-9])/i.test(s.text));qaOCR.push(s)}
  }
  await fs.writeFile(out+'/qa/two-second-ocr.json',JSON.stringify(qaOCR,null,2));
  await fs.writeFile(out+'/qa/audio-alignment.json',JSON.stringify(alignment,null,2));

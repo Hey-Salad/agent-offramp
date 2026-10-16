@@ -1,442 +1,242 @@
 [
   {
-    "file": "qa/landscape/frame-001.png",
-    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\nea\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nea)\n\nE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\nC\n\ng\n\ncs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+    "file": "qa/landscape/frame-01.png",
+    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\ncx\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nea)\n\nrE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\n€\n\ng\n\ncs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
   },
   {
-    "file": "qa/landscape/frame-002.png",
-    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\nca\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nem)\n\nE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\n€\n\ng\n\ncs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+    "file": "qa/landscape/frame-02.png",
+    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\ncx\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nea)\n\nrE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\n€\n\ng\n\n=\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
   },
   {
-    "file": "qa/landscape/frame-003.png",
-    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\nca\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nem)\n\nE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\nG\n\ng\n\ncs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+    "file": "qa/landscape/frame-03.png",
+    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\ncx\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nea)\n\nrE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\n€\n\ng\n\ncs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
   },
   {
-    "file": "qa/landscape/frame-004.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nPaymentintents\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nrestock\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSupplier payment pending.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-04.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n°&\n\n98 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\npre\n\n29\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-005.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nPaymentintents\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nrestock\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally is working on your request...\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-05.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nrragent\n\nfin\n\nal\n\nyo\n\nerating system,\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n98 Overview\n\nm\n\nrs\n\n$ Payments\n\n© Card\n\nB Invoices\n\n@\n\nYour approved supplier is paid. Items needing your approval remain on hold\n\nPLATFORM\n\nPAYMENTINTENTS - TEST MODE\n\nC Billing\n\nsucceeded - £96.82\n\n&% Connect\n\n@ Audit\n\nOpen receipt\n\nStripe output\n\n‘Trya business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappr\n"
   },
   {
-    "file": "qa/landscape/frame-006.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nPaymentintents\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nrestock\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally paid your supplier within your rules.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n|_3UR1L1LRBii4S4KdWaw19ZCjX\",\n\n“status'\n\nsucceeded\",\n\n\"\n\namoun:\n\n: 9682,\n\n\"currency\"\n\n\"gbp\",\n\n“Livemode\"\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-06.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nrragent\n\nfinan\n\nal\n\nyo\n\nerating system,\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n98 Overview\n\nmy\n\nrs\n\n$ Payments\n\n© Card\n\nB Invoices\n\n@\n\nYour approved supplier is paid. Items needing your approval remain on hold\n\nPLATFORM\n\nPAYMENTINTENTS - TEST MODE\n\nC Billing\n\nsucceeded - £96.82\n\n% Connect\n\n@ Audit\n\nOpen receipt\n\nStripe output\n\n“id\n\n“pi_3UR2zZoRBii4S4KdWONSSnbnz\",\n\n0\n\n‘status\n\n“succeeded”,\n\namount’\n\n9682,\n\ncurrency\n\n“gbp\",\n\n“Livemode'\n\nfalse\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappr\n"
   },
   {
-    "file": "qa/landscape/frame-007.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nCheckout\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ncreate a checkout for the kitchen order\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nCustomer checkout pending.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-07.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npre\n\n296\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-008.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nCheckout\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ncreate a checkout for the kitchen order\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared a secure checkout. Payment is pending\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n“cs_test_a167 fFjJ1ANEaQNO9IJnEcFcLBycLJWWkdkbz0j qEz9mJuQ\n\nCyzGogg696P7\",\n\n\"status\"\n\n\"open\",\n\n“payment_status\"\n\n\"unpaid\",\n\n\"amount_tota\n\n3250,\n\n\"currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCheckoutSessions\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-08.png",
+    "text": "@HeySalad\n\nAgent 9\n\njour agent a fina\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nvate\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\n@\n\nPLATFORM\n\nCHECKOUT - TEST MODE\n\nC Billing\n\nopen - £32.50\n\n% Connect\n\n@ Audit\n\nOpen checkout\n\nStripe output\n\n1\n\nid\":\n\n“cs_test_alANqAiphCk4EI8HO3Me7KTnZcXY8Wy3M3SECCb4cL\n\nn30iU5KmRQvYeqP9\",\n\n\"status\": \"open\",\n\n\"payment_status\": “unpaid’\n\n“amount_total\"\n\n3250,\n\n\"currency\"\n\n“gbp\",\n\n\"Livemode\"\n\nfalse\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappro\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-009.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nCheckout\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ncreate a checkout for the kitchen order\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared a secure checkout. Payment is pending\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n“cs_test_a167 fFjJ1ANEaQNO9IJnEcFcLBycLJWWkdkbz0j qEz9mJuQ\n\nCyzGogg696P7\",\n\n\"status\"\n\n\"open\",\n\n“payment_status\"\n\n\"unpaid\",\n\n\"amount_tota\n\n3250,\n\n\"currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCheckoutSessions\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-09.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour agent afi\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nvate\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\n@\n\nPLATFORM\n\nCHECKOUT - TEST MODE\n\nC Billing\n\nopen - £32.50\n\n% Connect\n\n@ Audit\n\nOpen checkout\n\nStripe output\n\n1\n\nid\":\n\n\"cs_test_alANqAiphCk4EI8HO3Me7KTnZcXY8Wy3M3SECCb4cL\n\nn30iU5KmRQvYeqP9\",\n\n\"status\": \"open\",\n\n\"payment_status\": “unpaid’\n\n“amount_total\"\n\n3250,\n\n“currency”\n\n“gbp\",\n\n\"Livemode\"\n\nfalse\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappro\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-010.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nPayment Links\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ntable for 6 Saturday 8pm\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally is working on your request...\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-10.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\ne a deposit link fo\n\nest\n\n$ Payments\n\n© Card\n\n@\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n&% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npre\n\nM\n\na\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-011.png",
-    "text": "@ HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nPayment Links\n\n01 Paymentintents\n\nYour agent's financial operating system\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ntable for 6 Saturday 8pm\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared a deposit link for six guests.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\n™pLink_1URIMBRBii4S4KdWaEWF3pZv\"\n\nactive’\n\ntrue,\n\n“currency’\n\ngbp\",\n\n“livemode\":\n\nfalse\n\nReal Stripe test objects, No real money.\n"
+    "file": "qa/landscape/frame-11.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nwragent\n\nal\n\nyo\n\nerating\n\ng system.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nat\n\nit lin\n\nts\n\n$ Payments\n\n© Card\n\nB Invoices\n\n@\n\nYour £60 deposit link is ready for six guests. Payment is pending.\n\nPLATFORM\n\nPAYMENT LINKS - TEST MODE\n\nC Billing\n\nactive\n\n% Connect\n\n@ Audit\n\nOpen payment link\n\nStripe output\n\n“Gd\n\nf\n\n“pLink_1UR3@cRBii4S4KdW9ijxSubA\",\n\n0\n\nactive’\n\ni\n\ntrue,\n\ncurrency\n\n‘gbp\",\n\n‘Livemode'\n\nfalse\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-012.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nInvoicing\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nprepare an invoice for Agent Nine Demo 120 for catering\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nCustomer invoice pending.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-12.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\nppre\n\n296\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-013.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nInvoicing\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nprepare an invoice for Agent Nine Demo 120 for catering\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally is working on your request...\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-13.png",
+    "text": "@HeySalad\n\nAgent 9\n\nal\n\nGive your agent\n\nerating\n\ng system.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nDraft a\n\nfor\n\nmp\n\n$ Payments\n\n© Card\n\nYour £120 invoice is drafted. No email sent.\n\nB Invoices\n\n@\n\nPLATFORM\n\nINVOICING - TEST MODE\n\nC Billing\n\ndraft - £120.00\n\n% Connect\n\n@ Audit\n\nStripe output\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n"
   },
   {
-    "file": "qa/landscape/frame-014.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nInvoicing\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nprepare an invoice for Agent Nine Demo 120 for catering\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared your draft invoice. No email sent.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n|_1URIMNRBii4S4KdWjwSzdC1H\",\n\n“status'\n\ndraft\",\n\n“total\": 12000,\n\n\"currency\"\n\n“gbp\",\n\n“Livemode\"\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-14.png",
+    "text": "@HeySalad\n\nAgent 9\n\njour agent\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nDraft a £120 in\n\nfor come\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £120 invoice is drafted. No email sent.\n\n&\n\nPLATFORM\n\nINVOICING - TEST MODE\n\nC Billing\n\ndraft - £120.00\n\n% Connect\n\n@ Audit\n\nStripe output\n\nd\": \"in_1UR3@tRBii4S4KdWz0zpTAIu\",\n\n‘status\n\ndraft\n\n“total”\n\n12000\n\n\"currency\"\n\n\"gbp\",\n\n\"Livemode\"\n\nfalse\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-015.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nple agent: Sal\n\nGi\n\nyo\n\nagent\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): your preferences, orders and decisions\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nper\n\n°@\n"
+    "file": "qa/landscape/frame-15.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n&% Connect\n\n@ Audit\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\nppre\n\n296\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-016.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nnt: Sal\n\nfinan\n\nal\n\nGive your agent\n\nerating system,\n\n© Sally remembers (Cognee): your preferences, orders and decisions\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\n10 at\n\nSp\n\n© Card\n\nB Invoices\n\nDeclined, £80.00 is over your £50 card limit. No money was taken.\n\nPLATFORM\n\n&\n\nCG Billing\n\nSALLY'S CARD - TEST MODE\n\n% Connect\n\n£80.00 at Ocado\n\n@ Audit\n\nDeclined - No money taken\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\n\"aa\"\n\n\"iauth_1UR2dQLVLGMLREYZw4FRONT8\",\n\n\"object\n\n\"issuing. authorization\",\n\n“status\n\n\"closed\",\n\n\"approved\": false,\n\n\"amount\": 8000,\n\n\"currency\": \"gbp\",\n\n\"Livemode\n\nfalse,\n\n\"lasta\":\n\n\"900s\"\n\n+\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappr\n\na\n\ne\n"
+    "file": "qa/landscape/frame-16.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour agent.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n°&\n\n88\n\nOverview\n\n0\n\n$\n\nPayments\n\ni=)\n\nCard\n\n8\n\nInvoices\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\n@\n\nPLATFORM\n\nSALLY'S CARD - TEST MODE\n\nCG Billing\n\n£80.00 at Ocado\n\n% Connect\n\nDeclined - No money taken\n\n@ Audit\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\nid\n\nauth_1UR319LvLGMLREYZDJdpdkZN\" ,\n\n“object\n\nissuing. authorization\",\n\n“status\n\nclosed’\n\n,\n\nfalse,\n\n“approve\n\n\"amount\"\n\n8000,\n\n0\n\ncurrenc:\n\n“gbp\",\n\n‘Livemod\n\nfalse,\n\n“last4\"\n\n\"0005\"\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-017.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nnt: Sal\n\nfinan\n\nal\n\nGive your agent\n\nerating system,\n\n© Sally remembers (Cognee): your preferences, orders and decisions\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\n10 at\n\nSp\n\n© Card\n\nB Invoices\n\nDeclined, £80.00 is over your £50 card limit. No money was taken.\n\nPLATFORM\n\n&\n\nCG Billing\n\nSALLY'S CARD - TEST MODE\n\n% Connect\n\n£80.00 at Ocado\n\n@ Audit\n\nDeclined - No money taken\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\n\"aa\"\n\n\"iauth_1UR2dQLVLGMLREYZw4FRONT8\",\n\n“object\n\n\"issuing. authorization\",\n\n“status\n\n\"closed\",\n\n\"approved\": false,\n\n\"amount\"\n\n8000,\n\n\"currency\": \"gbp\",\n\n\"Livemode\n\nfalse,\n\n\"lasta\":\n\n\"9005\"\n\n+\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappr\n\na\n\ne\n"
+    "file": "qa/landscape/frame-17.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour agent.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n°@\n\n88\n\nOverview\n\n0\n\n$\n\nPayments\n\n(=)\n\nCard\n\n8\n\nInvoices\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\n@\n\nPLATFORM\n\nSALLY'S CARD - TEST MODE\n\nC Billing\n\n£80.00 at Ocado\n\n% Connect\n\nDeclined - No money taken\n\n@ Audit\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\nid\n\nauth_1UR319LvLGMLREYZDJdpdkZN\" ,\n\n“object\n\nissuing. authorization\",\n\n“status\n\nclosed’\n\n,\n\nfalse,\n\n“approve\n\n\"amount\"\n\n8000,\n\n0\n\ncurrenc:\n\n“gbp\",\n\n‘Livemod\n\nfalse,\n\n“last4\"\n\n\"0005\"\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-018.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nConnect\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\npay the venue sixty pounds\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally is working on your request...\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-18.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nPay my\n\nner\n\n60\n\n$ Payments\n\n© Card\n\n@\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\npre\n\n596\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-019.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nConnect\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\npay the venue sixty pounds\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally paid the venue and recorded your platform fee.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n_3URIMgRBii4S4KdW190xfybn\",\n\n“status'\n\nsucceeded\",\n\n“amoun\n\n: 6000,\n\n\"currency\"\n\n“gbp\",\n\nlivemode\"\n\nfalse,\n\n“destination\"\n\n\"acct_1UR18uIaqRBZsLdQ\",\n\n\"transfer\": \"\n\nr_3URIMqRBii4S4KdW12VcOcKD\",\n\n“trans fer_amoun\n\n7964,\n\n\"trans fer_currency'\n\n\"usd\",\n\n“application_fee_amount\"\n\n300\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-19.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour ak\n\nnt\n\nina\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n©\n\n98\n\n88\n\nOverview\n\n$\n\nPayments\n\n(=)\n\nCard\n\n8\n\nInvoices\n\nYour partner payment is complete: £60 charged, with a £3 platform fee\n\nrecorded.\n\n&\n\nPLATFORM\n\nC Billing\n\nCONNECT - TEST MODE\n\n% Connect\n\nsucceeded - £60.00\n\n@ Audit\n\nStripe output\n\nid\"\n\n“pi_3UR31PRBii4S4KdW1Ro2n6Tt\",\n\n“status\n\n“succeeded”,\n\n“amount”\n\n6000,\n\n“currency”\n\n“gbp\",\n\n“Livemode\"\n\nfalse,\n\n\"destination\": “acct_1UQuLVIX6SJqMWzD\",\n\n“transfer\"\n\n“tr_3UR31PRBii4S4KdW1G6duvhy\",\n\n“trans fer_amoun\n\n7981,\n\nusd\"\n\n\"transfer_currency'\n\n“application_fee_amount\": 300\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-020.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nBilling\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nstart a Sally Plus subscription\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nNew subscription pending.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-20.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour agent 2\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\nppre\n\n296\n\n;\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-021.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nBilling\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nstart a Sally Plus subscription\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally is working on your request...\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-21.png",
+    "text": "@HeySalad\n\nAgent 9\n\nal\n\nGive your agent a\n\nol\n\nerating system,\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n88 Overview\n\nmonth\n\nub\n\non\n\n$ Payments\n\n© Card\n\nB Invoices\n\n@\n\nYour test customer's £9 monthly subscription is active.\n\nPLATFORM\n\nBILLING - TEST MODE\n\nCG Billing\n\nactive\n\n% Connect\n\n@ Audit\n\nStripe output\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n29\n\n5\n"
   },
   {
-    "file": "qa/landscape/frame-022.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nBilling\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nstart a Sally Plus subscription\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally started your customer's monthly subscription.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\nub_1URIN7RBii4S4KdW3eFYFSR6\",\n\n“status'\n\nactive\",\n\n“Livemode\": false,\n\n“price”\n\nrice_1UR18xRBii4S4KdWvJilcw3C\",\n\ninterval\"\n\njonth\"\n\n“Latest_invoice\"\n\nin_1UR1N7RBii4S4KdWbE@aekKw\"\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-22.png",
+    "text": "@HeySalad\n\nAgent 9\n\na\n\nnt\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n88 Overview\n\nrt\n\nmont!\n\nub\n\nn\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour test customer's £9 monthly subscription is active.\n\nce\n\nPLATFORM\n\nBILLING - TEST MODE\n\nCG Billing\n\nactive\n\n% Connect\n\n@ Audit\n\nStripe output\n\na\"\n\n“sub_1UR31kRBii4S4KdWLUrVhxQ2\",\n\n“status\n\n‘active\",\n\n“Livemode\"\n\nfalse,\n\n\"\n\n\"price\"\n\nrice_1UQulaRBii4S4KdWRmcwnL39\",\n\ninterval\"\n\n“month\",\n\n“latest_invoice\":\n\nin_1UR31kRBii4S4KdWXbrSNNPK\"\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-023.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nShared payment tokens\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\npay nine pounds sixty with a shared payment token\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nScoped token payment pending.\n\n08 Shared payment\n\ntokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-23.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour a\n\nnt\n\nal\n\nating 5\n\nm.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n&% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\npre\n\n296\n\n5\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-024.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nShared payment tokens\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\npay nine pounds sixty with a shared payment token\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally paid with a scoped token, without card details.\n\n08 Shared payment\n\ntokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n__3URINMRBii4S4KdWizsrkK2IW\",\n\n“status'\n\nsucceeded\",\n\n\"\n\namoun:\n\n: 960,\n\n\"currency\"\n\n“gbp\",\n\nLivemode\"\n\nfalse,\n\n\"token_id\n\n\"spt_1URINLRBii4S4KdWgQjWKIrc\",\n\n“token_Limit_gbp\": 5\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-24.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour ak\n\nnt\n\nina\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nithout sharing car\n\nlet:\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £9.60 payment succeeded using a scoped token, without sharing card\n\ndetails.\n\n@\n\nPLATFORM\n\nC Billing\n\nSHARED PAYMENT TOKENS - TEST MODE\n\n% Connect\n\nsucceeded - £9.60\n\n@ Audit\n\nStripe output\n\nid\"\n\n“pi_3UR322RBii4S4KdW06exsumu\",\n\n“status\n\n“succeeded”,\n\n“amount”\n\n960,\n\n“currency”\n\n“gbp\",\n\n“Livemode\"\n\nfalse,\n\n\"token.\n\na\"\n\n“spt_1UR322RBii4S4KdWRnWskxwU\"\n\n“token_Limit_gbp’\n\n50\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-025.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nShared payment tokens\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\npay nine pounds sixty with a shared payment token\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally paid with a scoped token, without card details.\n\n08 Shared payment\n\ntokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n__3URINMRBii4S4KdW1zsrkK2IW\",\n\n“status'\n\nsucceeded\",\n\n\"\n\namoun:\n\n: 960,\n\n\"currency\"\n\n“gbp\",\n\nLivemode\"\n\nfalse,\n\n\"token_id\n\n\"spt_1URINLRBii4S4KdWgQjWKIrc\",\n\n“token_Limit_gbp\": 5\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-25.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour ak\n\nnt\n\nina\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nithout sharing car\n\nlet:\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £9.60 payment succeeded using a scoped token, without sharing card\n\ndetails.\n\n@\n\nPLATFORM\n\nC Billing\n\nSHARED PAYMENT TOKENS - TEST MODE\n\n&% Connect\n\nsucceeded - £9.60\n\n@ Audit\n\nStripe output\n\nid\"\n\n“pi_3UR322RBii4S4KdW06exsumu\",\n\n“status\n\n“succeeded”,\n\n“amount™\n\n960,\n\n“currency”\n\n“gbp\",\n\n“Livemode\"\n\nfalse,\n\n\"token.\n\na\n\n“spt_1UR322RBii4S4KdWRnWskxwU\"\n\n“token_Limit_gbp’\n\n50\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-026.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally is working on your request...\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-26.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\n‘Trya business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\npre\n\nUs\n\nStripe tools to|\n\n°@\n"
   },
   {
-    "file": "qa/landscape/frame-027.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nAgent Toolkit\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared your draft invoice. No email sent.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n|_1UR1WhRBii4S4KdWsYovyf4M\",\n\n“status'\n\ndraft\",\n\n\"total\": 7500,\n\n\"currency\"\n\n“gbp\",\n\n“Livemode\"\n\nfalse\n\nvia: agent-toolkit PostCustomers\n\nPostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-27.png",
+    "text": "@HeySalad\n\nAgent 9\n\n‘\n\nGi\n\n‘\n\nal\n\ne your agent\n\nol\n\nerating system,\n\n( D Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n88 Overview\n\nri\n\naf\n\nin\n\n$ Payments\n\n© Card\n\nYour £75 invoice is drafted. No email sent.\n\nB Invoices\n\n@\n\nPLATFORM\n\nAGENT TOOLKIT - TEST MODE\n\nCG Billing\n\ndraft - £75.00\n\n% Connect\n\n@ Audit\n\nStripe output\n\nid\n\nn_1UR32JRBii4S4KdWPSjd8Hds\",\n\n‘status\n\n“draft\",\n\n“total”\n\n: 7500,\n\n\"currency\": \"gbp\",\n\n“Livemode'\n\nfalse\n\nExecuted through Stripe Agent Toolkit\n\n‘Trya business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\na\n\ne\n"
   },
   {
-    "file": "qa/landscape/frame-028.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nAgent Toolkit\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared your draft invoice. No email sent.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n|_1UR1WhRBii4S4KdWsYovyf4M\",\n\n“status'\n\ndraft\",\n\n\"total\": 7500,\n\n\"currency\"\n\n“gbp\",\n\n“Livemode\"\n\nfalse\n\nvia: agent-toolkit PostCustomers\n\nPostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/landscape/frame-28.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nrag\n\nfinan\n\nal\n\nyo\n\nerating\n\ng system.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nri\n\naf\n\nin\n\n$ Payments\n\n© Card\n\nYour £75 invoice is drafted. No email sent.\n\nB Invoices\n\n@\n\nPLATFORM\n\nAGENT TOOLKIT : TEST MODE\n\nCG Billing\n\ndraft - £75.00\n\n% Connect\n\n@ Audit\n\nStripe output\n\nid\n\nn_1UR32JRBii4S4KdWPSjd8Hds\",\n\n‘status\n\n“draft\",\n\n“total”\n\n: 7500,\n\n\"currency\": \"gbp\",\n\n“Livemode'\n\nfalse\n\nExecuted through Stripe Agent Toolkit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\na\n\ne\n"
   },
   {
-    "file": "qa/landscape/frame-029.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nple agent: Sal\n\nGi\n\nyour at\n\nnt\n\nfin\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally booking booking 25361965: status awaiting. diner, total £60.00\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\nres\n\nk\n\n© Card\n\nB Invoices\n\n&\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nPPT\n\nM\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-030.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nagent: Sally\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally booking booking 25361965: status awaiting.diner, total £60.00\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\nres\n\nk\n\n© Card\n\nB Invoices\n\nHere's the restock.\n\nPLATFORM\n\n&\n\nCG Billing\n\nWaitrose\n\n% Connect\n\noO\n\n£71.92\n\nPaid\n\nis\n\n@ Audit\n\nDetai\n\nIs\n\nBidfood\n\n°o\n\n£57.40 Needs approval\n\nDetai\n\ns\n\nAmazon\n\n£19.00 Blocked\n\n°\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nPPT\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-031.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nagent: Sally\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally booking booking 25361965: status awaiting. diner, total £60.00\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\nres\n\nk\n\n© Card\n\nB Invoices\n\nHere's the restock.\n\nPLATFORM\n\n&\n\nCG Billing\n\nWaitrose\n\n% Connect\n\n@\n\n£71.92\n\nPaid\n\nis\n\n@ Audit\n\nDetai\n\nIs\n\nBidfood\n\n°o\n\n£57.40 Needs approval\n\nDetai\n\ns\n\nAmazon\n\n£19.00 Blocked\n\n°\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nPPT\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-032.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nagent: Sally\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally booking booking 25361965: status awaiting. diner, total £60.00\n\n( D Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\nC\n\n$ Payments\n\nres\n\nk\n\n© Card\n\nB Invoices\n\nHere's the restock.\n\nPLATFORM\n\no\n\nC Billing\n\nWaitrose\n\n% Connect\n\noO\n\n£71.92\n\nPaid\n\nis\n\n@ Audit\n\nDetai\n\ns\n\nBidfood\n\n°o\n\n£57.40 Needs approval\n\nDetai\n\ns\n\nAmazon\n\n£19.00 Blocked\n\n°\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nPPT\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-033.png",
-    "text": "@Heysalad\n\nAgent 9\n\nChat exmieavent saty\n\nGive your agent a financial\n\noperating system,\n\n‘© Sally remembers (Cognee): 2026-10-16 Sally booking booking.25361965: status aweiting.diner, total £60.00\n\n( DB Chat\n\nMONEY\n\nSALLY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\n8 Card\n\nve Lecce rasta renne rigate: WitIHn pulley, TUNHINY WUal £40.07 01 £1I9U.VU\n\nB Invoices\n\nWaitrose Thai Hom Mali Rice: Within policy; running total £51.67 of £150.00\n\nPLATFORM\n\nEssential Reduced Fat Coconut Milk: Within policy; running total £54.17 of £150.00\n\nC Billing\n\nEssential Chickpeas in Water: Within policy; running total £54.72 of £150.00\n\n% Connect\n\nCirio Passata: Within policy; running total £56.12 of £150.00\n\n@ Audit\n\nWaitrose Low Sugar Nutty Granola Breakfast Cereal: Within policy; running total\n\n£58.77 of £150.00\n\nRowse Runny Honey Squeezy: Within policy; running total £60.77 of £150.00\n\nWaitrose Fairtrade Italian Style Ground Coffee: Within policy; running total £64.62 of\n\n£150.00\n\nClipper Organic Fairtrade 80 Tea Bags: Within policy; running total £69.12 of £150.00\n\nEssential Frozen British Garden Peas: Within policy; running total £71.12 of £150.00\n\nEssential Washing Up Liquid Citrus: Within policy; running total £71.92 of £150.00\n\nSTRIPE\n\nFull record - Receipt restock_7cldae9d\n\n@ aia\n\nMONEY MOVED TODAY\n\n£2887.59\n\nPolicy\n\nAudit trail\n"
-  },
-  {
-    "file": "qa/landscape/frame-034.png",
-    "text": "£5.50\n\nDuchy Organic 12 Medium Eggs\n\n@Heysalad\n\nAgent 9\n\nRI-R4-- auto paid\n\nGive your agent a financial\n\nGAIL's Sourdough\n\n£4.85\n\noperating system,\n\nRI-R4-- auto paid\n\nDB Chat\n\nNo.1 British Free Range Chicken Thighs\n\n£4.32\n\nMONEY\n\nRI-R4-- auto paid\n\nNo.1 British Free Range 6 Pork Sausages\n\n£5.30\n\n83 Overview\n\nRI-R4-- auto paid\n\n£3.00\n\n( $ Payments\n\nDuchy Organic Sweet Potatoes\n\nRI-R4-- auto paid\n\n© Card\n\nWaitrose Red Onions\n\n£1.00\n\nB Invoices\n\nRI-R4-- auto paid\n\nPLATFORM\n\nWaitrose Courgettes\n\n£4.40\n\nRI-R4-- auto paid\n\nC Billing\n\nWaitrose British Chestnut Mushrooms\n\n£115\n\n% Connect\n\nRI-R4-- auto paid\n\n@ Audit\n\n£1.45\n\nDuchy Organic Avocado\n\nRI-R4-- auto paid\n\nEssential Limes 5s\n\n£1.40\n\nRI-R4-- auto paid\n\nWaitrose Strawberries\n\n£370\n\nRI-R4-- auto paid\n\nWaitrose Blueberries\n\n£2.50\n\nRI-R4-- auto paid\n\n£2.85\n\nYeo Valley Organic Natural Yogurts\n\nRI-R4-- auto paid\n\nEssential Mature Cheddar Cheese Strength 4\n\n£270\n\nRI-R4-- auto paid\n\nEssential Unsalted Butter\n\n£2.00\n\nRI-R4-- auto paid\n\nDe Cecco Pasta Penne Rigate\n\n£1.30\n\nRI-R4-- auto paid\n\nWaitrose Thai Hom Mali Rice\n\n£3.00\n\nRI-R4-- auto paid\n\nEssential Reduced Fat Coconut Milk\n\n£2.50\n\nRI-R4-- auto paid\n\nEssential Chickpeas in Water\n\n£0.55\n\nRI-R4-- auto paid\n\nCirio Passata\n\n£1.40\n\nRI-R4-- auto paid\n\n£2.65\n\nWaitrose Low Sugar Nutty Granola Breakfast Cereal\n\nRI-R4-- auto paid\n"
-  },
-  {
-    "file": "qa/landscape/frame-035.png",
-    "text": "£5.50\n\nDuchy Organic 12 Medium Eggs\n\n@Heysalad\n\nAgent 9\n\nRI-R4-- auto paid\n\nGive your agent a financial\n\nGAIL's Sourdough\n\n£4.85\n\noperating system.\n\nRI-R4-- auto paid\n\nDB Chat\n\nNo.1 British Free Range Chicken Thighs\n\n£4.32\n\nMONEY\n\nRI-R4-- auto paid\n\nNo.1 British Free Range 6 Pork Sausages\n\n£5.30\n\n88 Overview\n\nRI-R4-- auto paid\n\n£3.00\n\n( $ Payments\n\nDuchy Organic Sweet Potatoes\n\nRI-R4-- auto paid\n\n© Card\n\nWaitrose Red Onions\n\n£1.00\n\nB Invoices\n\nRI-R4-- auto paid\n\nPLATFORM\n\nWaitrose Courgettes\n\n£4.40\n\nRI-R4-- auto paid\n\nCG Billing\n\nWaitrose British Chestnut Mushrooms\n\n£115\n\n% Connect\n\nRI-R4-- auto paid\n\n@ Audit\n\n£1.45\n\nDuchy Organic Avocado\n\nRI-R4-- auto paid\n\nEssential Limes 5s\n\n£1.40\n\nRI-R4-- auto paid\n\nWaitrose Strawberries\n\n£370\n\nRI-R4-- auto paid\n\nWaitrose Blueberries\n\n£2.50\n\nRI-R4-- auto paid\n\n£2.85\n\nYeo Valley Organic Natural Yogurts\n\nRI-R4-- auto paid\n\nEssential Mature Cheddar Cheese Strength 4\n\n£270\n\nRI-R4-- auto paid\n\nEssential Unsalted Butter\n\n£2.00\n\nRI-R4-- auto paid\n\nDe Cecco Pasta Penne Rigate\n\n£1.30\n\nRI-R4-- auto paid\n\nWaitrose Thai Hom Mali Rice\n\n£3.00\n\nRI-R4-- auto paid\n\nEssential Reduced Fat Coconut Milk\n\n£2.50\n\nR1-R4-- auto paid\n\nEssential Chickpeas in Water\n\n£0.55\n\nRI-R4-- auto paid\n\nCirio Passata\n\n£1.40\n\nRI-R4-- auto paid\n\n£2.65\n\nWaitrose Low Sugar Nutty Granola Breakfast Cereal\n\nRI-R4-- auto paid\n"
-  },
-  {
-    "file": "qa/landscape/frame-036.png",
-    "text": "Essential Unsalted Butter\n\n£2.00\n\n@Heysalad\n\nAgent 9\n\nRI-R4-- auto paid\n\nGive your agent a financial\n\nDe Cecco Pasta Penne Rigate\n\n£1.30\n\noperating system,\n\nRI-R4-- auto paid\n\nDB Chat\n\nWaitrose Thai Hom Mali Rice\n\n£3.00\n\nMONEY\n\nRI-R4-- auto paid\n\nEssential Reduced Fat Coconut Milk\n\n£2.50\n\n88 Overview\n\nRI-R4-- auto paid\n\n( $ Payments\n\nEssential Chickpeas in Water\n\n£0.55\n\nRI-R4-- auto paid\n\n8 Card\n\nCirio Passata\n\n£1.40\n\nB Invoices\n\nRI-R4-- auto paid\n\nPLATFORM\n\nWaitrose Low Sugar Nutty Granola Breakfast Cereal\n\n£2.65\n\nRI-R4-- auto paid\n\nCG Billing\n\n£2.00\n\n% Connect\n\nRowse Runny Honey Squeezy\n\nRI-R4-- auto paid\n\n@ Audit\n\nWaitrose Fairtrade Italian Style Ground Coffee\n\n£3.85\n\nRI-R4-- auto paid\n\nClipper Organic Fairtrade 80 Tea Bags\n\n£4.50\n\nRI-R4-- auto paid\n\nEssential Frozen British Garden Peas\n\n£2.00\n\nRI-R4-- auto paid\n\n£0.80\n\nEssential Washing Up Liquid Citrus\n\nRI-R4-- auto paid\n\nFryer oil 20L\n\n£24.90\n\nRI-R4-- auto paid\n\nTotal\n\n£96.82\n\nPayment Intent pi_3UR2OLRBii4S4KdW1VoSUW7a\n\nRecord restock_7cld8e9d\n\n> Stripe output\n\nJobject\n\nEvery line cites a clause in policy.md, See the audi\n\n© Booked in Briefcase\n\nPreview, not connected\n\nWhat each payment would book in\n\nBriefcase, the UK accounting ledger. Nothing is sent\n\nuntil Briefcase is connected\n\nDOCUMENT\n\n‘SUPPLIER\n\nCATEGORY\n\nAMOUNT STATUS\n"
-  },
-  {
-    "file": "qa/landscape/frame-037.png",
-    "text": "rc)\n\nReceipt from HeySalad Inc.\n\nReceipt #1309-1437\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 3:40:25 AM\n\n‘VISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\n~~ HeySalad Inc. contributed 1.5% of your purchase to remove\n\nCO, from the atmosphere.\n\nIfyou have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help@heysalad.ai, or call us at +1 650-600-0883.\n\nSomething wrong with the email? View it in your browser.\n\nYou're receiving th\n\nis email because you made a purc\n\nat HeySalad Inc\n\nwhich\n\nUses Stripe to provide invoicing and payment processing.\n"
-  },
-  {
-    "file": "qa/landscape/frame-038.png",
-    "text": "rc)\n\nReceipt from HeySalad Inc.\n\nReceipt #1309-1437\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 3:40:25 AM\n\n‘VISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\n~~ HeySalad Inc. contributed 1.5% of your purchase to remove\n\nCO, from the atmosphere.\n\nIfyou have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help@heysalad.ai, or call us at +1 650-600-0883.\n\n‘Something wrong with the email? View it in your browser.\n\nYou're receiving th\n\nis email because you made a put\n\nat HeySalad Inc\n\nwhich\n\nUses Stripe to provide invoicing and payment processing.\n"
-  },
-  {
-    "file": "qa/landscape/frame-039.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nagent: Sal\n\nGi\n\nyour at\n\nnt\n\nfin\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally invoice invoice.aldObf4f: status paid, total £184.60\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\n6\n\ntur\n\ny 8pm\n\n© Card\n\nB Invoices\n\n@\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npr\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-040.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nagent: Sal\n\nGi\n\nyo\n\na\n\nnt\n\nfin\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally invoice invoice.aldObf4f: status paid, total £184.60\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\n6\n\ntur\n\nry 8pm\n\n© Card\n\nB Invoices\n\nDeposit link ready.\n\nPLATFORM\n\n&\n\nC Billing\n\nGuest booking\n\n% Connect\n\n©\n\n£60.00\n\nLink sent\n\n@ Audit\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npr\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-041.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nagent: Sal\n\nGi\n\nyo\n\na\n\nnt\n\nfin\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally invoice invoice.aldObf4f: status paid, total £184.60\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\n6\n\ntur\n\nry 8pm\n\n© Card\n\nB Invoices\n\nDeposit link ready.\n\nPLATFORM\n\n&\n\nCG Billing\n\nGuest booking\n\n% Connect\n\n@\n\n£60.00\n\nLink sent\n\n@ Audit\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npr\n\na\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-042.png",
-    "text": "@ Sandi\n\nContact information\n\nEmail\n\nHeySalad table deposit (6 guests)\n\nemail@example.com\n\n£60.00\n\nPayment method\n\nmm Card\n\n‘ard information\n\n1234 1234 1234 1234\n\nves OS\n\nfang\n\n=|\n\nMM/YY\n\neve\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n[Y save my information with Link for faster checkout\n\nPhone number\n\n1% (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privagy-\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nto remo)\n\n19 CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/landscape/frame-043.png",
-    "text": "Sandb«\n\nContact information\n\nEmail\n\nHeySalad table deposit (6 guests)\n\nemail@example.com\n\n£60.00\n\nPayment method\n\nmm Card\n\nCard information\n\n=\n\n1234 1234 1234 1234\n\nvse\n\n|\n\nMM /-YY\n\ncve\n\n&\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nzip\n\n(save my information with Link for faster checkout\n\nPhone number\n\n1 (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nd\n\nto removing CO; from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/landscape/frame-044.png",
-    "text": "° C=\n\nHeySalad table deposit (6 guests)\n\noR\n\n£60.00\n\nContact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\nmm Card\n\n‘ard information\n\n12\n\n4\n\n34\n\n34.1234\n\nvse DE 055\n\nMM/YY\n\neve\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nzip\n\n[Y save my information with Link for faster checkout\n\nPhone number\n\n0123\n\n1% (201) 5:\n\nBy payin:\n\nyou agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\n@\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/landscape/frame-045.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nple agent:\n\nGive your a\n\nnta\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally booking booking e53ca623: status awaiting. diner, total £60.00\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n8G Overview\n\n&\n\n$ Payments\n\nfor Agent Ni\n\nDemo 12\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n&% Connect\n\n@ Audit\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nppr\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-046.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nple agent: Sal\n\nGi\n\nyour at\n\nnt\n\nfin\n\nal\n\nerating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally booking booking e53ca623: status awaiting. diner, total £60.00\n\n( DB Chat\n\nMONEY\n\ny\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n@\n\n$ Payments\n\nfor Agent Ni\n\n9\n\n© Card\n\nB Invoices\n\ndraft invoice Agent Nine Demo £120.00 ready (14). Say \"send the invoice\"\n\nPLATFORM\n\nto send,\n\n&\n\nCG Billing\n\n% Connect\n\nAgent Nine Demo\n\nnd £\n\n@\n\n£120.00\n\nDraft\n\n@ Audit\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nppr\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-047.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nple agent:\n\nGi\n\nyour at\n\nnt\n\nfin\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally outinvoice outinvoice_a190b984: status draft, total £120.00\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n88 Overview\n\n&\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npr\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-048.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nple agent: Sal\n\nGi\n\nyour at\n\nnt\n\nfin\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally outinvoice outinvoice_a190b984: status draft, total £120.00\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n8G Overview\n\n@\n\n$ Payments\n\nay tl\n\nBi\n\ninv\n\n© Card\n\nB Invoices\n\nInvoice checked.\n\nPLATFORM\n\n@\n\nC Billing\n\nBidfood\n\n% Connect\n\n°o\n\n£184.60,\n\nPaid\n\n@ Audit\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npr\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-049.png",
-    "text": "@HeySalad\n\nAgent 9\n\nChat =\n\nple agent: Sal\n\nGi\n\nyour at\n\nnt\n\nfin\n\nal\n\nating 5\n\nm.\n\n© Sally remembers (Cognee): 2026-10-16 Sally outinvoice outinvoice_a190b984: status draft, total £120.00\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n8G Overview\n\n@\n\n$ Payments\n\nay tl\n\nBi\n\ninv\n\n© Card\n\nB Invoices\n\nInvoice checked.\n\nPLATFORM\n\n@\n\nCG Billing\n\nBidfood\n\n% Connect\n\n°o\n\n£184.60\n\nPaid\n\n@ Audit\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npr\n\n°@\n"
-  },
-  {
-    "file": "qa/landscape/frame-050.png",
-    "text": "@Heysatad\n\nAgent 9\n\nChat bemvie agent\n\nally\n\nGive your agent a financial\n\n‘operating system\n\n© Sally remembers (Cognee): 2026-10-16 Sally outinvoice outinvoice a190b984: status draft, total £120.00\n\n(2 chat\n\nMONEY\n\n88 Overview\n\nHi, I'm Sally. What do you need?\n\n@\n\n$ Payments\n\n8 Card\n\nB invoices\n\nInvoice checked.\n\nPLATFORM\n\n@\n\n© Biting\n\nBidfood\n\n& Connect\n\n£184.60\n\nPaid\n\n@ Audit\n\nBidfood\n\nwoice - chat\n\noe\n\n£184.60\n\nPraia\n\nems\n\n£89.60 matched\n\nChicken thighs 10kg\n\n£49.80 matched\n\nFryer oil 20L x2\n\nMixed salad leaves 6kg\n\n£45.20 matened\n\nWHY (POLICY APPLIED)\n\n2\n\nMust match the PO\n\nChicken thighs 10kg: On PO-1042\n\nfer oll 201 x2: On PO-1042\n\nMi\n\n1d salad leaves 6kg: On PO-1042\n\nSTRIPE\n\nFull record Receipt invoice aldobtar\n\n@ Paid\n\nEY MOVED TODAY\n\n£3072.19\n\nPolicy\n\n“Audit trait\n"
-  },
-  {
-    "file": "qa/landscape/frame-051.png",
-    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.RD4JHKWW-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\n@ HeySalad Inc. ‘Test MODE,\n\nItems\n\n£89.60\n\nChicken thighs 10kg\n\natyt\n\n°\n\nFryer oil 20L x2\n\n£49.80\n\naty1\n\nInvoice paid\n\nMixed salad leaves 6kg\n\n£45.20\n\n£184.60\n\naty1\n\nClose invoice and payment details x\n\nTotal due\n\n£184.60\n\nInvoice number\n\nRD4JHKWW-0001\n\nPayment date\n\n16 October 2026\n\nAmount paid\n\n£184.60\n\nPayment method\n\nVisa «\n\n+4242\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nPowered by stripe\n\nVisa +\n\n= 4242\n\n16 Oct 2026\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/landscape/frame-052.png",
-    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.RD4JHKWW-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\n@ HeySalad Inc. ‘Test MODE,\n\nITeMs\n\n£89.60\n\nChicken thighs 10kg\n\naty1\n\n°\n\nFryer oil 20L x2\n\n£49.80\n\natyt\n\nInvoice paid\n\nMixed salad leaves 6kg\n\n£45.20\n\n£184.60\n\naty1\n\nClose invoice and payment details x\n\nTotal due\n\n£184.60\n\nInvoice number\n\nRD4JHKWW-0001\n\nPayment date\n\n16 October 2026\n\nAmount paid\n\n£184.60\n\nPayment method\n\nVisa +\n\n+4242\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nPowered by stripe\n\nVisa +\n\n= 4242\n\n16 Oct 2026\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/landscape/frame-053.png",
-    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.RD4JHKWW-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\n@ HeySalad Inc. ‘Test MODE,\n\nITeMs\n\n£89.60\n\nChicken thighs 10kg\n\naty1\n\n°\n\nFryer oil 20L x2\n\n£49.80\n\natyt\n\nInvoice paid\n\nMixed salad leaves 6kg\n\n£45.20\n\n£184.60\n\naty1\n\nClose invoice and payment details x\n\nTotal due\n\n£184.60\n\nInvoice number\n\nRD4JHKWW-0001\n\nPayment date\n\n16 October 2026\n\nAmount paid\n\n£184.60\n\nPayment method\n\nVisa «\n\n+4242\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nPowered by stripe\n\nVisa +\n\n+4242\n\n16 Oct 2026\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/landscape/frame-054.png",
+    "file": "qa/landscape/frame-29.png",
     "text": "@HeySalad\n\nAgent 9.\n\nGive your agent a financial\n\noperating system.\n"
   },
   {
-    "file": "qa/landscape/frame-055.png",
+    "file": "qa/landscape/frame-30.png",
     "text": "@HeySalad\n\nAgent 9.\n\nGive your agent a financial\n\noperating system.\n"
   },
   {
-    "file": "qa/vertical/frame-001.png",
-    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nurn StYIPe\n\n$\n\ncs\n\nGC?\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\neas\n\ncE\n\n%S\n\nInvoicing\n\nIssuing\n\nConnect\n\nGe\n\nY\n\ntS\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+    "file": "qa/vertical/frame-01.png",
+    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nurn StYIPe\n\n$\n\nca\n\nC?\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\neas)\n\ncE\n\n%\n\nInvoicing\n\nIssuing\n\nConnect\n\nGe\n\nY\n\nrs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
   },
   {
-    "file": "qa/vertical/frame-002.png",
-    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nurn StYIPe\n\n$\n\ncs\n\nGC?\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\nSS\n\ncE\n\n%\n\nInvoicing\n\nIssuing\n\nConnect\n\nGe\n\nY\n\nrs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+    "file": "qa/vertical/frame-02.png",
+    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nurn StYIPe\n\n$\n\nca\n\nCG?\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\nS\n\nEI\n\n%\n\nInvoicing\n\nIssuing\n\nConnect\n\nGs\n\nY\n\nf=\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
   },
   {
-    "file": "qa/vertical/frame-003.png",
-    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\ncuron StYIPe\n\n$\n\nca\n\nC?\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\nSS\n\ncE\n\n%\n\nInvoicing\n\nIssuing\n\nConnect\n\n©\n\nY\n\nf=\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+    "file": "qa/vertical/frame-03.png",
+    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\ncron StYIPe\n\n$\n\nca\n\nCO\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\nS\n\nEI\n\n%\n\nInvoicing\n\nIssuing\n\nConnect\n\nGs\n\nY\n\nTS\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
   },
   {
-    "file": "qa/vertical/frame-004.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nPaymentintents\n\nYour agent's financial operating system.\n\nAsk Sally\n\nrestock\n\nSupplier payment pending.\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-04.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-005.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nPaymentintents\n\nYour agent's financial operating system.\n\nAsk Sally\n\nrestock\n\nSally is working on your request...\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-05.png",
+    "text": "&\n\nHi, I'm Sally. What do you need?\n\nYour approved supplier is paid. Items needing your approval remain on hold.\n\nce)\n\nPAYMENTINTENTS - TEST MODE\n\nsucceeded - £96.82\n\nOpen receipt\n\nStripe output\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-006.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nPaymentintents\n\nYour agent's financial operating system.\n\nAsk Sally\n\nrestock\n\nSally paid your supplier within your rules.\n\nStripe output\n\n\"id\": “\"pi_3URILIRBii4S4KdWow19ZCjX\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 9682,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-06.png",
+    "text": "&\n\nHi, I'm Sally. What do you need?\n\nYour approved supplier is paid. Items needing your approval remain on hold.\n\nCe)\n\nPAYMENTINTENTS - TEST MODE\n\nsucceeded - £96.82\n\nOpen receipt\n\nStripe output\n\n\"id\": \"pi_3UR2ZoRBii4S4KdWONSSnbnZ\",\n\n“status\": “succeeded”,\n\n“amount\": 9682,\n\n\"currency\": \"“gbp\",\n\n“Livemode\":\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-007.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nCheckout\n\nYour agent's financial operating system.\n\nAsk Sally\n\ncreate a checkout for the kitchen order\n\nCustomer checkout pending.\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-07.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-008.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nCheckout\n\nYour agent's financial operating system.\n\nAsk Sally\n\ncreate a checkout for the kitchen order\n\nSally prepared a secure checkout. Payment is pending.\n\nStripe output\n\n\"Gd\":\n\n“cs_test_a167fFjJ1ANEaQNQ9JnEcFcLBycLJWWkdkbz0j qEz9mJuQ\n\nCyzGogg696P7\",\n\n\"status\": \"open\",\n\n“payment_status\": \"unpaid\",\n\n“amount_total\": 3250,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCheckoutSessions\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-08.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n°\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\nce)\n\nCHECKOUT - TEST MODE\n\nopen - £32.50\n\nOpen checkout\n\nStripe output\n\n{\n\n\"id\":\n\n\"“cs_test_alANqAiphCk4EI8HO3Me7KTnZcxY8Wy3M3SECCb4cI\n\nn30iU5KmRQvYeqP9\",\n\n\"status\": \"open\",\n\n“payment_status\": “unpaid\",\n\n“amount_total\": 3250,\n\n“currency”: “gbp\",\n\n\"Livemode\"\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n-@\n"
   },
   {
-    "file": "qa/vertical/frame-009.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nCheckout\n\nYour agent's financial operating system.\n\nAsk Sally\n\ncreate a checkout for the kitchen order\n\nSally prepared a secure checkout. Payment is pending.\n\nStripe output\n\n\"Gd\":\n\n“cs_test_a167fFjJ1ANEaQNQ9JnEcFcLBycLJWWkdkbz0j qEz9mJuQ\n\nCyzGogg696P7\",\n\n\"status\": \"open\",\n\n“payment_status\": \"unpaid\",\n\n“amount_total\": 3250,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCheckoutSessions\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-09.png",
+    "text": "Hi, I'm Sally. What do you need?\n\noo\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\nce)\n\nCHECKOUT - TEST MODE\n\nopen - £32.50\n\nOpen checkout\n\nStripe output\n\n{\n\n\"id\":\n\n\"cs_test_alANqAiphCk4EI8HO3Me7KTnZcXY8Wy3M3SECCb4cI\n\nn30iU5KmRQvYeqP9\",\n\n\"status\": \"open\",\n\n“payment_status\": “unpaid\",\n\n“amount_total\": 3250,\n\n“currency”: “gbp\",\n\n\"Livemode\"\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-010.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nPayment Links\n\nYour agent's financial operating system.\n\nAsk Sally\n\ntable for 6 Saturday 8pm\n\nSally is working on your request...\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-10.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n\n]\n\n-@\n"
   },
   {
-    "file": "qa/vertical/frame-011.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nPayment Links\n\nYour agent's financial operating system.\n\nAsk Sally\n\ntable for 6 Saturday 8pm\n\nSally prepared a deposit link for six guests.\n\nStripe output\n\n\"id\": \"plink_1URIMBRBii4S4KdWaEWF3pZv\",\n\n\"active\":\n\ntrue,\n\n“currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-11.png",
+    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\nYour £60 deposit link is ready for six guests. Payment is pending.\n\nce)\n\nPAYMENT LINKS - TEST MODE\n\nactive\n\nOpen payment link\n\nStripe output\n\n\"id\": \"plink_1UR3@cRBii4S4KdwW9ijxSubA\",\n\n“active”: true,\n\n“currency”: “gbp\",\n\n“Livemode\":\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-012.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nInvoicing\n\nYour agent's financial operating system.\n\nAsk Sally\n\nprepare an invoice for Agent Nine Demo 120 for catering\n\nCustomer invoice pending.\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-12.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-013.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nInvoicing\n\nYour agent's financial operating system.\n\nAsk Sally\n\nprepare an invoice for Agent Nine Demo 120 for catering\n\nSally is working on your request...\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-13.png",
+    "text": "&\n\nHi, I'm Sally. What do you need?\n\nYour £120 invoice is drafted. No email sent.\n\n&\n\nINVOICING - TEST MODE\n\ndraft - £120.00\n\nStripe output\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n\n-@\n"
   },
   {
-    "file": "qa/vertical/frame-014.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nInvoicing\n\nYour agent's financial operating system.\n\nAsk Sally\n\nprepare an invoice for Agent Nine Demo 120 for catering\n\nSally prepared your draft invoice. No email sent.\n\nStripe output\n\n\"id\": “in_1URIMNRBii4S4KdWjwSzdC1H\",\n\n\"status\": \"draft\",\n\n\"total\": 12000,\n\n\"currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-14.png",
+    "text": "&\n\nHi, I'm Sally. What do you need?\n\nYour £120 invoice is drafted. No email sent.\n\n&\n\nINVOICING - TEST MODE\n\ndraft - £120.00\n\nStripe output\n\n\"id\": “in_1UR30tRBii4S4KdWz0zpTAIu\",\n\n\"status\": “draft\",\n\n“total\": 12000,\n\n“currency\": \"“gbp\",\n\n\"Livemode\":\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-015.png",
-    "text": "Hi, I'm Sally. What do you need?\n\nce)\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
+    "file": "qa/vertical/frame-15.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-016.png",
-    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\nce)\n\nSALLY'S CARD - TEST MODE\n\n£80.00 at Ocado\n\nDeclined - No money taken\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\n\"id\": \"iauth_1UR2dQLVLGMLREYZw4FRO@Nrs\",\n\n\"object\": “issuing.authorization\",\n\n\"status\": \"closed\",\n\n\"approved\":\n\nfalse,\n\n“amount\": 8000,\n\n“currency\": \"gbp\",\n\n“Livemode\": false,\n\n\"Last4\":\n\n\"9005\"\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
+    "file": "qa/vertical/frame-16.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\nce)\n\nSALLY'S CARD - TEST MODE\n\n£80.00 at Ocado\n\nDeclined - No money taken\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\n\"id\": \"“iauth_1UR319LVLGMLREYZDJdpdkZN\",\n\n“object\": “issuing.authorization\",\n\n\"status\":\n\n“closed\",\n\n“approved\": false,\n\n“amount\": 8000,\n\n“currency”: “gbp\",\n\n“Livemode\": false,\n\n“Last4\":\n\n\"9005\"\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-017.png",
-    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\nce)\n\nSALLY'S CARD - TEST MODE\n\n£80.00 at Ocado\n\nDeclined - No money taken\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\n\"id\": \"iauth_1UR2dQLVLGMLREYZw4FRO@Nrs8\",\n\n\"object\": “issuing.authorization\",\n\n\"status\": \"closed\",\n\n\"approved\":\n\nfalse,\n\n“amount\": 8000,\n\n“currency\": \"gbp\",\n\n“Livemode\": false,\n\n\"Last4\":\n\n\"9005\"\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
+    "file": "qa/vertical/frame-17.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\nce)\n\nSALLY'S CARD - TEST MODE\n\n£80.00 at Ocado\n\nDeclined - No money taken\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\n\"id\": \"“iauth_1UR319LVLGMLREYZDJdpdkZN\",\n\n“object\": “issuing.authorization\",\n\n\"status\":\n\n“closed\",\n\n“approved\": false,\n\n“amount\": 8000,\n\n“currency”: “gbp\",\n\n“Livemode\": false,\n\n“Last4\":\n\n\"9005\"\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
   },
   {
-    "file": "qa/vertical/frame-018.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nConnect\n\nYour agent's financial operating system.\n\nAsk Sally\n\npay the venue sixty pounds\n\nSally is working on your request...\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-18.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-019.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nConnect\n\nYour agent's financial operating system.\n\nAsk Sally\n\npay the venue sixty pounds\n\nSally paid the venue and recorded your platform fee.\n\nStripe output\n\n\"id\": \"pi_3URIMqRBii4S4KdW19Qxfybn\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 6000,\n\n\"currency\": \"gbp\",\n\n“Livemode\": false,\n\n\"destination\": \"acct_1UR18uIaqRBZsLdQ\",\n\n\"transfer\": \"tr_3URIMqRBii4S4KdW12Vc@cKD\",\n\n“transfer_amount\": 7964,\n\n“transfer_currency\": \"usd\",\n\n“application_fee_amount\": 300\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-19.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nYour partner payment is complete: £60 charged, with a £3 platform fee\n\nrecorded,\n\n&\n\nCONNECT - TEST MODE\n\nsucceeded - £60.00\n\nStripe output\n\n\"id\": \"pi_3UR31PRBii4S4KdW1Ro2n6Tt\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 6000,\n\n\"currency\": \"“gbp\",\n\n\"“Livemode\": false,\n\n\"destination\": “acct_1UQuLVIX6SJqMWzD\",\n\n\"transfer\": “tr_3UR31PRBii4S4KdW1G6duvhy\",\n\n“transfer_amount\": 7981,\n\n:\n\n.\n\n“transfer_currency\"\n\n\"usd\",\n\n“application_fee_amount\": 300\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-020.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nBilling\n\nYour agent's financial operating system.\n\nAsk Sally\n\nstart a Sally Plus subscription\n\nNew subscription pending.\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-20.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n°\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n1}\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-021.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nBilling\n\nYour agent's financial operating system.\n\nAsk Sally\n\nstart a Sally Plus subscription\n\nSally is working on your request...\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-21.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n°\n\nce)\n\nYour test customer's £9 monthly subscription is active.\n\nBILLING - TEST MODE\n\nactive\n\nStripe output\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-022.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nBilling\n\nYour agent's financial operating system.\n\nAsk Sally\n\nstart a Sally Plus subscription\n\nSally started your customer's monthly subscription.\n\nStripe output\n\n\"id\": \"sub_1URIN7RBii4S4KdW3eFYFSR6\",\n\n\"status\": \"active\",\n\n“Livemode\": false,\n\n\"price\": \"price_1UR18xRBii4S4KdWvJilcw3C\",\n\n\"interval\": \"month\",\n\n\"Latest_invoice\": \"in_1UR1IN7RBii4S4KdWbEQaekKw\"\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-22.png",
+    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\nYour test customer's £9 monthly subscription is active.\n\nce)\n\nBILLING - TEST MODE\n\nactive\n\nStripe output\n\n\"id\": \"“sub_1UR31kRBii4S4KdWLUrVhxQ2\",\n\n\"status\": “active\",\n\n“Livemode\": false,\n\n\"price\": \"price_1UQulLaRBii4S4KdWRmcwnL39\",\n\n\"interval\": \"month\",\n\n“Latest_invoice\": “in_1UR31kRBii4S4KdWXbrSNNPK\"\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-023.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nShared payment tokens\n\nYour agent's financial operating system.\n\nAsk Sally\n\npay nine pounds sixty with a shared payment token\n\nScoped token payment pending.\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-23.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
   },
   {
-    "file": "qa/vertical/frame-024.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nShared payment tokens\n\nYour agent's financial operating system.\n\nAsk Sally\n\npay nine pounds sixty with a shared payment token\n\nSally paid with a scoped token, without card details.\n\nStripe output\n\n\"id\": \"pi_3URINMRBii4S4KdW1zsrk2IW\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 960,\n\n\"currency\": \"gbp\",\n\n“Livemode\": false,\n\n“token_id\": \"spt_1URINLRBii4S4KdWgQjWKIrc\",\n\n“token_Limit_gbp\": 50\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-24.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nYour £9.60 payment succeeded using a scoped token, without sharing card\n\ndetails.\n\n&\n\nSHARED PAYMENT TOKENS - TEST MODE\n\nsucceeded - £9.60\n\nStripe output\n\n\"id\": \"pi_3UR322RBii4S4KdW06exsumu\",\n\n\"status\": “succeeded”,\n\n\"amount\": 960,\n\n“currency”: “gbp\",\n\n“Livemode\": false,\n\n“token_id\": \"spt_1UR322RBii4S4KdWRnWskxwU\" ,\n\n\"token_Limit_gbp\": 50\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-025.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nShared payment tokens\n\nYour agent's financial operating system.\n\nAsk Sally\n\npay nine pounds sixty with a shared payment token\n\nSally paid with a scoped token, without card details.\n\nStripe output\n\n\"id\": \"pi 3URINMRBii4S4KdW1zsrk2IW\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 960,\n\n\"currency\": \"gbp\",\n\n“Livemode\": false,\n\n“token_id\": \"spt_1URINLRBii4S4KdWgQjWKIrCc\",\n\n“token_Limit_gbp\": 50\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-25.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nYour £9.60 payment succeeded using a scoped token, without sharing card\n\ndetails.\n\n&\n\nSHARED PAYMENT TOKENS - TEST MODE\n\nsucceeded : £9.60\n\nStripe output\n\n\"id\": \"pi_3UR322RBii4S4KdW06exsumu\",\n\n\"status\": “succeeded”,\n\n\"amount\": 960,\n\n“currency”: “gbp\",\n\n“Livemode\": false,\n\n“token_id\": \"spt_1UR322RBii4S4KdWRnWskxwU\" ,\n\n\"token_Limit_gbp\": 50\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
   },
   {
-    "file": "qa/vertical/frame-026.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\nAsk Sally\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\nSally is working on your request...\n\nStripe output\n\nNo Stripe object for this request yet.\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-26.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nUse Stripe tools to|\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-027.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\nAsk Sally\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\nSally prepared your draft invoice. No email sent.\n\nStripe output\n\n\"id\": “in_1URIWhRBii4S4KdWsYovyf4M\",\n\n\"status\": \"draft\",\n\n\"total\": 7500,\n\n\"currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCustomers\n\nPostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-27.png",
+    "text": "c)\n\nHi, I'm Sally. What do you need?\n\nYour £75 invoice is drafted. No email sent.\n\nce)\n\nAGENT TOOLKIT - TEST MODE\n\ndraft - £75.00\n\nStripe output\n\n\"id\": \"“in_1UR32JRBii4S4KdWPSjd8Hds\",\n\n\"status\": “draft\",\n\n“total\": 7500,\n\n\"currency\": \"“gbp\",\n\n\"Livemode\":\n\nfalse\n\nExecuted through Stripe Agent Toolkit\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
   },
   {
-    "file": "qa/vertical/frame-028.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\nAsk Sally\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\nSally prepared your draft invoice. No email sent.\n\nStripe output\n\n\"id\": “in_1URIWhRBii4S4KdWsYovyf4M\",\n\n\"status\": \"draft\",\n\n\"total\": 7500,\n\n\"currency\": \"gbp\",\n\n\"“Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCustomers\n\nPostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
+    "file": "qa/vertical/frame-28.png",
+    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\nYour £75 invoice is drafted. No email sent.\n\ncc)\n\nAGENT TOOLKIT - TEST MODE\n\ndraft - £75.00\n\nStripe output\n\n\"id\": \"“in_1UR32JRBii4S4KdWPSjd8Hds\",\n\n\"status\": \"draft\",\n\n“total\": 7500,\n\n\"currency\": \"“gbp\",\n\n\"Livemode\":\n\nfalse\n\nExecuted through Stripe Agent Toolkit\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
   },
   {
-    "file": "qa/vertical/frame-029.png",
-    "text": ", total £60.00\n\nHi, I'm Sally. What do you need?\n\noo\n\nce)\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n\n]\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-030.png",
-    "text": "total £60.00\n\nHi, I'm Sally. What do you need?\n\nre)\n\nHere's the restock.\n\ni)\n\nWaitrose\n\n£71.92\n\nPaid\n\nDe\n\nBidfood\n\n£57.40\n\nNeeds approval\n\nDetai\n\nAmazon\n\n©\n\n£19.0'\n\nBlocked\n\nDeta\n\nRestock the kitchen\n\nDo the Waitrose shop\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-031.png",
-    "text": "total £60.00\n\nHi, I'm Sally. What do you need?\n\nre)\n\nHere's the restock.\n\n&\n\nWaitrose\n\n£71.92\n\nPaid\n\nDe\n\nBidfood\n\n£57.40\n\nNeeds approval\n\nDetai\n\nAmazon\n\n©\n\n£19.0'\n\nBlocked\n\nDeta\n\nRestock the kitchen\n\nDo the Waitrose shop\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
-  },
-  {
-    "file": "qa/vertical/frame-032.png",
-    "text": "total £60.00\n\nHi, I'm Sally. What do you need?\n\nce)\n\nHere's the restock.\n\n&\n\nWaitrose\n\n£71.92\n\nPaid\n\nDe\n\nBidfood\n\n£57.40 Needs approval\n\nDetai\n\nAmazon\n\n0\n\n£19.00\n\nBlocked\n\nDeta\n\nS\n\nRestock the kitchen\n\nDo the Waitrose shop\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
-  },
-  {
-    "file": "qa/vertical/frame-033.png",
-    "text": ", total £60.00\n\nSALLY\n\nHi, I'm Sally. What do you need?\n\n&\n\nVe LeCCU rasla Frenne migale: vIUIT policy, TUNING WLal £40.07 Ol £1IDU.UU\n\nWaitrose Thai Hom Mali Rice: Within policy; running total £51.67 of £150.00\n\nEssential Reduced Fat Coconut Milk: Within policy; running total £54.17 of £150.00\n\nEssential Chickpeas in Water: Within policy; running total £54.72 of £150.00\n\nCirio Passata: Within policy; running total £56.12 of £150.00\n\nWaitrose Low Sugar Nutty Granola Breakfast Cereal: Within policy; running total\n\n£58.77 of £150.00\n\nRowse Runny Honey Squeezy: Within policy; running total £60.77 of £150.00\n\nWaitrose Fairtrade Italian Style Ground Coffee: Within policy; running total £64.62 of\n\n£150.00\n\nClipper Organic Fairtrade 80 Tea Bags: Within policy; running total £69.12 of £150.00\n\nEssential Frozen British Garden Peas: Within policy; running total £71.12 of £150.00\n\nEssential Washing Up Liquid Citrus: Within policy; running total £71.92 of £150.00\n\nSTRIPE\n\nFull record - Receipt restock_7c1d8e9d\n\n@ Paia\n\nMONEY MOVED TODAY\n\n£2887.59\n\nPolicy\n\nAudit trail\n"
-  },
-  {
-    "file": "qa/vertical/frame-034.png",
-    "text": "Duchy Organic 12 Medium Eggs\n\n£5.50\n\nR1-R4 - auto paid\n\n£4.85\n\nGAIL's Sourdough\n\nR1-R4 - auto paid\n\n£4.32\n\nNo.1 British Free Range Chicken Thighs\n\nR1-R4 - auto paid\n\nNo.1 British Free Range 6 Pork Sausages\n\n£5.30\n\nR1-R4 - auto paid\n\nDuchy Organic Sweet Potatoes\n\n£3.00\n\nR1-R4 - auto paid\n\nWaitrose Red Onions\n\n£1.00\n\nR1-R4 - auto paid\n\nWaitrose Courgettes\n\n£4.40\n\nR1-R4 - auto paid\n\nWaitrose British Chestnut Mushrooms\n\n£1.15\n\nR1-R4 - auto paid\n\nDuchy Organic Avocado\n\n£1.45\n\nR1-R4 - auto paid\n\nEssential Limes 5s\n\n£1.40\n\nR1-R4 - auto paid\n\nWaitrose Strawberries\n\n£3.70\n\nR1-R4 - auto paid\n\nWaitrose Blueberries\n\n£2.50\n\nR1-R4 - auto paid\n\nYeo Valley Organic Natural Yogurts\n\n£2.85\n\nR1-R4 - auto paid\n\nEssential Mature Cheddar Cheese Strength 4\n\n£2.70\n\nR1-R4 - auto paid\n\nEssential Unsalted Butter\n\n£2.00\n\nR1-R4 - auto paid\n\nDe Cecco Pasta Penne Rigate\n\n£1.30\n\nR1-R4 - auto paid\n\nWaitrose Thai Hom Mali Rice\n\n£3.00\n\nR1-R4 - auto paid\n\nEssential Reduced Fat Coconut Milk\n\n£2.50\n\nR1-R4 - auto paid\n\n£0.55\n\nEssential Chickpeas in Water\n\nR1-R4 - auto paid\n\nCirio Passata\n\n£1.40\n\nR1-R4 - auto paid\n\nWaitrose Low Sugar Nutty Granola Breakfast Cereal\n\n£2.65\n\nR1-R4 - auto paid\n"
-  },
-  {
-    "file": "qa/vertical/frame-035.png",
-    "text": "Duchy Organic 12 Medium Eggs\n\n£5.50\n\nR1-R4 - auto paid\n\n£4.85\n\nGAIL's Sourdough\n\nR1-R4 - auto paid\n\n£4.32\n\nNo.1 British Free Range Chicken Thighs\n\nR1-R4 - auto paid\n\nNo.1 British Free Range 6 Pork Sausages\n\n£5.30\n\nR1-R4 - auto paid\n\nDuchy Organic Sweet Potatoes\n\n£3.00\n\nR1-R4 - auto paid\n\nWaitrose Red Onions\n\n£1.00\n\nR1-R4 - auto paid\n\nWaitrose Courgettes\n\n£4.40\n\nR1-R4 - auto paid\n\nWaitrose British Chestnut Mushrooms\n\n£1.15\n\nR1-R4 - auto paid\n\nDuchy Organic Avocado\n\n£1.45\n\nR1-R4 - auto paid\n\nEssential Limes 5s\n\n£1.40\n\nR1-R4 - auto paid\n\nWaitrose Strawberries\n\n£3.70\n\nR1-R4 - auto paid\n\nWaitrose Blueberries\n\n£2.50\n\nR1-R4 - auto paid\n\nYeo Valley Organic Natural Yogurts\n\n£2.85\n\nR1-R4 - auto paid\n\nEssential Mature Cheddar Cheese Strength 4\n\n£2.70\n\nR1-R4 - auto paid\n\nEssential Unsalted Butter\n\n£2.00\n\nR1-R4 - auto paid\n\nDe Cecco Pasta Penne Rigate\n\n£1.30\n\nR1-R4 - auto paid\n\nWaitrose Thai Hom Mali Rice\n\n£3.00\n\nR1-R4 - auto paid\n\nEssential Reduced Fat Coconut Milk\n\n£2.50\n\nR1-R4 - auto paid\n\n£0.55\n\nEssential Chickpeas in Water\n\nR1-R4 - auto paid\n\nCirio Passata\n\n£1.40\n\nR1-R4 - auto paid\n\nWaitrose Low Sugar Nutty Granola Breakfast Cereal\n\n£2.65\n\nR1-R4 - auto paid\n"
-  },
-  {
-    "file": "qa/vertical/frame-036.png",
-    "text": "Essential Unsalted Butter\n\n£2.00\n\nR1-R4 - auto paid\n\n£1.30\n\nDe Cecco Pasta Penne Rigate\n\nR1-R4 - auto paid\n\nWaitrose Thai Hom Mali Rice\n\n£3.00\n\nR1-R4 - auto paid\n\nEssential Reduced Fat Coconut Milk\n\n£2.50\n\nR1-R4 - auto paid\n\nEssential Chickpeas in Water\n\n£0.55\n\nR1-R4 - auto paid\n\nCirio Passata\n\n£1.40\n\nR1-R4 - auto paid\n\nWaitrose Low Sugar Nutty Granola Breakfast Cereal\n\n£2.65\n\nR1-R4 - auto paid\n\nRowse Runny Honey Squeezy\n\n£2.00\n\nR1-R4 - auto paid\n\nWaitrose Fairtrade Italian Style Ground Coffee\n\n£3.85\n\nR1-R4 - auto paid\n\n£4.50\n\nClipper Organic Fairtrade 80 Tea Bags\n\nR1-R4 - auto paid\n\nEssential Frozen British Garden Peas\n\n£2.00\n\nR1-R4 - auto paid\n\nEssential Washing Up Liquid Citrus\n\n£0.80\n\nR1-R4 - auto paid\n\nFryer oil 2OL\n\n£24.90\n\nR1-R4 - auto paid\n\nTotal\n\n£96.82\n\nPayment Intent pi_3UR2@LRBii4S4KdW1VoSUW7a\n\nRecord restock_7c1d8e9d\n\n> Stripe output\n\n1 object\n\nEvery line cites a clause in policy.md. See the audit.\n\n& Booked in Briefcase\n\nPreview, not connected\n\nWhat each payment would book in Briefcase, the UK accounting ledger. Nothing is sent\n\nuntil Briefcase is connected.\n\nDOCUMENT\n\nSUPPLIER\n\nCATEGORY\n\nAMOUNT STATUS\n"
-  },
-  {
-    "file": "qa/vertical/frame-037.png",
-    "text": "ce)\n\nReceipt from HeySalad Inc.\n\nReceipt #1309-1437\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 3:40:25 AM\n\nVISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\nHeySalad Inc. contributed 1.5% of your purchase to remove\n\n@\n\nCO, from the atmosphere.\n\nIf you have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help @heysalad.ai, or call us at +1 650-600-0883.\n\nSomething wrong with the email? View it in your browser.\n\nYou're receiving this email because you made a purchase at HeySalad Inc., which\n\nuses Stripe to provide invoicing and payment processing\n"
-  },
-  {
-    "file": "qa/vertical/frame-038.png",
-    "text": "ce)\n\nReceipt from HeySalad Inc.\n\nReceipt #1309-1437\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 3:40:25 AM\n\nVISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\nHeySalad Inc. contributed 1.5% of your purchase to remove\n\n@\n\nCO, from the atmosphere.\n\nIf you have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help @heysalad.ai, or call us at +1 650-600-0883.\n\nSomething wrong with the email? View it in your browser.\n\nYou're receiving this email because you made a purchase at HeySalad Inc., which\n\nuses Stripe to provide invoicing and payment processing\n"
-  },
-  {
-    "file": "qa/vertical/frame-039.png",
-    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\ncs)\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-040.png",
-    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nDeposit link ready.\n\n&\n\nGuest booking\n\n£60.00\n\nLink sent\n\n©\n\n+\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-041.png",
-    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nDeposit link ready.\n\n&\n\nGuest booking\n\n£60.00\n\nLink sent\n\n©\n\n+\n\nDetails\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-042.png",
-    "text": "Contact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\ngm Card\n\nCard information\n\n1234 1234 1234 1234\n\nvss ES ~\n\nMM / YY\n\ncvc\n\n&\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\na Save my information with Link for faster checkor\n\nPhone number\n\n&% (201) 555-0123\n\nBy paying, you agree to Link's Terms and Pyi\n\nGY\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purch\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/vertical/frame-043.png",
-    "text": "Contact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\nee Card\n\nCard information\n\nemcee\n\n1234 1234 1234 1234\n\nvss DEE\n\n|\n\nMM / YY\n\nCVC\n\nFa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n[v Save my information with Link for faster checkout\n\nPhone number\n\n&% (201) 555-0123\n\nBy paying, you agree to Link's Terms and P;\n\nCY:\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\n@\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/vertical/frame-044.png",
-    "text": "OR\n\nContact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\ngm Card\n\nCard information\n\n1234 1234 1234 1234\n\nvisa WE) MS 955\n\nCVC\n\nMM /YY\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n[‘M Save my information with Link for faster checkout\n\nPhone number\n\n® (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\n@\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
-  },
-  {
-    "file": "qa/vertical/frame-045.png",
-    "text": ", total £60.00\n\nHi, I'm Sally. What do you need?\n\ncs)\n\n&\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-046.png",
-    "text": "total £60.00\n\noo\n\nHi, I'm Sally. What do you need?\n\ndraft invoice Agent Nine Demo £120.00 ready (14). Say \"send the invoice”\n\nto send.\n\noo\n\nAgent Nine Demo\n\n@\n\n£120.00 _ Draft\n\nDetai\n\n+\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n-@\n"
-  },
-  {
-    "file": "qa/vertical/frame-047.png",
-    "text": "al £120.00\n\nHi, I'm Sally. What do you need?\n\ncs)\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\na\n\n]\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-048.png",
-    "text": "| £120.00\n\nHi, I'm Sally. What do you need?\n\nCe)\n\nInvoice checked.\n\nce)\n\nBidfood\n\n£184.60\n\nPaid\n\n0\n\nDe\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-049.png",
-    "text": "| £120.00\n\nHi, I'm Sally. What do you need?\n\nCe)\n\nInvoice checked.\n\nce)\n\nBidfood\n\n£184.60\n\nPaid\n\n©\n\nDe\n\nDo the Waitrose shop\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
-  },
-  {
-    "file": "qa/vertical/frame-050.png",
-    "text": "Hi, I'm Sally. What do you need?\n\nce)\n\nInvoice checked.\n\ncr)\n\nBidfood\n\n£184.60\n\nPaid\n\nBidfood\n\ninvoice - chat\n\n34.60\n\n£89.60 matched\n\nen thighs 10kg\n\noil 20L x2\n\n£49.80 matched\n\ni salad leaves 6kg\n\n£45.20 matched\n\nOLICY APPLIED)\n\nAust match the PO\n\nen thighs 10kg: On PO-1042\n\noil ZOL x2: On PO-1042\n\nsalad leaves 6kg: On PO-1042\n\ncord - Receipt invoice_ald@bf4t\n\nid\n\nMOVED TODAY\n\n972.19\n\nt trail\n"
-  },
-  {
-    "file": "qa/vertical/frame-051.png",
-    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.RD4JHKWW-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\nITEMS\n\nChicken thighs 10kg\n\n£89.60\n\nQty1\n\nFryer oil 20L x2\n\n£49.80\n\nQty1\n\nMixed salad leaves 6kg\n\n£45.20\n\nQty1\n\nTotal due\n\n£184.60\n\nAmount paid\n\n£184.60\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nVisa +++» 4242\n\n16 Oct 2026\n"
-  },
-  {
-    "file": "qa/vertical/frame-052.png",
-    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.RD4JHKWW-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\nITEMS\n\nChicken thighs 10kg\n\n£89.60\n\nQty1\n\nFryer oil 20L x2\n\n£49.80\n\nQty1\n\nMixed salad leaves 6kg\n\n£45.20\n\nQty1\n\nTotal due\n\n£184.60\n\nAmount paid\n\n£184.60\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nVisa +++» 4242\n\n16 Oct 2026\n"
-  },
-  {
-    "file": "qa/vertical/frame-053.png",
-    "text": "@ HeySalad Inc. TesTMoDE\n\niv)\n\nInvoice paid\n\n£184.60\n\nClose invoice and payment details X\n\nInvoice number\n\nRD4JHKWW-0001\n\nPayment date\n\n16 October 2026\n\nPayment method\n\nVisa +++» 4242\n\n( Download invoice Download receit |\n\nPowered by stripe\n\nTerms Privacy\n"
-  },
-  {
-    "file": "qa/vertical/frame-054.png",
+    "file": "qa/vertical/frame-29.png",
     "text": "@ HeySalad\n\nAgent 9.\n\nGive your agent a financial\n\noperating system.\n"
   },
   {
-    "file": "qa/vertical/frame-055.png",
+    "file": "qa/vertical/frame-30.png",
     "text": "@ HeySalad\n\nAgent 9.\n\nGive your agent a financial\n\noperating system.\n"
   }
 ]

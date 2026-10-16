@@ -16,7 +16,7 @@ export async function recordNineChat(root,{resume=false,onlyScene=null}={}){
   const name='scene-'+String(i).padStart(2,'0');
   const context=await browser.newContext({viewport:{width:1920,height:1200},deviceScaleFactor:1,recordVideo:{dir:raw,size:{width:1920,height:1200}}});
   await context.route('**/*',r=>new URL(r.request().url()).hostname==='dashboard.stripe.com'?r.abort():r.continue());
-  if(i>0&&i<10)await context.addInitScript(css=>document.addEventListener('DOMContentLoaded',()=>{const s=document.createElement('style');s.textContent=css+'\n#mem,.chat>header,.chat>div:has(>.bcw){display:none!important} .card{flex-shrink:0!important} #log{padding-top:100px!important}';document.head.appendChild(s)},{once:true}),css);
+  if(i>0&&i<10)await context.addInitScript(css=>document.addEventListener('DOMContentLoaded',()=>{const s=document.createElement('style');s.textContent=css+'\n#mem,.chat>header,.chat>div:has(>.bcw){display:none!important} .card{flex-shrink:0!important;width:100%!important} .card pre{font-family:Menlo,monospace!important;font-size:16px!important;font-weight:600!important;line-height:1.45!important;white-space:pre-wrap!important;overflow-wrap:anywhere!important} #log{padding-top:100px!important}';document.head.appendChild(s)},{once:true}),css);
   const page=await context.newPage();page.setDefaultTimeout(90000);
   let examples;
   if(i===0||i===10){await page.setContent(await cardHTML(i===10));await page.evaluate(()=>document.fonts.ready)}

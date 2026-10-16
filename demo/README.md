@@ -1,6 +1,6 @@
 # Agent 9 demo pipeline
 
-`npm run demo` builds `demo/out/agent9-demo.mp4` (1920×1080) and `demo/out/agent9-demo-vertical.mp4` (1080×1920). It records nine genuine Stripe test workflows, using the committed [shotlist](shotlist.md). The original overview is validated at 50–60 seconds and preserved in `demo/out/overview/`. The default export combines it with four real chat journeys (about 105 seconds), as requested in the later chat-first direction.
+`npm run demo` builds `demo/out/agent9-demo.mp4` (1920×1080) and `agent9-demo-vertical.mp4` (1080×1920), showing **all nine Stripe products through the original chat**. Target 50–60 seconds. See [nine-chat shotlist](nine-chat-shotlist.md) and [behavior/checks](nine-chat.md).
 
 ## Setup
 
@@ -8,11 +8,11 @@ Install Node dependencies with `npm ci`, Chromium with `npx playwright install c
 
 Set these environment variables, or put them in the ignored `demo/.env` (chmod 600). Never put values in shell arguments, logs, screenshots or Git:
 
-- `STRIPE_SECRET_KEY`: an `sk_test_` key with Payments, Checkout, Payment Links, Invoicing, Connect, Billing, shared-payment test helpers and Agent Toolkit access.
+- The hosted app must already have its Stripe `sk_test_` key and existing Issuing test secret. The new chat-only runner does not need either Stripe key locally; `STRIPE_SECRET_KEY` is only needed by the legacy local pipeline.
 - `ELEVENLABS_API_KEY`: access to Jessica Gallagher (Irish), voice ID `DbwWo4rVEd5NrejHYUnm`, model `eleven_multilingual_v2`.
-- `APP_URL`: the existing hosted **test-mode** app, used for the Issuing scene and the original-interface chat walkthrough. Its server must already have an active test card, £50 spending limit, the original chat card command and inline Stripe output. This URL is never rendered or logged.
+- `APP_URL`: the existing hosted **test-mode** app, used for all nine original-chat scenes. Its server must already have an active test card, £50 spending limit, the original chat card command and inline Stripe output. This URL is never rendered or logged.
 
-The other eight scenes run on an automatically started local app with an ephemeral port. The runner explicitly enables AGENT9_DEMO=1; the additional workspace is otherwise disabled. Its fixed commands and timestamped audit records follow recording rule D1 in policy.md. The local child gets only its test Stripe key; no Issuing, messaging or Cognee credentials. No hosted deployment occurs. The command prepares Connect's test venue and waits up to five minutes for its transfers capability to activate. If verification remains pending, it fails clearly; rerun when Stripe finishes verification. No simulated decline or Toolkit SDK fallback is accepted. Unavailable features fail the build.
+All nine scenes run against APP_URL's existing hosted Stripe **test** app, with the nine chat examples deployed first. No app URL is hard-coded or rendered. No local Issuing key is needed. The runner verifies test mode and prepares the existing Connect test account before capture. It never deploys automatically. The separate /agent9 workspace remains opt-in and is not used in this recording.
 
 ## Rebuild and inspect
 
@@ -22,14 +22,12 @@ npm run demo -- --scene=9
 npm run demo -- --resume
 npm run demo -- --edit-only
 npm run demo -- --verify-only
-npm run demo -- --combine-only
-npm run demo -- --walkthrough-only
-npm run demo -- --overview-only
+node demo/legacy-run.mjs # previous mixed-interface / extended walkthrough pipeline
 ```
 
 The first command regenerates fresh financial scenes. `--scene=N` replaces just one saved source scene (0–10), then rebuilds both edits and all evidence. `--resume` continues after the last successfully saved scene when a feature was temporarily unavailable. Voice synthesis is cached privately by request hash. Editing and verification can be rerun without repeating financial actions. ElevenLabs synthesis consumes the account's normal API allowance; Stripe actions use test money only. Invoices remain drafts, Checkout remains unpaid and Payment Links remain uncollected. No customer email is sent by this pipeline.
 
-`demo/work/agent9/raw/scene-00.mp4` through `scene-10.mp4` are separate source clips, including opening and closing. `demo/out/clips/` contains edited landscape/vertical scenes. A black sync marker, outside the final edit, synchronizes browser-clock beat timestamps to actual recorded video. `beats.json` records source phase times, marker offsets, final cuts and real read-back proof. Cuts are derived from those measurements.
+`demo/work/nine-chat/raw/scene-00.mp4` through `scene-10.mp4` are separate source clips, including opening and closing. `demo/out/clips/` contains edited landscape/vertical scenes. A black sync marker, outside the final edit, synchronizes browser-clock beat timestamps to actual recorded video. `beats.json` records source phase times, marker offsets, final cuts and real read-back proof. Cuts are derived from those measurements.
 
 Each scene keeps ~1s before, retimes its measured action to 47 frames, then plays the actual proof recording at normal speed. Natural voice begins with the proof; only action footage changes speed. No music, subtitles, captions, zoom, pan or camera animation. Hard cuts only. The vertical crop is fixed at x=772, y=0, width=608, height=1080 in the source content column, then scaled to 1080×1920; the sidebar stays outside it. The hosted scene uses the same content column via a checked-in presentation-only stylesheet. No Stripe data is modified by capture styling or network observation.
 

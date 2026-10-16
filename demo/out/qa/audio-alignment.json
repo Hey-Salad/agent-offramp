@@ -1,97 +1,57 @@
 [
   {
-    "product": "Opening",
+    "scene": 0,
     "correlation": 0.9999887309460983,
     "offsetSeconds": 0
   },
   {
-    "product": "PaymentIntents",
+    "scene": 1,
     "correlation": 0.9864008421204628,
     "offsetSeconds": 0
   },
   {
-    "product": "Checkout",
+    "scene": 2,
     "correlation": 0.9765159406951383,
     "offsetSeconds": 0
   },
   {
-    "product": "Payment Links",
+    "scene": 3,
     "correlation": 0.9999940430156705,
     "offsetSeconds": 0
   },
   {
-    "product": "Invoicing",
+    "scene": 4,
     "correlation": 0.9999894771155935,
     "offsetSeconds": 0
   },
   {
-    "product": "Issuing",
+    "scene": 5,
     "correlation": 0.9856381090153015,
     "offsetSeconds": 0
   },
   {
-    "product": "Connect",
+    "scene": 6,
     "correlation": 0.9999803145857826,
     "offsetSeconds": 0
   },
   {
-    "product": "Billing",
+    "scene": 7,
     "correlation": 0.999988943898502,
     "offsetSeconds": 0
   },
   {
-    "product": "Shared payment tokens",
+    "scene": 8,
     "correlation": 0.9999840813371644,
     "offsetSeconds": 0
   },
   {
-    "product": "Agent Toolkit",
+    "scene": 9,
     "correlation": 0.9999868179171795,
     "offsetSeconds": 0
   },
   {
-    "product": "Restock example",
-    "correlation": 0.988133018299902,
-    "offsetSeconds": 0
-  },
-  {
-    "product": "Itemised receipt",
-    "correlation": 0.9875242594011399,
-    "offsetSeconds": 0
-  },
-  {
-    "product": "Stripe receipt",
-    "correlation": 0.9999838751005005,
-    "offsetSeconds": 0
-  },
-  {
-    "product": "Booking deposit",
-    "correlation": 0.9817314861790496,
-    "offsetSeconds": 0
-  },
-  {
-    "product": "Customer checkout",
-    "correlation": 0.9850356636698847,
-    "offsetSeconds": 0
-  },
-  {
-    "product": "Draft invoice",
-    "correlation": 0.9999833502817012,
-    "offsetSeconds": 0
-  },
-  {
-    "product": "Supplier checks",
-    "correlation": 0.9799614395181124,
-    "offsetSeconds": 0
-  },
-  {
-    "product": "Invoice documents",
-    "correlation": 0.9897772555584997,
-    "offsetSeconds": 0
-  },
-  {
-    "product": "Closing",
-    "correlation": 0.9999691626117891,
+    "scene": 10,
+    "correlation": 0.9841531202212869,
     "offsetSeconds": 0
   }
 ]

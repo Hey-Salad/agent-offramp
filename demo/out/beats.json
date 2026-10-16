@@ -4,12 +4,12 @@
     "product": "Opening",
     "target": "rendered-html",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-00.mp4",
-      "markerEnd": 0.933333,
+      "source": "demo/work/nine-chat/raw/scene-00.mp4",
+      "markerEnd": 0.866667,
       "beforeStart": 0,
       "actionStart": 0,
       "proofStart": 0,
-      "end": 6.5010411249999995
+      "end": 6.500465125
     },
     "edit": {
       "scene": 0,
@@ -30,19 +30,19 @@
   {
     "scene": 1,
     "product": "PaymentIntents",
-    "target": "local-test-app",
+    "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-01.mp4",
-      "markerEnd": 1.233333,
+      "source": "demo/work/nine-chat/raw/scene-01.mp4",
+      "markerEnd": 3.733333,
       "beforeStart": 0,
-      "actionStart": 1.0009488330000007,
-      "proofStart": 3.009766625000001,
-      "end": 9.010263832999998
+      "actionStart": 1.0009310830000002,
+      "proofStart": 4.977902500000001,
+      "end": 11.207699624999998
     },
     "edit": {
       "scene": 1,
       "product": "PaymentIntents",
-      "target": "local-test-app",
+      "target": "hosted-test-app",
       "start": 6,
       "end": 11.2,
       "duration": 5.2,
@@ -54,29 +54,32 @@
       "line": "PaymentIntents confirms your supplier payment."
     },
     "proof": {
-      "id": "pi_3UR1LlRBii4S4KdW0w19ZCjX",
+      "id": "pi_3UR2zoRBii4S4KdW0NSSnbnZ",
       "status": "succeeded",
       "amount": 9682,
       "currency": "gbp",
-      "livemode": false
+      "livemode": false,
+      "execution": {
+        "via": "hosted-original-chat"
+      }
     }
   },
   {
     "scene": 2,
     "product": "Checkout",
-    "target": "local-test-app",
+    "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-02.mp4",
-      "markerEnd": 1.466667,
+      "source": "demo/work/nine-chat/raw/scene-02.mp4",
+      "markerEnd": 3.233333,
       "beforeStart": 0,
-      "actionStart": 1.0018219579999998,
-      "proofStart": 4.08375525,
-      "end": 10.085010582999999
+      "actionStart": 1.0014955420000007,
+      "proofStart": 4.222763959000001,
+      "end": 10.456232042
     },
     "edit": {
       "scene": 2,
       "product": "Checkout",
-      "target": "local-test-app",
+      "target": "hosted-test-app",
       "start": 11.2,
       "end": 16.53333333333333,
       "duration": 5.333333333333333,
@@ -88,7 +91,7 @@
       "line": "Checkout prepares your customer's secure payment."
     },
     "proof": {
-      "id": "cs_test_a167fFjJ1ANEaQN09JnEcFcLBycLJWWkdkbzOjqEz9mJuQCyzGogg696P7",
+      "id": "cs_test_a1ANqAiphCk4EI8H03Me7KTnZcXY8Wy3M3SECCb4cIn3oiU5KmRQvYeqP9",
       "status": "open",
       "payment_status": "unpaid",
       "amount_total": 3250,
@@ -105,19 +108,19 @@
   {
     "scene": 3,
     "product": "Payment Links",
-    "target": "local-test-app",
+    "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-03.mp4",
-      "markerEnd": 1.266667,
+      "source": "demo/work/nine-chat/raw/scene-03.mp4",
+      "markerEnd": 3.233333,
       "beforeStart": 0,
-      "actionStart": 1.0006463749999952,
-      "proofStart": 4.354243707999991,
-      "end": 10.355417290999995
+      "actionStart": 1.0011674159999941,
+      "proofStart": 5.038706374999997,
+      "end": 11.279646957999997
     },
     "edit": {
       "scene": 3,
       "product": "Payment Links",
-      "target": "local-test-app",
+      "target": "hosted-test-app",
       "start": 16.53333333333333,
       "end": 21.833333333333332,
       "duration": 5.3,
@@ -129,28 +132,31 @@
       "line": "Payment Links prepares your booking deposits."
     },
     "proof": {
-      "id": "plink_1UR1MBRBii4S4KdWaEWF3pZv",
+      "id": "plink_1UR30cRBii4S4KdW9ijxSubA",
       "active": true,
       "currency": "gbp",
-      "livemode": false
+      "livemode": false,
+      "execution": {
+        "via": "hosted-original-chat"
+      }
     }
   },
   {
     "scene": 4,
     "product": "Invoicing",
-    "target": "local-test-app",
+    "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-04.mp4",
-      "markerEnd": 1.266667,
+      "source": "demo/work/nine-chat/raw/scene-04.mp4",
+      "markerEnd": 3.233333,
       "beforeStart": 0,
-      "actionStart": 1.000998999999993,
-      "proofStart": 4.070841249999994,
-      "end": 10.072800624999992
+      "actionStart": 1.0008374169999996,
+      "proofStart": 5.762268541999994,
+      "end": 12.005841333999996
     },
     "edit": {
       "scene": 4,
       "product": "Invoicing",
-      "target": "local-test-app",
+      "target": "hosted-test-app",
       "start": 21.833333333333332,
       "end": 27.266666666666666,
       "duration": 5.433333333333334,
@@ -162,11 +168,14 @@
       "line": "Invoicing turns completed work into bills."
     },
     "proof": {
-      "id": "in_1UR1MNRBii4S4KdWjwSzdC1H",
+      "id": "in_1UR30tRBii4S4KdWz0zpTAIu",
       "status": "draft",
       "total": 12000,
       "currency": "gbp",
-      "livemode": false
+      "livemode": false,
+      "execution": {
+        "via": "hosted-original-chat"
+      }
     }
   },
   {
@@ -174,12 +183,12 @@
     "product": "Issuing",
     "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/chat-card/chat-card.mp4",
-      "markerEnd": 2.566667,
+      "source": "demo/work/nine-chat/raw/scene-05.mp4",
+      "markerEnd": 3.333333,
       "beforeStart": 0,
-      "actionStart": 1.0030268339999995,
-      "proofStart": 5.561817833999999,
-      "end": 9.569638916999999
+      "actionStart": 1.0002150830000005,
+      "proofStart": 4.405910458000001,
+      "end": 10.636291917000001
     },
     "edit": {
       "scene": 5,
@@ -196,7 +205,7 @@
       "line": "Issuing keeps your agent within budget."
     },
     "proof": {
-      "id": "iauth_1UR2dQLvLGMlREYZw4FR0Nr8",
+      "id": "iauth_1UR319LvLGMlREYZDJdpdkZN",
       "object": "issuing.authorization",
       "status": "closed",
       "approved": false,
@@ -212,19 +221,19 @@
   {
     "scene": 6,
     "product": "Connect",
-    "target": "local-test-app",
+    "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-06.mp4",
-      "markerEnd": 1.233333,
+      "source": "demo/work/nine-chat/raw/scene-06.mp4",
+      "markerEnd": 3.233333,
       "beforeStart": 0,
-      "actionStart": 1.0003933339999946,
-      "proofStart": 6.628216417000004,
-      "end": 12.629425749999996
+      "actionStart": 1.0015671669999904,
+      "proofStart": 8.734754209000002,
+      "end": 14.880263166999995
     },
     "edit": {
       "scene": 6,
       "product": "Connect",
-      "target": "local-test-app",
+      "target": "hosted-test-app",
       "start": 32.33333333333333,
       "end": 37.53333333333333,
       "duration": 5.2,
@@ -236,34 +245,37 @@
       "line": "Connect pays partners and records fees."
     },
     "proof": {
-      "id": "pi_3UR1MqRBii4S4KdW19Qxfybn",
+      "id": "pi_3UR31PRBii4S4KdW1Ro2n6Tt",
       "status": "succeeded",
       "amount": 6000,
       "currency": "gbp",
       "livemode": false,
-      "destination": "acct_1UR18uIaqRBZsLdQ",
-      "transfer": "tr_3UR1MqRBii4S4KdW12Vc0cKD",
-      "transfer_amount": 7964,
+      "destination": "acct_1UQulVIX6SJqMWzD",
+      "transfer": "tr_3UR31PRBii4S4KdW1G6duvhy",
+      "transfer_amount": 7981,
       "transfer_currency": "usd",
-      "application_fee_amount": 300
+      "application_fee_amount": 300,
+      "execution": {
+        "via": "hosted-original-chat"
+      }
     }
   },
   {
     "scene": 7,
     "product": "Billing",
-    "target": "local-test-app",
+    "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-07.mp4",
-      "markerEnd": 1.266667,
+      "source": "demo/work/nine-chat/raw/scene-07.mp4",
+      "markerEnd": 3.033333,
       "beforeStart": 0,
-      "actionStart": 1.0011772919999942,
-      "proofStart": 5.269195874999994,
-      "end": 11.270397583999994
+      "actionStart": 1.0007838329999856,
+      "proofStart": 6.823909666999995,
+      "end": 12.95848762499999
     },
     "edit": {
       "scene": 7,
       "product": "Billing",
-      "target": "local-test-app",
+      "target": "hosted-test-app",
       "start": 37.53333333333333,
       "end": 43.03333333333333,
       "duration": 5.5,
@@ -275,30 +287,33 @@
       "line": "Billing starts your customer's recurring subscription."
     },
     "proof": {
-      "id": "sub_1UR1N7RBii4S4KdW3eFYFSR6",
+      "id": "sub_1UR31kRBii4S4KdWLUrVhxQ2",
       "status": "active",
       "livemode": false,
-      "price": "price_1UR18xRBii4S4KdWvJilcw3C",
+      "price": "price_1UQulaRBii4S4KdWRmcwnL39",
       "interval": "month",
-      "latest_invoice": "in_1UR1N7RBii4S4KdWbE0aekKw"
+      "latest_invoice": "in_1UR31kRBii4S4KdWXbrSNNPK",
+      "execution": {
+        "via": "hosted-original-chat"
+      }
     }
   },
   {
     "scene": 8,
     "product": "Shared payment tokens",
-    "target": "local-test-app",
+    "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-08.mp4",
-      "markerEnd": 1.266667,
+      "source": "demo/work/nine-chat/raw/scene-08.mp4",
+      "markerEnd": 3.133333,
       "beforeStart": 0,
-      "actionStart": 1.0007242500000046,
-      "proofStart": 2.940414957999991,
-      "end": 8.941370750000004
+      "actionStart": 1.0009374159999993,
+      "proofStart": 5.230051915999994,
+      "end": 11.364725415999999
     },
     "edit": {
       "scene": 8,
       "product": "Shared payment tokens",
-      "target": "local-test-app",
+      "target": "hosted-test-app",
       "start": 43.03333333333333,
       "end": 48.83333333333333,
       "duration": 5.8,
@@ -310,31 +325,34 @@
       "line": "Shared payment tokens keep card details private."
     },
     "proof": {
-      "id": "pi_3UR1NMRBii4S4KdW1zsrK2IW",
+      "id": "pi_3UR322RBii4S4KdW06exsumu",
       "status": "succeeded",
       "amount": 960,
       "currency": "gbp",
       "livemode": false,
-      "token_id": "spt_1UR1NLRBii4S4KdWgQjWKIrC",
-      "token_limit_gbp": 50
+      "token_id": "spt_1UR322RBii4S4KdWRnWskxwU",
+      "token_limit_gbp": 50,
+      "execution": {
+        "via": "hosted-original-chat"
+      }
     }
   },
   {
     "scene": 9,
     "product": "Agent Toolkit",
-    "target": "local-test-app",
+    "target": "hosted-test-app",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-09.mp4",
-      "markerEnd": 1.366667,
+      "source": "demo/work/nine-chat/raw/scene-09.mp4",
+      "markerEnd": 3.233333,
       "beforeStart": 0,
-      "actionStart": 1.0023977919999991,
-      "proofStart": 5.117366416999999,
-      "end": 11.119558375
+      "actionStart": 1.0006659159999884,
+      "proofStart": 5.881636624999999,
+      "end": 12.110243415999975
     },
     "edit": {
       "scene": 9,
       "product": "Agent Toolkit",
-      "target": "local-test-app",
+      "target": "hosted-test-app",
       "start": 48.83333333333333,
       "end": 55.133333333333326,
       "duration": 6.3,
@@ -346,7 +364,7 @@
       "line": "Agent Toolkit creates invoices through Stripe's tools."
     },
     "proof": {
-      "id": "in_1UR1WhRBii4S4KdWsYovyf4M",
+      "id": "in_1UR32JRBii4S4KdWPSjd8Hds",
       "status": "draft",
       "total": 7500,
       "currency": "gbp",
@@ -362,328 +380,30 @@
     }
   },
   {
-    "scene": 11,
-    "product": "Restock example",
-    "target": "hosted-test-app-original-chat",
-    "capture": {
-      "scene": 0,
-      "product": "Restock example",
-      "beforeStart": 0.000008791999999591127,
-      "actionStart": 1.0007210410000003,
-      "proofStart": 3.412193125,
-      "end": 9.214713166000001,
-      "verticalCrop": {
-        "x": 772,
-        "y": 0,
-        "width": 608,
-        "height": 1080
-      },
-      "objectPrefix": "pi_",
-      "status": "awaiting_human",
-      "source": "demo/work/combined/raw/walkthrough-01.mp4",
-      "captureOffset": 0,
-      "journeyMarkerEnd": 2.066667,
-      "recordId": "restock_7c1d8e9d",
-      "proof": {
-        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
-        "livemode": false,
-        "status": "succeeded"
-      }
-    },
-    "edit": {
-      "start": 55.133333333333326,
-      "end": 62.56666666666666,
-      "voiceStart": 57.133333333333326
-    },
-    "status": "awaiting_human",
-    "objectPrefix": "pi_"
-  },
-  {
-    "scene": 12,
-    "product": "Itemised receipt",
-    "target": "hosted-test-app-original-chat",
-    "capture": {
-      "scene": 1,
-      "product": "Itemised receipt",
-      "beforeStart": 9.275473083,
-      "actionStart": 0.6012832919999997,
-      "proofStart": 1.9625750839999991,
-      "end": 6.469090542,
-      "verticalCrop": {
-        "x": 772,
-        "y": 0,
-        "width": 608,
-        "height": 1080
-      },
-      "objectPrefix": "pi_",
-      "status": "succeeded",
-      "source": "demo/work/combined/raw/walkthrough-02.mp4",
-      "captureOffset": 0,
-      "journeyMarkerEnd": 2.066667,
-      "recordId": "restock_7c1d8e9d",
-      "proof": {
-        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
-        "livemode": false,
-        "status": "succeeded"
-      }
-    },
-    "edit": {
-      "start": 62.56666666666666,
-      "end": 68.7,
-      "voiceStart": 64.56666666666666
-    },
-    "status": "succeeded",
-    "objectPrefix": "pi_"
-  },
-  {
-    "scene": 13,
-    "product": "Stripe receipt",
-    "target": "hosted-test-app-original-chat",
-    "capture": {
-      "scene": 2,
-      "product": "Stripe receipt",
-      "beforeStart": 15.820012042,
-      "actionStart": 0.6011682910000005,
-      "proofStart": 2.223323540999999,
-      "end": 6.632458207999999,
-      "verticalCrop": {
-        "x": 656,
-        "y": 0,
-        "width": 608,
-        "height": 1080
-      },
-      "objectPrefix": "pi_",
-      "status": "succeeded",
-      "source": "demo/work/combined/raw/walkthrough-03.mp4",
-      "captureOffset": 0,
-      "journeyMarkerEnd": 2.066667,
-      "recordId": "restock_7c1d8e9d",
-      "proof": {
-        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
-        "livemode": false,
-        "status": "succeeded"
-      }
-    },
-    "edit": {
-      "start": 68.7,
-      "end": 74.73333333333333,
-      "voiceStart": 70.7
-    },
-    "status": "succeeded",
-    "objectPrefix": "pi_"
-  },
-  {
-    "scene": 14,
-    "product": "Booking deposit",
-    "target": "hosted-test-app-original-chat",
-    "capture": {
-      "scene": 3,
-      "product": "Booking deposit",
-      "beforeStart": 0.000003208999999948503,
-      "actionStart": 1.0014314999999994,
-      "proofStart": 4.574776,
-      "end": 8.472851333000001,
-      "verticalCrop": {
-        "x": 772,
-        "y": 0,
-        "width": 608,
-        "height": 1080
-      },
-      "objectPrefix": "plink_",
-      "status": "active",
-      "source": "demo/work/combined/raw/walkthrough-04.mp4",
-      "captureOffset": 0,
-      "journeyMarkerEnd": 2.633333,
-      "recordId": "booking_12200934",
-      "proof": {
-        "id": "plink_1UR23cRBii4S4KdWnJS0z1a3",
-        "livemode": false,
-        "status": "active"
-      }
-    },
-    "edit": {
-      "start": 74.73333333333333,
-      "end": 80.23333333333333,
-      "voiceStart": 76.73333333333333
-    },
-    "status": "active",
-    "objectPrefix": "plink_"
-  },
-  {
-    "scene": 15,
-    "product": "Customer checkout",
-    "target": "hosted-test-app-original-chat",
-    "capture": {
-      "scene": 4,
-      "product": "Customer checkout",
-      "beforeStart": 8.533292916999999,
-      "actionStart": 0.6006301250000003,
-      "proofStart": 3.9670555420000007,
-      "end": 8.421397083,
-      "verticalCrop": {
-        "x": 1000,
-        "y": 0,
-        "width": 608,
-        "height": 1080
-      },
-      "objectPrefix": "plink_",
-      "status": "unpaid",
-      "source": "demo/work/combined/raw/walkthrough-05.mp4",
-      "captureOffset": 0,
-      "journeyMarkerEnd": 2.633333,
-      "recordId": "booking_12200934",
-      "proof": {
-        "id": "plink_1UR23cRBii4S4KdWnJS0z1a3",
-        "livemode": false,
-        "status": "active"
-      }
-    },
-    "edit": {
-      "start": 80.23333333333333,
-      "end": 86.3,
-      "voiceStart": 82.23333333333333
-    },
-    "status": "unpaid",
-    "objectPrefix": "plink_"
-  },
-  {
-    "scene": 16,
-    "product": "Draft invoice",
-    "target": "hosted-test-app-original-chat",
-    "capture": {
-      "scene": 5,
-      "product": "Draft invoice",
-      "beforeStart": 0.000006749999997168743,
-      "actionStart": 1.0009364999999946,
-      "proofStart": 6.587704541000001,
-      "end": 10.531265083000001,
-      "verticalCrop": {
-        "x": 772,
-        "y": 0,
-        "width": 608,
-        "height": 1080
-      },
-      "objectPrefix": "in_",
-      "status": "draft",
-      "source": "demo/work/combined/raw/walkthrough-06.mp4",
-      "captureOffset": 0,
-      "journeyMarkerEnd": 0.8,
-      "recordId": "outinvoice_a190b984",
-      "proof": {
-        "id": "in_1UR21BRBii4S4KdWXU71vl2x",
-        "livemode": false,
-        "status": "draft"
-      }
-    },
-    "edit": {
-      "start": 86.3,
-      "end": 91.86666666666666,
-      "voiceStart": 88.3
-    },
-    "status": "draft",
-    "objectPrefix": "in_"
-  },
-  {
-    "scene": 17,
-    "product": "Supplier checks",
-    "target": "hosted-test-app-original-chat",
-    "capture": {
-      "scene": 6,
-      "product": "Supplier checks",
-      "beforeStart": 0.000006250000012641976,
-      "actionStart": 1.0012574579999978,
-      "proofStart": 9.979393625,
-      "end": 13.738257707999992,
-      "verticalCrop": {
-        "x": 772,
-        "y": 0,
-        "width": 608,
-        "height": 1080
-      },
-      "objectPrefix": "in_",
-      "status": "paid",
-      "source": "demo/work/combined/raw/walkthrough-07.mp4",
-      "captureOffset": 0,
-      "journeyMarkerEnd": 0.8,
-      "recordId": "invoice_a1d0bf4f",
-      "proof": {
-        "id": "in_1UR21ORBii4S4KdWI50oyPpc",
-        "livemode": false,
-        "status": "paid"
-      }
-    },
-    "edit": {
-      "start": 91.86666666666666,
-      "end": 97.23333333333332,
-      "voiceStart": 93.86666666666666
-    },
-    "status": "paid",
-    "objectPrefix": "in_"
-  },
-  {
-    "scene": 18,
-    "product": "Invoice documents",
-    "target": "hosted-test-app-original-chat",
-    "capture": {
-      "scene": 7,
-      "product": "Invoice documents",
-      "beforeStart": 13.77658012500001,
-      "actionStart": 0.600997458000009,
-      "proofStart": 6.989261249999998,
-      "end": 12.234087458000005,
-      "verticalCrop": {
-        "x": 1312,
-        "y": 0,
-        "width": 608,
-        "height": 1080
-      },
-      "objectPrefix": "in_",
-      "status": "paid",
-      "source": "demo/work/combined/raw/walkthrough-08.mp4",
-      "captureOffset": 0,
-      "journeyMarkerEnd": 0.8,
-      "recordId": "invoice_a1d0bf4f",
-      "proof": {
-        "id": "in_1UR21ORBii4S4KdWI50oyPpc",
-        "livemode": false,
-        "status": "paid"
-      }
-    },
-    "edit": {
-      "start": 97.23333333333332,
-      "end": 104.09999999999998,
-      "voiceStart": 99.23333333333332
-    },
-    "status": "paid",
-    "objectPrefix": "in_"
-  },
-  {
     "scene": 10,
     "product": "Closing",
     "target": "rendered-html",
     "capture": {
-      "source": "demo/work/agent9/raw/scene-10.mp4",
+      "source": "demo/work/nine-chat/raw/scene-10.mp4",
       "markerEnd": 0.8,
       "beforeStart": 0,
       "actionStart": 0,
       "proofStart": 0,
-      "end": 4.500219167000012
+      "end": 4.501342790999985
     },
     "edit": {
       "scene": 10,
       "product": "Closing",
       "target": "rendered-html",
-      "start": 104.09999999999998,
-      "end": 108.09999999999998,
+      "start": 55.133333333333326,
+      "end": 59.133333333333326,
       "duration": 4,
-      "voiceStart": 104.09999999999998,
-      "productNamedAt": 104.09999999999998,
+      "voiceStart": 55.133333333333326,
+      "productNamedAt": 55.133333333333326,
       "proofVisibleAt": null,
       "stripePrefix": null,
       "status": null,
-      "line": "Agent 9. Give your agent a financial operating system.",
-      "kind": "overview",
-      "voiceFile": "/Users/peter-machona/Documents/ChatGPT/Product_Mgmt/agent-offramp/demo/work/agent9/voice/10.wav"
+      "line": "Agent 9. Give your agent a financial operating system."
     },
     "proof": null
   }

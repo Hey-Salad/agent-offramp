@@ -6,6 +6,7 @@ import {recordNineChat} from './nine-chat-record.mjs';
 import {prepareVenue} from './setup.mjs';
 import {edit} from './edit.mjs';
 import {verify} from './verify.mjs';
+import {verifyNineChat} from './nine-chat-check.mjs';
 dotenv.config({path:'demo/.env',quiet:true});
 const root=path.resolve('demo/work/nine-chat'),out=path.resolve('demo/out');
 try{
@@ -24,11 +25,11 @@ try{
  }
  if(!verifyOnly){
   // Keep former combined edit locally; new primary export is nine examples in one chat.
-  if(!process.argv.includes('--scene=')&&!await fs.stat(out+'/previous-combined').catch(()=>null)){
+  if(!await fs.stat(out+'/previous-combined').catch(()=>null)){
    await fs.mkdir(out+'/previous-combined',{recursive:true});
    for(const n of ['agent9-demo.mp4','agent9-demo-vertical.mp4'])try{await fs.copyFile(out+'/'+n,out+'/previous-combined/'+n)}catch{}
   }
   await fs.rm(out+'/proof',{recursive:true,force:true});await edit(root,out);
  }
- await verify(out,root);
+ await verify(out,root);await verifyNineChat();
 }catch(e){let message=String(e.message).replace(/https?:\S+/g,'[private URL]');for(const[k,v]of Object.entries(process.env))if(v&&(k.includes('KEY')||k==='APP_URL'))message=message.replaceAll(v,'[redacted]');console.error(message);process.exitCode=1}
