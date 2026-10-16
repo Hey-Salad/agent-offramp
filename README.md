@@ -11,8 +11,10 @@
 <p align="center">Spend rules and virtual cards for AI agents, built on 9 Stripe products. Open source, by HeySalad.</p>
 
 <p align="center">
-  <img src="demo/out/agent9.gif" alt="Agent 9 demo: card declines an overspend" width="720">
+  <img src="demo/out/agent9.gif?full-demo=1" alt="Agent 9 demo: nine Stripe workflows, checkout, receipts and invoice PDF" width="720">
 </p>
+
+The loop shows all nine chat examples, then the real customer receipt, Checkout, payment link, invoice and downloaded PDF.
 
 **Nine business tasks, one chat:** pay suppliers, collect a payment, take a deposit, invoice a customer, control card spending, pay a partner, start a subscription, use a scoped token, and run Stripe agent tools. Each example shows its real Stripe test result. [Chat examples and video pipeline](demo/nine-chat.md). A separate [customer walkthrough](demo/customer-pages.md) opens the real receipts, payment pages and invoice PDF.
 

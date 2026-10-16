@@ -75,3 +75,7 @@ The [customer shotlist](customer-shotlist.md) preserves the short overview and r
 ## GitHub assets
 
 At the user's request, the four final MP4s and matching test invoice PDF are committed on the PR branch. Raw recordings, voice caches, credentials, private deployment logs and intermediate clips remain ignored. The PDF export hash are in `demo/out/documents/manifest.json`. `npm run demo` refreshes the exports; explicitly stage the four MP4s and `documents/` after rebuilding because `demo/out/` remains ignored by default.
+
+## Homepage GIF versus social clips
+
+`npm run demo:gif` rebuilds the homepage `demo/out/agent9.gif`: a 31.6s square loop with all nine chat results and all five real customer pages, 1200px wide at 15fps, under 8MB. It also saves a silent `agent9-readme.mp4` preview, timing manifest, fourteen proof frames and all-distinct-frame OCR checks. `npm run demo:social` separately rebuilds the original eight-second decline as `agent9-decline.gif` and the X/square social MP4s. It does not overwrite the homepage GIF.

@@ -28,13 +28,13 @@ ff(['-i',source,'-filter_complex',core,'-map','[v]','-an','-frames:v','240','-c:
 // Keep the reply, Stripe proof and composer inside every export.
 const gifFilter='crop=960:960:596:120,scale=1200:1200:flags=lanczos,fps=15';
 ff(['-i',work+'/loop-master.mp4','-vf',gifFilter+',palettegen=max_colors=192:stats_mode=diff:reserve_transparent=0','-frames:v','1',work+'/palette.png']);
-ff(['-i',work+'/loop-master.mp4','-i',work+'/palette.png','-filter_complex',`[0:v]${gifFilter}[v];[v][1:v]paletteuse=dither=sierra2_4a:diff_mode=rectangle`,'-an','-loop','0',out+'/agent9.gif']);
+ff(['-i',work+'/loop-master.mp4','-i',work+'/palette.png','-filter_complex',`[0:v]${gifFilter}[v];[v][1:v]paletteuse=dither=sierra2_4a:diff_mode=rectangle`,'-an','-loop','0',out+'/agent9-decline.gif']);
 for(const [name,filter]of[
  ['agent9-x.mp4','crop=1680:945:236:124,scale=1280:720:flags=lanczos'],
  ['agent9-square.mp4','crop=960:960:596:120,scale=1080:1080:flags=lanczos'],
 ])ff(['-i',work+'/loop-master.mp4','-vf',filter,'-an','-r','30','-frames:v','240','-c:v','libx264','-crf','18','-preset','slow','-pix_fmt','yuv420p','-movflags','+faststart',out+'/'+name]);
 const info=[];
-for(const [name,w,h,fps,limit]of[['agent9.gif',1200,1200,15,8000000],['agent9-x.mp4',1280,720,30,15000000],['agent9-square.mp4',1080,1080,30,15000000]]){
+for(const [name,w,h,fps,limit]of[['agent9-decline.gif',1200,1200,15,8000000],['agent9-x.mp4',1280,720,30,15000000],['agent9-square.mp4',1080,1080,30,15000000]]){
  const p=JSON.parse(run('ffprobe',['-v','error','-show_streams','-show_format','-of','json',out+'/'+name]));const v=p.streams.find(s=>s.codec_type==='video'),bytes=(await fs.stat(out+'/'+name)).size;
  if(v.width!==w||v.height!==h||Math.abs(Number(v.nb_frames)/Number(p.format.duration)-fps)>.01||p.streams.some(s=>s.codec_type==='audio')||bytes>=limit||Math.abs(Number(p.format.duration)-8)>.08)throw Error('Export requirements failed: '+name);
  if(name.endsWith('.mp4')&&v.codec_name!=='h264')throw Error('H.264 required');

@@ -1,3 +1,5 @@
+The homepage now uses the full-workflow GIF built by `npm run demo:gif`. The short decline described below is preserved as `demo/out/agent9-decline.gif`; the X/square clips stay focused on that single beat.
+
 # Agent 9 social loop
 
 ## Candidates reviewed from the combined video
