@@ -42,10 +42,11 @@ async function marker(page){
  await page.evaluate(()=>document.querySelector('#capture-marker').remove());
  return performance.now()/1000;
 }
-export async function record(root,localURL,resume=false){
+export async function record(root,localURL,resume=false,onlyScene=null){
  const raw=path.resolve(root,'raw');await fs.mkdir(raw,{recursive:true});
- const browser=await chromium.launch({headless:false,args:['--window-size=1920,1200']});const beats=resume?JSON.parse(await fs.readFile(root+'/beats.json','utf8')):[];
- try{for(let i=beats.length;i<scenes.length;i++){
+ const browser=await chromium.launch({headless:false,args:['--window-size=1920,1200']});const beats=resume||onlyScene!==null?JSON.parse(await fs.readFile(root+'/beats.json','utf8')):[];
+ const indices=onlyScene!==null?[onlyScene]:Array.from({length:scenes.length-beats.length},(_,i)=>i+beats.length);
+ try{for(const i of indices){
   const name='scene-'+String(i).padStart(2,'0');
   const context=await browser.newContext({viewport:{width:1920,height:1200},deviceScaleFactor:1,recordVideo:{dir:raw,size:{width:1920,height:1200}}});
   await context.route('**/*',route=>{const host=new URL(route.request().url()).hostname;return host==='dashboard.stripe.com'?route.abort():route.continue()});
@@ -67,7 +68,7 @@ export async function record(root,localURL,resume=false){
   const {spawnSync}=await import('node:child_process');const scan=spawnSync('ffmpeg',['-hide_banner','-i',source,'-vf','blackdetect=d=0.2:pix_th=0.02','-an','-f','null','-'],{encoding:'utf8',maxBuffer:4e6});
   const ends=[...scan.stderr.matchAll(/black_end:([\d.]+)/g)].map(m=>Number(m[1]));if(ends.length!==1)throw Error('Capture marker ambiguous for scene '+i);
   const beat={scene:i,product:scenes[i].product,target:hosted?'hosted-test-app':i===0||i===10?'rendered-html':'local-test-app',source:path.relative(process.cwd(),source),captureOffset:ends[0],beforeStart:0,actionStart:action-start,proofStart:proof-start,end:end-start,result};
-  beats.push(beat);await fs.writeFile(root+'/beats.json',JSON.stringify(beats,null,2));console.log('Recorded '+name+' '+scenes[i].product);
+  beats[i]=beat;await fs.writeFile(root+'/beats.json',JSON.stringify(beats,null,2));console.log('Recorded '+name+' '+scenes[i].product);
  }}finally{await browser.close()}
  return beats;
 }

@@ -2,8 +2,10 @@
 // The UI only receives selected fields read back from Stripe, never whole card/token objects.
 import type { Express } from "express";
 import { stripeX, stripeI, issueCard, testAuthorization, payVenue, subscribe, sptPay } from "./stripe-extra.js";
-import { stripeWriteRequired } from "./toolkit.js";
+import { stripeWrite, stripeWriteRequired } from "./toolkit.js";
 import { readFileSync } from "node:fs";
+import crypto from "node:crypto";
+import { memory } from "./memory.js";
 
 export const AGENT9_COMMANDS = [
   "restock", "create a checkout for the kitchen order", "table for 6 Saturday 8pm",
@@ -27,6 +29,9 @@ export function mountAgent9(app: Express, port: number) {
     const n = commandIndex(q.body?.text);
     if (n < 0) return res.status(400).json({ error: "Choose a supported request" });
     if (!stripeX) return res.status(503).json({ error: "Stripe test key required" });
+    const at = () => new Date().toISOString();
+    const run: any = { id: "or_" + crypto.randomBytes(5).toString("hex"), createdAt: at(), agent: "Sally", channel: "chat", demo: "agent9", request: AGENT9_COMMANDS[n], decisions: [{ status: "approved", clause: "D1", reason: "Explicit, fixed test-demo request; no invoice email or live payment" }], total: 0, status: "running", stripe: {}, audit: [{ at: at(), event: "request_received", channel: "chat", text: AGENT9_COMMANDS[n] }, { at: at(), event: "policy_checked", clause: "D1", status: "approved" }] };
+    memory.save(run);
     const call = async (path: string, body = {}) => {
       const r = await fetch(`http://127.0.0.1:${port}${path}`, { method: "POST", headers: { "content-type": "application/json", accept: "application/json" }, body: JSON.stringify(body) });
       if (!r.ok) throw new Error("Financial action failed");
@@ -41,7 +46,9 @@ export function mountAgent9(app: Express, port: number) {
         proof = fields(o, ["id", "status", "amount", "currency", "livemode"]);
         reply = "Sally paid your supplier within your rules.";
       } else if (n === 1) {
-        const s = await stripeX.checkout.sessions.create({ mode: "payment", line_items: [{ price_data: { currency: "gbp", unit_amount: 3250, product_data: { name: "Kitchen order (test)" } }, quantity: 1 }], success_url: `http://localhost:${port}/agent9`, cancel_url: `http://localhost:${port}/agent9` });
+        const params: any = { mode: "payment", line_items: [{ price_data: { currency: "gbp", unit_amount: 3250, product_data: { name: "Kitchen order (test)" } }, quantity: 1 }], success_url: `http://localhost:${port}/agent9`, cancel_url: `http://localhost:${port}/agent9` };
+        const s = await stripeWrite("PostCheckoutSessions", params, () => stripeX!.checkout.sessions.create(params));
+        audit = { via: s._via, operations: ["PostCheckoutSessions"] };
         o = await verify(s.id, "checkout/sessions");
         proof = fields(o, ["id", "status", "payment_status", "amount_total", "currency", "livemode"]);
         reply = "Sally prepared a secure checkout. Payment is pending.";
@@ -55,11 +62,11 @@ export function mountAgent9(app: Express, port: number) {
           const r = await call("/demo/outinvoice", { customer: "Agent Nine Demo", amount: 120, desc: "Catering" });
           o = await verify(r.stripe.draft.id, "invoices");
         } else {
-          const c = await stripeX.customers.create({ name: "Agent Nine Tools", email: "agent9-tools@example.com", metadata: { app: "agent9-demo" } });
+          const c = await stripeWriteRequired("PostCustomers", { name: "Agent Nine Tools", email: "agent9-tools@example.com" });
           const draft = await stripeWriteRequired("PostInvoices", { customer: c.id, currency: "gbp", auto_advance: false, collection_method: "send_invoice", days_until_due: 30 });
           await stripeWriteRequired("PostInvoiceitems", { customer: c.id, invoice: draft.id, amount: 7500, currency: "gbp", description: "Services" });
           o = await verify(draft.id, "invoices");
-          audit = { via: "agent-toolkit", operations: ["PostInvoices", "PostInvoiceitems"] };
+          audit = { via: "agent-toolkit", operations: ["PostCustomers", "PostInvoices", "PostInvoiceitems"] };
         }
         proof = fields(o, ["id", "status", "total", "currency", "livemode"]);
         reply = "Sally prepared your draft invoice. No email sent.";
@@ -108,8 +115,17 @@ export function mountAgent9(app: Express, port: number) {
       }
       const expected = ["succeeded", "open", undefined, "draft", "closed", "succeeded", "active", "succeeded", "draft"][n];
       if ((expected && proof.status !== expected) || (n === 2 && proof.active !== true)) throw new Error("Unexpected Stripe state");
+      run.status = proof.status || "active";
+      run.total = (proof.amount ?? proof.amount_total ?? proof.total ?? 0) / 100;
+      run.stripe = { verified: proof };
+      run.audit.push({ at: at(), event: "stripe_verified", channel: "chat", object: proof.id, status: run.status, livemode: false });
+      if (audit) run.audit.push({ at: at(), event: "stripe_tool", channel: "chat", via: audit.via, tools: audit.operations });
+      memory.save(run);
       res.json({ reply, proof, audit });
     } catch {
+      run.status = "failed";
+      run.audit.push({ at: at(), event: "verification_failed", channel: "chat" });
+      memory.save(run);
       // Deliberately exclude upstream messages, URLs, keys and token payloads.
       res.status(502).json({ error: "This Stripe test action could not be verified. No proof is available." });
     }

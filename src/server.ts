@@ -39,7 +39,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 mountMcp(app);
 mountStripeExtra(app);
-mountAgent9(app, PORT);
+if (process.env.AGENT9_DEMO === "1") mountAgent9(app, PORT);
 mountUi(app);
 // Cognee memory: preferences, past orders and spend decisions.
 app.post("/api/memory/remember", async (req, res) => { const t = String(req.body?.text || "").slice(0, 4000); if (!t) return res.status(400).json({ error: "text required" }); res.json(await remember(t)); });

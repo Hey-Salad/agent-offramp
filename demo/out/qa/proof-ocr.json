@@ -9,11 +9,11 @@
   },
   {
     "file": "02-checkout-vertical.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nCheckout\n\nYour agent's financial operating system.\n\nAsk Sally\n\ncreate a checkout for the kitchen order\n\nSally prepared a secure checkout. Payment is pending.\n\nStripe output\n\n\"id\":\n\n“cs_test_alJlavf8Ub69eIe3N LAxHbve6XbN3nvdCLAA2g4SJ6IHX6\n\nZSGyrM9ZP6uu\",\n\n\"status\": \"open\",\n\n“payment_status\": \"unpaid\",\n\n“amount_total\": 3250,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+    "text": "@ HeySalad\n\nStripe test mode\n\nCheckout\n\nYour agent's financial operating system.\n\nAsk Sally\n\ncreate a checkout for the kitchen order\n\nSally prepared a secure checkout. Payment is pending.\n\nStripe output\n\n\"id\":\n\n“cs_test_a167fFjJ1ANEaQNQ9JnEcFcLBycLJWWkdkbz0j qEz9mJuQ\n\nCyzGogg696P7\",\n\n\"status\": \"open\",\n\n“payment_status\": \"unpaid\",\n\n“amount_total\": 3250,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCheckoutSessions\n\nReal Stripe test objects. No real money.\n"
   },
   {
     "file": "02-checkout.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nCheckout\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ncreate a checkout for the kitchen order\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared a secure checkout. Payment is pending\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n“cs_test_alJIavf8Ub69eTe3N LAxHbve6XbN3nvdCLAA2g4SJ6IHX6\n\nZsGyrm9ZP6uu\",\n\n\"status\"\n\n\"open\",\n\n“payment_status\"\n\n\"unpaid\",\n\n\"amount_tota\n\n3250,\n\n\"currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nReal Stripe test objects. No real money.\n"
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nCheckout\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\ncreate a checkout for the kitchen order\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared a secure checkout. Payment is pending\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n“cs_test_a167 fFjJ1ANEaQNO9IJnEcFcLBycLJWWkdkbz0j qEz9mJuQ\n\nCyzGogg696P7\",\n\n\"status\"\n\n\"open\",\n\n“payment_status\"\n\n\"unpaid\",\n\n\"amount_tota\n\n3250,\n\n\"currency\": \"gbp\",\n\n“Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCheckoutSessions\n\nReal Stripe test objects. No real money.\n"
   },
   {
     "file": "03-payment-links-vertical.png",
@@ -65,10 +65,10 @@
   },
   {
     "file": "09-agent-toolkit-vertical.png",
-    "text": "@ HeySalad\n\nStripe test mode\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\nAsk Sally\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\nSally prepared your draft invoice. No email sent.\n\nStripe output\n\n\"id\": \"in_1URINYRBii4S4KdWRZ4GJNkr\",\n\n\"status\": \"draft\",\n\n\"total\": 7500,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nvia: agent-toolkit PostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
+    "text": "@ HeySalad\n\nStripe test mode\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\nAsk Sally\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\nSally prepared your draft invoice. No email sent.\n\nStripe output\n\n\"id\": “in_1URIWhRBii4S4KdWsYovyf4M\",\n\n\"status\": \"draft\",\n\n\"total\": 7500,\n\n\"currency\": \"gbp\",\n\n\"Livemode\":\n\nfalse\n\nvia: agent-toolkit PostCustomers\n\nPostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
   },
   {
     "file": "09-agent-toolkit.png",
-    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nAgent Toolkit\n\nYour agent's financial operating system.\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared your draft invoice. No email sent.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n|_1URINYRBii4S4KdWRZ4GINkr\",\n\n“status'\n\ndraft\",\n\n\"total\": 7500,\n\n\"currency\"\n\n“gbp\",\n\n“Livemode\"\n\nfalse\n\nvia: agent-toolkit PostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
+    "text": "@HeySalad\n\n@HeySalad\n\nStripe test mode\n\nAgent 9\n\nAgent Toolkit\n\nYour agent's financial operating system\n\n01 Paymentintents\n\n02 Checkout\n\nAsk Sally\n\n03 Payment Links\n\nuse Agent Toolkit to prepare an invoice for Agent Nine Tools 75\n\nfor services\n\n04 Invoicing\n\n05 Issuing\n\n06 Connect\n\n07 Billing\n\nSally prepared your draft invoice. No email sent.\n\n08 Shared payment tokens\n\n09 Agent Toolkit\n\nStripe output\n\nid’\n\n|_1UR1WhRBii4S4KdWsYovyf4M\",\n\n“status'\n\ndraft\",\n\n\"total\": 7500,\n\n\"currency\"\n\n“gbp\",\n\n“Livemode\"\n\nfalse\n\nvia: agent-toolkit PostCustomers\n\nPostInvoices\n\nPostInvoiceitems\n\nReal Stripe test objects. No real money.\n"
   }
 ]

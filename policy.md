@@ -25,3 +25,7 @@ Sally may build a basket on her own, but **never pays**. Payment is off-ramped t
 - **I4** Outgoing customer invoices: Sally prepares a DRAFT; up to **£500** she may send it, over £500 waits for human approval. Stripe test mode only; customer email is a test address.
 - **E1** Emails (e.g. shopping list) are drafts only. Sally never sends email.
 - **S1** Autonomous grocery shop (Waitrose): Sally picks the best-match product per list line and auto-pays up to **£25** per shop; the rest waits for human approval (R2). Stripe test mode only.
+
+## Recording-only test workspace (D1)
+
+When explicitly enabled with `AGENT9_DEMO=1`, `/agent9` accepts only its nine fixed, human-selected demo commands. It uses Stripe test keys and verifies every resulting object has `livemode: false`. Amounts are fixed by the committed shotlist, never supplied by a model. Existing restock, booking, invoice, card-control and token-limit checks still apply. Checkout and outgoing invoices are prepared only; no Checkout completion or invoice email is triggered. The £80 Issuing request deliberately exercises the card's decline. Connect's £60 venue payment and the £9 Billing subscription are explicitly authorized test-demo operations. All workspace requests, policy decisions, results and Toolkit operations are timestamped in the existing audit store. The workspace is disabled unless opted in, and no deployment is implied by a recording.

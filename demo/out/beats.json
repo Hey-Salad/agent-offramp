@@ -67,11 +67,11 @@
     "target": "local-test-app",
     "capture": {
       "source": "demo/work/agent9/raw/scene-02.mp4",
-      "markerEnd": 1.266667,
+      "markerEnd": 1.466667,
       "beforeStart": 0,
-      "actionStart": 1.0018637920000018,
-      "proofStart": 2.0451746250000014,
-      "end": 8.046807957999999
+      "actionStart": 1.0018219579999998,
+      "proofStart": 4.08375525,
+      "end": 10.085010582999999
     },
     "edit": {
       "scene": 2,
@@ -88,12 +88,18 @@
       "line": "Checkout prepares your customer's secure payment."
     },
     "proof": {
-      "id": "cs_test_a1JIavf8Ub69eIe3NlAxHbve6XbN3nvdCLAA2g4SJ6IHX6ZSGyrM9ZP6uu",
+      "id": "cs_test_a167fFjJ1ANEaQN09JnEcFcLBycLJWWkdkbzOjqEz9mJuQCyzGogg696P7",
       "status": "open",
       "payment_status": "unpaid",
       "amount_total": 3250,
       "currency": "gbp",
-      "livemode": false
+      "livemode": false,
+      "execution": {
+        "via": "agent-toolkit",
+        "operations": [
+          "PostCheckoutSessions"
+        ]
+      }
     }
   },
   {
@@ -318,11 +324,11 @@
     "target": "local-test-app",
     "capture": {
       "source": "demo/work/agent9/raw/scene-09.mp4",
-      "markerEnd": 1.266667,
+      "markerEnd": 1.366667,
       "beforeStart": 0,
-      "actionStart": 1.0014001250000035,
-      "proofStart": 4.006484374999999,
-      "end": 10.007601791999988
+      "actionStart": 1.0023977919999991,
+      "proofStart": 5.117366416999999,
+      "end": 11.119558375
     },
     "edit": {
       "scene": 9,
@@ -339,7 +345,7 @@
       "line": "Agent Toolkit creates invoices through Stripe's tools."
     },
     "proof": {
-      "id": "in_1UR1NYRBii4S4KdWRZ4GJNkr",
+      "id": "in_1UR1WhRBii4S4KdWsYovyf4M",
       "status": "draft",
       "total": 7500,
       "currency": "gbp",
@@ -347,6 +353,7 @@
       "execution": {
         "via": "agent-toolkit",
         "operations": [
+          "PostCustomers",
           "PostInvoices",
           "PostInvoiceitems"
         ]

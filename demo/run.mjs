@@ -18,10 +18,13 @@ try{
   const probe=net.createServer();await new Promise(r=>probe.listen(0,'127.0.0.1',r));const port=probe.address().port;await new Promise(r=>probe.close(r));
   const localURL='http://127.0.0.1:'+port;
   // No messaging/Cognee/Issuing credentials are passed to the local app.
-  server=spawn(process.execPath,['--import','tsx','src/server.ts'],{env:{PATH:process.env.PATH,HOME:process.env.HOME,TMPDIR:process.env.TMPDIR,STRIPE_SECRET_KEY:process.env.STRIPE_SECRET_KEY,PORT:String(port),PUBLIC_URL:localURL},stdio:'ignore'});
+  server=spawn(process.execPath,['--import','tsx','src/server.ts'],{env:{PATH:process.env.PATH,HOME:process.env.HOME,TMPDIR:process.env.TMPDIR,STRIPE_SECRET_KEY:process.env.STRIPE_SECRET_KEY,AGENT9_DEMO:'1',PORT:String(port),PUBLIC_URL:localURL},stdio:'ignore'});
   let ready=false;for(let i=0;i<100;i++){try{if((await fetch(localURL+'/agent9')).ok){ready=true;break}}catch{}await new Promise(r=>setTimeout(r,100))}if(!ready)throw Error('Local test app did not start');
   await prepareVenue(localURL);
-  await record(root,localURL,process.argv.includes('--resume'));
+  const selection=process.argv.find(a=>a.startsWith('--scene='));
+  const onlyScene=selection?Number(selection.split('=')[1]):null;
+  if(onlyScene!==null&&(!Number.isInteger(onlyScene)||onlyScene<0||onlyScene>10))throw Error('Scene must be 0–10');
+  await record(root,localURL,process.argv.includes('--resume'),onlyScene);
  }
  if(!process.argv.includes('--verify-only'))await edit(root,out);
  await verify(out);

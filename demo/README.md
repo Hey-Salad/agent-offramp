@@ -12,18 +12,19 @@ Set these environment variables, or put them in the ignored `demo/.env` (chmod 6
 - `ELEVENLABS_API_KEY`: access to Jessica Gallagher (Irish), voice ID `DbwWo4rVEd5NrejHYUnm`, model `eleven_multilingual_v2`.
 - `APP_URL`: the existing hosted **test-mode** app, used only for the Issuing scene. Its server must already have an active test card, £50 spending limit, the £80 test authorization button and a working Stripe output panel. This URL is never rendered or logged.
 
-The other eight scenes run on an automatically started local app with an ephemeral port. The local child gets only its test Stripe key; no Issuing, messaging or Cognee credentials. No hosted deployment occurs. The command prepares Connect's test venue and waits up to five minutes for its transfers capability to activate. If verification remains pending, it fails clearly; rerun when Stripe finishes verification. No simulated decline or Toolkit SDK fallback is accepted. Unavailable features fail the build.
+The other eight scenes run on an automatically started local app with an ephemeral port. The runner explicitly enables AGENT9_DEMO=1; the additional workspace is otherwise disabled. Its fixed commands and timestamped audit records follow recording rule D1 in policy.md. The local child gets only its test Stripe key; no Issuing, messaging or Cognee credentials. No hosted deployment occurs. The command prepares Connect's test venue and waits up to five minutes for its transfers capability to activate. If verification remains pending, it fails clearly; rerun when Stripe finishes verification. No simulated decline or Toolkit SDK fallback is accepted. Unavailable features fail the build.
 
 ## Rebuild and inspect
 
 ```sh
 npm run demo
+npm run demo -- --scene=9
 npm run demo -- --resume
 npm run demo -- --edit-only
 npm run demo -- --verify-only
 ```
 
-The first command regenerates fresh financial scenes. `--resume` continues after the last successfully saved scene when a feature was temporarily unavailable. Voice synthesis is cached privately by request hash. Editing and verification can be rerun without repeating financial actions. ElevenLabs synthesis consumes the account's normal API allowance; Stripe actions use test money only. Invoices remain drafts, Checkout remains unpaid and Payment Links remain uncollected. No customer email is sent by this pipeline.
+The first command regenerates fresh financial scenes. `--scene=N` replaces just one saved source scene (0–10), then rebuilds both edits and all evidence. `--resume` continues after the last successfully saved scene when a feature was temporarily unavailable. Voice synthesis is cached privately by request hash. Editing and verification can be rerun without repeating financial actions. ElevenLabs synthesis consumes the account's normal API allowance; Stripe actions use test money only. Invoices remain drafts, Checkout remains unpaid and Payment Links remain uncollected. No customer email is sent by this pipeline.
 
 `demo/work/agent9/raw/scene-00.mp4` through `scene-10.mp4` are separate source clips, including opening and closing. `demo/out/clips/` contains edited landscape/vertical scenes. A black sync marker, outside the final edit, synchronizes browser-clock beat timestamps to actual recorded video. `beats.json` records source phase times, marker offsets, final cuts and real read-back proof. Cuts are derived from those measurements.
 
