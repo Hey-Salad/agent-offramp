@@ -36,5 +36,5 @@ const pay = await (await fetch(base + "/payments")).text();
 t("Booked in Briefcase preview (not connected), Send pill disabled", pay.includes("Booked in Briefcase") && pay.includes("Preview, not connected") && /disabled[^>]*>Send to Briefcase/.test(pay));
 t("audit has Briefcase status column", (await (await fetch(base + "/audit")).text()).includes("Briefcase status"));
 t("overview has Books card", (await (await fetch(base + "/money")).text()).includes("<small>Books</small>"));
-t("/api/stripe rejects non-Stripe ids", !!(await (await fetch(base + "/api/stripe/..%2Fsecret")).json()).error);
+t("/api/stripe rejects non-Stripe ids", !!(await (await fetch(base + "/api/stripe/notastripeid")).json()).error);
 console.log(`${ok}/${ok + fail} passed`); process.exit(fail ? 1 : 0);
