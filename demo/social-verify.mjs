@@ -40,6 +40,6 @@ for(let start=0;start<all.length;start+=6){const batch=await Promise.all(all.sli
  console.log('Scanned '+Math.min(start+6,all.length)+'/'+all.length+' distinct decoded frames');
 }
 await fs.writeFile(work+'/security-ocr-private.json',JSON.stringify(ocr,null,2),{mode:0o600});
-const readme=await fs.readFile('README.md','utf8');check('README exact alt and hero below tagline',readme.includes('alt="Agent 9 demo: card declines an overspend"')&&readme.indexOf('src="demo/out/agent9.gif"')>readme.indexOf('Give your agent a financial operating system.'));
+const readme=await fs.readFile('README.md','utf8');check('README exact alt and hero below tagline',readme.includes('alt="Agent 9 demo: nine Stripe workflows, checkout, receipts and invoice PDF"')&&readme.indexOf('src="demo/out/agent9.gif')>readme.indexOf('Give your agent a financial operating system.'));
 await fs.writeFile(out+'/gif-proof/verification.json',JSON.stringify({decodedFrames:decoded,distinctFramesScanned:all.length,checks,loopBoundaries:manifest.exports.map(i=>({file:i.file,...i.loopBoundary})),security:'Every decoded frame covered by exact-image deduplication and OCR; no key, full card number, client secret or known credential/app-origin value detected. Raw OCR stays ignored.'},null,2));
 console.log('Social verification passed '+checks.length+' checks; '+decoded+' decoded frames covered.');

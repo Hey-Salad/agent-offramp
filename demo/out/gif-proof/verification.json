@@ -3,11 +3,11 @@
   "distinctFramesScanned": 567,
   "checks": [
     {
-      "name": "agent9.gif dimensions, eight seconds, fps and byte limit",
+      "name": "agent9-decline.gif dimensions, eight seconds, fps and byte limit",
       "ok": true
     },
     {
-      "name": "agent9.gif silent",
+      "name": "agent9-decline.gif silent",
       "ok": true
     },
     {
@@ -15,11 +15,11 @@
       "ok": true
     },
     {
-      "name": "agent9.gif every frame decoded",
+      "name": "agent9-decline.gif every frame decoded",
       "ok": true
     },
     {
-      "name": "agent9.gif stable matching loop boundary",
+      "name": "agent9-decline.gif stable matching loop boundary",
       "ok": true
     },
     {
@@ -63,955 +63,955 @@
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-001.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-001.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-001.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-001.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-002.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-002.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-002.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-002.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-003.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-003.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-003.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-003.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-004.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-004.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-004.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-004.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-005.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-005.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-005.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-005.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-006.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-006.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-006.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-006.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-007.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-007.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-007.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-007.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-008.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-008.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-008.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-008.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-009.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-009.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-009.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-009.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-010.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-010.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-010.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-010.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-011.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-011.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-011.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-011.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-012.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-012.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-012.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-012.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-013.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-013.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-013.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-013.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-014.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-014.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-014.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-014.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-015.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-015.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-015.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-015.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-016.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-016.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-016.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-016.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-017.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-017.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-017.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-017.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-018.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-018.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-018.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-018.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-019.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-019.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-019.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-019.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-020.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-020.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-020.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-020.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-021.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-021.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-021.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-021.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-022.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-022.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-022.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-022.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-023.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-023.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-023.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-023.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-024.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-024.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-024.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-024.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-025.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-025.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-025.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-025.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-026.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-026.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-026.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-026.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-027.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-027.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-027.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-027.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-028.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-028.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-028.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-028.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-029.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-029.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-029.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-029.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-030.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-030.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-030.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-030.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-031.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-031.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-031.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-031.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-032.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-032.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-032.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-032.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-033.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-033.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-033.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-033.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-034.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-034.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-034.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-034.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-035.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-035.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-035.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-035.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-036.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-036.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-036.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-036.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-037.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-037.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-037.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-037.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-038.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-038.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-038.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-038.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-039.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-039.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-039.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-039.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-040.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-040.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-040.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-040.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-041.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-041.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-041.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-041.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-042.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-042.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-042.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-042.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-043.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-043.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-043.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-043.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-044.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-044.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-044.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-044.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-045.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-045.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-045.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-045.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-046.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-046.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-046.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-046.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-047.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-047.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-047.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-047.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-048.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-048.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-048.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-048.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-049.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-049.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-049.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-049.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-050.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-050.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-050.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-050.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-051.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-051.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-051.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-051.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-052.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-052.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-052.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-052.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-053.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-053.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-053.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-053.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-054.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-054.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-054.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-054.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-055.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-055.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-055.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-055.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-056.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-056.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-056.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-056.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-057.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-057.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-057.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-057.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-058.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-058.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-058.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-058.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-059.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-059.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-059.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-059.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-060.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-060.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-060.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-060.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-061.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-061.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-061.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-061.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-062.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-062.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-062.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-062.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-063.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-063.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-063.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-063.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-064.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-064.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-064.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-064.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-065.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-065.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-065.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-065.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-066.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-066.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-066.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-066.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-067.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-067.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-067.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-067.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-068.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-068.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-068.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-068.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-069.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-069.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-069.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-069.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-070.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-070.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-070.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-070.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-071.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-071.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-071.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-071.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-072.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-072.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-072.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-072.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-073.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-073.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-073.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-073.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-074.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-074.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-074.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-074.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-075.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-075.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-075.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-075.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-076.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-076.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-076.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-076.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-077.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-077.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-077.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-077.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-078.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-078.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-078.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-078.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-079.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-079.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-079.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-079.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-080.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-080.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-080.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-080.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-081.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-081.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-081.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-081.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-082.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-082.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-082.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-082.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-083.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-083.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-083.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-083.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-084.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-084.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-084.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-084.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-085.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-085.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-085.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-085.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-086.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-086.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-086.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-086.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-087.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-087.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-087.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-087.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-088.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-088.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-088.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-088.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-089.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-089.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-089.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-089.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-090.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-090.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-090.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-090.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-091.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-091.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-091.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-091.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-092.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-092.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-092.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-092.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-093.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-093.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-093.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-093.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-094.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-094.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-094.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-094.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-095.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-095.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-095.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-095.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-096.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-096.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-096.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-096.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-097.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-097.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-097.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-097.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-098.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-098.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-098.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-098.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-099.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-099.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-099.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-099.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-100.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-100.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-100.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-100.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-102.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-102.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-102.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-102.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-103.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-103.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-103.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-103.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-104.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-104.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-104.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-104.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-105.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-105.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-105.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-105.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-106.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-106.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-106.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-106.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-107.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-107.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-107.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-107.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-108.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-108.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-108.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-108.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-109.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-109.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-109.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-109.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-110.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-110.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-110.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-110.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-111.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-111.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-111.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-111.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-112.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-112.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-112.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-112.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-113.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-113.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-113.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-113.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-114.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-114.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-114.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-114.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-115.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-115.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-115.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-115.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-116.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-116.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-116.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-116.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-117.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-117.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-117.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-117.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-118.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-118.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-118.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-118.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-119.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-119.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-119.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-119.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-120.png no keys, PAN or client secret",
+      "name": "agent9-decline-gif/frame-120.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-gif/frame-120.png no stray memory/header text",
+      "name": "agent9-decline-gif/frame-120.png no stray memory/header text",
       "ok": true
     },
     {
@@ -4605,7 +4605,7 @@
   ],
   "loopBoundaries": [
     {
-      "file": "agent9.gif",
+      "file": "agent9-decline.gif",
       "meanAbsoluteRGBError": 0.06305338541666666,
       "largeDifferenceFraction": 0.000048828125
     },

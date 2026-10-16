@@ -1,0 +1,170 @@
+{
+  "source": "agent9-walkthrough.mp4",
+  "seconds": 31.6,
+  "shots": [
+    {
+      "name": "Nine products",
+      "start": 1,
+      "duration": 1.6,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "gifStart": 0,
+      "gifEnd": 1.6
+    },
+    {
+      "name": "PaymentIntents",
+      "start": 7.916666666666666,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "succeeded",
+      "gifStart": 1.6,
+      "gifEnd": 3.6
+    },
+    {
+      "name": "Checkout",
+      "start": 13.116666666666665,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "open",
+      "gifStart": 3.6,
+      "gifEnd": 5.6
+    },
+    {
+      "name": "Payment Links",
+      "start": 18.45,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "active",
+      "gifStart": 5.6,
+      "gifEnd": 7.6
+    },
+    {
+      "name": "Invoicing",
+      "start": 23.75,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "draft",
+      "gifStart": 7.6,
+      "gifEnd": 9.6
+    },
+    {
+      "name": "Issuing",
+      "start": 29.183333333333334,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "closed",
+      "gifStart": 9.6,
+      "gifEnd": 11.6
+    },
+    {
+      "name": "Connect",
+      "start": 34.25,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "succeeded",
+      "gifStart": 11.6,
+      "gifEnd": 13.6
+    },
+    {
+      "name": "Billing",
+      "start": 39.45,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "active",
+      "gifStart": 13.6,
+      "gifEnd": 15.6
+    },
+    {
+      "name": "Shared payment tokens",
+      "start": 44.95,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "succeeded",
+      "gifStart": 15.6,
+      "gifEnd": 17.6
+    },
+    {
+      "name": "Agent Toolkit",
+      "start": 50.75,
+      "duration": 2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.85,
+      "status": "draft",
+      "gifStart": 17.6,
+      "gifEnd": 19.6
+    },
+    {
+      "name": "Customer receipt",
+      "start": 58.08333333333332,
+      "duration": 2,
+      "crop": "crop=1060:1060:430:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.2,
+      "status": "succeeded",
+      "gifStart": 19.6,
+      "gifEnd": 21.6
+    },
+    {
+      "name": "Customer Checkout",
+      "start": 63.41666666666666,
+      "duration": 2,
+      "crop": "crop=1060:1060:430:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.2,
+      "status": "open",
+      "gifStart": 21.6,
+      "gifEnd": 23.6
+    },
+    {
+      "name": "Deposit payment link",
+      "start": 69.64999999999999,
+      "duration": 2,
+      "crop": "crop=1060:1060:430:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.2,
+      "status": "active",
+      "gifStart": 23.6,
+      "gifEnd": 25.6
+    },
+    {
+      "name": "Hosted invoice",
+      "start": 76.05,
+      "duration": 2,
+      "crop": "crop=608:1080:1312:0,scale=676:1200:flags=lanczos,pad=1200:1200:262:0:white",
+      "proofOffset": 0.2,
+      "status": "paid",
+      "gifStart": 25.6,
+      "gifEnd": 27.6
+    },
+    {
+      "name": "Invoice PDF",
+      "start": 82.41666666666666,
+      "duration": 2,
+      "crop": "crop=1060:1060:430:8,scale=1200:1200:flags=lanczos",
+      "proofOffset": 0.2,
+      "status": "paid",
+      "gifStart": 27.6,
+      "gifEnd": 29.6
+    },
+    {
+      "name": "Tagline",
+      "start": 85.66666666666666,
+      "duration": 1.2,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "gifStart": 29.6,
+      "gifEnd": 30.8
+    },
+    {
+      "name": "Loop return",
+      "start": 1,
+      "duration": 0.8,
+      "crop": "crop=1060:1060:546:8,scale=1200:1200:flags=lanczos",
+      "gifStart": 30.8,
+      "gifEnd": 31.6
+    }
+  ]
+}

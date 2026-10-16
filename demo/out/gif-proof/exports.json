@@ -10,7 +10,7 @@
   "edit": "Original chat: proof lead-in, request, real reply, expand Stripe output, proof. Measured phase retiming to 8s; no overlays or audio.",
   "exports": [
     {
-      "file": "agent9.gif",
+      "file": "agent9-decline.gif",
       "width": 1200,
       "height": 1200,
       "fps": 15,
