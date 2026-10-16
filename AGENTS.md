@@ -39,3 +39,7 @@ curl -s localhost:3000/api/chat -H 'content-type: application/json' -d '{"text":
 - `do the shopping` = `restock`
 - Voice: POST /api/realtime/session → ephemeral OpenAI Realtime secret; tools map to the commands above.
 Unmatched text may be rewritten to a command by OpenAI if OPENAI_API_KEY is set; amounts/limits always come from policy.
+
+## Card spending in the original chat
+
+`spend £12 at Ocado`, `spend £80 at Ocado`, and `spend £10 at an off-licence` exercise fixed Stripe test-card examples under P1–P3. They require an existing active test card and verified £50 per-authorisation control. A real Stripe authorization is retrieved before the chat claims approved/declined; missing or simulated results show unavailable. Approval is an authorization only, never described as a captured payment. Amounts outside these fixed examples return help, without asking a model to invent an amount. No local Issuing key is required for deployment: the existing hosted secret stays in Modal.

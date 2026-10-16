@@ -113,7 +113,7 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 .wave{display:none;gap:3px;align-items:center;height:20px;margin-right:4px}#f.live .wave{display:flex}#f.live #q::placeholder{color:#fff}
 .wave i{width:3px;height:6px;background:#fff;border-radius:2px;animation:wv .9s ease-in-out infinite}.wave i:nth-child(2){animation-delay:.1s}.wave i:nth-child(3){animation-delay:.2s}.wave i:nth-child(4){animation-delay:.3s}.wave i:nth-child(5){animation-delay:.4s}
 @keyframes wv{50%{height:20px}}
-.mail{background:#fff;border-radius:12px;padding:10px 12px;margin-top:8px;font-size:12px;white-space:pre-wrap;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.card-spend-result{width:min(540px,95%)}.card-spend-result .total{font-size:24px}.card-stripe-proof pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 ui-monospace,monospace;background:#fff;padding:12px;border-radius:12px}.card-spend-result details{border:1px solid #ddd!important;background:#fff;padding:0 12px}.mail{background:#fff;border-radius:12px;padding:10px 12px;margin-top:8px;font-size:12px;white-space:pre-wrap;box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .sw{border:1px solid #1f1416;border-radius:16px;padding:14px;margin:8px 0;background:#fff;max-width:720px;box-sizing:border-box;width:100%}@media(max-width:600px){.sw .gr{grid-template-columns:repeat(3,1fr)}.sw .tot{font-size:18px}}.sw .hd{display:flex;align-items:center;gap:10px;font-weight:700}.sw .stt{font-size:13px;color:#666;font-weight:400}.sw .tot{margin-left:auto;font-size:22px}
 .sw .gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin-top:12px}.sw .pd{border:1px solid #e5e5e5;border-radius:12px;padding:8px;text-align:center;font-size:11px;line-height:1.25;transition:all .4s}.sw .pd .e{font-size:28px}.sw .pd b{display:block;font-size:12px}
 .sw .pd.pick{border-color:#1f1416;transform:scale(1.06)}.sw .lbl{font-size:12px;color:#666;margin-top:4px}.sw .pd.in{opacity:.45;transform:scale(.9)}.sw .bk{display:flex;flex-wrap:wrap;gap:4px;min-height:38px;margin-top:12px;padding:8px;border:1px dashed #1f1416;border-radius:12px}.sw .bk span{font-size:22px;animation:drop .45s ease-out}.sw .bk span.h{outline:2px dashed #999;border-radius:6px}
@@ -129,7 +129,7 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 <header><h1 style="border:0;padding:0;margin:0">Chat</h1><span>Example agent: Sally</span></header>
 <div style="padding:12px 28px 0"><!--BRIEFCASE--></div><div id="mem" style="font-size:12px;color:#1f1416;padding:4px 16px;display:none"></div>
 <div id="log"><div class="msg sally"><span class="tag">Sally</span>Hi, I'm Sally. What do you need?</div></div>
-<div class="dock"><div class="chips"><button class="chip">Do the Waitrose shop</button><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
+<div class="dock"><div class="chips"><button class="chip">Spend £80 at Ocado</button><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
 <form id="f"><span class="wave"><i></i><i></i><i></i><i></i><i></i></span><input id="q" placeholder="Message Sally…" autocomplete="off"><button type="button" id="mic" aria-label="Talk to Sally"><span class="ring"></span><span class="ring r2"></span><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button><button id="send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></form></div>
 </section>
 </div>
@@ -184,6 +184,12 @@ async function shopWindow(r,ap){let cat=[];try{cat=await (await fetch('/api/cata
 function card(r){
   if(!r)return;const ds=r.decisions||[];const ln=d=>`<div><span>${esc(d.name||d.clause)}</span><span>${d.price!=null?gbp(d.price)+' · ':''}${esc(d.clause||'')}</span></div>`;
   const ap=`<button class="btn" data-ap="${r.id}">Approve ${gbp(due(r))}</button>`;
+  if(r.demo==='card'){
+    const a=r.cardAttempt||{},p=r.stripe?.authorization,declined=r.status==='declined',approved=r.status==='authorized';
+    const state=declined?'Declined':approved?'Authorised':'Not checked';
+    const proof=p?JSON.stringify({id:p.id,object:p.object,status:p.status,approved:p.approved,amount:p.amount,currency:p.currency,livemode:p.livemode,last4:p.last4},null,2):'';
+    add(`<h3>Sally's card · Test mode</h3><div class="total">${gbp(r.total)} at ${esc(a.merchant||'the shop')}</div><p><b>${state}</b> · ${declined?'No money taken':approved?'Authorisation only':'No confirmed card result'}</p><p>${esc(r.decisions?.[0]?.reason||'')}</p>${proof?`<details class="card-stripe-proof"><summary>Stripe output</summary><pre>${esc(proof)}</pre></details>`:''}`,'card card-spend-result');return;
+  }
   if(r.demo==='shop'){shopWindow(r,ap);return}
   if(r.demo==='restock'){const g={};ds.forEach(d=>(g[d.supplier||'Other']??=[]).push(d));
     for(const [n,items] of Object.entries(g)){const st=items.some(d=>d.status==='blocked')&&items.every(d=>d.status==='blocked')?'blocked':items.some(d=>d.status==='needs_approval')&&r.status==='awaiting_human'?'awaiting_human':r.status==='paid'||items.some(d=>d.status==='auto_paid'||d.status==='approved')?'paid':items[0].status;

@@ -4,14 +4,17 @@
 Secrets: 'offramp-env' (STRIPE_SECRET_KEY sk_test_ only, OPENAI_API_KEY, PUBLIC_URL), 'offramp-live' (SALLY_LIVE_VIEW_URL),
 'offramp-cognee' (COGNEE_API_KEY, COGNEE_BASE_URL), 'offramp-issuing' (STRIPE_ISSUING_KEY, sk_test_ only).
 """
-import os, subprocess, modal
+import os, re, subprocess, modal
 
 REF = os.environ.get("REF", "master")
+if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_./-]*", REF):
+    raise ValueError("Invalid git ref")
 PORT = 3000
 
 image = (
     modal.Image.debian_slim()
     .apt_install("git", "curl", "ca-certificates")
+    .env({"AGENT9_BUILD_SHA": REF})
     .run_commands(
         "curl -fsSL https://deb.nodesource.com/setup_20.x | bash -",
         "apt-get install -y nodejs",

@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "tsx src/server.ts",
-    "lint": "tsc --noEmit --skipLibCheck --module nodenext --moduleResolution nodenext --target es2022 --resolveJsonModule --noImplicitAny false src/ui.ts src/stripe-extra.ts src/mcp.ts src/agent9.ts src/toolkit.ts",
+    "lint": "tsc --noEmit --skipLibCheck --module nodenext --moduleResolution nodenext --target es2022 --resolveJsonModule --noImplicitAny false src/ui.ts src/stripe-extra.ts src/mcp.ts src/agent9.ts src/toolkit.ts src/chat-card.ts src/twilio.ts",
     "test": "node test/ui.test.mjs && node test/stripe-extra.test.mjs",
     "demo": "node demo/run.mjs",
     "test:agent9": "node --import tsx test/agent9.test.mjs",
-    "demo:social": "node demo/social.mjs && node demo/social-verify.mjs"
+    "demo:social": "node demo/social.mjs && node demo/social-verify.mjs",
+    "test:chat-card": "node --import tsx test/chat-card.test.mjs"
   },
   "keywords": [],
   "author": "",

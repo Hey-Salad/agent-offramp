@@ -3,6 +3,8 @@
 import type { Express, Request, Response, NextFunction } from "express";
 import twilio from "twilio";
 import { memory } from "./memory.js";
+import {AsyncLocalStorage} from "node:async_hooks";
+import {cardCommand,runCardChat} from "./chat-card.js";
 
 const xml = (s: string) => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" }[c]!));
 const ALLERGENS = /allerg|nut|peanut|gluten|coeliac|celiac|dairy|lactose|shellfish|sesame|vegan|egg/i;
@@ -24,10 +26,10 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     if (!r.ok) throw new Error(`${path} -> ${r.status}`);
     return r.json() as Promise<any>;
   }
-  let lastId = "";
+  const requestState = new AsyncLocalStorage<{lastId:string}>();
   let aiUsed = 0;
   const tag = (id: string, sid: string, channel: string, from: string, text: string) => {
-    lastId = id;
+    const request=requestState.getStore();if(request)request.lastId=id;
     const r = memory.get(id); if (!r) return;
     r.channel = channel; r.audit.push({ at: new Date().toISOString(), event: "twilio_trigger", channel, sid, from: mask(from), text }); memory.save(r);
   };
@@ -36,6 +38,11 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
   // Returns a one-line reply: what happened + link + why.
   async function route(text: string, sid: string, channel: string, from: string): Promise<string> {
     const t = text.trim();
+    const card=cardCommand(t);
+    if(card){
+      if('unsupported' in card)return "Sally: try 'spend £12 at Ocado', 'spend £80 at Ocado', or 'spend £10 at an off-licence'. These are test card examples.";
+      const result=await runCardChat(card,t,channel);tag(result.record.id,sid,channel,from,t);return 'Sally: '+result.reply;
+    }
     const yes = t.match(/^yes\s+(\S+)/i);
     if (yes) {
       const r = memory.get(yes[1]);
@@ -118,15 +125,15 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
   }
 
   // Web chat: same router as /sms, JSON in/out.
-  app.post("/api/chat", async (req, res) => {
+  app.post("/api/chat", (req,res)=>requestState.run({lastId:""},async()=>{
     const text = String(req.body?.text || "");
-    lastId = "";
     let reply: string;
     try { reply = await route(text, "CHAT_" + Date.now(), "chat", "web"); }
     catch (e: any) { reply = "Sally: something went wrong, a human will follow up."; console.error(e.message); }
-    const r = lastId ? memory.get(lastId) : null;
-    res.json({ reply: reply.replace(/^Sally:\s*/, ""), record: r ? { id: r.id, demo: r.demo, status: r.status, total: r.total, decisions: r.decisions, stripe: r.stripe, outInvoice: r.outInvoice, emailDraft: r.emailDraft, url: `/r/${r.id}` } : null });
-  });
+    const id=requestState.getStore()!.lastId;
+    const r = id ? memory.get(id) : null;
+    res.json({ reply: reply.replace(/^Sally:\s*/, ""), record: r ? { id: r.id, demo: r.demo, status: r.status, total: r.total, decisions: r.decisions, stripe: r.stripe, cardAttempt:r.cardAttempt, outInvoice: r.outInvoice, emailDraft: r.emailDraft, url: `/r/${r.id}` } : null });
+  }));
   // OpenAI Realtime (WebRTC): mint a short-lived client secret. The key never leaves the server.
   // Tools only map speech to router commands; the browser calls /api/chat so policy runs here.
   const TOOLS = [

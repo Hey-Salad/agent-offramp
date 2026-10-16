@@ -20,6 +20,7 @@ const key = process.env.STRIPE_SECRET_KEY || "";
 if (key && !key.startsWith("sk_test_")) throw new Error("Off-Ramp only runs with Stripe TEST keys (sk_test_...)");
 const stripe = key ? new Stripe(key) : null;
 const now = () => new Date().toISOString();
+app.get("/api/build",(_req,res)=>res.json({commit:process.env.AGENT9_BUILD_SHA||null,testMode:true}));
 const gbp = (n: number) => `£${n.toFixed(2)}`;
 const log = (r: any, event: string, data: any = {}) => { r.audit.push({ at: now(), event, ...data }); memory.save(r); };
 
