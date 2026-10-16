@@ -85,4 +85,4 @@ Suggested narration: “Sally checks the supplier bill against the order. The pa
 
 Show a short causal sequence for each business task: **request → rule/approval → action → actual invoice, checkout or receipt → audit**. Use the original chat and records to explain the action; use the hosted page to show its customer-facing result. Keep technical object IDs as supporting proof rather than the only visible outcome.
 
-A detailed walkthrough can accompany the existing 59-second nine-product overview. This collection does not change that exported video or imply a hosted deployment. Screenshots are authentic browser-driver captures of the original interface, with its existing styling.
+A detailed walkthrough can accompany the existing 59-second nine-product overview. The combined cut now adds fresh, real chat-first versions of these journeys before the overview's closing slate. The original overview is preserved under `demo/out/overview/`. No hosted deployment is implied. Screenshots are authentic browser-driver captures of the original interface, with its existing styling.

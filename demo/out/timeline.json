@@ -11,7 +11,8 @@
     "proofVisibleAt": null,
     "stripePrefix": null,
     "status": null,
-    "line": "Agent 9 gives your agent a financial operating system, built on the Stripe tools every business should use."
+    "line": "Agent 9 gives your agent a financial operating system, built on the Stripe tools every business should use.",
+    "kind": "overview"
   },
   {
     "scene": 1,
@@ -25,7 +26,8 @@
     "proofVisibleAt": 8.566666666666666,
     "stripePrefix": "pi_",
     "status": "succeeded",
-    "line": "PaymentIntents confirms your supplier payment."
+    "line": "PaymentIntents confirms your supplier payment.",
+    "kind": "overview"
   },
   {
     "scene": 2,
@@ -39,7 +41,8 @@
     "proofVisibleAt": 13.766666666666666,
     "stripePrefix": "cs_test_",
     "status": "open",
-    "line": "Checkout prepares your customer's secure payment."
+    "line": "Checkout prepares your customer's secure payment.",
+    "kind": "overview"
   },
   {
     "scene": 3,
@@ -53,7 +56,8 @@
     "proofVisibleAt": 19.099999999999998,
     "stripePrefix": "plink_",
     "status": "active",
-    "line": "Payment Links prepares your booking deposits."
+    "line": "Payment Links prepares your booking deposits.",
+    "kind": "overview"
   },
   {
     "scene": 4,
@@ -67,7 +71,8 @@
     "proofVisibleAt": 24.4,
     "stripePrefix": "in_",
     "status": "draft",
-    "line": "Invoicing turns completed work into bills."
+    "line": "Invoicing turns completed work into bills.",
+    "kind": "overview"
   },
   {
     "scene": 5,
@@ -81,7 +86,8 @@
     "proofVisibleAt": 29.833333333333332,
     "stripePrefix": "iauth_",
     "status": "closed",
-    "line": "Issuing keeps your agent within budget."
+    "line": "Issuing keeps your agent within budget.",
+    "kind": "overview"
   },
   {
     "scene": 6,
@@ -95,7 +101,8 @@
     "proofVisibleAt": 34.9,
     "stripePrefix": "pi_",
     "status": "succeeded",
-    "line": "Connect pays partners and records fees."
+    "line": "Connect pays partners and records fees.",
+    "kind": "overview"
   },
   {
     "scene": 7,
@@ -109,7 +116,8 @@
     "proofVisibleAt": 40.1,
     "stripePrefix": "sub_",
     "status": "active",
-    "line": "Billing starts your customer's recurring subscription."
+    "line": "Billing starts your customer's recurring subscription.",
+    "kind": "overview"
   },
   {
     "scene": 8,
@@ -123,7 +131,8 @@
     "proofVisibleAt": 45.6,
     "stripePrefix": "pi_",
     "status": "succeeded",
-    "line": "Shared payment tokens keep card details private."
+    "line": "Shared payment tokens keep card details private.",
+    "kind": "overview"
   },
   {
     "scene": 9,
@@ -137,20 +146,342 @@
     "proofVisibleAt": 51.4,
     "stripePrefix": "in_",
     "status": "draft",
-    "line": "Agent Toolkit creates invoices through Stripe's tools."
+    "line": "Agent Toolkit creates invoices through Stripe's tools.",
+    "kind": "overview"
+  },
+  {
+    "scene": 11,
+    "walkthrough": 0,
+    "kind": "walkthrough",
+    "product": "Restock example",
+    "start": 55.133333333333326,
+    "end": 62.56666666666666,
+    "duration": 7.433333333333334,
+    "voiceStart": 57.133333333333326,
+    "productNamedAt": 57.133333333333326,
+    "proofVisibleAt": 57.133333333333326,
+    "stripePrefix": "pi_",
+    "status": "awaiting_human",
+    "line": "Ask Sally to restock. She pays within your rules and holds anything needing approval.",
+    "capture": {
+      "scene": 0,
+      "product": "Restock example",
+      "beforeStart": 0.000008791999999591127,
+      "actionStart": 1.0007210410000003,
+      "proofStart": 3.412193125,
+      "end": 9.214713166000001,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "pi_",
+      "status": "awaiting_human",
+      "source": "demo/work/combined/raw/walkthrough-01.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.066667,
+      "recordId": "restock_7c1d8e9d",
+      "proof": {
+        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
+        "livemode": false,
+        "status": "succeeded"
+      }
+    }
+  },
+  {
+    "scene": 12,
+    "walkthrough": 1,
+    "kind": "walkthrough",
+    "product": "Itemised receipt",
+    "start": 62.56666666666666,
+    "end": 68.7,
+    "duration": 6.133333333333334,
+    "voiceStart": 64.56666666666666,
+    "productNamedAt": 64.56666666666666,
+    "proofVisibleAt": 64.56666666666666,
+    "stripePrefix": "pi_",
+    "status": "succeeded",
+    "line": "Open the itemised receipt to see each purchase and the rule behind it.",
+    "capture": {
+      "scene": 1,
+      "product": "Itemised receipt",
+      "beforeStart": 9.275473083,
+      "actionStart": 0.6012832919999997,
+      "proofStart": 1.9625750839999991,
+      "end": 6.469090542,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "pi_",
+      "status": "succeeded",
+      "source": "demo/work/combined/raw/walkthrough-02.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.066667,
+      "recordId": "restock_7c1d8e9d",
+      "proof": {
+        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
+        "livemode": false,
+        "status": "succeeded"
+      }
+    }
+  },
+  {
+    "scene": 13,
+    "walkthrough": 2,
+    "kind": "walkthrough",
+    "product": "Stripe receipt",
+    "start": 68.7,
+    "end": 74.73333333333333,
+    "duration": 6.033333333333333,
+    "voiceStart": 70.7,
+    "productNamedAt": 70.7,
+    "proofVisibleAt": 70.7,
+    "stripePrefix": "pi_",
+    "status": "succeeded",
+    "line": "Then open Stripe's receipt, with the amount and payment details.",
+    "capture": {
+      "scene": 2,
+      "product": "Stripe receipt",
+      "beforeStart": 15.820012042,
+      "actionStart": 0.6011682910000005,
+      "proofStart": 2.223323540999999,
+      "end": 6.632458207999999,
+      "verticalCrop": {
+        "x": 656,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "pi_",
+      "status": "succeeded",
+      "source": "demo/work/combined/raw/walkthrough-03.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.066667,
+      "recordId": "restock_7c1d8e9d",
+      "proof": {
+        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
+        "livemode": false,
+        "status": "succeeded"
+      }
+    }
+  },
+  {
+    "scene": 14,
+    "walkthrough": 3,
+    "kind": "walkthrough",
+    "product": "Booking deposit",
+    "start": 74.73333333333333,
+    "end": 80.23333333333333,
+    "duration": 5.5,
+    "voiceStart": 76.73333333333333,
+    "productNamedAt": 76.73333333333333,
+    "proofVisibleAt": 76.73333333333333,
+    "stripePrefix": "plink_",
+    "status": "active",
+    "line": "For six guests, Sally prepares a sixty-pound deposit link.",
+    "capture": {
+      "scene": 3,
+      "product": "Booking deposit",
+      "beforeStart": 0.000003208999999948503,
+      "actionStart": 1.0014314999999994,
+      "proofStart": 4.574776,
+      "end": 8.472851333000001,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "plink_",
+      "status": "active",
+      "source": "demo/work/combined/raw/walkthrough-04.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.633333,
+      "recordId": "booking_12200934",
+      "proof": {
+        "id": "plink_1UR23cRBii4S4KdWnJS0z1a3",
+        "livemode": false,
+        "status": "active"
+      }
+    }
+  },
+  {
+    "scene": 15,
+    "walkthrough": 4,
+    "kind": "walkthrough",
+    "product": "Customer checkout",
+    "start": 80.23333333333333,
+    "end": 86.3,
+    "duration": 6.066666666666666,
+    "voiceStart": 82.23333333333333,
+    "productNamedAt": 82.23333333333333,
+    "proofVisibleAt": 82.23333333333333,
+    "stripePrefix": "plink_",
+    "status": "unpaid",
+    "line": "Open it to see your customer's secure checkout, ready for payment.",
+    "capture": {
+      "scene": 4,
+      "product": "Customer checkout",
+      "beforeStart": 8.533292916999999,
+      "actionStart": 0.6006301250000003,
+      "proofStart": 3.9670555420000007,
+      "end": 8.421397083,
+      "verticalCrop": {
+        "x": 1000,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "plink_",
+      "status": "unpaid",
+      "source": "demo/work/combined/raw/walkthrough-05.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.633333,
+      "recordId": "booking_12200934",
+      "proof": {
+        "id": "plink_1UR23cRBii4S4KdWnJS0z1a3",
+        "livemode": false,
+        "status": "active"
+      }
+    }
+  },
+  {
+    "scene": 16,
+    "walkthrough": 5,
+    "kind": "walkthrough",
+    "product": "Draft invoice",
+    "start": 86.3,
+    "end": 91.86666666666666,
+    "duration": 5.566666666666666,
+    "voiceStart": 88.3,
+    "productNamedAt": 88.3,
+    "proofVisibleAt": 88.3,
+    "stripePrefix": "in_",
+    "status": "draft",
+    "line": "Customer invoices start as drafts, ready for your review.",
+    "capture": {
+      "scene": 5,
+      "product": "Draft invoice",
+      "beforeStart": 0.000006749999997168743,
+      "actionStart": 1.0009364999999946,
+      "proofStart": 6.587704541000001,
+      "end": 10.531265083000001,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "in_",
+      "status": "draft",
+      "source": "demo/work/combined/raw/walkthrough-06.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 0.8,
+      "recordId": "outinvoice_a190b984",
+      "proof": {
+        "id": "in_1UR21BRBii4S4KdWXU71vl2x",
+        "livemode": false,
+        "status": "draft"
+      }
+    }
+  },
+  {
+    "scene": 17,
+    "walkthrough": 6,
+    "kind": "walkthrough",
+    "product": "Supplier checks",
+    "start": 91.86666666666666,
+    "end": 97.23333333333332,
+    "duration": 5.366666666666666,
+    "voiceStart": 93.86666666666666,
+    "productNamedAt": 93.86666666666666,
+    "proofVisibleAt": 93.86666666666666,
+    "stripePrefix": "in_",
+    "status": "paid",
+    "line": "Ask Sally to check the supplier bill against your order.",
+    "capture": {
+      "scene": 6,
+      "product": "Supplier checks",
+      "beforeStart": 0.000006250000012641976,
+      "actionStart": 1.0012574579999978,
+      "proofStart": 9.979393625,
+      "end": 13.738257707999992,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "in_",
+      "status": "paid",
+      "source": "demo/work/combined/raw/walkthrough-07.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 0.8,
+      "recordId": "invoice_a1d0bf4f",
+      "proof": {
+        "id": "in_1UR21ORBii4S4KdWI50oyPpc",
+        "livemode": false,
+        "status": "paid"
+      }
+    }
+  },
+  {
+    "scene": 18,
+    "walkthrough": 7,
+    "kind": "walkthrough",
+    "product": "Invoice documents",
+    "start": 97.23333333333332,
+    "end": 104.09999999999998,
+    "duration": 6.866666666666666,
+    "voiceStart": 99.23333333333332,
+    "productNamedAt": 99.23333333333332,
+    "proofVisibleAt": 99.23333333333332,
+    "stripePrefix": "in_",
+    "status": "paid",
+    "line": "Open a paid example to see the invoice, line items and downloadable receipt.",
+    "capture": {
+      "scene": 7,
+      "product": "Invoice documents",
+      "beforeStart": 13.77658012500001,
+      "actionStart": 0.600997458000009,
+      "proofStart": 6.989261249999998,
+      "end": 12.234087458000005,
+      "verticalCrop": {
+        "x": 1312,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "in_",
+      "status": "paid",
+      "source": "demo/work/combined/raw/walkthrough-08.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 0.8,
+      "recordId": "invoice_a1d0bf4f",
+      "proof": {
+        "id": "in_1UR21ORBii4S4KdWI50oyPpc",
+        "livemode": false,
+        "status": "paid"
+      }
+    }
   },
   {
     "scene": 10,
     "product": "Closing",
     "target": "rendered-html",
-    "start": 55.133333333333326,
-    "end": 59.133333333333326,
+    "start": 104.09999999999998,
+    "end": 108.09999999999998,
     "duration": 4,
-    "voiceStart": 55.133333333333326,
-    "productNamedAt": 55.133333333333326,
+    "voiceStart": 104.09999999999998,
+    "productNamedAt": 104.09999999999998,
     "proofVisibleAt": null,
     "stripePrefix": null,
     "status": null,
-    "line": "Agent 9. Give your agent a financial operating system."
+    "line": "Agent 9. Give your agent a financial operating system.",
+    "kind": "overview"
   }
 ]

@@ -1,806 +1,1330 @@
 [
   {
-    "name": "Nine financial scenes in required order",
+    "name": "Nine-product overview followed by eight walkthrough stages and closing",
     "ok": true
   },
   {
-    "name": "Scene 1 verified test object",
+    "name": "Original nine product timings preserved",
     "ok": true
   },
   {
-    "name": "Scene 1 proof precedes product name",
+    "name": "Final slate four seconds",
     "ok": true
   },
   {
-    "name": "Scene 2 verified test object",
+    "name": "Both formats have identical narration",
     "ok": true
   },
   {
-    "name": "Scene 2 proof precedes product name",
+    "name": "Opening voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 3 verified test object",
+    "name": "PaymentIntents voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 3 proof precedes product name",
+    "name": "PaymentIntents visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 4 verified test object",
+    "name": "Checkout voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 4 proof precedes product name",
+    "name": "Checkout visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 5 verified test object",
+    "name": "Payment Links voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 5 proof precedes product name",
+    "name": "Payment Links visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 6 verified test object",
+    "name": "Invoicing voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 6 proof precedes product name",
+    "name": "Invoicing visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 7 verified test object",
+    "name": "Issuing voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 7 proof precedes product name",
+    "name": "Issuing visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 8 verified test object",
+    "name": "Connect voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 8 proof precedes product name",
+    "name": "Connect visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 9 verified test object",
+    "name": "Billing voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 9 proof precedes product name",
+    "name": "Billing visible before voice",
     "ok": true
   },
   {
-    "name": "Real Issuing decline on hosted app",
+    "name": "Shared payment tokens voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Connect transfer and platform fee",
+    "name": "Shared payment tokens visible before voice",
     "ok": true
   },
   {
-    "name": "Actual Toolkit execution",
+    "name": "Agent Toolkit voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Both formats use identical narration",
+    "name": "Agent Toolkit visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 0 measured voice alignment",
+    "name": "Restock example voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 1 measured voice alignment",
+    "name": "Restock example visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 2 measured voice alignment",
+    "name": "Restock example real test object readback",
     "ok": true
   },
   {
-    "name": "Scene 3 measured voice alignment",
+    "name": "Itemised receipt voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 4 measured voice alignment",
+    "name": "Itemised receipt visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 5 measured voice alignment",
+    "name": "Itemised receipt real test object readback",
     "ok": true
   },
   {
-    "name": "Scene 6 measured voice alignment",
+    "name": "Stripe receipt voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 7 measured voice alignment",
+    "name": "Stripe receipt visible before voice",
     "ok": true
   },
   {
-    "name": "Scene 8 measured voice alignment",
+    "name": "Stripe receipt real test object readback",
     "ok": true
   },
   {
-    "name": "Scene 9 measured voice alignment",
+    "name": "Booking deposit voice correlation and offset",
     "ok": true
   },
   {
-    "name": "Scene 10 measured voice alignment",
+    "name": "Booking deposit visible before voice",
     "ok": true
   },
   {
-    "name": "agent9-demo.mp4 dimensions",
+    "name": "Booking deposit real test object readback",
     "ok": true
   },
   {
-    "name": "agent9-demo.mp4 duration 50–60s",
+    "name": "Customer checkout voice correlation and offset",
     "ok": true
   },
   {
-    "name": "agent9-demo.mp4 audio and video begin together",
+    "name": "Customer checkout visible before voice",
     "ok": true
   },
   {
-    "name": "agent9-demo.mp4 no subtitle stream",
+    "name": "Customer checkout real test object readback",
     "ok": true
   },
   {
-    "name": "agent9-demo.mp4 exactly one audio stream",
+    "name": "Draft invoice voice correlation and offset",
     "ok": true
   },
   {
-    "name": "agent9-demo-vertical.mp4 dimensions",
+    "name": "Draft invoice visible before voice",
     "ok": true
   },
   {
-    "name": "agent9-demo-vertical.mp4 duration 50–60s",
+    "name": "Draft invoice real test object readback",
     "ok": true
   },
   {
-    "name": "agent9-demo-vertical.mp4 audio and video begin together",
+    "name": "Supplier checks voice correlation and offset",
     "ok": true
   },
   {
-    "name": "agent9-demo-vertical.mp4 no subtitle stream",
+    "name": "Supplier checks visible before voice",
     "ok": true
   },
   {
-    "name": "agent9-demo-vertical.mp4 exactly one audio stream",
+    "name": "Supplier checks real test object readback",
     "ok": true
   },
   {
-    "name": "Nine proof frames per format",
+    "name": "Invoice documents voice correlation and offset",
     "ok": true
   },
   {
-    "name": "01-paymentintents-vertical.png no login or visible app URL",
+    "name": "Invoice documents visible before voice",
     "ok": true
   },
   {
-    "name": "01-paymentintents-vertical.png readable status",
+    "name": "Invoice documents real test object readback",
     "ok": true
   },
   {
-    "name": "01-paymentintents.png no login or visible app URL",
+    "name": "Closing voice correlation and offset",
     "ok": true
   },
   {
-    "name": "01-paymentintents.png readable status",
+    "name": "Dimensions false",
     "ok": true
   },
   {
-    "name": "02-checkout-vertical.png no login or visible app URL",
+    "name": "Extended combined duration 95–120s false",
     "ok": true
   },
   {
-    "name": "02-checkout-vertical.png readable status",
+    "name": "No subtitles and single audio false",
     "ok": true
   },
   {
-    "name": "02-checkout.png no login or visible app URL",
+    "name": "Audio/video start together false",
     "ok": true
   },
   {
-    "name": "02-checkout.png readable status",
+    "name": "landscape sample 0 no pink background",
     "ok": true
   },
   {
-    "name": "03-payment-links-vertical.png no login or visible app URL",
+    "name": "landscape sample 1 no pink background",
     "ok": true
   },
   {
-    "name": "03-payment-links-vertical.png readable status",
+    "name": "landscape sample 2 no pink background",
     "ok": true
   },
   {
-    "name": "03-payment-links.png no login or visible app URL",
+    "name": "landscape sample 3 no pink background",
     "ok": true
   },
   {
-    "name": "03-payment-links.png readable status",
+    "name": "landscape sample 4 no pink background",
     "ok": true
   },
   {
-    "name": "04-invoicing-vertical.png no login or visible app URL",
+    "name": "landscape sample 5 no pink background",
     "ok": true
   },
   {
-    "name": "04-invoicing-vertical.png readable status",
+    "name": "landscape sample 6 no pink background",
     "ok": true
   },
   {
-    "name": "04-invoicing.png no login or visible app URL",
+    "name": "landscape sample 7 no pink background",
     "ok": true
   },
   {
-    "name": "04-invoicing.png readable status",
+    "name": "landscape sample 8 no pink background",
     "ok": true
   },
   {
-    "name": "05-issuing-vertical.png no login or visible app URL",
+    "name": "landscape sample 9 no pink background",
     "ok": true
   },
   {
-    "name": "05-issuing-vertical.png readable status",
+    "name": "landscape sample 10 no pink background",
     "ok": true
   },
   {
-    "name": "05-issuing.png no login or visible app URL",
+    "name": "landscape sample 11 no pink background",
     "ok": true
   },
   {
-    "name": "05-issuing.png readable status",
+    "name": "landscape sample 12 no pink background",
     "ok": true
   },
   {
-    "name": "06-connect-vertical.png no login or visible app URL",
+    "name": "landscape sample 13 no pink background",
     "ok": true
   },
   {
-    "name": "06-connect-vertical.png readable status",
+    "name": "landscape sample 14 no pink background",
     "ok": true
   },
   {
-    "name": "06-connect.png no login or visible app URL",
+    "name": "landscape sample 15 no pink background",
     "ok": true
   },
   {
-    "name": "06-connect.png readable status",
+    "name": "landscape sample 16 no pink background",
     "ok": true
   },
   {
-    "name": "07-billing-vertical.png no login or visible app URL",
+    "name": "landscape sample 17 no pink background",
     "ok": true
   },
   {
-    "name": "07-billing-vertical.png readable status",
+    "name": "landscape sample 18 no pink background",
     "ok": true
   },
   {
-    "name": "07-billing.png no login or visible app URL",
+    "name": "landscape sample 19 no pink background",
     "ok": true
   },
   {
-    "name": "07-billing.png readable status",
+    "name": "landscape sample 20 no pink background",
     "ok": true
   },
   {
-    "name": "08-shared-payment-tokens-vertical.png no login or visible app URL",
+    "name": "landscape sample 21 no pink background",
     "ok": true
   },
   {
-    "name": "08-shared-payment-tokens-vertical.png readable status",
+    "name": "landscape sample 22 no pink background",
     "ok": true
   },
   {
-    "name": "08-shared-payment-tokens.png no login or visible app URL",
+    "name": "landscape sample 23 no pink background",
     "ok": true
   },
   {
-    "name": "08-shared-payment-tokens.png readable status",
+    "name": "landscape sample 24 no pink background",
     "ok": true
   },
   {
-    "name": "09-agent-toolkit-vertical.png no login or visible app URL",
+    "name": "landscape sample 25 no pink background",
     "ok": true
   },
   {
-    "name": "09-agent-toolkit-vertical.png readable status",
+    "name": "landscape sample 26 no pink background",
     "ok": true
   },
   {
-    "name": "09-agent-toolkit.png no login or visible app URL",
+    "name": "landscape sample 27 no pink background",
     "ok": true
   },
   {
-    "name": "09-agent-toolkit.png readable status",
+    "name": "landscape sample 28 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 0 no pink background",
+    "name": "landscape sample 29 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 1 no pink background",
+    "name": "landscape sample 30 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 2 no pink background",
+    "name": "landscape sample 31 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 3 no pink background",
+    "name": "landscape sample 32 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 4 no pink background",
+    "name": "landscape sample 33 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 5 no pink background",
+    "name": "landscape sample 34 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 6 no pink background",
+    "name": "landscape sample 35 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 7 no pink background",
+    "name": "landscape sample 36 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 8 no pink background",
+    "name": "landscape sample 37 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 9 no pink background",
+    "name": "landscape sample 38 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 10 no pink background",
+    "name": "landscape sample 39 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 11 no pink background",
+    "name": "landscape sample 40 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 12 no pink background",
+    "name": "landscape sample 41 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 13 no pink background",
+    "name": "landscape sample 42 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 14 no pink background",
+    "name": "landscape sample 43 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 15 no pink background",
+    "name": "landscape sample 44 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 16 no pink background",
+    "name": "landscape sample 45 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 17 no pink background",
+    "name": "landscape sample 46 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 18 no pink background",
+    "name": "landscape sample 47 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 19 no pink background",
+    "name": "landscape sample 48 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 20 no pink background",
+    "name": "landscape sample 49 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 21 no pink background",
+    "name": "landscape sample 50 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 22 no pink background",
+    "name": "landscape sample 51 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 23 no pink background",
+    "name": "landscape sample 52 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 24 no pink background",
+    "name": "landscape sample 53 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 25 no pink background",
+    "name": "landscape sample 54 no pink background",
     "ok": true
   },
   {
-    "name": "landscape frame 26 no pink background",
+    "name": "Dimensions true",
     "ok": true
   },
   {
-    "name": "landscape frame 27 no pink background",
+    "name": "Extended combined duration 95–120s true",
     "ok": true
   },
   {
-    "name": "landscape frame 28 no pink background",
+    "name": "No subtitles and single audio true",
     "ok": true
   },
   {
-    "name": "landscape frame 29 no pink background",
+    "name": "Audio/video start together true",
     "ok": true
   },
   {
-    "name": "vertical frame 0 no pink background",
+    "name": "vertical sample 0 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 1 no pink background",
+    "name": "vertical sample 1 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 2 no pink background",
+    "name": "vertical sample 2 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 3 no pink background",
+    "name": "vertical sample 3 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 4 no pink background",
+    "name": "vertical sample 4 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 5 no pink background",
+    "name": "vertical sample 5 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 6 no pink background",
+    "name": "vertical sample 6 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 7 no pink background",
+    "name": "vertical sample 7 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 8 no pink background",
+    "name": "vertical sample 8 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 9 no pink background",
+    "name": "vertical sample 9 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 10 no pink background",
+    "name": "vertical sample 10 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 11 no pink background",
+    "name": "vertical sample 11 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 12 no pink background",
+    "name": "vertical sample 12 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 13 no pink background",
+    "name": "vertical sample 13 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 14 no pink background",
+    "name": "vertical sample 14 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 15 no pink background",
+    "name": "vertical sample 15 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 16 no pink background",
+    "name": "vertical sample 16 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 17 no pink background",
+    "name": "vertical sample 17 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 18 no pink background",
+    "name": "vertical sample 18 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 19 no pink background",
+    "name": "vertical sample 19 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 20 no pink background",
+    "name": "vertical sample 20 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 21 no pink background",
+    "name": "vertical sample 21 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 22 no pink background",
+    "name": "vertical sample 22 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 23 no pink background",
+    "name": "vertical sample 23 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 24 no pink background",
+    "name": "vertical sample 24 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 25 no pink background",
+    "name": "vertical sample 25 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 26 no pink background",
+    "name": "vertical sample 26 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 27 no pink background",
+    "name": "vertical sample 27 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 28 no pink background",
+    "name": "vertical sample 28 no pink background",
     "ok": true
   },
   {
-    "name": "vertical frame 29 no pink background",
+    "name": "vertical sample 29 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-01.png no login or visible app URL",
+    "name": "vertical sample 30 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-02.png no login or visible app URL",
+    "name": "vertical sample 31 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-03.png no login or visible app URL",
+    "name": "vertical sample 32 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-04.png no login or visible app URL",
+    "name": "vertical sample 33 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-05.png no login or visible app URL",
+    "name": "vertical sample 34 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-06.png no login or visible app URL",
+    "name": "vertical sample 35 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-07.png no login or visible app URL",
+    "name": "vertical sample 36 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-08.png no login or visible app URL",
+    "name": "vertical sample 37 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-09.png no login or visible app URL",
+    "name": "vertical sample 38 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-10.png no login or visible app URL",
+    "name": "vertical sample 39 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-11.png no login or visible app URL",
+    "name": "vertical sample 40 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-12.png no login or visible app URL",
+    "name": "vertical sample 41 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-13.png no login or visible app URL",
+    "name": "vertical sample 42 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-14.png no login or visible app URL",
+    "name": "vertical sample 43 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-15.png no login or visible app URL",
+    "name": "vertical sample 44 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-16.png no login or visible app URL",
+    "name": "vertical sample 45 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-17.png no login or visible app URL",
+    "name": "vertical sample 46 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-18.png no login or visible app URL",
+    "name": "vertical sample 47 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-19.png no login or visible app URL",
+    "name": "vertical sample 48 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-20.png no login or visible app URL",
+    "name": "vertical sample 49 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-21.png no login or visible app URL",
+    "name": "vertical sample 50 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-22.png no login or visible app URL",
+    "name": "vertical sample 51 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-23.png no login or visible app URL",
+    "name": "vertical sample 52 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-24.png no login or visible app URL",
+    "name": "vertical sample 53 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-25.png no login or visible app URL",
+    "name": "vertical sample 54 no pink background",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-26.png no login or visible app URL",
+    "name": "qa/landscape/frame-001.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-27.png no login or visible app URL",
+    "name": "qa/landscape/frame-002.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-28.png no login or visible app URL",
+    "name": "qa/landscape/frame-003.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-29.png no login or visible app URL",
+    "name": "qa/landscape/frame-004.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/landscape/frame-30.png no login or visible app URL",
+    "name": "qa/landscape/frame-005.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-01.png no login or visible app URL",
+    "name": "qa/landscape/frame-006.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-02.png no login or visible app URL",
+    "name": "qa/landscape/frame-007.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-03.png no login or visible app URL",
+    "name": "qa/landscape/frame-008.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-04.png no login or visible app URL",
+    "name": "qa/landscape/frame-009.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-05.png no login or visible app URL",
+    "name": "qa/landscape/frame-010.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-06.png no login or visible app URL",
+    "name": "qa/landscape/frame-011.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-07.png no login or visible app URL",
+    "name": "qa/landscape/frame-012.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-08.png no login or visible app URL",
+    "name": "qa/landscape/frame-013.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-09.png no login or visible app URL",
+    "name": "qa/landscape/frame-014.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-10.png no login or visible app URL",
+    "name": "qa/landscape/frame-015.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-11.png no login or visible app URL",
+    "name": "qa/landscape/frame-016.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-12.png no login or visible app URL",
+    "name": "qa/landscape/frame-017.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-13.png no login or visible app URL",
+    "name": "qa/landscape/frame-018.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-14.png no login or visible app URL",
+    "name": "qa/landscape/frame-019.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-15.png no login or visible app URL",
+    "name": "qa/landscape/frame-020.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-16.png no login or visible app URL",
+    "name": "qa/landscape/frame-021.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-17.png no login or visible app URL",
+    "name": "qa/landscape/frame-022.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-18.png no login or visible app URL",
+    "name": "qa/landscape/frame-023.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-19.png no login or visible app URL",
+    "name": "qa/landscape/frame-024.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-20.png no login or visible app URL",
+    "name": "qa/landscape/frame-025.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-21.png no login or visible app URL",
+    "name": "qa/landscape/frame-026.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-22.png no login or visible app URL",
+    "name": "qa/landscape/frame-027.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-23.png no login or visible app URL",
+    "name": "qa/landscape/frame-028.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-24.png no login or visible app URL",
+    "name": "qa/landscape/frame-029.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-25.png no login or visible app URL",
+    "name": "qa/landscape/frame-030.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-26.png no login or visible app URL",
+    "name": "qa/landscape/frame-031.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-27.png no login or visible app URL",
+    "name": "qa/landscape/frame-032.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-28.png no login or visible app URL",
+    "name": "qa/landscape/frame-033.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-29.png no login or visible app URL",
+    "name": "qa/landscape/frame-034.png no login or live app URL",
     "ok": true
   },
   {
-    "name": "qa/vertical/frame-30.png no login or visible app URL",
+    "name": "qa/landscape/frame-035.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-036.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-037.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-038.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-039.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-040.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-041.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-042.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-043.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-044.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-045.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-046.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-047.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-048.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-049.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-050.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-051.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-052.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-053.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-054.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/landscape/frame-055.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-001.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-002.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-003.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-004.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-005.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-006.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-007.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-008.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-009.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-010.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-011.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-012.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-013.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-014.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-015.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-016.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-017.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-018.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-019.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-020.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-021.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-022.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-023.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-024.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-025.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-026.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-027.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-028.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-029.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-030.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-031.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-032.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-033.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-034.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-035.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-036.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-037.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-038.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-039.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-040.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-041.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-042.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-043.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-044.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-045.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-046.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-047.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-048.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-049.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-050.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-051.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-052.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-053.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-054.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "qa/vertical/frame-055.png no login or live app URL",
+    "ok": true
+  },
+  {
+    "name": "Seventeen proof frames in each format",
+    "ok": true
+  },
+  {
+    "name": "01-paymentintents-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "01-paymentintents.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "02-checkout-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "02-checkout.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "03-payment-links-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "03-payment-links.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "04-invoicing-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "04-invoicing.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "05-issuing-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "05-issuing.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "06-connect-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "06-connect.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "07-billing-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "07-billing.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "08-shared-payment-tokens-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "08-shared-payment-tokens.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "09-agent-toolkit-vertical.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "09-agent-toolkit.png original overview frame preserved",
+    "ok": true
+  },
+  {
+    "name": "01-paymentintents-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "01-paymentintents.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "02-checkout-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "02-checkout.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "03-payment-links-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "03-payment-links.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "04-invoicing-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "04-invoicing.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "05-issuing-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "05-issuing.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "06-connect-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "06-connect.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "07-billing-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "07-billing.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "08-shared-payment-tokens-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "08-shared-payment-tokens.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "09-agent-toolkit-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "09-agent-toolkit.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-01-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-01.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-02-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-02.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-03-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-03.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-04-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-04.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-05-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "Checkout form readable when voice starts",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-05.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-06-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-06.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-07-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-07.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-08-vertical.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "walkthrough-08.png no app URL or login",
+    "ok": true
+  },
+  {
+    "name": "No caption rendering or animated crop filters",
+    "ok": true
+  },
+  {
+    "name": "White original app presentation",
     "ok": true
   }
 ]

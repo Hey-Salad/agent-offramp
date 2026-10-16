@@ -361,6 +361,302 @@
     }
   },
   {
+    "scene": 11,
+    "product": "Restock example",
+    "target": "hosted-test-app-original-chat",
+    "capture": {
+      "scene": 0,
+      "product": "Restock example",
+      "beforeStart": 0.000008791999999591127,
+      "actionStart": 1.0007210410000003,
+      "proofStart": 3.412193125,
+      "end": 9.214713166000001,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "pi_",
+      "status": "awaiting_human",
+      "source": "demo/work/combined/raw/walkthrough-01.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.066667,
+      "recordId": "restock_7c1d8e9d",
+      "proof": {
+        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
+        "livemode": false,
+        "status": "succeeded"
+      }
+    },
+    "edit": {
+      "start": 55.133333333333326,
+      "end": 62.56666666666666,
+      "voiceStart": 57.133333333333326
+    },
+    "status": "awaiting_human",
+    "objectPrefix": "pi_"
+  },
+  {
+    "scene": 12,
+    "product": "Itemised receipt",
+    "target": "hosted-test-app-original-chat",
+    "capture": {
+      "scene": 1,
+      "product": "Itemised receipt",
+      "beforeStart": 9.275473083,
+      "actionStart": 0.6012832919999997,
+      "proofStart": 1.9625750839999991,
+      "end": 6.469090542,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "pi_",
+      "status": "succeeded",
+      "source": "demo/work/combined/raw/walkthrough-02.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.066667,
+      "recordId": "restock_7c1d8e9d",
+      "proof": {
+        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
+        "livemode": false,
+        "status": "succeeded"
+      }
+    },
+    "edit": {
+      "start": 62.56666666666666,
+      "end": 68.7,
+      "voiceStart": 64.56666666666666
+    },
+    "status": "succeeded",
+    "objectPrefix": "pi_"
+  },
+  {
+    "scene": 13,
+    "product": "Stripe receipt",
+    "target": "hosted-test-app-original-chat",
+    "capture": {
+      "scene": 2,
+      "product": "Stripe receipt",
+      "beforeStart": 15.820012042,
+      "actionStart": 0.6011682910000005,
+      "proofStart": 2.223323540999999,
+      "end": 6.632458207999999,
+      "verticalCrop": {
+        "x": 656,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "pi_",
+      "status": "succeeded",
+      "source": "demo/work/combined/raw/walkthrough-03.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.066667,
+      "recordId": "restock_7c1d8e9d",
+      "proof": {
+        "id": "pi_3UR20LRBii4S4KdW1VoSUW7a",
+        "livemode": false,
+        "status": "succeeded"
+      }
+    },
+    "edit": {
+      "start": 68.7,
+      "end": 74.73333333333333,
+      "voiceStart": 70.7
+    },
+    "status": "succeeded",
+    "objectPrefix": "pi_"
+  },
+  {
+    "scene": 14,
+    "product": "Booking deposit",
+    "target": "hosted-test-app-original-chat",
+    "capture": {
+      "scene": 3,
+      "product": "Booking deposit",
+      "beforeStart": 0.000003208999999948503,
+      "actionStart": 1.0014314999999994,
+      "proofStart": 4.574776,
+      "end": 8.472851333000001,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "plink_",
+      "status": "active",
+      "source": "demo/work/combined/raw/walkthrough-04.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.633333,
+      "recordId": "booking_12200934",
+      "proof": {
+        "id": "plink_1UR23cRBii4S4KdWnJS0z1a3",
+        "livemode": false,
+        "status": "active"
+      }
+    },
+    "edit": {
+      "start": 74.73333333333333,
+      "end": 80.23333333333333,
+      "voiceStart": 76.73333333333333
+    },
+    "status": "active",
+    "objectPrefix": "plink_"
+  },
+  {
+    "scene": 15,
+    "product": "Customer checkout",
+    "target": "hosted-test-app-original-chat",
+    "capture": {
+      "scene": 4,
+      "product": "Customer checkout",
+      "beforeStart": 8.533292916999999,
+      "actionStart": 0.6006301250000003,
+      "proofStart": 3.9670555420000007,
+      "end": 8.421397083,
+      "verticalCrop": {
+        "x": 1000,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "plink_",
+      "status": "unpaid",
+      "source": "demo/work/combined/raw/walkthrough-05.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 2.633333,
+      "recordId": "booking_12200934",
+      "proof": {
+        "id": "plink_1UR23cRBii4S4KdWnJS0z1a3",
+        "livemode": false,
+        "status": "active"
+      }
+    },
+    "edit": {
+      "start": 80.23333333333333,
+      "end": 86.3,
+      "voiceStart": 82.23333333333333
+    },
+    "status": "unpaid",
+    "objectPrefix": "plink_"
+  },
+  {
+    "scene": 16,
+    "product": "Draft invoice",
+    "target": "hosted-test-app-original-chat",
+    "capture": {
+      "scene": 5,
+      "product": "Draft invoice",
+      "beforeStart": 0.000006749999997168743,
+      "actionStart": 1.0009364999999946,
+      "proofStart": 6.587704541000001,
+      "end": 10.531265083000001,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "in_",
+      "status": "draft",
+      "source": "demo/work/combined/raw/walkthrough-06.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 0.8,
+      "recordId": "outinvoice_a190b984",
+      "proof": {
+        "id": "in_1UR21BRBii4S4KdWXU71vl2x",
+        "livemode": false,
+        "status": "draft"
+      }
+    },
+    "edit": {
+      "start": 86.3,
+      "end": 91.86666666666666,
+      "voiceStart": 88.3
+    },
+    "status": "draft",
+    "objectPrefix": "in_"
+  },
+  {
+    "scene": 17,
+    "product": "Supplier checks",
+    "target": "hosted-test-app-original-chat",
+    "capture": {
+      "scene": 6,
+      "product": "Supplier checks",
+      "beforeStart": 0.000006250000012641976,
+      "actionStart": 1.0012574579999978,
+      "proofStart": 9.979393625,
+      "end": 13.738257707999992,
+      "verticalCrop": {
+        "x": 772,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "in_",
+      "status": "paid",
+      "source": "demo/work/combined/raw/walkthrough-07.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 0.8,
+      "recordId": "invoice_a1d0bf4f",
+      "proof": {
+        "id": "in_1UR21ORBii4S4KdWI50oyPpc",
+        "livemode": false,
+        "status": "paid"
+      }
+    },
+    "edit": {
+      "start": 91.86666666666666,
+      "end": 97.23333333333332,
+      "voiceStart": 93.86666666666666
+    },
+    "status": "paid",
+    "objectPrefix": "in_"
+  },
+  {
+    "scene": 18,
+    "product": "Invoice documents",
+    "target": "hosted-test-app-original-chat",
+    "capture": {
+      "scene": 7,
+      "product": "Invoice documents",
+      "beforeStart": 13.77658012500001,
+      "actionStart": 0.600997458000009,
+      "proofStart": 6.989261249999998,
+      "end": 12.234087458000005,
+      "verticalCrop": {
+        "x": 1312,
+        "y": 0,
+        "width": 608,
+        "height": 1080
+      },
+      "objectPrefix": "in_",
+      "status": "paid",
+      "source": "demo/work/combined/raw/walkthrough-08.mp4",
+      "captureOffset": 0,
+      "journeyMarkerEnd": 0.8,
+      "recordId": "invoice_a1d0bf4f",
+      "proof": {
+        "id": "in_1UR21ORBii4S4KdWI50oyPpc",
+        "livemode": false,
+        "status": "paid"
+      }
+    },
+    "edit": {
+      "start": 97.23333333333332,
+      "end": 104.09999999999998,
+      "voiceStart": 99.23333333333332
+    },
+    "status": "paid",
+    "objectPrefix": "in_"
+  },
+  {
     "scene": 10,
     "product": "Closing",
     "target": "rendered-html",
@@ -376,15 +672,17 @@
       "scene": 10,
       "product": "Closing",
       "target": "rendered-html",
-      "start": 55.133333333333326,
-      "end": 59.133333333333326,
+      "start": 104.09999999999998,
+      "end": 108.09999999999998,
       "duration": 4,
-      "voiceStart": 55.133333333333326,
-      "productNamedAt": 55.133333333333326,
+      "voiceStart": 104.09999999999998,
+      "productNamedAt": 104.09999999999998,
       "proofVisibleAt": null,
       "stripePrefix": null,
       "status": null,
-      "line": "Agent 9. Give your agent a financial operating system."
+      "line": "Agent 9. Give your agent a financial operating system.",
+      "kind": "overview",
+      "voiceFile": "/Users/peter-machona/Documents/ChatGPT/Product_Mgmt/agent-offramp/demo/work/agent9/voice/10.wav"
     },
     "proof": null
   }

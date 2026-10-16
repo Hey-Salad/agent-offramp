@@ -1,5 +1,20 @@
 # Agent 9 verification
 
+## Combined chat-first cut — 16 October 2026
+
+The final `npm run demo -- --combine-only` run passed **332 checks** and exported both formats at **108.100 seconds**. The longer runtime follows the user's subsequent request to combine the overview with step-by-step original chat journeys. The original 59.133-second overview remains under the ignored `demo/out/overview/`.
+
+- Four real requests were typed into the original hosted Chat in headed Chromium: restock, a six-guest booking, a £120 customer invoice draft, and the matched supplier invoice. Continuous recordings include the actual response-to-document navigation, split into eight clips from measured browser/sync-marker timestamps. No response or document was fabricated.
+- Read-back from the hosted app's Stripe output API verifies the new PaymentIntent (`succeeded`), Payment Link (`active`), customer invoice (`draft`) and supplier invoice (`paid`) all have `livemode: false`. Held restock items remain held; the customer draft was not sent; the deposit checkout was not paid. No payment details were entered.
+- Every original product proof frame is byte-identical to the preserved overview proof, in both formats. The first nine products and their voice timestamps are unchanged. Opening remains 6 seconds; the single final slate is exactly 4 seconds.
+- 19 voice files correlate with final narration at **0.9765 or better**, with measured **zero offset**. Landscape and portrait audio match. Jessica Gallagher's Irish voice remains at natural speed 1. No captions, subtitle streams, music or camera motion.
+- 1920×1080 and 1080×1920 exports. Fixed crops follow the content for each hard cut; the invoice detail panel cuts to its download controls when named. Portrait excludes the navigation. Native Stripe customer pages retain authentic branding; the original app uses white/ink capture CSS without modifying data.
+- Extracted **110 two-second frames** plus **34 proof frames**, checked for login text and exposed app origins. Automated flat-area colour checks find no pink backgrounds. Visually inspected the new proof frames/contact sheets, checkout form and invoice downloads. A checkout loading-placeholder issue found in the first visual pass was fixed by waiting for the actual payment form, then re-recording that journey.
+- `npm run lint`, syntax checks on the added JavaScript modules, and `npm run test:agent9` pass. Read-only hosted UI checks: **63/63**. The full Stripe test suite was not run because it includes local Issuing actions, which the user excluded.
+- Capture plans were committed before recording (`a2d122b`, chat-first clarification `d67405e`). Credentials, raw clips, voice caches and final videos remain ignored. Updated timing JSON, proof table, new evidence frames and QA summaries are included in PR #10. No merge or deployment.
+
+## Original overview validation (preserved separately)
+
 The complete capture/edit command `npm run demo` produced both final videos at **59.133 seconds**. The final verification run passed **201 checks**.
 
 - 1920×1080 landscape; 1080×1920 portrait. Headed Chromium source: 1920×1200, scale 1. Fixed content crop, no sidebar in portrait.
