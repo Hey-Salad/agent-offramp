@@ -6,6 +6,8 @@ import { memory } from "./memory.js";
 import {AsyncLocalStorage} from "node:async_hooks";
 import {cardCommand,runCardChat} from "./chat-card.js";
 
+import {CHAT_EXAMPLES,chatExampleIndex,runChatExample} from "./chat-examples.js";
+
 const xml = (s: string) => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" }[c]!));
 const ALLERGENS = /allerg|nut|peanut|gluten|coeliac|celiac|dairy|lactose|shellfish|sesame|vegan|egg/i;
 
@@ -42,6 +44,12 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     if(card){
       if('unsupported' in card)return "Sally: try 'spend £12 at Ocado', 'spend £80 at Ocado', or 'spend £10 at an off-licence'. These are test card examples.";
       const result=await runCardChat(card,t,channel);tag(result.record.id,sid,channel,from,t);return 'Sally: '+result.reply;
+    }
+    const example=chatExampleIndex(t);
+    if(example>=0){
+      let result;
+      try{result=await runChatExample(example,PORT,BASE,channel)}catch{return "Sally: this test action is unavailable. No Stripe result was confirmed."}
+      tag(result.record.id,sid,channel,from,t);return 'Sally: '+result.reply;
     }
     const yes = t.match(/^yes\s+(\S+)/i);
     if (yes) {
@@ -124,6 +132,8 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     return m.sid;
   }
 
+  app.get("/api/chat/examples",(_q,res)=>res.json(CHAT_EXAMPLES));
+
   // Web chat: same router as /sms, JSON in/out.
   app.post("/api/chat", (req,res)=>requestState.run({lastId:""},async()=>{
     const text = String(req.body?.text || "");
@@ -132,7 +142,7 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
     catch (e: any) { reply = "Sally: something went wrong, a human will follow up."; console.error(e.message); }
     const id=requestState.getStore()!.lastId;
     const r = id ? memory.get(id) : null;
-    res.json({ reply: reply.replace(/^Sally:\s*/, ""), record: r ? { id: r.id, demo: r.demo, status: r.status, total: r.total, decisions: r.decisions, stripe: r.stripe, cardAttempt:r.cardAttempt, outInvoice: r.outInvoice, emailDraft: r.emailDraft, url: `/r/${r.id}` } : null });
+    res.json({ reply: reply.replace(/^Sally:\s*/, ""), record: r ? { id: r.id, demo: r.demo, status: r.status, total: r.total, decisions: r.decisions, stripe: r.stripe, cardAttempt:r.cardAttempt, chatExample:r.chatExample, outInvoice: r.outInvoice, emailDraft: r.emailDraft, url: `/r/${r.id}` } : null });
   }));
   // OpenAI Realtime (WebRTC): mint a short-lived client secret. The key never leaves the server.
   // Tools only map speech to router commands; the browser calls /api/chat so policy runs here.

@@ -43,3 +43,7 @@ Unmatched text may be rewritten to a command by OpenAI if OPENAI_API_KEY is set;
 ## Card spending in the original chat
 
 `spend £12 at Ocado`, `spend £80 at Ocado`, and `spend £10 at an off-licence` exercise fixed Stripe test-card examples under P1–P3. They require an existing active test card and verified £50 per-authorisation control. A real Stripe authorization is retrieved before the chat claims approved/declined; missing or simulated results show unavailable. Approval is an authorization only, never described as a captured payment. Amounts outside these fixed examples return help, without asking a model to invent an amount. No local Issuing key is required for deployment: the existing hosted secret stays in Modal.
+
+## Nine examples in the original chat
+
+`GET /api/chat/examples` lists nine fixed requests and business labels (C9). Selecting a UI example only fills the composer. Sending executes the existing verified test workflow; the card example retains the strict original-chat card path. `/api/chat` returns `record.chatExample` plus selected `record.stripe.verified` readback fields. Checkout/Payment Links include allowlisted Stripe public links; unpaid/draft/active states remain distinct. Toolkit requires actual `agent-toolkit` execution. `/agent9` remains opt-in. Never substitute model-generated amounts or silently approve held restock items.

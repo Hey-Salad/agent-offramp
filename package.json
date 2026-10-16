@@ -11,7 +11,8 @@
     "demo": "node demo/run.mjs",
     "test:agent9": "node --import tsx test/agent9.test.mjs",
     "demo:social": "node demo/social.mjs && node demo/social-verify.mjs",
-    "test:chat-card": "node --import tsx test/chat-card.test.mjs"
+    "test:chat-card": "node --import tsx test/chat-card.test.mjs",
+    "test:chat-examples": "node --import tsx test/chat-examples.test.mjs"
   },
   "keywords": [],
   "author": "",
