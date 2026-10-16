@@ -3,7 +3,7 @@ const base = process.env.SALLY_URL || "http://localhost:3000";
 let ok = 0, fail = 0;
 const t = (n, c) => { console.log((c ? "PASS " : "FAIL ") + n); c ? ok++ : fail++; };
 const pages = ["/money", "/payments", "/card", "/invoices", "/billing", "/connect", "/audit"];
-const BRAND = new Set(["#ed4c4c", "#faa09a", "#ffd0cd", "#fff8f6", "#1f1416", "#fff", "#ffffff", "#6b5557"]);
+const BRAND = new Set(["#faa09a", "#ffd0cd", "#fff8f6", "#1f1416", "#fff", "#ffffff", "#6b5557"]);
 const NAV = ["/", ...pages];
 const sidebarOk = (h, active) => h.includes('<nav class="sb"') && h.includes('class="nav-t"') && h.includes("Agent 9") && h.includes("Test mode") && NAV.every(x => h.includes(`href="${x}"`))
   && (h.match(/class="it on"/g) || []).length === 1 && h.includes(`<a class="it on" href="${active}"`) && !/class="top"><a href="\/"><img/.test(h);
@@ -11,7 +11,8 @@ for (const p of pages) {
   const r = await fetch(base + p); const h = await r.text();
   t(`${p} 200`, r.status === 200);
   t(`${p} sidebar, ${p} active`, sidebarOk(h, p));
-  t(`${p} Stripe output panel, Briefcase slot, logo in header`, (h.includes('class="card so"') || h.includes('class="so mini"')) && h.includes('id="briefcase"') && /class="ph">.*heysalad-logo-black\.svg/.test(h));
+  t(`${p} Stripe output panel, Briefcase slot, logo top left only`, (h.includes('class="card so"') || h.includes('class="so mini"')) && h.includes('id="briefcase"') && /class="brand" href="\/"><img src="\/heysalad-logo-black\.svg"/.test(h) && (h.match(/heysalad-logo-black\.svg/g) || []).length === 2 && !/class="ph">[^\n]*?<img/.test(h.split('</div>').find(x => x.includes('class="ph"')) || ""));
+  t(`${p} no Cherry red`, !/#ed4c4c/i.test(h));
   t(`${p} no "PaymentIntents" label`, !/>[^<]*PaymentIntents/.test(h));
   t(`${p} Figtree, no Grandstander`, h.includes("Figtree") && !/grandstander/i.test(h));
   const off = [...h.matchAll(/#[0-9a-f]{6}\b|#[0-9a-f]{3}\b/gi)].map(m => m[0].toLowerCase()).filter(c => !BRAND.has(c));
@@ -32,6 +33,7 @@ const chat = await (await fetch(base + "/")).text();
 t("chat links to money pages", chat.includes('href="/money"') && chat.includes('href="/payments"') && !/grandstander/i.test(chat));
 t("chat in shell, Chat active", sidebarOk(chat, "/"));
 t("chat has Briefcase slot", chat.includes('id="briefcase"'));
+t("chat: no Cherry red, logo only top left", !/#ed4c4c/i.test(chat) && (chat.match(/heysalad-logo-black\.svg/g) || []).length === 2);
 const pay = await (await fetch(base + "/payments")).text();
 t("Booked in Briefcase preview (not connected), Send pill disabled", pay.includes("Booked in Briefcase") && pay.includes("Preview, not connected") && /disabled[^>]*>Send to Briefcase/.test(pay));
 t("audit has Briefcase status column", (await (await fetch(base + "/audit")).text()).includes("Briefcase status"));

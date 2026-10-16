@@ -20,7 +20,7 @@ header h1{font-size:17px;margin:0 0 0 2px;font-weight:500;color:#444;padding-lef
 .row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:5px 0;border-bottom:1px solid #f2f2f2}
 .row small{color:#888}.row.blocked span:first-child{text-decoration:line-through;color:#999}.row.needs_approval span:first-child{font-weight:600}
 .total{font-size:26px;font-weight:700;margin:10px 0 4px;letter-spacing:-.02em}
-:root{--btn-bg:#ed4c4c;--btn-fg:#fff;--btn-border:#ed4c4c}html.btn-red{--btn-bg:#ed4c4c;--btn-fg:#fff;--btn-border:#ed4c4c}
+:root{--btn-bg:#1f1416;--btn-fg:#fff;--btn-border:#1f1416}html.btn-red{--btn-bg:#1f1416;--btn-fg:#fff;--btn-border:#1f1416}
 .btn{display:inline-block;background:var(--btn-bg);color:var(--btn-fg);border:1px solid var(--btn-border);box-shadow:none;background-image:none;border-radius:999px;padding:10px 18px;font:600 14px inherit;font-family:inherit;cursor:pointer;text-decoration:none;margin:8px 8px 0 0;transition:transform .15s}
 .btn:hover{transform:translateY(-1px)}.btn.alt{background:#fff;color:#1f1416;border-color:#1f1416}.btn:disabled{opacity:.4}
 .paid{display:inline-flex;align-items:center;gap:8px;font-weight:600;margin-top:10px}
@@ -100,15 +100,15 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 #send{width:46px;height:46px;border-radius:50%;border:0;background:#fff;display:grid;place-items:center;cursor:pointer;flex:none;transition:transform .15s}#send:hover{transform:scale(1.08)}#send svg{width:20px;height:20px;stroke:#1f1416;stroke-width:2.4;fill:none}
 #brief{position:fixed;right:26px;bottom:30px;width:60px;height:60px;border-radius:50%;border:0;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.16);cursor:pointer;z-index:25;display:grid;place-items:center;transition:transform .2s}
 #brief:hover{transform:scale(1.06)}#brief svg{width:26px;height:26px;stroke:#1f1416;stroke-width:1.8;fill:none}
-#brief .bd{position:absolute;top:-6px;right:-10px;background:#ed4c4c;color:#fff;font:700 11px inherit;font-family:inherit;border-radius:999px;padding:3px 7px;white-space:nowrap;transition:transform .3s}
+#brief .bd{position:absolute;top:-6px;right:-10px;background:#1f1416;color:#fff;font:700 11px inherit;font-family:inherit;border-radius:999px;padding:3px 7px;white-space:nowrap;transition:transform .3s}
 #brief .bd:empty{display:none}#brief.pulse{animation:pulse .7s ease 2}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18);box-shadow:0 0 0 12px rgba(0,0,0,.06)}}
 #panel{top:auto!important;bottom:100px;right:26px;height:min(680px,calc(100vh - 124px))!important;transform-origin:calc(100% - 30px) calc(100% + 70px);transform:scale(.08)!important;opacity:0;pointer-events:none;transition:transform .42s cubic-bezier(.2,.8,.2,1),opacity .3s}
 #panel.open{transform:none!important;opacity:1;pointer-events:auto}#panel aside{padding:18px 0 0}
 @media(max-width:820px){.dock{width:calc(100% - 100px);left:16px;transform:none}#brief{right:16px;bottom:24px}#panel{right:0;bottom:0;width:100%;height:80vh!important;transform-origin:calc(100% - 46px) 100%;border-radius:28px 28px 0 0}}
 #mic{position:relative;width:46px;height:46px;border-radius:50%;border:0;background:#2a2a2a;display:grid;place-items:center;cursor:pointer;flex:none;transition:transform .15s,background .2s}#mic:hover{transform:scale(1.08)}
-#mic svg{width:20px;height:20px;stroke:#fff;stroke-width:2.2;fill:none;position:relative}#mic .ring{position:absolute;inset:0;border-radius:50%;border:2px solid #ed4c4c;opacity:0}
-#mic.on{background:#ed4c4c}#mic.on .ring{animation:ring 1.6s ease-out infinite}#mic.on .r2{animation-delay:.8s}
+#mic svg{width:20px;height:20px;stroke:#fff;stroke-width:2.2;fill:none;position:relative}#mic .ring{position:absolute;inset:0;border-radius:50%;border:2px solid #1f1416;opacity:0}
+#mic.on{background:#1f1416}#mic.on .ring{animation:ring 1.6s ease-out infinite}#mic.on .r2{animation-delay:.8s}
 @keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.1);opacity:0}}
 .wave{display:none;gap:3px;align-items:center;height:20px;margin-right:4px}#f.live .wave{display:flex}#f.live #q::placeholder{color:#fff}
 .wave i{width:3px;height:6px;background:#fff;border-radius:2px;animation:wv .9s ease-in-out infinite}.wave i:nth-child(2){animation-delay:.1s}.wave i:nth-child(3){animation-delay:.2s}.wave i:nth-child(4){animation-delay:.3s}.wave i:nth-child(5){animation-delay:.4s}
@@ -126,8 +126,8 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 @keyframes drop{from{transform:translateY(-30px) scale(1.6);opacity:0}to{transform:none;opacity:1}}.sw .res{margin-top:12px;font-size:14px}
 </style></head><body><div class="app">
 <section class="chat">
-<header><h1 style="border:0;padding:0;margin:0">Chat</h1><span>Example agent: Sally</span><img class="logo" src="/heysalad-logo-black.svg" alt="HeySalad" style="margin-left:auto;height:26px"></header>
-<div style="padding:12px 28px 0"><!--BRIEFCASE--></div><div id="mem" style="font-size:12px;color:#ed4c4c;padding:4px 16px;display:none"></div>
+<header><h1 style="border:0;padding:0;margin:0">Chat</h1><span>Example agent: Sally</span></header>
+<div style="padding:12px 28px 0"><!--BRIEFCASE--></div><div id="mem" style="font-size:12px;color:#1f1416;padding:4px 16px;display:none"></div>
 <div id="log"><div class="msg sally"><span class="tag">Sally</span>Hi, I'm Sally. What do you need?</div></div>
 <div class="dock"><div class="chips"><button class="chip">Do the Waitrose shop</button><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
 <form id="f"><span class="wave"><i></i><i></i><i></i><i></i><i></i></span><input id="q" placeholder="Message Sally…" autocomplete="off"><button type="button" id="mic" aria-label="Talk to Sally"><span class="ring"></span><span class="ring r2"></span><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button><button id="send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></form></div>

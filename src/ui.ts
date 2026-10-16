@@ -1,5 +1,5 @@
 // Shared HeySalad UI for every page: one layout, one stylesheet, one left side nav.
-// Brand: Cherry #ed4c4c, Peach #faa09a, Light Peach #ffd0cd, Cream #fff8f6, ink #1f1416. Figtree only.
+// Brand (accents in ink, no Cherry red): Peach #faa09a, Light Peach #ffd0cd, Cream #fff8f6, ink #1f1416. Figtree only.
 import type { Express } from "express";
 import { memory } from "./memory.js";
 import { extraState, stripeX, stripeI } from "./stripe-extra.js";
@@ -26,8 +26,8 @@ export const SHELL_CSS = `.sb{position:fixed;top:0;left:0;bottom:0;width:232px;b
 .sb .brand{display:flex;align-items:center;gap:10px;padding:2px 10px 18px;text-decoration:none;color:#1f1416}.sb .brand img{height:24px;width:auto}.sb .brand b{font-size:15px;font-weight:700;letter-spacing:-.01em;padding-left:10px;border-left:1px solid #ffd0cd}
 .sb .tl{text-transform:none;letter-spacing:0;margin:-8px 10px 8px;font-size:12px;line-height:1.35;color:#6b5557}.sb .grp{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#6b5557;padding:14px 12px 6px}
 .sb a.it{display:flex;align-items:center;gap:10px;padding:8px 12px;margin:1px 0;border-radius:10px;color:#1f1416;text-decoration:none;font-size:14px;font-weight:500;border-left:3px solid transparent}
-.sb a.it:hover{background:#fff8f6}.sb a.it.on{background:#ffd0cd;color:#ed4c4c;border-left-color:#ed4c4c;font-weight:600}
-.sb .foot{margin-top:auto;padding:12px}.sb .tm{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;background:#fff8f6;border:1px solid #ffd0cd;color:#1f1416;border-radius:999px;padding:4px 12px}.sb .tm i{width:7px;height:7px;border-radius:50%;background:#ed4c4c}
+.sb a.it:hover{background:#fff8f6}.sb a.it.on{background:#fff8f6;color:#1f1416;border-left-color:#1f1416;font-weight:600}
+.sb .foot{margin-top:auto;padding:12px}.sb .tm{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;background:#fff8f6;border:1px solid #ffd0cd;color:#1f1416;border-radius:999px;padding:4px 12px}.sb .tm i{width:7px;height:7px;border-radius:50%;background:#1f1416}
 body.shell{padding-left:232px}.mbar,.nav-t,.scrim{display:none}
 @media(max-width:767px){body.shell{padding-left:0;padding-top:52px}.sb{transform:translateX(-100%);box-shadow:none}
 .mbar{display:flex;position:fixed;top:0;left:0;right:0;height:52px;background:#fff;border-bottom:1px solid #ffd0cd;align-items:center;gap:12px;padding:0 14px;z-index:35}
@@ -40,17 +40,17 @@ export function sidebar(active = "") {
 }
 
 
-// ---- Shared components: content header (logo top right), Stripe output panel, Briefcase slot ----
+// ---- Shared components: content header (logo lives top left in the sidebar), Stripe output panel, Briefcase slot ----
 export const COMP_CSS = `.ph{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}.ph .crumb{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#6b5557}.ph img{height:26px;width:auto}
 .so{padding:0;overflow:hidden}.so>summary{list-style:none;cursor:pointer;padding:14px 18px;font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px}.so>summary::-webkit-details-marker{display:none}
-.so>summary:before{content:'';width:8px;height:8px;border-right:2px solid #ed4c4c;border-bottom:2px solid #ed4c4c;transform:rotate(-45deg);transition:transform .2s}.so[open]>summary:before{transform:rotate(45deg)}.so>summary .n{margin-left:auto}
+.so>summary:before{content:'';width:8px;height:8px;border-right:2px solid #1f1416;border-bottom:2px solid #1f1416;transform:rotate(-45deg);transition:transform .2s}.so[open]>summary:before{transform:rotate(45deg)}.so>summary .n{margin-left:auto}
 .so .ob{border-top:1px solid #ffd0cd;padding:12px 18px}.so .oh{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}.so .oh b{font-size:13px}.so .oh .sp{flex:1}
-.so .pl{display:inline-block;border-radius:999px;padding:4px 12px;font:600 12px Figtree,sans-serif;border:1px solid #ed4c4c;color:#ed4c4c;background:#fff;cursor:pointer;text-decoration:none}.so .pl:hover{background:#ed4c4c;color:#fff}
+.so .pl{display:inline-block;border-radius:999px;padding:4px 12px;font:600 12px Figtree,sans-serif;border:1px solid #1f1416;color:#1f1416;background:#fff;cursor:pointer;text-decoration:none}.so .pl:hover{background:#1f1416;color:#fff}
 .so pre.j{margin:0;background:#fff8f6;border-radius:12px;padding:12px;max-height:360px;overflow:auto;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;color:#1f1416}
-.j .k{color:#ed4c4c;font-weight:600}.j .s{color:#1f1416}.j .x{color:#6b5557;font-style:italic}.j .m{color:#6b5557}
-.so.mini{border:0;background:none;margin:6px 0 0;border-radius:12px}.so.mini>summary{padding:4px 0;font-size:12px;color:#ed4c4c}.so.mini .ob{padding:8px 0}
-.bc{border:1px dashed #faa09a;background:#fff}.bc h2{display:flex;align-items:center;gap:8px}.bc table{width:100%;border-collapse:collapse}.bc td,.bc th{padding:8px 6px;border-bottom:1px solid #ffd0cd;text-align:left;font-size:13px;vertical-align:top}.bc th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#6b5557;font-weight:600}.bc td.r,.bc th.r{text-align:right}.bc code{font-size:11px;word-break:break-all}.bcw{margin:0 0 6px}.bcw>summary{cursor:pointer;font-weight:600;font-size:14px;padding:6px 0;color:#1f1416}.bcw .bc{margin-top:8px}.bc .ph2{color:#6b5557;font-size:14px;margin:0 0 10px}.bc h2 .pill{margin-left:6px}.so .pl:disabled,.bc .pl:disabled{opacity:.5;cursor:not-allowed}.bc .pl{display:inline-block;border-radius:999px;padding:4px 12px;font:600 12px Figtree,sans-serif;border:1px solid #ed4c4c;color:#ed4c4c;background:#fff;cursor:pointer;margin:0;white-space:nowrap}`;
-export function pageHead(title: string) { return `<div class="ph"><span class="crumb">${esc(title)}</span><img src="/heysalad-logo-black.svg" alt="HeySalad"></div>`; }
+.j .k{color:#1f1416;font-weight:600}.j .s{color:#1f1416}.j .x{color:#6b5557;font-style:italic}.j .m{color:#6b5557}
+.so.mini{border:0;background:none;margin:6px 0 0;border-radius:12px}.so.mini>summary{padding:4px 0;font-size:12px;color:#1f1416}.so.mini .ob{padding:8px 0}
+.bc{border:1px dashed #faa09a;background:#fff}.bc h2{display:flex;align-items:center;gap:8px}.bc table{width:100%;border-collapse:collapse}.bc td,.bc th{padding:8px 6px;border-bottom:1px solid #ffd0cd;text-align:left;font-size:13px;vertical-align:top}.bc th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#6b5557;font-weight:600}.bc td.r,.bc th.r{text-align:right}.bc code{font-size:11px;word-break:break-all}.bcw{margin:0 0 6px}.bcw>summary{cursor:pointer;font-weight:600;font-size:14px;padding:6px 0;color:#1f1416}.bcw .bc{margin-top:8px}.bc .ph2{color:#6b5557;font-size:14px;margin:0 0 10px}.bc h2 .pill{margin-left:6px}.so .pl:disabled,.bc .pl:disabled{opacity:.5;cursor:not-allowed}.bc .pl{display:inline-block;border-radius:999px;padding:4px 12px;font:600 12px Figtree,sans-serif;border:1px solid #1f1416;color:#1f1416;background:#fff;cursor:pointer;margin:0;white-space:nowrap}`;
+export function pageHead(title: string) { return `<div class="ph"><span class="crumb">${esc(title)}</span></div>`; }
 export type SRef = { id?: string; acct?: string; label?: string };
 // Collapsible "Stripe output": real objects fetched (on open) from /api/stripe/:id, secrets redacted server-side.
 export function stripeOutput(refs: SRef[], opts: { mini?: boolean; title?: string } = {}) {
@@ -96,15 +96,15 @@ export const CSS = `@import url('https://fonts.googleapis.com/css2?family=Figtre
 *{box-sizing:border-box}body{font-family:Figtree,sans-serif;background:#fff8f6;color:#1f1416;margin:0;-webkit-font-smoothing:antialiased;font-size:15px}
 main{max-width:1100px;margin:0 auto;padding:24px 20px 60px}h1{font-size:26px;margin:4px 0 6px;letter-spacing:-.02em}h2{font-size:16px;margin:0 0 12px}
 .sub{color:#6b5557;margin:0 0 18px}.card{background:#fff;border:1px solid #ffd0cd;border-radius:16px;padding:18px;margin:0 0 14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.tile{display:block;text-decoration:none;color:inherit}.tile:hover{border-color:#ed4c4c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.tile{display:block;text-decoration:none;color:inherit}.tile:hover{border-color:#1f1416}
 .tile b{display:block;font-size:22px;margin-top:6px}.tile small{color:#6b5557}
 table{width:100%;border-collapse:collapse}td,th{padding:10px 8px;border-bottom:1px solid #ffd0cd;text-align:left;font-size:14px;vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#6b5557;font-weight:600}
 td.r,th.r{text-align:right}.scroll{overflow-x:auto}
-.btn,button{display:inline-block;background:#ed4c4c;color:#fff;border:0;border-radius:999px;padding:9px 16px;font:600 14px Figtree,sans-serif;cursor:pointer;text-decoration:none;margin:4px 6px 4px 0}
-.btn.ghost{background:#fff;color:#ed4c4c;border:1px solid #ed4c4c}.btn.soft{background:#ffd0cd;color:#1f1416}
+.btn,button{display:inline-block;background:#1f1416;color:#fff;border:0;border-radius:999px;padding:9px 16px;font:600 14px Figtree,sans-serif;cursor:pointer;text-decoration:none;margin:4px 6px 4px 0}
+.btn.ghost{background:#fff;color:#1f1416;border:1px solid #1f1416}.btn.soft{background:#ffd0cd;color:#1f1416}
 .pill{display:inline-block;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;background:#ffd0cd;color:#1f1416}
-.pill.ok{background:#1f1416;color:#fff}.pill.no{background:#ed4c4c;color:#fff}.pill.wait{background:#faa09a}
-.blocked td:first-child{text-decoration:line-through;color:#6b5557}a{color:#ed4c4c}code{font-size:12px;background:#fff8f6;border-radius:6px;padding:1px 6px}
+.pill.ok{background:#1f1416;color:#fff}.pill.no{background:#6b5557;color:#fff}.pill.wait{background:#faa09a}
+.blocked td:first-child{text-decoration:line-through;color:#6b5557}a{color:#1f1416}code{font-size:12px;background:#fff8f6;border-radius:6px;padding:1px 6px}
 .empty{color:#6b5557;font-size:14px}pre{white-space:pre-wrap;font-size:12px;background:#fff8f6;border-radius:12px;padding:12px;max-height:320px;overflow:auto}
 .rc{max-width:440px;margin:0 auto}.rc .amt{font-size:36px;font-weight:700;letter-spacing:-.03em}.rc .ln{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed #ffd0cd;font-size:14px}
 .rc .ln.tot{border:0;font-weight:700;font-size:16px}.muted{color:#6b5557;font-size:13px}
