@@ -35,6 +35,7 @@ t("chat in shell, Chat active", sidebarOk(chat, "/"));
 t("chat has Briefcase slot", chat.includes('id="briefcase"'));
 t("chat: no Cherry red, logo only top left", !/#ed4c4c/i.test(chat) && (chat.match(/heysalad-logo-black\.svg/g) || []).length === 2);
 const pay = await (await fetch(base + "/payments")).text();
+t("Stripe output JSON has no pink bubble", /\.so pre\.j\{[^}]*background:#fff;/.test(pay) && !/\.so pre\.j\{[^}]*#fff8f6/.test(pay));
 t("Booked in Briefcase preview (not connected), Send pill disabled", pay.includes("Booked in Briefcase") && pay.includes("Preview, not connected") && /disabled[^>]*>Send to Briefcase/.test(pay));
 t("audit has Briefcase status column", (await (await fetch(base + "/audit")).text()).includes("Briefcase status"));
 t("overview has Books card", (await (await fetch(base + "/money")).text()).includes("<small>Books</small>"));
