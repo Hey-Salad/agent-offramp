@@ -4,15 +4,13 @@
 <p align="center"><b>The AI agent that spends your money like you would, and can explain every pound.</b></p>
 
 <p align="center">
-  <a href="https://drive.google.com/file/d/1ZCSo90Dt93hS0RibHrhlArkdVBAGAlqh/view"><img src="https://img.shields.io/badge/%E2%96%B6%20Demo%20video-1%3A59-ed4c4c?style=for-the-badge" alt="Demo video"></a>
-  <a href="https://peter-36009--agent-offramp-web.us-east.modal.run"><img src="https://img.shields.io/badge/Live%20app-Modal-ed4c4c?style=for-the-badge" alt="Live app"></a>
   <img src="https://img.shields.io/badge/Stripe-test%20mode-635bff?style=for-the-badge" alt="Stripe test mode">
   <img src="https://img.shields.io/badge/MCP-16%20tools-111?style=for-the-badge" alt="MCP">
 </p>
 
 Sally restocks the kitchen, takes deposits, pays supplier invoices and shops real grocers in her own cloud browser. She works by chat, SMS, voice or any MCP client. Every action passes a written spending policy **before** Stripe is touched. Anything over the limit waits for a human, and every pound gets an audit trail that cites the policy clause behind it.
 
-**Watch:** [1:59 demo video](https://drive.google.com/file/d/1ZCSo90Dt93hS0RibHrhlArkdVBAGAlqh/view) · **Try:** [peter-36009--agent-offramp-web.us-east.modal.run](https://peter-36009--agent-offramp-web.us-east.modal.run) · **Track:** Agents that spend
+**Track:** Agents that spend
 
 ## Features
 | | What Sally does | Stripe |
