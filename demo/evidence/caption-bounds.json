@@ -1,0 +1,130 @@
+[
+  {
+    "format": "landscape",
+    "id": "hook",
+    "x": 384.03125,
+    "y": 932.375,
+    "width": 1151.9375,
+    "height": 92.625
+  },
+  {
+    "format": "landscape",
+    "id": "basket",
+    "x": 318.4921875,
+    "y": 932.375,
+    "width": 1283.015625,
+    "height": 92.625
+  },
+  {
+    "format": "landscape",
+    "id": "approve",
+    "x": 324.9375,
+    "y": 932.375,
+    "width": 1270.125,
+    "height": 92.625
+  },
+  {
+    "format": "landscape",
+    "id": "attempt",
+    "x": 558.4765625,
+    "y": 932.375,
+    "width": 803.046875,
+    "height": 92.625
+  },
+  {
+    "format": "landscape",
+    "id": "declines",
+    "x": 619.9609375,
+    "y": 932.375,
+    "width": 680.078125,
+    "height": 92.625
+  },
+  {
+    "format": "landscape",
+    "id": "receipt",
+    "x": 640.5859375,
+    "y": 932.375,
+    "width": 638.828125,
+    "height": 92.625
+  },
+  {
+    "format": "landscape",
+    "id": "audit",
+    "x": 669.7890625,
+    "y": 932.375,
+    "width": 580.421875,
+    "height": 92.625
+  },
+  {
+    "format": "landscape",
+    "id": "slate",
+    "x": 539.6953125,
+    "y": 932.375,
+    "width": 840.609375,
+    "height": 92.625
+  },
+  {
+    "format": "vertical",
+    "id": "hook",
+    "x": 70,
+    "y": 1521.28125,
+    "width": 940,
+    "height": 158.71875
+  },
+  {
+    "format": "vertical",
+    "id": "basket",
+    "x": 70,
+    "y": 1521.28125,
+    "width": 940,
+    "height": 158.71875
+  },
+  {
+    "format": "vertical",
+    "id": "approve",
+    "x": 70,
+    "y": 1521.28125,
+    "width": 940,
+    "height": 158.71875
+  },
+  {
+    "format": "vertical",
+    "id": "attempt",
+    "x": 107.8515625,
+    "y": 1582.640625,
+    "width": 864.296875,
+    "height": 97.359375
+  },
+  {
+    "format": "vertical",
+    "id": "declines",
+    "x": 174.453125,
+    "y": 1582.640625,
+    "width": 731.09375,
+    "height": 97.359375
+  },
+  {
+    "format": "vertical",
+    "id": "receipt",
+    "x": 196.8046875,
+    "y": 1582.640625,
+    "width": 686.390625,
+    "height": 97.359375
+  },
+  {
+    "format": "vertical",
+    "id": "audit",
+    "x": 228.4375,
+    "y": 1582.640625,
+    "width": 623.125,
+    "height": 97.359375
+  },
+  {
+    "format": "vertical",
+    "id": "slate",
+    "x": 87.5,
+    "y": 1582.640625,
+    "width": 905,
+    "height": 97.359375
+  }
+]

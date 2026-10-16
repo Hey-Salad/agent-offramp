@@ -1,0 +1,257 @@
+{
+  "schema": 1,
+  "syntheticVoice": true,
+  "model": "gpt-4o-mini-tts",
+  "voice": "marin",
+  "fps": 30,
+  "timeline": [
+    {
+      "id": "hook",
+      "text": "Save time and money. I gave my AI a credit card.",
+      "start": 0,
+      "end": 5.733333333333333,
+      "duration": 5.733333333333333,
+      "voiceDuration": 3.94475,
+      "tempo": 0.6880377906976745
+    },
+    {
+      "id": "basket",
+      "text": "Sally restocks the kitchen and pays what's in my rules.",
+      "start": 5.733333333333333,
+      "end": 11.133333333333333,
+      "duration": 5.3999999999999995,
+      "voiceDuration": 3.728125,
+      "tempo": 0.6903935185185186
+    },
+    {
+      "id": "approve",
+      "text": "Anything over twenty-five pounds? She asks me first.",
+      "start": 11.133333333333333,
+      "end": 15.733333333333333,
+      "duration": 4.6,
+      "voiceDuration": 3.149667,
+      "tempo": 0.6847102173913044
+    },
+    {
+      "id": "attempt",
+      "text": "So I tried to make her overspend.",
+      "start": 15.733333333333333,
+      "end": 19.366666666666667,
+      "duration": 3.6333333333333346,
+      "voiceDuration": 2.513542,
+      "tempo": 0.6918005504587154
+    },
+    {
+      "id": "declines",
+      "text": "Declined, by the card itself.",
+      "start": 19.366666666666667,
+      "end": 22.333333333333332,
+      "duration": 2.966666666666665,
+      "voiceDuration": 2.0345,
+      "tempo": 0.685786516853933
+    },
+    {
+      "id": "receipt",
+      "text": "Every pound on a receipt.",
+      "start": 22.333333333333332,
+      "end": 24.833333333333332,
+      "duration": 2.5,
+      "voiceDuration": 1.730542,
+      "tempo": 0.6922168
+    },
+    {
+      "id": "audit",
+      "text": "With the rule behind it.",
+      "start": 24.833333333333332,
+      "end": 27.5,
+      "duration": 2.666666666666668,
+      "voiceDuration": 1.831167,
+      "tempo": 0.6866876249999997
+    },
+    {
+      "id": "slate",
+      "text": "Give your AI a card it can't misuse.",
+      "start": 27.5,
+      "end": 32,
+      "duration": 4.5,
+      "voiceDuration": 3.09875,
+      "tempo": 0.6886111111111111
+    }
+  ],
+  "captures": [
+    {
+      "format": "landscape",
+      "clock": "Monotonic action clock aligned to blackdetect marker; 25fps capture resolution",
+      "syncEnd": 3.44,
+      "beats": [
+        {
+          "id": "hook",
+          "start": 3.4423477080000002,
+          "end": 4.175651875000001,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 0
+        },
+        {
+          "id": "basket",
+          "start": 4.175711916,
+          "end": 8.520915624999999,
+          "focus": {
+            "x": 707.5,
+            "y": 507.9375
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "approve",
+          "start": 8.521000333,
+          "end": 12.117389915999999,
+          "focus": {
+            "x": 707.5,
+            "y": 776.0625
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "attempt",
+          "start": 12.117557208,
+          "end": 17.662153458000002,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "declines",
+          "start": 17.662316458000003,
+          "end": 22.714957625,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "receipt",
+          "start": 22.715039041,
+          "end": 29.793378541000003,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "audit",
+          "start": 29.793426666000002,
+          "end": 34.483680416000006,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "slate",
+          "start": 34.483717958,
+          "end": 36.204118957999995,
+          "focus": {
+            "x": 960,
+            "y": 367.15625
+          },
+          "resultHoldSeconds": 1.7
+        }
+      ]
+    },
+    {
+      "format": "vertical",
+      "clock": "Monotonic action clock aligned to blackdetect marker; 25fps capture resolution",
+      "syncEnd": 2.76,
+      "beats": [
+        {
+          "id": "hook",
+          "start": 2.761699,
+          "end": 3.505989874999999,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 0
+        },
+        {
+          "id": "basket",
+          "start": 3.5060808329999995,
+          "end": 7.777783625000003,
+          "focus": {
+            "x": 931.25,
+            "y": 507.9375
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "approve",
+          "start": 7.777878333,
+          "end": 11.675129165999998,
+          "focus": {
+            "x": 931.25,
+            "y": 776.0625
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "attempt",
+          "start": 11.675166250000002,
+          "end": 17.191868166,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "declines",
+          "start": 17.191903458,
+          "end": 22.047790625000005,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "receipt",
+          "start": 22.047832416,
+          "end": 29.152394750000006,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "audit",
+          "start": 29.152413000000003,
+          "end": 33.622236583,
+          "focus": {
+            "x": 960,
+            "y": 880
+          },
+          "resultHoldSeconds": 1.5
+        },
+        {
+          "id": "slate",
+          "start": 33.622279625,
+          "end": 35.340640541,
+          "focus": {
+            "x": 960,
+            "y": 367.15625
+          },
+          "resultHoldSeconds": 1.7
+        }
+      ]
+    }
+  ]
+}

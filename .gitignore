@@ -2,3 +2,6 @@ node_modules
 .env
 data/records.json
 data/stripe-extra.json
+demo/.env
+demo/out/
+demo/work/

@@ -1,0 +1,242 @@
+{
+  "status": "automated checks passed; human visual/audio review required",
+  "duration": 32,
+  "checks": [
+    "landscape: geometry, duration, A/V length, no >1s silence/freeze, OCR login/URL/name scan passed",
+    "vertical: geometry, duration, A/V length, no >1s silence/freeze, OCR login/URL/name scan passed"
+  ],
+  "samples": [
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-01.png",
+      "at": 0
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-02.png",
+      "at": 2
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-03.png",
+      "at": 4
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-04.png",
+      "at": 6
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-05.png",
+      "at": 8
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-06.png",
+      "at": 10
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-07.png",
+      "at": 12
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-08.png",
+      "at": 14
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-09.png",
+      "at": 16
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-10.png",
+      "at": 18
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-11.png",
+      "at": 20
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-12.png",
+      "at": 22
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-13.png",
+      "at": 24
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-14.png",
+      "at": 26
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-15.png",
+      "at": 28
+    },
+    {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-16.png",
+      "at": 30
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-01.png",
+      "at": 0
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-02.png",
+      "at": 2
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-03.png",
+      "at": 4
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-04.png",
+      "at": 6
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-05.png",
+      "at": 8
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-06.png",
+      "at": 10
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-07.png",
+      "at": 12
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-08.png",
+      "at": 14
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-09.png",
+      "at": 16
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-10.png",
+      "at": 18
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-11.png",
+      "at": 20
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-12.png",
+      "at": 22
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-13.png",
+      "at": 24
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-14.png",
+      "at": 26
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-15.png",
+      "at": 28
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-16.png",
+      "at": 30
+    }
+  ],
+  "audioAlignment": {
+    "method": "Whisper word timestamps from final decoded AAC; <=5% word error, line boundaries within 750ms; identical audio in both exports",
+    "wordErrorRate": 0.03333333333333333,
+    "differences": [
+      {
+        "expected": "tried",
+        "heard": "try"
+      },
+      {
+        "expected": "rules",
+        "heard": "rolls"
+      }
+    ],
+    "boundaries": [
+      {
+        "id": "hook",
+        "captionStart": 0,
+        "speechStart": 0,
+        "captionEnd": 5.733333333333333,
+        "speechEnd": 5.71999979019165
+      },
+      {
+        "id": "basket",
+        "captionStart": 5.733333333333333,
+        "speechStart": 6.260000228881836,
+        "captionEnd": 11.133333333333333,
+        "speechEnd": 11.039999961853027
+      },
+      {
+        "id": "approve",
+        "captionStart": 11.133333333333333,
+        "speechStart": 11.239999771118164,
+        "captionEnd": 15.733333333333333,
+        "speechEnd": 15.699999809265137
+      },
+      {
+        "id": "attempt",
+        "captionStart": 15.733333333333333,
+        "speechStart": 15.859999656677246,
+        "captionEnd": 19.366666666666667,
+        "speechEnd": 19.31999969482422
+      },
+      {
+        "id": "declines",
+        "captionStart": 19.366666666666667,
+        "speechStart": 19.760000228881836,
+        "captionEnd": 22.333333333333332,
+        "speechEnd": 22.219999313354492
+      },
+      {
+        "id": "receipt",
+        "captionStart": 22.333333333333332,
+        "speechStart": 22.3799991607666,
+        "captionEnd": 24.833333333333332,
+        "speechEnd": 24.600000381469727
+      },
+      {
+        "id": "audit",
+        "captionStart": 24.833333333333332,
+        "speechStart": 24.600000381469727,
+        "captionEnd": 27.5,
+        "speechEnd": 27.479999542236328
+      },
+      {
+        "id": "slate",
+        "captionStart": 27.5,
+        "speechStart": 27.479999542236328,
+        "captionEnd": 32,
+        "speechEnd": 31.84000015258789
+      }
+    ]
+  }
+}

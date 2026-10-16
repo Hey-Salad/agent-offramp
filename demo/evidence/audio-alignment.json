@@ -1,0 +1,72 @@
+{
+  "method": "Whisper word timestamps from final decoded AAC; <=5% word error, line boundaries within 750ms; identical audio in both exports",
+  "wordErrorRate": 0.03333333333333333,
+  "differences": [
+    {
+      "expected": "tried",
+      "heard": "try"
+    },
+    {
+      "expected": "rules",
+      "heard": "rolls"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "hook",
+      "captionStart": 0,
+      "speechStart": 0,
+      "captionEnd": 5.733333333333333,
+      "speechEnd": 5.71999979019165
+    },
+    {
+      "id": "basket",
+      "captionStart": 5.733333333333333,
+      "speechStart": 6.260000228881836,
+      "captionEnd": 11.133333333333333,
+      "speechEnd": 11.039999961853027
+    },
+    {
+      "id": "approve",
+      "captionStart": 11.133333333333333,
+      "speechStart": 11.239999771118164,
+      "captionEnd": 15.733333333333333,
+      "speechEnd": 15.699999809265137
+    },
+    {
+      "id": "attempt",
+      "captionStart": 15.733333333333333,
+      "speechStart": 15.859999656677246,
+      "captionEnd": 19.366666666666667,
+      "speechEnd": 19.31999969482422
+    },
+    {
+      "id": "declines",
+      "captionStart": 19.366666666666667,
+      "speechStart": 19.760000228881836,
+      "captionEnd": 22.333333333333332,
+      "speechEnd": 22.219999313354492
+    },
+    {
+      "id": "receipt",
+      "captionStart": 22.333333333333332,
+      "speechStart": 22.3799991607666,
+      "captionEnd": 24.833333333333332,
+      "speechEnd": 24.600000381469727
+    },
+    {
+      "id": "audit",
+      "captionStart": 24.833333333333332,
+      "speechStart": 24.600000381469727,
+      "captionEnd": 27.5,
+      "speechEnd": 27.479999542236328
+    },
+    {
+      "id": "slate",
+      "captionStart": 27.5,
+      "speechStart": 27.479999542236328,
+      "captionEnd": 32,
+      "speechEnd": 31.84000015258789
+    }
+  ]
+}
