@@ -5,7 +5,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import { memory, recall } from "./memory.js";
 import { stripeWrite } from "./toolkit.js";
-import { layout, recordPage, auditPage, CSS } from "./ui.js";
+import { layout, recordPage, auditPage, CSS, chatPage } from "./ui.js";
 
 export const RPOLICY = {
   weeklyCapGBP: 150, approvalThresholdGBP: 25, licensedForAlcohol: false,
@@ -220,7 +220,7 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
   app.get("/r/:id", (req, res) => { const r = memory.get(req.params.id); r ? res.send(recordPage(r)) : res.status(404).send("Not found"); });
   app.get("/audit", (_q, res) => res.send(auditPage()));
   app.get("/classic", (_q, res) => res.send(homePage()));
-  app.get("/", (_q, res) => res.sendFile("chat.html", { root: "public" }));
+  app.get("/", (_q, res) => res.send(chatPage()));
   app.get("/heysalad-mark.svg", (_q, res) => res.sendFile("heysalad-mark.svg", { root: "public" }));
   app.get("/heysalad-logo-black.svg", (_q, res) => res.sendFile("heysalad-logo-black.svg", { root: "public" }));
 }

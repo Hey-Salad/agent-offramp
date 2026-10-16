@@ -7,8 +7,8 @@
 </p>
 
 <h1 align="center">Agent 9</h1>
-<p align="center"><b>9 Stripe products vs 1. We lost. Here's the code.</b></p>
-<p align="center">Spend rules and virtual cards for AI agents. Open source, by HeySalad.</p>
+<p align="center"><b>Give your agent a financial operating system.</b></p>
+<p align="center">Spend rules and virtual cards for AI agents, built on 9 Stripe products. Open source, by HeySalad.</p>
 
 <!-- HERO: add assets/demo.gif (15–20s: the agent shops, then the card declines £80), then uncomment:
 <p align="center"><img src="assets/demo.gif" alt="The agent restocks the kitchen; the card declines £80" width="720"></p>
