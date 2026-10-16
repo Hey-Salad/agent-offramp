@@ -40,16 +40,16 @@ export function mountTwilio(app: Express, BASE: string, PORT: number) {
   // Returns a one-line reply: what happened + link + why.
   async function route(text: string, sid: string, channel: string, from: string): Promise<string> {
     const t = text.trim();
+    const example=chatExampleIndex(t);
+    if(example>=0&&example!==4){
+      let result;
+      try{result=await runChatExample(example,PORT,BASE,channel)}catch{return "Sally: this test action is unavailable. No Stripe result was confirmed."}
+      tag(result.record.id,sid,channel,from,t);return 'Sally: '+result.reply;
+    }
     const card=cardCommand(t);
     if(card){
       if('unsupported' in card)return "Sally: try 'spend £12 at Ocado', 'spend £80 at Ocado', or 'spend £10 at an off-licence'. These are test card examples.";
       const result=await runCardChat(card,t,channel);tag(result.record.id,sid,channel,from,t);return 'Sally: '+result.reply;
-    }
-    const example=chatExampleIndex(t);
-    if(example>=0){
-      let result;
-      try{result=await runChatExample(example,PORT,BASE,channel)}catch{return "Sally: this test action is unavailable. No Stripe result was confirmed."}
-      tag(result.record.id,sid,channel,from,t);return 'Sally: '+result.reply;
     }
     const yes = t.match(/^yes\s+(\S+)/i);
     if (yes) {

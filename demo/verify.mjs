@@ -4,7 +4,7 @@ import {execFileSync,execFile} from 'node:child_process';
 import {promisify} from 'node:util';
 const exec=promisify(execFile);
 const run=(name,args)=>execFileSync(name,args,{encoding:'utf8',maxBuffer:8e6});
-export async function verify(out){
+export async function verify(out,root=path.resolve("demo/work/agent9")){
  const beats=JSON.parse(await fs.readFile(out+'/beats.json','utf8'));
  const timeline=JSON.parse(await fs.readFile(out+'/timeline.json','utf8'));
  const checks=[];const check=(name,ok)=>{checks.push({name,ok:!!ok});if(!ok)throw Error('Verification failed: '+name)};
@@ -22,7 +22,7 @@ export async function verify(out){
  const audio=pcm(out+'/agent9-demo.mp4');
  const verticalAudio=pcm(out+'/agent9-demo-vertical.mp4');
  check('Both formats use identical narration',audio.length===verticalAudio.length&&audio.every((v,i)=>Math.abs(v-verticalAudio[i])<.001));
- const voices=JSON.parse(await fs.readFile(path.resolve('demo/work/agent9/voice.json'),'utf8'));
+ const voices=JSON.parse(await fs.readFile(path.join(root,'voice.json'),'utf8'));
  const alignment=[];
  for(let i=0;i<11;i++){
   const ref=pcm(voices[i].file);const expected=Math.round(timeline[i].voiceStart*8000);let best=-1,lag=0;

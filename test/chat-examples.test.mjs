@@ -26,6 +26,7 @@ try{
  assert.equal(await page.locator('.msg.me').count(),0,'chooser does not spend');
  for(const e of CHAT_EXAMPLES){
   const result=await (await fetch(base+'/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({text:e.text})})).json();
+  if(e.index!==4)assert.doesNotMatch(result.reply,/try 'spend/, 'token request must not hit card parser');
   assert.ok(!result.record?.stripe?.verified,'no-key results never claim verified proof');
   assert.ok(!result.record?.stripe?.authorization,'no-key results never invent card result');
  }
