@@ -1,0 +1,110 @@
+{
+  "build": {
+    "commit": "ff8b87fe50c4e0df8c3261c0f99961f9901c74fe",
+    "testMode": true
+  },
+  "examples": [
+    {
+      "product": "PaymentIntents",
+      "request": "Pay my approved suppliers",
+      "record": "or_a503df174c",
+      "objectPrefix": "pi_",
+      "status": "succeeded",
+      "livemode": false,
+      "auditConfirmed": true
+    },
+    {
+      "product": "Checkout",
+      "request": "Create a £32.50 checkout",
+      "record": "or_07f88b4b66",
+      "objectPrefix": "cs_test_",
+      "status": "open",
+      "livemode": false,
+      "auditConfirmed": true
+    },
+    {
+      "product": "Payment Links",
+      "request": "Create a deposit link for six guests",
+      "record": "or_091d057958",
+      "objectPrefix": "plink_",
+      "status": "active",
+      "livemode": false,
+      "auditConfirmed": true
+    },
+    {
+      "product": "Invoicing",
+      "request": "Draft a £120 invoice for completed work",
+      "record": "or_bace9bc36f",
+      "objectPrefix": "in_",
+      "status": "draft",
+      "livemode": false,
+      "auditConfirmed": true
+    },
+    {
+      "product": "Issuing",
+      "request": "Spend £80 at Ocado",
+      "record": "card_a049133a",
+      "objectPrefix": "iauth_",
+      "status": "closed",
+      "livemode": false,
+      "auditConfirmed": true
+    },
+    {
+      "product": "Connect",
+      "request": "Pay my partner £60",
+      "record": "or_3fadefd4e5",
+      "objectPrefix": "pi_",
+      "status": "succeeded",
+      "livemode": false,
+      "auditConfirmed": true
+    },
+    {
+      "product": "Billing",
+      "request": "Start a £9 monthly subscription",
+      "record": "or_1aacdf1311",
+      "objectPrefix": "sub_",
+      "status": "active",
+      "livemode": false,
+      "auditConfirmed": true
+    },
+    {
+      "product": "Shared payment tokens",
+      "request": "Pay £9.60 without sharing card details",
+      "record": "or_8cde5d6f64",
+      "objectPrefix": "pi_",
+      "status": "succeeded",
+      "livemode": false,
+      "auditConfirmed": true
+    },
+    {
+      "product": "Agent Toolkit",
+      "request": "Use Stripe tools to draft a £75 services invoice",
+      "record": "or_e0eca74d8f",
+      "objectPrefix": "in_",
+      "status": "draft",
+      "livemode": false,
+      "auditConfirmed": true
+    }
+  ],
+  "chooser": {
+    "count": 9,
+    "selectionRequiresSend": true
+  },
+  "publicPages": [
+    {
+      "product": "PaymentIntents",
+      "label": "Open receipt",
+      "publicPageLoads": true
+    },
+    {
+      "product": "Checkout",
+      "label": "Open checkout",
+      "publicPageLoads": true
+    },
+    {
+      "product": "Payment Links",
+      "label": "Open payment link",
+      "publicPageLoads": true
+    }
+  ]
+}

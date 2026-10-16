@@ -1,0 +1,402 @@
+[
+  {
+    "file": "customer-qa/landscape/frame-001.png",
+    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\ncx\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nea)\n\nrE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\n€\n\ng\n\ncs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-002.png",
+    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\ncx\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nea)\n\nrE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\n€\n\ng\n\n=\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-003.png",
+    "text": "@HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nBuilt on stripe\n\n$\n\ncx\n\noo\n\nPaymentintents\n\nCheckout\n\nPayment Links\n\nea)\n\nrE\n\nSS\n\nInvoicing\n\nIssuing\n\nConnect\n\n€\n\ng\n\ncs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-004.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n°&\n\n98 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\npre\n\n29\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-005.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nrragent\n\nfin\n\nal\n\nyo\n\nerating system,\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n98 Overview\n\nm\n\nrs\n\n$ Payments\n\n© Card\n\nB Invoices\n\n@\n\nYour approved supplier is paid. Items needing your approval remain on hold\n\nPLATFORM\n\nPAYMENTINTENTS - TEST MODE\n\nC Billing\n\nsucceeded - £96.82\n\n&% Connect\n\n@ Audit\n\nOpen receipt\n\nStripe output\n\n‘Trya business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappr\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-006.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nrragent\n\nfinan\n\nal\n\nyo\n\nerating system,\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n98 Overview\n\nmy\n\nrs\n\n$ Payments\n\n© Card\n\nB Invoices\n\n@\n\nYour approved supplier is paid. Items needing your approval remain on hold\n\nPLATFORM\n\nPAYMENTINTENTS - TEST MODE\n\nC Billing\n\nsucceeded - £96.82\n\n% Connect\n\n@ Audit\n\nOpen receipt\n\nStripe output\n\n“id\n\n“pi_3UR2zZoRBii4S4KdWONSSnbnz\",\n\n0\n\n‘status\n\n“succeeded”,\n\namount’\n\n9682,\n\ncurrency\n\n“gbp\",\n\n“Livemode'\n\nfalse\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappr\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-007.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npre\n\n296\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-008.png",
+    "text": "@HeySalad\n\nAgent 9\n\njour agent a fina\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nvate\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\n@\n\nPLATFORM\n\nCHECKOUT - TEST MODE\n\nC Billing\n\nopen - £32.50\n\n% Connect\n\n@ Audit\n\nOpen checkout\n\nStripe output\n\n1\n\nid\":\n\n“cs_test_alANqAiphCk4EI8HO3Me7KTnZcXY8Wy3M3SECCb4cL\n\nn30iU5KmRQvYeqP9\",\n\n\"status\": \"open\",\n\n\"payment_status\": “unpaid’\n\n“amount_total\"\n\n3250,\n\n\"currency\"\n\n“gbp\",\n\n\"Livemode\"\n\nfalse\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappro\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-009.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour agent afi\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nvate\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\n@\n\nPLATFORM\n\nCHECKOUT - TEST MODE\n\nC Billing\n\nopen - £32.50\n\n% Connect\n\n@ Audit\n\nOpen checkout\n\nStripe output\n\n1\n\nid\":\n\n\"cs_test_alANqAiphCk4EI8HO3Me7KTnZcXY8Wy3M3SECCb4cL\n\nn30iU5KmRQvYeqP9\",\n\n\"status\": \"open\",\n\n\"payment_status\": “unpaid’\n\n“amount_total\"\n\n3250,\n\n“currency”\n\n“gbp\",\n\n\"Livemode\"\n\nfalse\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappro\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-010.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\ne a deposit link fo\n\nest\n\n$ Payments\n\n© Card\n\n@\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n&% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npre\n\nM\n\na\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-011.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nwragent\n\nal\n\nyo\n\nerating\n\ng system.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nat\n\nit lin\n\nts\n\n$ Payments\n\n© Card\n\nB Invoices\n\n@\n\nYour £60 deposit link is ready for six guests. Payment is pending.\n\nPLATFORM\n\nPAYMENT LINKS - TEST MODE\n\nC Billing\n\nactive\n\n% Connect\n\n@ Audit\n\nOpen payment link\n\nStripe output\n\n“Gd\n\nf\n\n“pLink_1UR3@cRBii4S4KdW9ijxSubA\",\n\n0\n\nactive’\n\ni\n\ntrue,\n\ncurrency\n\n‘gbp\",\n\n‘Livemode'\n\nfalse\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-012.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\nppre\n\n296\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-013.png",
+    "text": "@HeySalad\n\nAgent 9\n\nal\n\nGive your agent\n\nerating\n\ng system.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nDraft a\n\nfor\n\nmp\n\n$ Payments\n\n© Card\n\nYour £120 invoice is drafted. No email sent.\n\nB Invoices\n\n@\n\nPLATFORM\n\nINVOICING - TEST MODE\n\nC Billing\n\ndraft - £120.00\n\n% Connect\n\n@ Audit\n\nStripe output\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-014.png",
+    "text": "@HeySalad\n\nAgent 9\n\njour agent\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nDraft a £120 in\n\nfor come\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £120 invoice is drafted. No email sent.\n\n&\n\nPLATFORM\n\nINVOICING - TEST MODE\n\nC Billing\n\ndraft - £120.00\n\n% Connect\n\n@ Audit\n\nStripe output\n\nd\": \"in_1UR3@tRBii4S4KdWz0zpTAIu\",\n\n‘status\n\ndraft\n\n“total”\n\n12000\n\n\"currency\"\n\n\"gbp\",\n\n\"Livemode\"\n\nfalse\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-015.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n&% Connect\n\n@ Audit\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\nppre\n\n296\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-016.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour agent.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n°&\n\n88\n\nOverview\n\n0\n\n$\n\nPayments\n\ni=)\n\nCard\n\n8\n\nInvoices\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\n@\n\nPLATFORM\n\nSALLY'S CARD - TEST MODE\n\nCG Billing\n\n£80.00 at Ocado\n\n% Connect\n\nDeclined - No money taken\n\n@ Audit\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\nid\n\nauth_1UR319LvLGMLREYZDJdpdkZN\" ,\n\n“object\n\nissuing. authorization\",\n\n“status\n\nclosed’\n\n,\n\nfalse,\n\n“approve\n\n\"amount\"\n\n8000,\n\n0\n\ncurrenc:\n\n“gbp\",\n\n‘Livemod\n\nfalse,\n\n“last4\"\n\n\"0005\"\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-017.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour agent.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n°@\n\n88\n\nOverview\n\n0\n\n$\n\nPayments\n\n(=)\n\nCard\n\n8\n\nInvoices\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\n@\n\nPLATFORM\n\nSALLY'S CARD - TEST MODE\n\nC Billing\n\n£80.00 at Ocado\n\n% Connect\n\nDeclined - No money taken\n\n@ Audit\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\nid\n\nauth_1UR319LvLGMLREYZDJdpdkZN\" ,\n\n“object\n\nissuing. authorization\",\n\n“status\n\nclosed’\n\n,\n\nfalse,\n\n“approve\n\n\"amount\"\n\n8000,\n\n0\n\ncurrenc:\n\n“gbp\",\n\n‘Livemod\n\nfalse,\n\n“last4\"\n\n\"0005\"\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-018.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nPay my\n\nner\n\n60\n\n$ Payments\n\n© Card\n\n@\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\npre\n\n596\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-019.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour ak\n\nnt\n\nina\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n©\n\n98\n\n88\n\nOverview\n\n$\n\nPayments\n\n(=)\n\nCard\n\n8\n\nInvoices\n\nYour partner payment is complete: £60 charged, with a £3 platform fee\n\nrecorded.\n\n&\n\nPLATFORM\n\nC Billing\n\nCONNECT - TEST MODE\n\n% Connect\n\nsucceeded - £60.00\n\n@ Audit\n\nStripe output\n\nid\"\n\n“pi_3UR31PRBii4S4KdW1Ro2n6Tt\",\n\n“status\n\n“succeeded”,\n\n“amount”\n\n6000,\n\n“currency”\n\n“gbp\",\n\n“Livemode\"\n\nfalse,\n\n\"destination\": “acct_1UQuLVIX6SJqMWzD\",\n\n“transfer\"\n\n“tr_3UR31PRBii4S4KdW1G6duvhy\",\n\n“trans fer_amoun\n\n7981,\n\nusd\"\n\n\"transfer_currency'\n\n“application_fee_amount\": 300\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-020.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour agent 2\n\nal\n\nating 5\n\nm.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\nppre\n\n296\n\n;\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-021.png",
+    "text": "@HeySalad\n\nAgent 9\n\nal\n\nGive your agent a\n\nol\n\nerating system,\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n88 Overview\n\nmonth\n\nub\n\non\n\n$ Payments\n\n© Card\n\nB Invoices\n\n@\n\nYour test customer's £9 monthly subscription is active.\n\nPLATFORM\n\nBILLING - TEST MODE\n\nCG Billing\n\nactive\n\n% Connect\n\n@ Audit\n\nStripe output\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n29\n\n5\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-022.png",
+    "text": "@HeySalad\n\nAgent 9\n\na\n\nnt\n\n( DB Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n88 Overview\n\nrt\n\nmont!\n\nub\n\nn\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour test customer's £9 monthly subscription is active.\n\nce\n\nPLATFORM\n\nBILLING - TEST MODE\n\nCG Billing\n\nactive\n\n% Connect\n\n@ Audit\n\nStripe output\n\na\"\n\n“sub_1UR31kRBii4S4KdWLUrVhxQ2\",\n\n“status\n\n‘active\",\n\n“Livemode\"\n\nfalse,\n\n\"\n\n\"price\"\n\nrice_1UQulaRBii4S4KdWRmcwnL39\",\n\ninterval\"\n\n“month\",\n\n“latest_invoice\":\n\nin_1UR31kRBii4S4KdWXbrSNNPK\"\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-023.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour a\n\nnt\n\nal\n\nating 5\n\nm.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nC Billing\n\n&% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\npre\n\n296\n\n5\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-024.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour ak\n\nnt\n\nina\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nithout sharing car\n\nlet:\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £9.60 payment succeeded using a scoped token, without sharing card\n\ndetails.\n\n@\n\nPLATFORM\n\nC Billing\n\nSHARED PAYMENT TOKENS - TEST MODE\n\n% Connect\n\nsucceeded - £9.60\n\n@ Audit\n\nStripe output\n\nid\"\n\n“pi_3UR322RBii4S4KdW06exsumu\",\n\n“status\n\n“succeeded”,\n\n“amount”\n\n960,\n\n“currency”\n\n“gbp\",\n\n“Livemode\"\n\nfalse,\n\n\"token.\n\na\"\n\n“spt_1UR322RBii4S4KdWRnWskxwU\"\n\n“token_Limit_gbp’\n\n50\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-025.png",
+    "text": "@HeySalad\n\nAgent 9\n\nour ak\n\nnt\n\nina\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nithout sharing car\n\nlet:\n\n$ Payments\n\n© Card\n\nB Invoices\n\nYour £9.60 payment succeeded using a scoped token, without sharing card\n\ndetails.\n\n@\n\nPLATFORM\n\nC Billing\n\nSHARED PAYMENT TOKENS - TEST MODE\n\n&% Connect\n\nsucceeded - £9.60\n\n@ Audit\n\nStripe output\n\nid\"\n\n“pi_3UR322RBii4S4KdW06exsumu\",\n\n“status\n\n“succeeded”,\n\n“amount™\n\n960,\n\n“currency”\n\n“gbp\",\n\n“Livemode\"\n\nfalse,\n\n\"token.\n\na\n\n“spt_1UR322RBii4S4KdWRnWskxwU\"\n\n“token_Limit_gbp’\n\n50\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-026.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nal\n\nating 5\n\nm.\n\n( D Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\n‘Trya business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n1 to\n\npre\n\nUs\n\nStripe tools to|\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-027.png",
+    "text": "@HeySalad\n\nAgent 9\n\n‘\n\nGi\n\n‘\n\nal\n\ne your agent\n\nol\n\nerating system,\n\n( D Chat\n\nMONEY\n\nHi, I'm Sally. What do you need?\n\n@\n\n88 Overview\n\nri\n\naf\n\nin\n\n$ Payments\n\n© Card\n\nYour £75 invoice is drafted. No email sent.\n\nB Invoices\n\n@\n\nPLATFORM\n\nAGENT TOOLKIT - TEST MODE\n\nCG Billing\n\ndraft - £75.00\n\n% Connect\n\n@ Audit\n\nStripe output\n\nid\n\nn_1UR32JRBii4S4KdWPSjd8Hds\",\n\n‘status\n\n“draft\",\n\n“total”\n\n: 7500,\n\n\"currency\": \"gbp\",\n\n“Livemode'\n\nfalse\n\nExecuted through Stripe Agent Toolkit\n\n‘Trya business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\na\n\ne\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-028.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nrag\n\nfinan\n\nal\n\nyo\n\nerating\n\ng system.\n\n( DB Chat\n\nMONEY\n\nHi, 'm Sally. What do you need?\n\n@\n\n88 Overview\n\nri\n\naf\n\nin\n\n$ Payments\n\n© Card\n\nYour £75 invoice is drafted. No email sent.\n\nB Invoices\n\n@\n\nPLATFORM\n\nAGENT TOOLKIT : TEST MODE\n\nCG Billing\n\ndraft - £75.00\n\n% Connect\n\n@ Audit\n\nStripe output\n\nid\n\nn_1UR32JRBii4S4KdWPSjd8Hds\",\n\n‘status\n\n“draft\",\n\n“total”\n\n: 7500,\n\n\"currency\": \"gbp\",\n\n“Livemode'\n\nfalse\n\nExecuted through Stripe Agent Toolkit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\na\n\ne\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-029.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour a\n\nnt\n\nal\n\nHi, 'm Sally. What do you need?\n\nating 5\n\nm.\n\n&\n\n( DB Chat\n\nMONEY\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\npr\n\nPay my|\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-030.png",
+    "text": "Receipt from HeySalad Inc.\n\nReceipt #1065-1155\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 4:56:08 AM\n\nVISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\neg _{127Salad inc. contributed 1.5% of your purchase to remove\n\nCO; from the atmosphere.\n\nIfyou have any questions, visit our support site at https://neysalad.ai,\n\ncontact us at help@heysalad.ai, or call us at +1 650-600-0883.\n\n‘Something wrong with the email? View it in your browser.\n\nYou're receiving this email because you made a purchase at HeySalad Inc.,\n\nUses Stripe to provide invoicing and payment processing.\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-031.png",
+    "text": "rr)\n\nReceipt from HeySalad Inc.\n\nReceipt #1065-1155\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 4:56:08 AM\n\nVISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\n~o HeySalad Inc. contributed 1.5% of your purchase to remove\n\nCO, from the atmosphere.\n\nIfyou have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help@heysalad.ai, or call us at +1 650-600-0883.\n\n‘Something wrong with the email? View it in your browser.\n\nYou're receiving this email because you made a purchase at HeySalad Inc.\n\nwhich\n\nUses Stripe to provide invoicing and payment processing.\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-032.png",
+    "text": "@HeySalad\n\nAgent 9\n\nal\n\nGive your ag\n\nHi, I'm Sally. What do you need?\n\noperating system,\n\n@\n\n( DB Chat\n\nte af:\n\n0\n\nut\n\nMONEY\n\n88 Overview\n\n@\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\n$ Payments\n\n© Card\n\nCHECKOUT - TEST MODE\n\nB Invoices\n\nopen - £32.50\n\nPLATFORM\n\nCG Billing\n\nOpen checkout\n\n% Connect\n\nStripe output\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nappr\n\n296\n\n5\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-033.png",
+    "text": "Sandi\n\nContact information\n\nEmail\n\nKitchen order (test)\n\nemail@example.com\n\n£32.50\n\nPayment method\n\nem Card\n\n‘ard information\n\n1234 1234 1234 1234\n\nvss OS\n\nfa]\n\n=|\n\nMM/YY\n\neve\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nzp\n\n[Y save my information with Link for faster checkout\n\nPhone number\n\n(201) 555-0123\n\nBy paying, you agree to Link's Terms and Privagy-\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nw\n\nto remo)\n\n19 CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-034.png",
+    "text": "°®\n\nKitchen order (test)\n\noR\n\n£32.50\n\nContact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\nmm Card\n\nCard information\n\n4\n\n41234\n\nvse DE 055\n\nMM YY\n\neve\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nzp\n\n[Y save my information with Link for faster checkout\n\nPhone number\n\n@ (201) 555-0123\n\nBy payin:\n\nyou agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad inc. will contribute 1.5% of your purchase\n\n@\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-035.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyo\n\nnt\n\nal\n\nHi, I'm Sally. What do you need?\n\nating 5\n\nm.\n\n@\n\n( DB Chat\n\nit lin\n\nMONEY\n\n98 Overview\n\n@\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task -9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nppr\n\n296\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-036.png",
+    "text": "Sand\n\nContact information\n\nEmail\n\nHeySalad table deposit (6 guests)\n\nemail@example.com\n\n£60.00\n\nPayment method\n\nmm Card\n\n‘ard information\n\n1234 1234 1234 1234\n\nvss OS\n\nfa\n\nso)\n\nMM/YY\n\neve\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nzip\n\n[Y save my information with Link for faster checkout\n\nPhone number\n\n@ (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privagy-\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-037.png",
+    "text": "° C=\n\nHeySalad table deposit (6 guests)\n\noR\n\n£60.00\n\nContact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\nem Card\n\nCard information\n\n44\n\n3\n\n3\n\n4\n\n34 1234\n\nvse DE 055\n\nMM /YY\n\neve\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n[Y save my information with Link for faster checkout\n\nPhone number\n\n& (201) 555-0123\n\ny paying, you agree to Link's Terms and Privagy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\n@\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-038.png",
+    "text": "@HeySalad\n\nAgent 9\n\nGi\n\nyour at\n\nnt\n\nfin\n\nal\n\nHi, 'm Sally. What do you need?\n\nating 5\n\nm.\n\n@&\n\n( DB Chat\n\nMONEY\n\n88 Overview\n\n$ Payments\n\n© Card\n\nB Invoices\n\nPLATFORM\n\nCG Billing\n\n% Connect\n\n@ Audit\n\n‘Try a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nper\n\nPay the Bidfood invoid\n\n°@\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-039.png",
+    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.LSUDSQEO-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\n@ HeySalad Inc. TEST MODE:\n\nITEMS\n\n£89.60\n\nChicken thighs 10kg\n\nty\n\n°o\n\nFryer oil 20L x2\n\n£49.80\n\nty\n\nInvoice paid\n\nMixed salad leaves 6kg\n\n£45.20\n\n£184.60\n\naty1\n\nClose invoice and payment details x\n\nTotal due\n\n£184.60\n\nInvoice number\n\nLSUDSQEO-0001\n\nPayment date\n\n16 October 2026\n\nAmount paid\n\n£184.60\n\nPayment method\n\nVisa +\n\n+4242\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nowered by stripe\n\nVisa ++++ 4242\n\n16 Oct 2026\n\nTerms Privacy\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-040.png",
+    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.LSUDSQEO-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\n@ HeySalad Inc. Test MODE\n\nITEMS\n\n£89.60\n\nChicken thighs 10kg\n\natyt\n\n°o\n\nFryer oil 20L x2\n\n£49.80\n\nay\n\nInvoice paid\n\nMixed salad leaves 6kg\n\n£45.20\n\n£184.60\n\nty\n\nClose invoice and payment details x\n\nTotal due\n\n£184.60\n\nInvoice number\n\nLSUDSQEO-0001\n\nPayment date\n\n16 October 2026\n\nAmount paid\n\n£184.60\n\nPayment method\n\nVisa +\n\n+4242\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nowered by stripe\n\nVisa ++++ 4242\n\n16 Oct 2026\n\nTerms Privacy\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-041.png",
+    "text": "@ HeySalad Inc. ‘Test MODE)\n\n°\n\nInvoice paid\n\n£184.60\n\nView invoice and payment details >\n\nInvoice number\n\nLSUDSQEO-0001\n\nPayment date\n\n16 October 2026\n\nPayment method\n\nVisa\n\n+4242\n\nPowered by stripe\n\nTerms Privacy\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-042.png",
+    "text": "=\n\n=\n\ninvoice-landscape.pdf\n\n144\n\n125%\n\n+\n\na\n\no\n\n&\n\nInvoice\n\nInvoice number LSUDSQEO-0001\n\nDate of issue\n\nOctober 16, 2026\n\nDate due\n\nOctober 16, 2026\n\nBill to\n\nHeySalad Inc.\n\n584 Castro Street\n\nHeySalad (bill from Bidfood)\n\nSan Francisco, California 94114\n\nUnited States\n\n+1 650-600-0883\n\nhelp@heysalad.ai\n\n£184.60 due October 16, 2026\n\nBidfood INV-7718 against PO-1042\n\nUnit price\n\nAmount\n\nDescription\n\nay\n\nChicken thighs 10kg\n\n£89.60\n\n£89.60\n\nFryer oil 20L x2\n\n£49.80\n\n£49.80\n\nMixed salad leaves 6kg\n\n£45.20\n\n£45.20\n\nSubtotal\n\n£184.60\n\nTotal\n\n£184.60\n\nAmount due\n\n£184.60\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-043.png",
+    "text": "=\n\n=\n\n=\n\ninvoice-landscape.pdf\n\n144\n\n125%\n\n+\n\na\n\no\n\n&\n\n&\n\nL\n\n=)\n\nInvoice\n\nInvoice number LSUDSQEO-0001\n\nDate of issue\n\nOctober 16, 2026\n\nDate due\n\nOctober 16, 2026\n\nBill to\n\nHeySalad Inc.\n\n584 Castro Street\n\nHeySalad (bill from Bidfood)\n\nSan Francis\n\n, California 94114\n\nUnited States\n\n+1 650-600-0883\n\nhelp@heysalad.ai\n\n£184.60 due October 16, 2026\n\nPay online\n\nBidfood INV-7718 against PO-1042\n\nUnit price\n\nAmount\n\nDescription\n\nay\n\nChicken thighs 10kg\n\n£89.60\n\n£89.60\n\nFryer oil 20L x2\n\n£49.80\n\n£49.80\n\nMixed salad leaves 6kg\n\n£45.20\n\n£45.20\n\nSubtotal\n\n£184.60\n\nTotal\n\n£184.60\n\nAmount due\n\n£184.60\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-044.png",
+    "text": "@HeySalad\n\nAgent 9.\n\nGive your agent a financial\n\noperating system.\n"
+  },
+  {
+    "file": "customer-qa/landscape/frame-045.png",
+    "text": "@HeySalad\n\nAgent 9.\n\nGive your agent a financial\n\noperating system.\n"
+  },
+  {
+    "file": "customer-proof/0.png",
+    "text": "rc)\n\nReceipt from HeySalad Inc.\n\nReceipt #1065-1155\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 4:56:08 AM\n\nVISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\n~~ HeySalad Inc. contributed 1.5% of your purchase to remove\n\nCO, from the atmosphere.\n\nIfyou have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help@heysalad.ai, or call us at +1 650-600-0883.\n\n‘Something wrong with the email? View it in your browser.\n\nYou're receiving this email because you made a purchase at HeySalad Inc.\n\nwhich\n\nUses Stripe to provide invoicing and payment processing.\n"
+  },
+  {
+    "file": "customer-proof/1.png",
+    "text": "Sandi\n\nContact information\n\nEmail\n\nKitchen order (test)\n\nemail@example.com\n\n£32.50\n\nPayment method\n\nem Card\n\n‘ard information\n\n1234 1234 1234 1234\n\nvss OS\n\nfon\n\n=|\n\nMM/YY\n\neve\n\nGal\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n[Y save my information with Link for faster checkout\n\nPhone number\n\n1 (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privagy-\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nto remo)\n\n19 CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-proof/2.png",
+    "text": "Sand\n\nContact information\n\nEmail\n\nHeySalad table deposit (6 guests)\n\nemail@example.com\n\n£60.00\n\nPayment method\n\nmm Card\n\n‘ard information\n\n1234 1234 1234 1234\n\nvs ES\n\nfa\n\nso]\n\nMM/YY\n\neve\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nzip\n\n[Y save my information with Link for faster checkout\n\nPhone number\n\n& (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-proof/3.png",
+    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.LSUDSQEO-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\n@ HeySalad Inc. TEST MODE’\n\nITEMS\n\n£89.60\n\nChicken thighs 10kg\n\naty1\n\n°o\n\nFryer oil 20L x2\n\n£49.80\n\nty\n\nInvoice paid\n\nMixed salad leaves 6kg\n\n£45.20\n\n£184.60\n\nty\n\nClose invoice and payment details x\n\nTotal due\n\n£184.60\n\nInvoice number\n\nLSUDSQEO-0001\n\nPayment date\n\n16 October 2026\n\nAmount paid\n\n£184.60\n\nPayment method\n\nVisa +\n\n+4242\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nowered by stripe\n\nVisa ++++ 4242\n\n16 Oct 2026\n\nTerms Privacy\n"
+  },
+  {
+    "file": "customer-proof/4.png",
+    "text": "=\n\n=\n\n=\n\ninvoice-landscape.pdf\n\n144\n\n125%\n\n+\n\na\n\no\n\n&\n\n&\n\nL\n\n=)\n\nInvoice\n\nInvoice number LSUDSQEO-0001\n\nDate of issue\n\nOctober 16, 2026\n\nDate due\n\nOctober 16, 2026\n\nBill to\n\nHeySalad Inc.\n\n584 Castro Street\n\nHeySalad (bill from Bidfood)\n\nSan Francis\n\n, California 94114\n\nUnited States\n\n+1 650-600-0883\n\nhelp@heysalad.ai\n\n£184.60 due October 16, 2026\n\nPay online\n\nBidfood INV-7718 against PO-1042\n\nUnit price\n\nAmount\n\nDescription\n\nay\n\nChicken thighs 10kg\n\n£89.60\n\n£89.60\n\nFryer oil 20L x2\n\n£49.80\n\n£49.80\n\nMixed salad leaves 6kg\n\n£45.20\n\n£45.20\n\nSubtotal\n\n£184.60\n\nTotal\n\n£184.60\n\nAmount due\n\n£184.60\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-001.png",
+    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nurn StYIPe\n\n$\n\nca\n\nC?\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\neas)\n\ncE\n\n%\n\nInvoicing\n\nIssuing\n\nConnect\n\nGe\n\nY\n\nrs\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-002.png",
+    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\nurn StYIPe\n\n$\n\nca\n\nCG?\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\nS\n\nEI\n\n%\n\nInvoicing\n\nIssuing\n\nConnect\n\nGs\n\nY\n\nf=\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-003.png",
+    "text": "@ HeySalad\n\nAgent 9\n\nA financial operating system\n\nfor your agent.\n\ncron StYIPe\n\n$\n\nca\n\nCO\n\nCheckout\n\nPaymentintents\n\nPayment Links\n\nS\n\nEI\n\n%\n\nInvoicing\n\nIssuing\n\nConnect\n\nGs\n\nY\n\nTS\n\nBilling\n\nShared payment\n\nAgent Toolkit\n\ntokens\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-004.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-005.png",
+    "text": "&\n\nHi, I'm Sally. What do you need?\n\nYour approved supplier is paid. Items needing your approval remain on hold.\n\nce)\n\nPAYMENTINTENTS - TEST MODE\n\nsucceeded - £96.82\n\nOpen receipt\n\nStripe output\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-006.png",
+    "text": "&\n\nHi, I'm Sally. What do you need?\n\nYour approved supplier is paid. Items needing your approval remain on hold.\n\nCe)\n\nPAYMENTINTENTS - TEST MODE\n\nsucceeded - £96.82\n\nOpen receipt\n\nStripe output\n\n\"id\": \"pi_3UR2ZoRBii4S4KdWONSSnbnZ\",\n\n“status\": “succeeded”,\n\n“amount\": 9682,\n\n\"currency\": \"“gbp\",\n\n“Livemode\":\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-007.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-008.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n°\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\nce)\n\nCHECKOUT - TEST MODE\n\nopen - £32.50\n\nOpen checkout\n\nStripe output\n\n{\n\n\"id\":\n\n\"“cs_test_alANqAiphCk4EI8HO3Me7KTnZcxY8Wy3M3SECCb4cI\n\nn30iU5KmRQvYeqP9\",\n\n\"status\": \"open\",\n\n“payment_status\": “unpaid\",\n\n“amount_total\": 3250,\n\n“currency”: “gbp\",\n\n\"Livemode\"\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n-@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-009.png",
+    "text": "Hi, I'm Sally. What do you need?\n\noo\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\nce)\n\nCHECKOUT - TEST MODE\n\nopen - £32.50\n\nOpen checkout\n\nStripe output\n\n{\n\n\"id\":\n\n\"cs_test_alANqAiphCk4EI8HO3Me7KTnZcXY8Wy3M3SECCb4cI\n\nn30iU5KmRQvYeqP9\",\n\n\"status\": \"open\",\n\n“payment_status\": “unpaid\",\n\n“amount_total\": 3250,\n\n“currency”: “gbp\",\n\n\"Livemode\"\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-010.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n\n]\n\n-@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-011.png",
+    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\nYour £60 deposit link is ready for six guests. Payment is pending.\n\nce)\n\nPAYMENT LINKS - TEST MODE\n\nactive\n\nOpen payment link\n\nStripe output\n\n\"id\": \"plink_1UR3@cRBii4S4KdwW9ijxSubA\",\n\n“active”: true,\n\n“currency”: “gbp\",\n\n“Livemode\":\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-012.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-013.png",
+    "text": "&\n\nHi, I'm Sally. What do you need?\n\nYour £120 invoice is drafted. No email sent.\n\n&\n\nINVOICING - TEST MODE\n\ndraft - £120.00\n\nStripe output\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n\n-@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-014.png",
+    "text": "&\n\nHi, I'm Sally. What do you need?\n\nYour £120 invoice is drafted. No email sent.\n\n&\n\nINVOICING - TEST MODE\n\ndraft - £120.00\n\nStripe output\n\n\"id\": “in_1UR30tRBii4S4KdWz0zpTAIu\",\n\n\"status\": “draft\",\n\n“total\": 12000,\n\n“currency\": \"“gbp\",\n\n\"Livemode\":\n\nfalse\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-015.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-016.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\nce)\n\nSALLY'S CARD - TEST MODE\n\n£80.00 at Ocado\n\nDeclined - No money taken\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\n\"id\": \"“iauth_1UR319LVLGMLREYZDJdpdkZN\",\n\n“object\": “issuing.authorization\",\n\n\"status\":\n\n“closed\",\n\n“approved\": false,\n\n“amount\": 8000,\n\n“currency”: “gbp\",\n\n“Livemode\": false,\n\n“Last4\":\n\n\"9005\"\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-017.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nDeclined. £80.00 is over your £50 card limit. No money was taken.\n\nce)\n\nSALLY'S CARD - TEST MODE\n\n£80.00 at Ocado\n\nDeclined - No money taken\n\n£80.00 is over your £50 card limit.\n\nStripe output\n\n\"id\": \"“iauth_1UR319LVLGMLREYZDJdpdkZN\",\n\n“object\": “issuing.authorization\",\n\n\"status\":\n\n“closed\",\n\n“approved\": false,\n\n“amount\": 8000,\n\n“currency”: “gbp\",\n\n“Livemode\": false,\n\n“Last4\":\n\n\"9005\"\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-018.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nM\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-019.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nYour partner payment is complete: £60 charged, with a £3 platform fee\n\nrecorded,\n\n&\n\nCONNECT - TEST MODE\n\nsucceeded - £60.00\n\nStripe output\n\n\"id\": \"pi_3UR31PRBii4S4KdW1Ro2n6Tt\",\n\n\"status\": \"succeeded\",\n\n\"amount\": 6000,\n\n\"currency\": \"“gbp\",\n\n\"“Livemode\": false,\n\n\"destination\": “acct_1UQuLVIX6SJqMWzD\",\n\n\"transfer\": “tr_3UR31PRBii4S4KdW1G6duvhy\",\n\n“transfer_amount\": 7981,\n\n:\n\n.\n\n“transfer_currency\"\n\n\"usd\",\n\n“application_fee_amount\": 300\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-020.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n°\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n1}\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-021.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n°\n\nce)\n\nYour test customer's £9 monthly subscription is active.\n\nBILLING - TEST MODE\n\nactive\n\nStripe output\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-022.png",
+    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\nYour test customer's £9 monthly subscription is active.\n\nce)\n\nBILLING - TEST MODE\n\nactive\n\nStripe output\n\n\"id\": \"“sub_1UR31kRBii4S4KdWLUrVhxQ2\",\n\n\"status\": “active\",\n\n“Livemode\": false,\n\n\"price\": \"price_1UQulLaRBii4S4KdWRmcwnL39\",\n\n\"interval\": \"month\",\n\n“Latest_invoice\": “in_1UR31kRBii4S4KdWXbrSNNPK\"\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-023.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-024.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nYour £9.60 payment succeeded using a scoped token, without sharing card\n\ndetails.\n\n&\n\nSHARED PAYMENT TOKENS - TEST MODE\n\nsucceeded - £9.60\n\nStripe output\n\n\"id\": \"pi_3UR322RBii4S4KdW06exsumu\",\n\n\"status\": “succeeded”,\n\n\"amount\": 960,\n\n“currency”: “gbp\",\n\n“Livemode\": false,\n\n“token_id\": \"spt_1UR322RBii4S4KdWRnWskxwU\" ,\n\n\"token_Limit_gbp\": 50\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-025.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nYour £9.60 payment succeeded using a scoped token, without sharing card\n\ndetails.\n\n&\n\nSHARED PAYMENT TOKENS - TEST MODE\n\nsucceeded : £9.60\n\nStripe output\n\n\"id\": \"pi_3UR322RBii4S4KdW06exsumu\",\n\n\"status\": “succeeded”,\n\n\"amount\": 960,\n\n“currency”: “gbp\",\n\n“Livemode\": false,\n\n“token_id\": \"spt_1UR322RBii4S4KdWRnWskxwU\" ,\n\n\"token_Limit_gbp\": 50\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-026.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nUse Stripe tools to|\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-027.png",
+    "text": "c)\n\nHi, I'm Sally. What do you need?\n\nYour £75 invoice is drafted. No email sent.\n\nce)\n\nAGENT TOOLKIT - TEST MODE\n\ndraft - £75.00\n\nStripe output\n\n\"id\": \"“in_1UR32JRBii4S4KdWPSjd8Hds\",\n\n\"status\": “draft\",\n\n“total\": 7500,\n\n\"currency\": \"“gbp\",\n\n\"Livemode\":\n\nfalse\n\nExecuted through Stripe Agent Toolkit\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n-@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-028.png",
+    "text": "ce)\n\nHi, I'm Sally. What do you need?\n\nYour £75 invoice is drafted. No email sent.\n\ncc)\n\nAGENT TOOLKIT - TEST MODE\n\ndraft - £75.00\n\nStripe output\n\n\"id\": \"“in_1UR32JRBii4S4KdWPSjd8Hds\",\n\n\"status\": \"draft\",\n\n“total\": 7500,\n\n\"currency\": \"“gbp\",\n\n\"Livemode\":\n\nfalse\n\nExecuted through Stripe Agent Toolkit\n\nTry a business task - 9 Stripe tools\n\nRestock the kitchen\n\nSpend £80 at Ocado\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-029.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n°\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nPay my|\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-030.png",
+    "text": "Receipt from HeySalad Inc.\n\nReceipt #1065-1155\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 4:56:08 AM\n\nVISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\n) HeySalad Inc. contributed 1.5% of your purchase to remove\n\nCO, from the atmosphere.\n\nIf you have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help@heysalad.ai, or call us at +1 650-600-0883.\n\nSomething wrong with the email? View it in your browser.\n\nYou're receiving this email because you made a purchase at HeySalad Inc., which\n\nuses Stripe to provide invoicing and payment processing.\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-031.png",
+    "text": "&\n\nReceipt from HeySalad Inc.\n\nReceipt #1065-1155\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 4:56:08 AM\n\nVISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\nHeySalad Inc. contributed 1.5% of your purchase to remove\n\n@\n\nCO; from the atmosphere.\n\nIf you have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help @heysalad.ai, or call us at +1 650-600-0883.\n\nSomething wrong with the email? View it in your browser,\n\nYou're receiving this email because you made a purchase at HeySalad Inc., which\n\nuses Stripe to provide invoicing and payment processing\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-032.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nYour £32.50 checkout is ready to share. No customer payment yet.\n\n&\n\nCHECKOUT - TEST MODE\n\nopen - £32.50\n\nOpen checkout\n\nStripe output\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n]\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-033.png",
+    "text": "Contact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\ngm Card\n\nCard information\n\n1234 1234 1234 1234\n\nva DE\n\neco\n\n=|\n\nMM / YY\n\ncvc\n\nFa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n(4 Save my information with Link for faster checkout\n\nPhone number\n\n&% (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nww\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-034.png",
+    "text": "OR\n\nContact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\ngm Card\n\nCard information\n\n1234 1234 1234 1234\n\nvisa (MS 955\n\nMM / YY\n\nCVC\n\nGa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n[M Save my information with Link for faster checkout\n\nPhone number\n\n5, (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\n@\n\nto removing CO, from the atmosphere.\n\nowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-035.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n°\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-036.png",
+    "text": "Contact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\nge Card\n\nCard information\n\n1234 1234 1234 1234\n\nve DE\n\nsecre\n\nI\n\nMM / YY\n\ncvc\n\nFa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n(V Save my information with Link for faster checkout\n\nPhone number\n\n&% (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-037.png",
+    "text": "OR\n\nContact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\ngm Card\n\nCard information\n\n1234 1234 1234 1234\n\nvisa WE) WS 955\n\nMM / YY\n\nCVC\n\nFa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n[M Save my information with Link for faster checkout\n\nPhone number\n\n5, (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\n@\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-038.png",
+    "text": "Hi, I'm Sally. What do you need?\n\n&\n\nTry a business task - 9 Stripe tools\n\nSpend £80 at Ocado\n\nRestock the kitchen\n\nTable for 6 Saturday 8pm\n\nPay the Bidfood invoice\n\nPay the Bidfood invoig\n\n>@\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-039.png",
+    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.LSUDSQEO-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\nITEMS\n\nChicken thighs 10kg\n\n£89.60\n\nQty1\n\nFryer oil 20L x2\n\n£49.80\n\nQty1\n\nMixed salad leaves 6kg\n\n£45.20\n\nQty1\n\nTotal due\n\n£184.60\n\nAmount paid\n\n£184.60\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nVisa +++» 4242\n\n16 Oct 2026\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-040.png",
+    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.LSUDSQEO-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\nITEMS\n\nChicken thighs 10kg\n\n£89.60\n\nQty1\n\nFryer oil 20L x2\n\n£49.80\n\nQty1\n\nMixed salad leaves 6kg\n\n£45.20\n\nQty1\n\nTotal due\n\n£184.60\n\nAmount paid\n\n£184.60\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nVisa +++» 4242\n\n16 Oct 2026\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-041.png",
+    "text": ")\n\nInvoice paid\n\n184.60\n\nse and payment details X\n\nLSUDSQEO-0001\n\n16 October 2026\n\nVisa ++++ 4242\n\nDownload receipt\n\n2\n\n-owered by stripe\n\nTerms Privacy\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-042.png",
+    "text": "75%\n\n+\n\nfA\n\nEd)\n\nInvoice\n\nInvoice number LSUDSQEO-0001\n\nDate of issue\n\nOctober 16, 2026\n\nDate due\n\nOctober 16, 2026\n\nHeySalad Inc.\n\nBill to\n\n584 Castro Street\n\nHeySalad (bill from Bidfood)\n\nSan Francisco, California 94114\n\nUnited States\n\n+1 650-600-0883\n\nhelp@heysalad.ai\n\n£184.60 due October 16, 2026\n\nPay online\n\nBidfood INV-7718 against PO-1042\n\nDescription\n\nary\n\nUnit price\n\nAmou\n\nChicken thighs 10kg\n\n£89.60\n\n£89.6\n\nFryer oll 20L x2\n\n£49.80\n\n£49.8\n\nMixed salad leaves 6kg\n\n£45.20\n\n£45.2\n\nSubtotal\n\n£184.6\n\nTotal\n\n£1846\n\nAmount due\n\n£184.6\n\nLSUDSQEO-0001 - £184,60 due October 16, 2026\n\nPage 101\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-043.png",
+    "text": "75%\n\n+\n\n1 if\n\nOo\n\nInvoice\n\nInvoice number LSUDSQEO-0001\n\nDate of issue\n\nOctober 16, 2026\n\nDate due\n\nOctober 16, 2026\n\nHeySalad Inc.\n\nBill to\n\n584 Castro Street\n\nHeySalad (bil\n\nrom Bidfood)\n\nSan Francisco, California 94114\n\nUnited States\n\n+1 650-600-0883\n\nhelp@heysalad ai\n\n£184.60 due October 16, 2026\n\nPay online\n\nBidfood INV-7718 against PO-1042\n\nDescription\n\nory\n\nUnit price\n\nAmount\n\nChicken thighs 10kg\n\n£89.60\n\n£89.60\n\nFryer oll 20L x2\n\n£49.80\n\n£49.80\n\nMixed salad leaves 6kg\n\n£45.20\n\n£45.20\n\nSubtotal\n\n£184.60\n\nTotal\n\n£184.60\n\nAmount due\n\n£184.60\n\nLSUDSQEO-0001 - £184.60 due October 16, 2026\n\nPage tot?\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-044.png",
+    "text": "@ HeySalad\n\nAgent 9.\n\nGive your agent a financial\n\noperating system.\n"
+  },
+  {
+    "file": "customer-qa/vertical/frame-045.png",
+    "text": "@ HeySalad\n\nAgent 9.\n\nGive your agent a financial\n\noperating system.\n"
+  },
+  {
+    "file": "customer-proof/0-vertical.png",
+    "text": "&\n\nReceipt from HeySalad Inc.\n\nReceipt #1065-1155\n\nAMOUNT PAID\n\nDATE PAID\n\nPAYMENT METHOD\n\n£96.82\n\nOct 16, 2026, 4:56:08 AM\n\nVISA - 4242\n\nSUMMARY\n\nSally restock (auto, within policy)\n\n£96.82\n\nAmount paid\n\n£96.82\n\nHeySalad Inc. contributed 1.5% of your purchase to remove\n\n@\n\nCO, from the atmosphere.\n\nIf you have any questions, visit our support site at https://heysalad.ai,\n\ncontact us at help @heysalad.ai, or call us at +1 650-600-0883.\n\nSomething wrong with the email? View it in your browser,\n\nYou're receiving this email because you made a purchase at HeySalad Inc., which\n\nuses Stripe to provide invoicing and payment processing,\n"
+  },
+  {
+    "file": "customer-proof/1-vertical.png",
+    "text": "Contact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\ngm Card\n\nCard information\n\n1234 1234 1234 1234\n\nve DE\n\neco\n\n=|\n\nMM / YY\n\ncvc\n\nFa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n(4 Save my information with Link for faster checkout\n\nPhone number\n\n&% (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-proof/2-vertical.png",
+    "text": "Contact information\n\nEmail\n\nemail@example.com\n\nPayment method\n\nge Card\n\nCard information\n\n1234 1234 1234 1234\n\nve DE\n\nsecre\n\nI\n\nMM / YY\n\ncvc\n\nFa\n\nCardholder name\n\nFull name on card\n\nCountry or region\n\nUnited States\n\nZIP\n\n(V Save my information with Link for faster checkout\n\nPhone number\n\n&% (201) 555-0123\n\nBy paying, you agree to Link's Terms and Privacy.\n\nPay\n\nHeySalad Inc. will contribute 1.5% of your purchase\n\nto removing CO, from the atmosphere.\n\nPowered by stripe\n\nTerms\n\nPrivacy\n"
+  },
+  {
+    "file": "customer-proof/3-vertical.png",
+    "text": "X Close invoice and payment details\n\nPaid on 16 Oct 2026\n\nSUMMARY\n\nTo\n\nHeySalad (bill from Bidfood)\n\nFrom\n\nHeySalad Inc.\n\nInvoice\n\nNo.LSUDSQEO-0001\n\nMemo\n\nBidfood INV-7718 against PO-1042\n\nITEMS\n\nChicken thighs 10kg\n\n£89.60\n\nQty1\n\nFryer oil 20L x2\n\n£49.80\n\nQty1\n\nMixed salad leaves 6kg\n\n£45.20\n\nQty1\n\nTotal due\n\n£184.60\n\nAmount paid\n\n£184.60\n\nAmount remaining\n\n£0.00\n\nPayment history\n\n£184.60\n\nVisa +++» 4242\n\n16 Oct 2026\n"
+  },
+  {
+    "file": "customer-proof/4-vertical.png",
+    "text": "75%\n\n+\n\n1 if\n\nOo\n\nInvoice\n\nInvoice number LSUDSQEO-0001\n\nDate of issue\n\nOctober 16, 2026\n\nDate due\n\nOctober 16, 2026\n\nHeySalad Inc.\n\nBill to\n\n584 Castro Street\n\nHeySalad (bil\n\nrom Bidfood)\n\nSan Francisco, California 94114\n\nUnited States\n\n+1 650-600-0883\n\nhelp@heysalad ai\n\n£184.60 due October 16, 2026\n\nPay online\n\nBidfood INV-7718 against PO-1042\n\nDescription\n\nOty\n\nUnit price\n\nAmount\n\nChicken thighs 10kg\n\n£89.60\n\n£89.60\n\nFryer oll 20L x2\n\n£49.80\n\n£49.80\n\nMixed salad leaves 6kg\n\n£45.20\n\n£45.20\n\nSubtotal\n\n£184.60\n\nTotal\n\n£184.60\n\nAmount due\n\n£184.60\n\nLSUDSQEO-0001 - £184.60 due October 16, 2026\n\nPage tot?\n"
+  }
+]

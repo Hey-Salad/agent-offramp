@@ -1,0 +1,30 @@
+{
+  "beforeRef": "f07b9b4",
+  "renderer": "GitHub Markdown API, local GitHub-style light/dark framing; not a deployed README screenshot",
+  "evidence": [
+    {
+      "version": "before",
+      "theme": "light",
+      "allImagesLoaded": true,
+      "gifWidth": null
+    },
+    {
+      "version": "after",
+      "theme": "light",
+      "allImagesLoaded": true,
+      "gifWidth": 720
+    },
+    {
+      "version": "before",
+      "theme": "dark",
+      "allImagesLoaded": true,
+      "gifWidth": null
+    },
+    {
+      "version": "after",
+      "theme": "dark",
+      "allImagesLoaded": true,
+      "gifWidth": 720
+    }
+  ]
+}

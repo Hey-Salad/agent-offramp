@@ -11,6 +11,7 @@ import { mountMcp } from "./mcp.js";
 import { mountShop } from "./shop.js";
 import { mountUi, CSS } from "./ui.js";
 import { mountStripeExtra, decideAuthorization, stripeX, stripeI } from "./stripe-extra.js";
+import { mountAgent9 } from "./agent9.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -19,6 +20,7 @@ const key = process.env.STRIPE_SECRET_KEY || "";
 if (key && !key.startsWith("sk_test_")) throw new Error("Off-Ramp only runs with Stripe TEST keys (sk_test_...)");
 const stripe = key ? new Stripe(key) : null;
 const now = () => new Date().toISOString();
+app.get("/api/build",(_req,res)=>res.json({commit:process.env.AGENT9_BUILD_SHA||null,testMode:true}));
 const gbp = (n: number) => `£${n.toFixed(2)}`;
 const log = (r: any, event: string, data: any = {}) => { r.audit.push({ at: now(), event, ...data }); memory.save(r); };
 
@@ -38,6 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 mountMcp(app);
 mountStripeExtra(app);
+if (process.env.AGENT9_DEMO === "1") mountAgent9(app, PORT);
 mountUi(app);
 // Cognee memory: preferences, past orders and spend decisions.
 app.post("/api/memory/remember", async (req, res) => { const t = String(req.body?.text || "").slice(0, 4000); if (!t) return res.status(400).json({ error: "text required" }); res.json(await remember(t)); });

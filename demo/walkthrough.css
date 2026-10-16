@@ -1,0 +1,19 @@
+/* Recording presentation only. Original labels, amounts and data are untouched. */
+body,body.shell,.sb,.sb a.it.on,.tm,code,.pill,.card,pre{background:#fff!important;color:#171717!important}
+*{border-color:#ddd!important;animation:none!important;transition:none!important}
+main{width:580px!important;max-width:580px!important;margin:24px auto!important;padding:0!important}
+h1{font-size:27px!important;overflow-wrap:anywhere}main>.sub{font-size:16px!important}
+.card{padding:14px!important}.card.scroll{overflow:visible!important}
+main table{width:100%!important;table-layout:fixed}main td,main th{padding:10px 6px!important;overflow-wrap:anywhere}
+main th:nth-child(5),main td:nth-child(5){display:none}
+main code{overflow-wrap:anywhere;font-size:12px!important}
+main .rc{max-width:580px!important;margin:0!important}.bcw{display:none!important}
+.sb a.it{border-left-color:transparent!important}.sb a.it.on{border-left-color:#171717!important}
+/* Keep the original chat composer/cards in the same portrait-safe column. */
+.app{margin-left:0!important}.chat{height:1080px!important}
+#log{width:580px!important;max-width:580px!important;margin:0 auto!important;padding:20px 0 190px!important}
+.dock{left:1076px!important;margin-left:0!important;width:580px!important;bottom:140px!important}
+#f:focus-within{transform:none!important}.chips{gap:6px!important}.msg{max-width:95%!important}
+#panel{width:580px!important;left:786px!important;right:auto!important;bottom:140px!important;height:800px!important;max-height:800px!important;transform:none!important}
+#panel:not(.open){display:none!important}#panel.open{display:block!important}
+#brief{right:30px!important;bottom:140px!important}body::before,body::after{display:none!important}

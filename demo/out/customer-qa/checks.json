@@ -1,0 +1,1090 @@
+[
+  {
+    "name": "Nine chat scenes, five customer pages, final slate",
+    "ok": true
+  },
+  {
+    "name": "Invoice page and PDF match the same test invoice",
+    "ok": true
+  },
+  {
+    "name": "Displayed actual PDF bytes match download hash",
+    "ok": true
+  },
+  {
+    "name": "Customer receipt verified real test object",
+    "ok": true
+  },
+  {
+    "name": "Customer Checkout verified real test object",
+    "ok": true
+  },
+  {
+    "name": "Deposit payment link verified real test object",
+    "ok": true
+  },
+  {
+    "name": "Hosted invoice verified real test object",
+    "ok": true
+  },
+  {
+    "name": "Invoice PDF verified real test object",
+    "ok": true
+  },
+  {
+    "name": "Wide PDF bytes match actual customer download",
+    "ok": true
+  },
+  {
+    "name": "Identical narration in both formats",
+    "ok": true
+  },
+  {
+    "name": "Opening spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Opening measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "PaymentIntents spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "PaymentIntents measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Checkout spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Checkout measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Payment Links spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Payment Links measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Invoicing spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Invoicing measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Issuing spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Issuing measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Connect spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Connect measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Billing spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Billing measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Shared payment tokens spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Shared payment tokens measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Agent Toolkit spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Agent Toolkit measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Customer receipt spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Customer receipt measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Customer Checkout spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Customer Checkout measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Deposit payment link spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Deposit payment link measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Hosted invoice spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Hosted invoice measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Invoice PDF spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Invoice PDF measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Closing spoken after visible result",
+    "ok": true
+  },
+  {
+    "name": "Closing measured voice synchronization",
+    "ok": true
+  },
+  {
+    "name": "Dimensions ",
+    "ok": true
+  },
+  {
+    "name": "Longer walkthrough duration ",
+    "ok": true
+  },
+  {
+    "name": "No subtitles; one narration track ",
+    "ok": true
+  },
+  {
+    "name": "Audio/video start together ",
+    "ok": true
+  },
+  {
+    "name": "PaymentIntents original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Checkout original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Payment Links original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Invoicing original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Issuing original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Connect original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Billing original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Shared payment tokens original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Agent Toolkit original chat pixels preserved ",
+    "ok": true
+  },
+  {
+    "name": "Dimensions -vertical",
+    "ok": true
+  },
+  {
+    "name": "Longer walkthrough duration -vertical",
+    "ok": true
+  },
+  {
+    "name": "No subtitles; one narration track -vertical",
+    "ok": true
+  },
+  {
+    "name": "Audio/video start together -vertical",
+    "ok": true
+  },
+  {
+    "name": "PaymentIntents original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "Checkout original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "Payment Links original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "Invoicing original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "Issuing original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "Connect original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "Billing original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "Shared payment tokens original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "Agent Toolkit original chat pixels preserved -vertical",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-001.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-001.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-002.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-002.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-003.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-003.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-004.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-004.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-005.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-005.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-006.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-006.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-007.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-007.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-008.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-008.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-009.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-009.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-010.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-010.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-011.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-011.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-012.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-012.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-013.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-013.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-014.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-014.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-015.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-015.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-016.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-016.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-017.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-017.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-018.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-018.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-019.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-019.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-020.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-020.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-021.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-021.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-022.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-022.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-023.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-023.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-024.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-024.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-025.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-025.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-026.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-026.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-027.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-027.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-028.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-028.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-029.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-029.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-030.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-030.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-031.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-031.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-032.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-032.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-033.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-033.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-034.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-034.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-035.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-035.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-036.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-036.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-037.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-037.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-038.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-038.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-039.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-039.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-040.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-040.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-041.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-041.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-042.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-042.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-043.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-043.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-044.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-044.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-045.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/landscape/frame-045.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/0.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/0.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/1.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/1.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/2.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/2.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/3.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/3.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/4.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/4.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-001.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-001.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-002.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-002.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-003.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-003.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-004.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-004.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-005.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-005.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-006.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-006.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-007.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-007.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-008.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-008.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-009.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-009.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-010.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-010.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-011.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-011.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-012.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-012.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-013.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-013.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-014.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-014.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-015.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-015.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-016.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-016.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-017.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-017.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-018.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-018.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-019.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-019.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-020.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-020.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-021.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-021.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-022.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-022.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-023.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-023.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-024.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-024.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-025.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-025.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-026.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-026.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-027.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-027.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-028.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-028.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-029.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-029.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-030.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-030.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-031.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-031.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-032.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-032.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-033.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-033.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-034.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-034.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-035.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-035.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-036.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-036.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-037.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-037.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-038.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-038.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-039.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-039.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-040.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-040.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-041.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-041.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-042.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-042.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-043.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-043.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-044.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-044.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-045.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-qa/vertical/frame-045.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/0-vertical.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/0-vertical.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/1-vertical.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/1-vertical.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/2-vertical.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/2-vertical.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/3-vertical.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/3-vertical.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/4-vertical.png no app origin or login screen",
+    "ok": true
+  },
+  {
+    "name": "customer-proof/4-vertical.png no keys, client secrets or full card data",
+    "ok": true
+  },
+  {
+    "name": "Invoice PDF amount visible ",
+    "ok": true
+  },
+  {
+    "name": "Invoice PDF number visible ",
+    "ok": true
+  },
+  {
+    "name": "Invoice PDF amount visible -vertical",
+    "ok": true
+  },
+  {
+    "name": "Invoice PDF number visible -vertical",
+    "ok": true
+  }
+]
