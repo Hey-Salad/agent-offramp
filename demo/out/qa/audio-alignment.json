@@ -1,0 +1,57 @@
+[
+  {
+    "scene": 0,
+    "correlation": 0.9999887309460983,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 1,
+    "correlation": 0.9864008421204628,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 2,
+    "correlation": 0.9765159406951383,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 3,
+    "correlation": 0.9999940430156705,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 4,
+    "correlation": 0.9999894771155935,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 5,
+    "correlation": 0.9856381090153015,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 6,
+    "correlation": 0.9999803145857826,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 7,
+    "correlation": 0.999988943898502,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 8,
+    "correlation": 0.9999840813371644,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 9,
+    "correlation": 0.9999868179171795,
+    "offsetSeconds": 0
+  },
+  {
+    "scene": 10,
+    "correlation": 0.9841531202212869,
+    "offsetSeconds": 0
+  }
+]

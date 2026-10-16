@@ -1,0 +1,25 @@
+{
+  "source": "demo/work/chat-card/chat-card.mp4",
+  "captureOffset": 2.566667,
+  "beforeStart": 0,
+  "actionStart": 1.0030268339999995,
+  "responseVisibleAt": 3.7697230420000003,
+  "stripeOpenAt": 5.370846166999998,
+  "proofStart": 5.561817833999999,
+  "end": 9.569638916999999,
+  "result": {
+    "proof": {
+      "id": "iauth_1UR2dQLvLGMlREYZw4FR0Nr8",
+      "object": "issuing.authorization",
+      "status": "closed",
+      "approved": false,
+      "amount": 8000,
+      "currency": "gbp",
+      "livemode": false,
+      "last4": "0005"
+    },
+    "audit": {
+      "via": "hosted-original-chat"
+    }
+  }
+}

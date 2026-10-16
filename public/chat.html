@@ -113,7 +113,7 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 .wave{display:none;gap:3px;align-items:center;height:20px;margin-right:4px}#f.live .wave{display:flex}#f.live #q::placeholder{color:#fff}
 .wave i{width:3px;height:6px;background:#fff;border-radius:2px;animation:wv .9s ease-in-out infinite}.wave i:nth-child(2){animation-delay:.1s}.wave i:nth-child(3){animation-delay:.2s}.wave i:nth-child(4){animation-delay:.3s}.wave i:nth-child(5){animation-delay:.4s}
 @keyframes wv{50%{height:20px}}
-.mail{background:#fff;border-radius:12px;padding:10px 12px;margin-top:8px;font-size:12px;white-space:pre-wrap;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.card-spend-result{width:min(540px,95%)}.card-spend-result .total{font-size:24px}.card-stripe-proof pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 ui-monospace,monospace;background:#fff;padding:12px;border-radius:12px}.card-spend-result details{border:1px solid #ddd!important;background:#fff;padding:0 12px}.mail{background:#fff;border-radius:12px;padding:10px 12px;margin-top:8px;font-size:12px;white-space:pre-wrap;box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .sw{border:1px solid #1f1416;border-radius:16px;padding:14px;margin:8px 0;background:#fff;max-width:720px;box-sizing:border-box;width:100%}@media(max-width:600px){.sw .gr{grid-template-columns:repeat(3,1fr)}.sw .tot{font-size:18px}}.sw .hd{display:flex;align-items:center;gap:10px;font-weight:700}.sw .stt{font-size:13px;color:#666;font-weight:400}.sw .tot{margin-left:auto;font-size:22px}
 .sw .gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin-top:12px}.sw .pd{border:1px solid #e5e5e5;border-radius:12px;padding:8px;text-align:center;font-size:11px;line-height:1.25;transition:all .4s}.sw .pd .e{font-size:28px}.sw .pd b{display:block;font-size:12px}
 .sw .pd.pick{border-color:#1f1416;transform:scale(1.06)}.sw .lbl{font-size:12px;color:#666;margin-top:4px}.sw .pd.in{opacity:.45;transform:scale(.9)}.sw .bk{display:flex;flex-wrap:wrap;gap:4px;min-height:38px;margin-top:12px;padding:8px;border:1px dashed #1f1416;border-radius:12px}.sw .bk span{font-size:22px;animation:drop .45s ease-out}.sw .bk span.h{outline:2px dashed #999;border-radius:6px}
@@ -124,12 +124,15 @@ input{border:0!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);b
 .sw .pg-live iframe{width:100%;height:340px;border:1px solid #1f1416;border-radius:12px;margin-top:10px}.sw .pg-live a{font-size:12px}
 @media(max-width:600px){.sw.pop{left:0!important;right:0!important;top:auto!important;bottom:0!important;width:100%;max-height:72vh;border-radius:18px 18px 0 0}}
 @keyframes drop{from{transform:translateY(-30px) scale(1.6);opacity:0}to{transform:none;opacity:1}}.sw .res{margin-top:12px;font-size:14px}
+#examples{width:100%;max-width:580px;margin:0 auto 10px;background:#fff;border:1px solid #ddd;border-radius:14px;box-shadow:0 4px 16px #00000008}
+#examples summary{cursor:pointer;font-size:13px;padding:10px 14px;list-style:none}#examples summary:after{content:' +';float:right}
+#example-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 10px 10px}#example-grid button{border:1px solid #e5e5e5;background:white;color:#1f1416;text-align:left;padding:10px;border-radius:10px;cursor:pointer;font:inherit;font-size:12px}#example-grid button:hover{border-color:#1f1416;background:#f7f7f7}#example-grid small{display:block;font-size:10px;margin-top:4px;color:#666}.business-result pre{font-size:12px;overflow-wrap:anywhere;white-space:pre-wrap;line-height:1.4}.business-result .btn{display:inline-block}.business-result h3{font-size:16px}.toolkit-proof{font-size:12px}
 </style></head><body><div class="app">
 <section class="chat">
 <header><h1 style="border:0;padding:0;margin:0">Chat</h1><span>Example agent: Sally</span></header>
 <div style="padding:12px 28px 0"><!--BRIEFCASE--></div><div id="mem" style="font-size:12px;color:#1f1416;padding:4px 16px;display:none"></div>
 <div id="log"><div class="msg sally"><span class="tag">Sally</span>Hi, I'm Sally. What do you need?</div></div>
-<div class="dock"><div class="chips"><button class="chip">Do the Waitrose shop</button><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
+<div class="dock"><details id="examples"><summary>Try a business task · 9 Stripe tools</summary><div id="example-grid"></div></details><div class="chips"><button class="chip">Spend £80 at Ocado</button><button class="chip">Restock the kitchen</button><button class="chip">Table for 6 Saturday 8pm</button><button class="chip">Pay the Bidfood invoice</button></div>
 <form id="f"><span class="wave"><i></i><i></i><i></i><i></i><i></i></span><input id="q" placeholder="Message Sally…" autocomplete="off"><button type="button" id="mic" aria-label="Talk to Sally"><span class="ring"></span><span class="ring r2"></span><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button><button id="send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></form></div>
 </section>
 </div>
@@ -182,8 +185,21 @@ async function shopWindow(r,ap){let cat=[];try{cat=await (await fetch('/api/cata
 {const c=co('Waitrose shop',t,r.status,r.status==='awaiting_human'?ap:tick,'',{name:'Waitrose shop',amt:t,st:r.status,items:ds,r})}
  bindAp(r)}
 function card(r){
+  if(r?.chatExample){
+    const e=r.chatExample,p=r.stripe?.verified,failed=r.status==='failed';
+    const state=failed?'Not verified':p?.status||(p?.active?'active':r.status);
+    const links=(e.links||[]).filter(l=>{try{const u=new URL(l.url);return u.protocol==='https:'&&['checkout.stripe.com','buy.stripe.com','invoice.stripe.com','pay.stripe.com'].includes(u.hostname)}catch{return false}});
+    add(`<h3>${esc(e.product)} · Test mode</h3><p><b>${esc(state)}</b>${r.total?' · '+gbp(r.total):''}</p>${links.map(l=>`<a class="btn alt" target="_blank" rel="noopener noreferrer" href="${esc(l.url)}">${esc(l.label)}</a>`).join(' ')}${p?`<details class="card-stripe-proof"><summary>Stripe output</summary><pre>${esc(JSON.stringify(p,null,2))}</pre></details>`:''}${e.index===8&&p?'<p class="toolkit-proof">Executed through Stripe Agent Toolkit</p>':''}`,'card business-result');return;
+  }
+
   if(!r)return;const ds=r.decisions||[];const ln=d=>`<div><span>${esc(d.name||d.clause)}</span><span>${d.price!=null?gbp(d.price)+' · ':''}${esc(d.clause||'')}</span></div>`;
   const ap=`<button class="btn" data-ap="${r.id}">Approve ${gbp(due(r))}</button>`;
+  if(r.demo==='card'){
+    const a=r.cardAttempt||{},p=r.stripe?.authorization,declined=r.status==='declined',approved=r.status==='authorized';
+    const state=declined?'Declined':approved?'Authorised':'Not checked';
+    const proof=p?JSON.stringify({id:p.id,object:p.object,status:p.status,approved:p.approved,amount:p.amount,currency:p.currency,livemode:p.livemode,last4:p.last4},null,2):'';
+    add(`<h3>Sally's card · Test mode</h3><div class="total">${gbp(r.total)} at ${esc(a.merchant||'the shop')}</div><p><b>${state}</b> · ${declined?'No money taken':approved?'Authorisation only':'No confirmed card result'}</p><p>${esc(r.decisions?.[0]?.reason||'')}</p>${proof?`<details class="card-stripe-proof"><summary>Stripe output</summary><pre>${esc(proof)}</pre></details>`:''}`,'card card-spend-result');return;
+  }
   if(r.demo==='shop'){shopWindow(r,ap);return}
   if(r.demo==='restock'){const g={};ds.forEach(d=>(g[d.supplier||'Other']??=[]).push(d));
     for(const [n,items] of Object.entries(g)){const st=items.some(d=>d.status==='blocked')&&items.every(d=>d.status==='blocked')?'blocked':items.some(d=>d.status==='needs_approval')&&r.status==='awaiting_human'?'awaiting_human':r.status==='paid'||items.some(d=>d.status==='auto_paid'||d.status==='approved')?'paid':items[0].status;
@@ -206,6 +222,10 @@ async function send(text){if(!text.trim())return;autoOpened=0;add(esc(text),'msg
   const j=await (await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({text})})).json();
   t.remove();if(j.record)mine.add(j.record.id);add('<span class="tag">Sally</span>'+(j.record?({shop:'Watch me shop.',restock:'Here\'s the restock.',booking:'Deposit link ready.',invoice:'Invoice checked.'}[j.record.demo]||linkify(j.reply)):linkify(j.reply)),'msg sally');speak(j.reply);if(j.record)card(j.record);else if(/allerg/i.test(text)){const det={name:'Guest booking',amt:0,st:'staff',items:[{name:'Allergy mentioned',clause:'H2',reason:'Allergen requests always go to a human'}],r:{id:'',demo:'booking',channel:'chat',stripe:{}}};const c=co('Guest booking',0,'staff','',`<div><span>Allergy mentioned</span><span>H2</span></div>`,det);openP(det,c)}poll();return j}
 $('#f').onsubmit=e=>{e.preventDefault();send($('#q').value);$('#q').value=''};
+fetch('/api/chat/examples').then(r=>r.json()).then(examples=>{
+  $('#example-grid').innerHTML=examples.map(e=>`<button type="button" data-example="${e.index}"><b>${esc(e.title)}</b><small>${esc(e.product)}</small></button>`).join('');
+  document.querySelectorAll('[data-example]').forEach(b=>b.onclick=()=>{const e=examples[Number(b.dataset.example)];$('#q').value=e.text;$('#examples').open=false;$('#q').focus()});
+});
 document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>send(c.textContent));
 async function poll(){try{const j=await (await fetch('/api/feed')).json();count($('#moved'),j.moved);const na=j.records.filter(r=>r.status==='awaiting_human').length;$('#bd').textContent=na?na+' to approve':(j.moved?gbp(j.moved):'');
   const feed=$('#feed');feed.innerHTML=j.lines.map(l=>`<div><span class="ch">${esc(l.channel)}</span><b>${esc(l.event.replace(/_/g,' '))}</b>${l.amount!=null?' · '+gbp(l.amount):''}<em>${esc(l.why||l.demo)}</em></div>`).join('');

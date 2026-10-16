@@ -81,12 +81,12 @@ export async function issueCard() {
   } catch (e: any) { return { ...err(e), enabled: !notEnabled(e), hint: notEnabled(e) ? "Issuing is not enabled on this Stripe test account: set STRIPE_ISSUING_KEY to a test key from an Issuing-enabled account." : undefined, controls: ISSUING_CONTROLS }; }
 }
 // Simulate a card purchase (Stripe test helper): Stripe's spending controls decide on the real card; policy decision shown alongside.
-export async function testAuthorization(amountGBP: number, category = "grocery_stores_supermarkets") {
+export async function testAuthorization(amountGBP: number, category = "grocery_stores_supermarkets", merchant = "Ocado") {
   const local = decideAuthorization({ amount: p(amountGBP), currency: "gbp", merchant_data: { category } });
-  if (!stripeI || !st.card) { log("auths", { amount: amountGBP, category, merchant: "Ocado", approved: local.approved, clause: local.clause, reason: local.reason, simulated: true }); return { ok: true, simulated: "policy-only", decision: local }; }
+  if (!stripeI || !st.card) { log("auths", { amount: amountGBP, category, merchant, approved: local.approved, clause: local.clause, reason: local.reason, simulated: true }); return { ok: true, simulated: "policy-only", decision: local }; }
   try {
-    const a: any = await (stripeI as any).testHelpers.issuing.authorizations.create({ card: st.card.card, amount: p(amountGBP), currency: "gbp", merchant_data: { category, name: "Ocado" } }, st.card.account ? { stripeAccount: st.card.account } : undefined);
-    log("auths", { authorization: a.id, amount: amountGBP, category, merchant: "Ocado", approved: a.approved, clause: local.clause, reason: local.reason });
+    const a: any = await (stripeI as any).testHelpers.issuing.authorizations.create({ card: st.card.card, amount: p(amountGBP), currency: "gbp", merchant_data: { category, name: merchant } }, st.card.account ? { stripeAccount: st.card.account } : undefined);
+    log("auths", { authorization: a.id, amount: amountGBP, category, merchant, approved: a.approved, clause: local.clause, reason: local.reason });
     return { ok: true, authorization: a.id, approved: a.approved, stripeReason: a.request_history?.[0]?.reason, decision: local };
   } catch (e: any) { return { ...err(e), decision: local }; }
 }

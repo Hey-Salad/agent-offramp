@@ -1,0 +1,157 @@
+[
+  {
+    "scene": 0,
+    "product": "Customer receipt",
+    "beforeStart": 0,
+    "actionStart": 1.000583667,
+    "proofStart": 7.826981624999999,
+    "end": 60.46666666666666,
+    "proof": {
+      "id": "pi_3UR3BbRBii4S4KdW1mUJQYHG",
+      "status": "succeeded",
+      "livemode": false,
+      "amount": 9682
+    },
+    "recordId": "or_36eaf75480",
+    "verticalCrop": {
+      "x": 656,
+      "y": 0,
+      "width": 608,
+      "height": 1080
+    },
+    "source": "demo/work/customers/raw/customer-00.mp4",
+    "captureOffset": 0,
+    "journeyMarkerEnd": 2.833333,
+    "line": "Open the receipt to see what was paid.",
+    "start": 55.133333333333326,
+    "voiceStart": 57.93333333333332,
+    "proofVisibleAt": 57.93333333333332
+  },
+  {
+    "scene": 1,
+    "product": "Customer Checkout",
+    "beforeStart": 0,
+    "actionStart": 1.0008992499999998,
+    "proofStart": 8.016149708000004,
+    "end": 66.69999999999999,
+    "proof": {
+      "id": "cs_test_a1OwpZsr9IiahCIvL2rtEugmUoJtw3avZi8sb7OWsb4YpzsfzhmBATyuLX",
+      "status": "open",
+      "livemode": false,
+      "amount": 3250
+    },
+    "recordId": "or_364a264668",
+    "verticalCrop": {
+      "x": 1000,
+      "y": 0,
+      "width": 608,
+      "height": 1080
+    },
+    "source": "demo/work/customers/raw/customer-01.mp4",
+    "captureOffset": 0,
+    "journeyMarkerEnd": 2.733333,
+    "line": "Your customer opens a secure checkout, ready to pay.",
+    "start": 60.46666666666666,
+    "voiceStart": 63.26666666666666,
+    "proofVisibleAt": 63.26666666666666
+  },
+  {
+    "scene": 2,
+    "product": "Deposit payment link",
+    "beforeStart": 0,
+    "actionStart": 1.000782583000003,
+    "proofStart": 9.072504500000008,
+    "end": 73.1,
+    "proof": {
+      "id": "plink_1UR3CGRBii4S4KdW0heMT84V",
+      "status": "active",
+      "livemode": false,
+      "amount": 6000
+    },
+    "recordId": "or_c98c407a46",
+    "verticalCrop": {
+      "x": 1000,
+      "y": 0,
+      "width": 608,
+      "height": 1080
+    },
+    "source": "demo/work/customers/raw/customer-02.mp4",
+    "captureOffset": 0,
+    "journeyMarkerEnd": 2.6,
+    "line": "Share the deposit link. Your customer chooses how to pay.",
+    "start": 66.69999999999999,
+    "voiceStart": 69.49999999999999,
+    "proofVisibleAt": 69.49999999999999
+  },
+  {
+    "scene": 3,
+    "product": "Hosted invoice",
+    "beforeStart": 0,
+    "actionStart": 1.000898459,
+    "proofStart": 16.750223499999997,
+    "end": 79.46666666666665,
+    "proof": {
+      "id": "in_1UR3EuRBii4S4KdWpKC8GUUn",
+      "status": "paid",
+      "livemode": false,
+      "amount": 18460,
+      "invoiceNumber": "LSUDSQEO-0001"
+    },
+    "recordId": "invoice_2a070f0c",
+    "verticalCrop": {
+      "x": 1312,
+      "y": 0,
+      "width": 608,
+      "height": 1080
+    },
+    "source": "demo/work/customers/raw/customer-03.mp4",
+    "captureOffset": 0,
+    "journeyMarkerEnd": 2.8,
+    "line": "Open a paid invoice to see the bill and its details.",
+    "start": 73.1,
+    "voiceStart": 75.89999999999999,
+    "proofVisibleAt": 75.89999999999999
+  },
+  {
+    "scene": 4,
+    "product": "Invoice PDF",
+    "beforeStart": 23.300984084,
+    "actionStart": 0.9012325409999988,
+    "proofStart": 8.874986791000001,
+    "end": 85.16666666666666,
+    "proof": {
+      "id": "in_1UR3EuRBii4S4KdWpKC8GUUn",
+      "status": "paid",
+      "livemode": false,
+      "amount": 18460,
+      "invoiceNumber": "LSUDSQEO-0001",
+      "pdfSHA256": "5a99544acc5bd023dd8d312409744ecbf6f4d7fdd65e1a9714ad81b10ff17650",
+      "pdfMagic": true,
+      "invoiceNumberMatched": true
+    },
+    "recordId": "invoice_2a070f0c",
+    "verticalCrop": {
+      "x": 656,
+      "y": 0,
+      "width": 608,
+      "height": 1080
+    },
+    "source": "demo/work/customers/raw/customer-04.mp4",
+    "captureOffset": 0,
+    "journeyMarkerEnd": 2.8,
+    "landscape": {
+      "source": "demo/work/customers/raw/customer-pdf-wide.mp4",
+      "actionStart": 6.0675958340000005,
+      "proofStart": 13.898592292,
+      "end": 20.457327042,
+      "captureOffset": 5.066667,
+      "pdfFile": "demo/work/customers/invoice-landscape.pdf",
+      "pdfSHA256": "5abcf664b8ed0cce9af77b81608638b3b79b18e131abf7f768acf8c985c626a8",
+      "invoiceNumberMatched": true
+    },
+    "line": "Download the invoice PDF to save or share.",
+    "start": 79.46666666666665,
+    "voiceStart": 82.26666666666665,
+    "proofVisibleAt": 82.26666666666665
+  }
+]
