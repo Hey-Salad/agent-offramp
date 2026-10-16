@@ -10,9 +10,9 @@
 <p align="center"><b>Give your agent a financial operating system.</b></p>
 <p align="center">Spend rules and virtual cards for AI agents, built on 9 Stripe products. Open source, by HeySalad.</p>
 
-<!-- HERO: add assets/demo.gif (15–20s: the agent shops, then the card declines £80), then uncomment:
-<p align="center"><img src="assets/demo.gif" alt="The agent restocks the kitchen; the card declines £80" width="720"></p>
--->
+<p align="center">
+  <img src="demo/out/agent9.gif" alt="Agent 9 demo: card declines an overspend" width="720">
+</p>
 
 Write your agent's spending rules in plain English in [`policy.md`](policy.md). Agent 9 checks every spend against them **before** Stripe is touched, then a Stripe Issuing virtual card enforces the same limits again at the card network. The AI can ask; it can't override. The example agent in the demo is Sally, who restocks a kitchen.
 

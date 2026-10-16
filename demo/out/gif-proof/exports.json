@@ -1,0 +1,41 @@
+{
+  "source": "demo/out/agent9-demo.mp4",
+  "selectedSource": {
+    "start": 27.266666666666666,
+    "end": 32.33333333333333,
+    "proofVisibleAt": 29.833333333333332
+  },
+  "edit": "1s proof lead-in + full Issuing scene retimed to 7s; fixed crops, no overlays, no audio",
+  "exports": [
+    {
+      "file": "agent9.gif",
+      "width": 1200,
+      "height": 1200,
+      "fps": 15,
+      "seconds": 8,
+      "bytes": 1698537,
+      "audio": false,
+      "codec": "gif"
+    },
+    {
+      "file": "agent9-x.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "seconds": 8,
+      "bytes": 218946,
+      "audio": false,
+      "codec": "h264"
+    },
+    {
+      "file": "agent9-square.mp4",
+      "width": 1080,
+      "height": 1080,
+      "fps": 30,
+      "seconds": 8,
+      "bytes": 314349,
+      "audio": false,
+      "codec": "h264"
+    }
+  ]
+}

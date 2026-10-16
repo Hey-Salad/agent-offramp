@@ -9,7 +9,8 @@
     "lint": "tsc --noEmit --skipLibCheck --module nodenext --moduleResolution nodenext --target es2022 --resolveJsonModule --noImplicitAny false src/ui.ts src/stripe-extra.ts src/mcp.ts src/agent9.ts src/toolkit.ts",
     "test": "node test/ui.test.mjs && node test/stripe-extra.test.mjs",
     "demo": "node demo/run.mjs",
-    "test:agent9": "node --import tsx test/agent9.test.mjs"
+    "test:agent9": "node --import tsx test/agent9.test.mjs",
+    "demo:social": "node demo/social.mjs && node demo/social-verify.mjs"
   },
   "keywords": [],
   "author": "",
