@@ -7,7 +7,7 @@ export async function verify(origin, timeline) {
     const name = `sally-demo${format === 'vertical' ? '-vertical' : ''}`;
     const file = `${OUT}/${name}.mp4`, info = probe(file), v = info.streams.find(s => s.codec_type === 'video'), a = info.streams.find(s => s.codec_type === 'audio');
     assert(v && a, 'Both video and narration streams are required.');
-    assert(Number(v.start_time) === 0 && Number(a.start_time) === 0, 'Voice and caption must start at zero.');
+    assert(Number(v.start_time) === 0 && Number(a.start_time) === 0, 'Voice and video must start at zero.');
     assert(Number(info.format.duration) >= 30 && Number(info.format.duration) <= 40, 'Video must run 30–40 seconds.');
     assert(v.width === (format === 'vertical' ? 1080 : 1920) && v.height === (format === 'vertical' ? 1920 : 1080), 'Wrong export dimensions.');
     assert(Math.abs(Number(a.duration) - Number(v.duration)) < 0.15, 'Audio/video duration mismatch.');

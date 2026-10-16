@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { OUT, WORK, ff, assert, json } from './lib.mjs';
-export const normalize = text => text.toLowerCase().replace(/-/g, ' ').replace(/25/g, 'twenty five').replace(/[^a-z\s]/g, '').replace(/\s+/g, ' ').trim();
+export const normalize = text => text.toLowerCase().replace(/-/g, ' ').replace(/80/g, 'eighty').replace(/25/g, 'twenty five').replace(/10/g, 'ten').replace(/[^a-z\s]/g, '').replace(/\s+/g, ' ').trim();
 export async function alignment(timeline) {
   // Decode the exported AAC, rather than trusting the pre-mux narration files.
   const audio = `${WORK}/final-voice.wav`;
@@ -27,7 +27,7 @@ export async function alignment(timeline) {
   for (let j = 0; j <= observed.length; j++) dp[0][j] = j;
   for (let i = 1; i <= expected.length; i++) for (let j = 1; j <= observed.length; j++) dp[i][j] = Math.min(dp[i-1][j] + 1, dp[i][j-1] + 1, dp[i-1][j-1] + Number(expected[i-1].token !== observed[j-1].token));
   const wordErrorRate = dp[expected.length][observed.length] / expected.length;
-  assert(wordErrorRate <= 0.05, 'Rendered narration differs from captions; inspect local transcript before publishing.');
+  assert(wordErrorRate <= 0.05, 'Rendered narration differs from script; inspect local transcript before publishing.');
   const matched = new Map(), differences = [];
   let i = expected.length, j = observed.length;
   while (i || j) {
@@ -42,8 +42,8 @@ export async function alignment(timeline) {
   for (const line of timeline) {
     const firstIndex = expected.findIndex(w => w.id === line.id), lastIndex = expected.findLastIndex(w => w.id === line.id);
     const first = matched.get(firstIndex), last = matched.get(lastIndex);
-    assert(first && last && Math.abs(first.start - line.start) < 0.75 && Math.abs(last.end - line.end) < 0.75, `Caption/audio boundary mismatch for ${line.id}.`);
-    boundaries.push({ id: line.id, captionStart: line.start, speechStart: first.start, captionEnd: line.end, speechEnd: last.end });
+    assert(first && last && Math.abs(first.start - line.start) < 0.75 && Math.abs(last.end - line.end) < 0.75, `Shot/audio boundary mismatch for ${line.id}.`);
+    boundaries.push({ id: line.id, shotStart: line.start, speechStart: first.start, shotEnd: line.end, speechEnd: last.end });
   }
   ff(['-i', `${OUT}/sally-demo-vertical.mp4`, '-vn', '-ar', '16000', '-ac', '1', `${WORK}/vertical-voice.wav`]);
   assert(createHash('sha256').update(await fs.readFile(`${WORK}/vertical-voice.wav`)).digest('hex') === hash, 'Portrait narration differs from landscape.');

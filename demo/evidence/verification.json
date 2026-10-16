@@ -1,6 +1,6 @@
 {
   "status": "automated checks passed; human visual/audio review required",
-  "duration": 32,
+  "duration": 33.53333333333333,
   "checks": [
     "landscape: geometry, duration, A/V length, no >1s silence/freeze, OCR login/URL/name scan passed",
     "vertical: geometry, duration, A/V length, no >1s silence/freeze, OCR login/URL/name scan passed"
@@ -87,6 +87,11 @@
       "at": 30
     },
     {
+      "format": "landscape",
+      "frame": "frames/landscape/frame-17.png",
+      "at": 32
+    },
+    {
       "format": "vertical",
       "frame": "frames/vertical/frame-01.png",
       "at": 0
@@ -165,77 +170,78 @@
       "format": "vertical",
       "frame": "frames/vertical/frame-16.png",
       "at": 30
+    },
+    {
+      "format": "vertical",
+      "frame": "frames/vertical/frame-17.png",
+      "at": 32
     }
   ],
   "audioAlignment": {
     "method": "Whisper word timestamps from final decoded AAC; <=5% word error, line boundaries within 750ms; identical audio in both exports",
-    "wordErrorRate": 0.03333333333333333,
+    "wordErrorRate": 0.010526315789473684,
     "differences": [
       {
-        "expected": "tried",
-        "heard": "try"
-      },
-      {
-        "expected": "rules",
-        "heard": "rolls"
+        "expected": "licence",
+        "heard": "license"
       }
     ],
     "boundaries": [
       {
         "id": "hook",
-        "captionStart": 0,
+        "shotStart": 0,
         "speechStart": 0,
-        "captionEnd": 5.733333333333333,
-        "speechEnd": 5.71999979019165
+        "shotEnd": 3.966666666666667,
+        "speechEnd": 3.940000057220459
       },
       {
         "id": "basket",
-        "captionStart": 5.733333333333333,
-        "speechStart": 6.260000228881836,
-        "captionEnd": 11.133333333333333,
-        "speechEnd": 11.039999961853027
+        "shotStart": 3.966666666666667,
+        "speechStart": 4.320000171661377,
+        "shotEnd": 9.166666666666666,
+        "speechEnd": 9.119999885559082
       },
       {
         "id": "approve",
-        "captionStart": 11.133333333333333,
-        "speechStart": 11.239999771118164,
-        "captionEnd": 15.733333333333333,
-        "speechEnd": 15.699999809265137
+        "shotStart": 9.166666666666666,
+        "speechStart": 9.239999771118164,
+        "shotEnd": 14.6,
+        "speechEnd": 14.579999923706055
       },
       {
         "id": "attempt",
-        "captionStart": 15.733333333333333,
-        "speechStart": 15.859999656677246,
-        "captionEnd": 19.366666666666667,
-        "speechEnd": 19.31999969482422
+        "shotStart": 14.6,
+        "speechStart": 14.65999984741211,
+        "shotEnd": 19.833333333333332,
+        "speechEnd": 19.719999313354492
       },
       {
         "id": "declines",
-        "captionStart": 19.366666666666667,
-        "speechStart": 19.760000228881836,
-        "captionEnd": 22.333333333333332,
-        "speechEnd": 22.219999313354492
+        "shotStart": 19.833333333333332,
+        "speechStart": 19.940000534057617,
+        "shotEnd": 24.466666666666665,
+        "speechEnd": 24.360000610351562
       },
       {
         "id": "receipt",
-        "captionStart": 22.333333333333332,
-        "speechStart": 22.3799991607666,
-        "captionEnd": 24.833333333333332,
-        "speechEnd": 24.600000381469727
+        "shotStart": 24.466666666666665,
+        "speechStart": 24.459999084472656,
+        "shotEnd": 27.733333333333334,
+        "speechEnd": 27.639999389648438
       },
       {
         "id": "audit",
-        "captionStart": 24.833333333333332,
-        "speechStart": 24.600000381469727,
-        "captionEnd": 27.5,
-        "speechEnd": 27.479999542236328
+        "shotStart": 27.733333333333334,
+        "speechStart": 27.639999389648438,
+        "shotEnd": 30.433333333333334,
+        "speechEnd": 30.420000076293945
       },
       {
         "id": "slate",
-        "captionStart": 27.5,
-        "speechStart": 27.479999542236328,
-        "captionEnd": 32,
-        "speechEnd": 31.84000015258789
+        "shotStart": 30.433333333333334,
+        "speechStart": 30.799999237060547,
+        "shotEnd": 33.53333333333333,
+        "speechEnd": 33.41999816894531
       }
     ]
   }

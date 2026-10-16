@@ -6,12 +6,12 @@ export const WORK = path.join(ROOT, 'demo/work');
 export const OUT = path.join(ROOT, 'demo/out');
 export const lines = [
   ['hook', 'Save time and money. I gave my AI a credit card.'],
-  ['basket', "Sally restocks the kitchen and pays what's in my rules."],
-  ['approve', 'Anything over twenty-five pounds? She asks me first.'],
-  ['attempt', 'So I tried to make her overspend.'],
-  ['declines', 'Declined, by the card itself.'],
-  ['receipt', 'Every pound on a receipt.'],
-  ['audit', 'With the rule behind it.'],
+  ['basket', 'Sally restocks the kitchen, pays Waitrose, and holds anything that needs my approval.'],
+  ['approve', "This item is over twenty-five pounds, so she asks me first. One click, and it's paid."],
+  ['attempt', 'Then I tried eighty pounds at Ocado, and ten pounds at an off-licence.'],
+  ['declines', 'Both declined, by the card itself. The spending limits stay in place.'],
+  ['receipt', 'Every payment has a receipt, so I can see where my money went.'],
+  ['audit', 'Every decision shows the rule behind it.'],
   ['slate', "Give your AI a card it can't misuse."],
 ];
 export function assert(ok, message) { if (!ok) throw new Error(message); }
@@ -33,15 +33,15 @@ export function validateEnv(env) {
   for (const k of ['STRIPE_SECRET_KEY', 'STRIPE_ISSUING_KEY']) if (env[k]) assert(env[k].startsWith('sk_test_'), 'Only Stripe test keys are permitted.');
   return u.origin;
 }
-export function timeline(durations, target = 32) {
+export function timeline(durations) {
   assert(durations.length === lines.length && durations.every(d => Number.isFinite(d) && d > 0), 'Eight valid voice durations are required.');
-  const rate = durations.reduce((a, b) => a + b, 0) / target;
-  assert(rate >= 0.65 && rate <= 1.6, 'Narration needs a new take: excessive tempo change for 32 seconds.');
-  let at = 0;
+  const total = durations.reduce((sum, d) => sum + Math.ceil(d * 30) / 30, 0);
+  assert(total >= 30 && total <= 40, 'Natural narration must run 30–40 seconds; adjust the script or regenerate the take. Audio is never stretched.');
+  let frame = 0;
   return durations.map((d, i) => {
-    // Quantize every cut to the output frame grid; cumulative total remains 32s.
-    const end = Math.round((at + d / rate) * 30) / 30;
-    const start = Math.round(at * 30) / 30; at += d / rate;
-    return { id: lines[i][0], text: lines[i][1], start, end, duration: end - start, voiceDuration: d, tempo: d / (end - start) };
+    const start = frame / 30;
+    frame += Math.ceil(d * 30);
+    const end = frame / 30;
+    return { id: lines[i][0], text: lines[i][1], start, end, duration: end - start, voiceDuration: d, playbackRate: 1 };
   });
 }

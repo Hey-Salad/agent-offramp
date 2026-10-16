@@ -15,7 +15,7 @@ try {
   const cuts = timeline(await voice());
   const captures = [];
   for (const format of ['landscape', 'vertical']) captures.push(await record(origin, format));
-  await json(`${OUT}/beats.json`, { schema: 1, syntheticVoice: true, model: 'gpt-4o-mini-tts', voice: 'marin', fps: 30, timeline: cuts, captures: captures.map(({ video, ...c }) => c) });
+  await json(`${OUT}/beats.json`, { schema: 2, captions: false, audioPlaybackRate: 1, syntheticVoice: true, model: 'gpt-4o-mini-tts', voice: 'marin', fps: 30, timeline: cuts, captures: captures.map(({ video, ...c }) => c) });
   console.log('Rendering both formats from measured capture and narration timestamps.');
   await edit(captures, cuts); await verify(origin, cuts);
   console.log('Exports and automated evidence are in demo/out. Review all two-second frames and listen before publishing.');
