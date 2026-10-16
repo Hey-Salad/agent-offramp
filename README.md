@@ -71,16 +71,14 @@ Every Stripe object has a page, linked from the top nav: `/money` (overview), `/
 
 ## How it works
 ```mermaid
-flowchart LR
-  A[Chat · SMS · Voice · MCP] --> R[Sally]
-  R --> P{{policy.md}}
-  P -->|within policy| S[(Stripe test mode)]
-  P -->|over limit| H[You approve]
+flowchart TD
+  A["You ask Sally<br/>chat · SMS · voice · MCP"] --> P["Sally checks policy.md"]
+  P --> S["Within policy<br/>Stripe pays (test mode)"]
+  P --> H["Over the limit<br/>you approve first"]
   H --> S
-  S --> L[Audit: every pound, every clause]
-  classDef hs fill:none,stroke:#ed4c4c,stroke-width:1.5px
-  class A,R,S,H,L hs
-  style P fill:#ed4c4c,color:#ffffff,stroke:#ed4c4c
+  S --> L["Audit log<br/>every pound, every rule"]
+  classDef hs fill:#ed4c4c,stroke:#ed4c4c,color:#ffffff,font-size:18px
+  class A,P,S,H,L hs
 ```
 Stripe: PaymentIntents, Checkout, Payment Links, Invoicing, Issuing, Connect, Billing and shared payment tokens, through the [Stripe Agent Toolkit](https://github.com/stripe/ai). Memory: [Cognee](https://cognee.ai) (optional). Test mode only.
 
