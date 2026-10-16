@@ -16,6 +16,8 @@ const ikey = process.env.STRIPE_ISSUING_KEY || key;
 export const stripeI = ikey.startsWith("sk_test_") ? new Stripe(ikey, { timeout: 25000 }) : null;
 const FILE = "data/stripe-extra.json";
 const st: any = fs.existsSync(FILE) ? JSON.parse(fs.readFileSync(FILE, "utf8")) : {};
+export const extraState = () => st;
+const log = (k: string, v: any) => { (st[k] ||= []).unshift({ at: new Date().toISOString(), ...v }); st[k].splice(50); persist(); };
 const persist = () => { try { fs.writeFileSync(FILE, JSON.stringify(st, null, 2)); } catch {} };
 const p = (x: number) => Math.round(x * 100);
 const err = (e: any) => ({ ok: false, error: String(e?.message || e).slice(0, 300), code: e?.code || e?.statusCode });
@@ -81,9 +83,10 @@ export async function issueCard() {
 // Simulate a card purchase (Stripe test helper): Stripe's spending controls decide on the real card; policy decision shown alongside.
 export async function testAuthorization(amountGBP: number, category = "grocery_stores_supermarkets") {
   const local = decideAuthorization({ amount: p(amountGBP), currency: "gbp", merchant_data: { category } });
-  if (!stripeI || !st.card) return { ok: true, simulated: "policy-only", decision: local };
+  if (!stripeI || !st.card) { log("auths", { amount: amountGBP, category, merchant: "Ocado", approved: local.approved, clause: local.clause, reason: local.reason, simulated: true }); return { ok: true, simulated: "policy-only", decision: local }; }
   try {
     const a: any = await (stripeI as any).testHelpers.issuing.authorizations.create({ card: st.card.card, amount: p(amountGBP), currency: "gbp", merchant_data: { category, name: "Ocado" } }, st.card.account ? { stripeAccount: st.card.account } : undefined);
+    log("auths", { authorization: a.id, amount: amountGBP, category, merchant: "Ocado", approved: a.approved, clause: local.clause, reason: local.reason });
     return { ok: true, authorization: a.id, approved: a.approved, stripeReason: a.request_history?.[0]?.reason, decision: local };
   } catch (e: any) { return { ...err(e), decision: local }; }
 }
@@ -112,6 +115,7 @@ export async function payVenue(amountGBP: number, feeGBP = Math.round(amountGBP 
   try {
     const pi = await stripeX!.paymentIntents.create({ amount: p(amountGBP), currency: "gbp", payment_method: "pm_card_visa", confirm: true, automatic_payment_methods: { enabled: true, allow_redirects: "never" }, transfer_data: { destination: v.account }, application_fee_amount: p(feeGBP), description: "Sally → venue (destination charge, test)" });
     remember(`Sally paid venue ${v.account} £${amountGBP.toFixed(2)} via Stripe Connect destination charge ${pi.id} (fee £${feeGBP.toFixed(2)}).`).catch(() => {});
+    log("venuePays", { paymentIntent: pi.id, status: pi.status, amount: amountGBP, fee: feeGBP });
     return { ok: true, paymentIntent: pi.id, status: pi.status, account: v.account, fee: feeGBP };
   } catch (e: any) { return err(e); }
 }
@@ -123,6 +127,7 @@ export async function subscribe(email = "peter@heysalad.io") {
     if (!st.price) { const pr = await stripeX.prices.create({ currency: "gbp", unit_amount: 900, recurring: { interval: "month" }, product_data: { name: "Sally Plus (monthly)" }, lookup_key: "sally_plus_monthly", transfer_lookup_key: true }); st.price = pr.id; persist(); }
     const c = await stripeX.customers.create({ email, name: "Sally Plus subscriber (test)", payment_method: "pm_card_visa", invoice_settings: { default_payment_method: "pm_card_visa" } });
     const sub = await stripeX.subscriptions.create({ customer: c.id, items: [{ price: st.price }], metadata: { app: "sally" } });
+    log("subs", { subscription: sub.id, status: sub.status, email });
     return { ok: true, subscription: sub.id, status: sub.status, price: st.price, amount: "£9.00/month" };
   } catch (e: any) { return err(e); }
 }
@@ -137,6 +142,7 @@ export async function sptPay(amountGBP: number, maxGBP = POLICY.maxCapGBP) {
     const spt: any = await stripeX.rawRequest("POST", "/v1/test_helpers/shared_payment/granted_tokens", { payment_method: "pm_card_visa", usage_limits: { currency: "gbp", max_amount: p(maxGBP), expires_at: Math.floor(Date.now() / 1000) + 3600 } });
     const pi: any = await stripeX.rawRequest("POST", "/v1/payment_intents", { amount: p(amountGBP), currency: "gbp", shared_payment_granted_token: spt.id, confirm: true, description: "Sally agentic checkout (shared payment token, test)" });
     remember(`Sally paid £${amountGBP.toFixed(2)} with shared payment token ${spt.id} (limit £${maxGBP}), PaymentIntent ${pi.id}.`).catch(() => {});
+    log("spts", { token: spt.id, paymentIntent: pi.id, status: pi.status, amount: amountGBP });
     return { ok: true, token: spt.id, limit: maxGBP, paymentIntent: pi.id, status: pi.status };
   } catch (e: any) { return err(e); }
 }

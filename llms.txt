@@ -1,0 +1,14 @@
+# Agent 9 (open source, by HeySalad)
+> Agent 9: give your agent a financial operating system. Spend rules and virtual cards for AI agents, built on 9 Stripe products. Every spend is checked against a written policy (policy.md) before Stripe is called, a Stripe Issuing virtual card enforces the same limits, anything over a limit is held for a human, and every pound is explained. Stripe test mode only. Example agent: Sally.
+
+## Use
+- MCP stdio: `SALLY_URL=http://localhost:3000 npx tsx src/mcp.ts`; HTTP: `<base>/mcp`
+- Tools: restock, shop, book_table, pay_supplier_invoice, prepare_invoice, send_invoice, email_shopping_list_draft, approve, get_audit, get_policy, remember, recall, issue_card, pay_venue, subscribe_sally_plus, pay_with_shared_token
+- HTTP: POST /api/chat {"text": "..."}; GET /api/records/:id; GET /policy
+- Pages: /money /payments /receipt/:id /card /invoices /billing /connect /audit
+
+## Docs
+- [README](README.md)
+- [AGENTS.md](AGENTS.md): calling Agent 9 from another agent
+- [policy.md](policy.md): the rules
+- [examples/](examples/): walkthroughs and a forkable policy

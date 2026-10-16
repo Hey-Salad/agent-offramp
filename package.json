@@ -1,11 +1,13 @@
 {
   "name": "agent-offramp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Agent 9: give your agent a financial operating system. Spend rules and virtual cards for AI agents, on 9 Stripe products (test mode). Open source by HeySalad.",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "start": "tsx src/server.ts"
+    "start": "tsx src/server.ts",
+    "lint": "tsc --noEmit --skipLibCheck --module nodenext --moduleResolution nodenext --target es2022 --resolveJsonModule --noImplicitAny false src/ui.ts src/stripe-extra.ts src/mcp.ts",
+    "test": "node test/ui.test.mjs && node test/stripe-extra.test.mjs"
   },
   "keywords": [],
   "author": "",
