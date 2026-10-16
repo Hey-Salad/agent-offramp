@@ -34,6 +34,7 @@ for(let start=0;start<all.length;start+=6){const batch=await Promise.all(all.sli
   const fullCard=/(?<![A-Za-z0-9])(?:\d[ -]?){12,18}\d(?![A-Za-z0-9])/.test(s.text);
   const normalized=s.text.replace(/[^a-z0-9]/gi,'').toLowerCase();const environmentLeak=known.some(v=>normalized.includes(v));
   check(path.relative(work,s.file)+' no keys, PAN or client secret',!secret&&!fullCard&&!environmentLeak);
+  check(path.relative(work,s.file)+' no stray memory/header text',!/Cognee|remembers|preferences|decisions|Example agent/i.test(s.text));
   ocr.push({file:path.relative(work,s.file),text:s.text});
  }
  console.log('Scanned '+Math.min(start+6,all.length)+'/'+all.length+' distinct decoded frames');

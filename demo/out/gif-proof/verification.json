@@ -1,6 +1,6 @@
 {
   "decodedFrames": 600,
-  "distinctFramesScanned": 550,
+  "distinctFramesScanned": 567,
   "checks": [
     {
       "name": "agent9.gif dimensions, eight seconds, fps and byte limit",
@@ -67,7 +67,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-001.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-002.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-002.png no stray memory/header text",
       "ok": true
     },
     {
@@ -75,7 +83,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-003.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-004.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-004.png no stray memory/header text",
       "ok": true
     },
     {
@@ -83,7 +99,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-005.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-006.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-006.png no stray memory/header text",
       "ok": true
     },
     {
@@ -91,7 +115,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-007.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-008.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-008.png no stray memory/header text",
       "ok": true
     },
     {
@@ -99,7 +131,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-009.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-010.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-010.png no stray memory/header text",
       "ok": true
     },
     {
@@ -107,7 +147,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-011.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-012.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-012.png no stray memory/header text",
       "ok": true
     },
     {
@@ -115,7 +163,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-013.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-014.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-014.png no stray memory/header text",
       "ok": true
     },
     {
@@ -123,7 +179,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-015.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-016.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-016.png no stray memory/header text",
       "ok": true
     },
     {
@@ -131,7 +195,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-017.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-018.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-018.png no stray memory/header text",
       "ok": true
     },
     {
@@ -139,7 +211,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-019.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-020.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-020.png no stray memory/header text",
       "ok": true
     },
     {
@@ -147,7 +227,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-021.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-022.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-022.png no stray memory/header text",
       "ok": true
     },
     {
@@ -155,7 +243,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-023.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-024.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-024.png no stray memory/header text",
       "ok": true
     },
     {
@@ -163,7 +259,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-025.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-026.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-026.png no stray memory/header text",
       "ok": true
     },
     {
@@ -171,7 +275,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-027.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-028.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-028.png no stray memory/header text",
       "ok": true
     },
     {
@@ -179,7 +291,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-029.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-030.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-030.png no stray memory/header text",
       "ok": true
     },
     {
@@ -187,7 +307,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-031.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-032.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-032.png no stray memory/header text",
       "ok": true
     },
     {
@@ -195,7 +323,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-033.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-034.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-034.png no stray memory/header text",
       "ok": true
     },
     {
@@ -203,7 +339,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-035.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-036.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-036.png no stray memory/header text",
       "ok": true
     },
     {
@@ -211,7 +355,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-037.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-038.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-038.png no stray memory/header text",
       "ok": true
     },
     {
@@ -219,7 +371,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-039.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-040.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-040.png no stray memory/header text",
       "ok": true
     },
     {
@@ -227,7 +387,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-041.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-042.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-042.png no stray memory/header text",
       "ok": true
     },
     {
@@ -235,7 +403,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-043.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-044.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-044.png no stray memory/header text",
       "ok": true
     },
     {
@@ -243,7 +419,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-045.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-046.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-046.png no stray memory/header text",
       "ok": true
     },
     {
@@ -251,7 +435,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-047.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-048.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-048.png no stray memory/header text",
       "ok": true
     },
     {
@@ -259,7 +451,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-049.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-050.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-050.png no stray memory/header text",
       "ok": true
     },
     {
@@ -267,7 +467,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-051.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-052.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-052.png no stray memory/header text",
       "ok": true
     },
     {
@@ -275,7 +483,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-053.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-054.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-054.png no stray memory/header text",
       "ok": true
     },
     {
@@ -283,7 +499,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-055.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-056.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-056.png no stray memory/header text",
       "ok": true
     },
     {
@@ -291,7 +515,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-057.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-058.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-058.png no stray memory/header text",
       "ok": true
     },
     {
@@ -299,7 +531,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-059.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-060.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-060.png no stray memory/header text",
       "ok": true
     },
     {
@@ -307,7 +547,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-061.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-062.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-062.png no stray memory/header text",
       "ok": true
     },
     {
@@ -315,7 +563,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-063.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-064.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-064.png no stray memory/header text",
       "ok": true
     },
     {
@@ -323,7 +579,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-065.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-066.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-066.png no stray memory/header text",
       "ok": true
     },
     {
@@ -331,7 +595,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-067.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-068.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-068.png no stray memory/header text",
       "ok": true
     },
     {
@@ -339,7 +611,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-069.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-070.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-070.png no stray memory/header text",
       "ok": true
     },
     {
@@ -347,7 +627,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-071.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-072.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-072.png no stray memory/header text",
       "ok": true
     },
     {
@@ -355,7 +643,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-073.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-074.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-074.png no stray memory/header text",
       "ok": true
     },
     {
@@ -363,7 +659,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-075.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-076.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-076.png no stray memory/header text",
       "ok": true
     },
     {
@@ -371,7 +675,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-077.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-078.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-078.png no stray memory/header text",
       "ok": true
     },
     {
@@ -379,7 +691,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-079.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-080.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-080.png no stray memory/header text",
       "ok": true
     },
     {
@@ -387,7 +707,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-081.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-082.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-082.png no stray memory/header text",
       "ok": true
     },
     {
@@ -395,7 +723,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-083.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-084.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-084.png no stray memory/header text",
       "ok": true
     },
     {
@@ -403,7 +739,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-085.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-086.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-086.png no stray memory/header text",
       "ok": true
     },
     {
@@ -411,7 +755,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-087.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-088.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-088.png no stray memory/header text",
       "ok": true
     },
     {
@@ -419,7 +771,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-089.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-090.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-090.png no stray memory/header text",
       "ok": true
     },
     {
@@ -427,7 +787,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-091.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-092.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-092.png no stray memory/header text",
       "ok": true
     },
     {
@@ -435,7 +803,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-093.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-094.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-094.png no stray memory/header text",
       "ok": true
     },
     {
@@ -443,7 +819,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-095.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-096.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-096.png no stray memory/header text",
       "ok": true
     },
     {
@@ -451,7 +835,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-097.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-098.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-098.png no stray memory/header text",
       "ok": true
     },
     {
@@ -459,7 +851,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-099.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-100.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-100.png no stray memory/header text",
       "ok": true
     },
     {
@@ -467,7 +867,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-102.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-103.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-103.png no stray memory/header text",
       "ok": true
     },
     {
@@ -475,7 +883,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-104.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-105.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-105.png no stray memory/header text",
       "ok": true
     },
     {
@@ -483,7 +899,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-106.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-107.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-107.png no stray memory/header text",
       "ok": true
     },
     {
@@ -491,7 +915,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-108.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-109.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-109.png no stray memory/header text",
       "ok": true
     },
     {
@@ -499,7 +931,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-110.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-111.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-111.png no stray memory/header text",
       "ok": true
     },
     {
@@ -507,7 +947,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-112.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-113.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-113.png no stray memory/header text",
       "ok": true
     },
     {
@@ -515,7 +963,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-114.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-115.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-115.png no stray memory/header text",
       "ok": true
     },
     {
@@ -523,7 +979,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-116.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-117.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-117.png no stray memory/header text",
       "ok": true
     },
     {
@@ -531,7 +995,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-118.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-gif/frame-119.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-gif/frame-119.png no stray memory/header text",
       "ok": true
     },
     {
@@ -539,7 +1011,15 @@
       "ok": true
     },
     {
+      "name": "agent9-gif/frame-120.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-001.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-001.png no stray memory/header text",
       "ok": true
     },
     {
@@ -547,7 +1027,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-002.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-003.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-003.png no stray memory/header text",
       "ok": true
     },
     {
@@ -555,7 +1043,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-004.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-005.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-005.png no stray memory/header text",
       "ok": true
     },
     {
@@ -563,7 +1059,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-006.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-007.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-007.png no stray memory/header text",
       "ok": true
     },
     {
@@ -571,7 +1075,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-008.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-009.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-009.png no stray memory/header text",
       "ok": true
     },
     {
@@ -579,7 +1091,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-010.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-011.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-011.png no stray memory/header text",
       "ok": true
     },
     {
@@ -587,7 +1107,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-012.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-013.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-013.png no stray memory/header text",
       "ok": true
     },
     {
@@ -595,11 +1123,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-015.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-016.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-014.png no stray memory/header text",
       "ok": true
     },
     {
@@ -607,7 +1131,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-017.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-018.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-018.png no stray memory/header text",
       "ok": true
     },
     {
@@ -615,7 +1147,71 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-019.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-020.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-020.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-021.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-021.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-022.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-022.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-023.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-023.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-025.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-025.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-026.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-026.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-027.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-027.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-029.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-029.png no stray memory/header text",
       "ok": true
     },
     {
@@ -623,7 +1219,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-030.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-031.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-031.png no stray memory/header text",
       "ok": true
     },
     {
@@ -631,7 +1235,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-032.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-033.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-033.png no stray memory/header text",
       "ok": true
     },
     {
@@ -639,7 +1251,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-034.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-035.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-035.png no stray memory/header text",
       "ok": true
     },
     {
@@ -647,7 +1267,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-036.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-037.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-037.png no stray memory/header text",
       "ok": true
     },
     {
@@ -655,7 +1283,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-038.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-039.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-039.png no stray memory/header text",
       "ok": true
     },
     {
@@ -663,7 +1299,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-040.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-041.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-041.png no stray memory/header text",
       "ok": true
     },
     {
@@ -671,7 +1315,23 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-042.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-043.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-043.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-044.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-044.png no stray memory/header text",
       "ok": true
     },
     {
@@ -679,7 +1339,23 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-045.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-046.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-046.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-047.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-047.png no stray memory/header text",
       "ok": true
     },
     {
@@ -687,7 +1363,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-048.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-049.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-049.png no stray memory/header text",
       "ok": true
     },
     {
@@ -695,7 +1379,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-050.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-051.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-051.png no stray memory/header text",
       "ok": true
     },
     {
@@ -703,7 +1395,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-052.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-053.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-053.png no stray memory/header text",
       "ok": true
     },
     {
@@ -711,7 +1411,119 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-054.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-055.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-055.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-056.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-056.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-057.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-057.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-058.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-058.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-059.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-059.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-060.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-060.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-061.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-061.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-062.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-062.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-063.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-063.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-064.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-064.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-065.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-065.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-066.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-066.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-067.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-067.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-068.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-068.png no stray memory/header text",
       "ok": true
     },
     {
@@ -719,7 +1531,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-069.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-070.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-070.png no stray memory/header text",
       "ok": true
     },
     {
@@ -727,7 +1547,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-071.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-072.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-072.png no stray memory/header text",
       "ok": true
     },
     {
@@ -735,7 +1563,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-073.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-074.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-074.png no stray memory/header text",
       "ok": true
     },
     {
@@ -743,7 +1579,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-075.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-076.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-076.png no stray memory/header text",
       "ok": true
     },
     {
@@ -751,7 +1595,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-077.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-078.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-078.png no stray memory/header text",
       "ok": true
     },
     {
@@ -759,7 +1611,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-079.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-080.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-080.png no stray memory/header text",
       "ok": true
     },
     {
@@ -767,7 +1627,23 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-081.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-082.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-082.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-083.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-083.png no stray memory/header text",
       "ok": true
     },
     {
@@ -775,7 +1651,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-084.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-085.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-085.png no stray memory/header text",
       "ok": true
     },
     {
@@ -783,7 +1667,31 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-086.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-087.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-087.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-088.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-088.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-089.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-089.png no stray memory/header text",
       "ok": true
     },
     {
@@ -791,7 +1699,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-090.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-091.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-091.png no stray memory/header text",
       "ok": true
     },
     {
@@ -799,7 +1715,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-092.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-093.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-093.png no stray memory/header text",
       "ok": true
     },
     {
@@ -807,7 +1731,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-094.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-095.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-095.png no stray memory/header text",
       "ok": true
     },
     {
@@ -815,7 +1747,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-096.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-097.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-097.png no stray memory/header text",
       "ok": true
     },
     {
@@ -823,7 +1763,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-098.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-099.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-099.png no stray memory/header text",
       "ok": true
     },
     {
@@ -831,7 +1779,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-100.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-101.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-101.png no stray memory/header text",
       "ok": true
     },
     {
@@ -839,7 +1795,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-102.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-103.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-103.png no stray memory/header text",
       "ok": true
     },
     {
@@ -847,7 +1811,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-104.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-105.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-105.png no stray memory/header text",
       "ok": true
     },
     {
@@ -855,7 +1827,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-106.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-107.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-107.png no stray memory/header text",
       "ok": true
     },
     {
@@ -863,7 +1843,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-108.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-109.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-109.png no stray memory/header text",
       "ok": true
     },
     {
@@ -871,7 +1859,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-110.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-111.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-111.png no stray memory/header text",
       "ok": true
     },
     {
@@ -879,7 +1875,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-112.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-113.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-113.png no stray memory/header text",
       "ok": true
     },
     {
@@ -887,7 +1891,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-114.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-115.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-115.png no stray memory/header text",
       "ok": true
     },
     {
@@ -895,7 +1907,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-116.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-117.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-117.png no stray memory/header text",
       "ok": true
     },
     {
@@ -903,7 +1923,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-118.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-119.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-119.png no stray memory/header text",
       "ok": true
     },
     {
@@ -911,7 +1939,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-120.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-121.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-121.png no stray memory/header text",
       "ok": true
     },
     {
@@ -919,7 +1955,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-122.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-123.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-123.png no stray memory/header text",
       "ok": true
     },
     {
@@ -927,7 +1971,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-124.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-125.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-125.png no stray memory/header text",
       "ok": true
     },
     {
@@ -935,7 +1987,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-126.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-127.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-127.png no stray memory/header text",
       "ok": true
     },
     {
@@ -943,7 +2003,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-128.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-129.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-129.png no stray memory/header text",
       "ok": true
     },
     {
@@ -951,7 +2019,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-130.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-131.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-131.png no stray memory/header text",
       "ok": true
     },
     {
@@ -959,7 +2035,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-132.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-133.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-133.png no stray memory/header text",
       "ok": true
     },
     {
@@ -967,7 +2051,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-134.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-135.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-135.png no stray memory/header text",
       "ok": true
     },
     {
@@ -975,7 +2067,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-136.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-137.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-137.png no stray memory/header text",
       "ok": true
     },
     {
@@ -983,7 +2083,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-138.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-139.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-139.png no stray memory/header text",
       "ok": true
     },
     {
@@ -991,7 +2099,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-140.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-141.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-141.png no stray memory/header text",
       "ok": true
     },
     {
@@ -999,7 +2115,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-142.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-143.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-143.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1007,7 +2131,39 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-145.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-146.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-146.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-147.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-147.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-149.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-149.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-150.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-150.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1015,7 +2171,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-151.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-152.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-152.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1023,7 +2187,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-153.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-154.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-154.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1031,7 +2203,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-155.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-156.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-156.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1039,7 +2219,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-157.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-158.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-158.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1047,7 +2235,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-159.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-160.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-160.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1055,7 +2251,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-161.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-162.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-162.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1063,7 +2267,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-163.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-164.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-164.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1071,7 +2283,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-165.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-166.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-166.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1079,7 +2299,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-167.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-168.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-168.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1087,7 +2315,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-169.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-170.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-170.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1095,7 +2331,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-171.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-172.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-172.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1103,7 +2347,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-173.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-174.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-174.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1111,7 +2363,23 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-175.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-176.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-176.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-177.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-177.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1119,7 +2387,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-178.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-179.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-179.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1127,7 +2403,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-180.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-181.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-181.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1135,11 +2419,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-182.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-183.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-184.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-183.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1147,7 +2435,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-185.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-186.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-186.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1155,7 +2451,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-187.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-188.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-188.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1163,7 +2467,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-189.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-190.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-190.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1171,7 +2483,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-192.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-191.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1179,7 +2491,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-193.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-194.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-194.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1187,7 +2507,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-195.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-196.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-196.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1195,7 +2523,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-197.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-198.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-198.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1203,7 +2539,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-200.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-199.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1211,7 +2547,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-201.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-202.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-202.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1219,7 +2563,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-204.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-203.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1227,7 +2571,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-205.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-206.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-206.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1235,7 +2587,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-208.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-207.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1243,7 +2595,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-209.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-210.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-210.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1251,7 +2611,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-211.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-212.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-212.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1259,7 +2627,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-213.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-214.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-214.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1267,7 +2643,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-215.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-216.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-216.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1275,7 +2659,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-217.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-218.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-218.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1283,7 +2675,7 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-220.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-219.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1291,27 +2683,23 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-221.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-222.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-224.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-222.png no stray memory/header text",
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-225.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-223.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-226.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-229.png no keys, PAN or client secret",
-      "ok": true
-    },
-    {
-      "name": "agent9-x-mp4/frame-230.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-223.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1319,11 +2707,15 @@
       "ok": true
     },
     {
+      "name": "agent9-x-mp4/frame-234.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-x-mp4/frame-235.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-236.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-235.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1331,7 +2723,23 @@
       "ok": true
     },
     {
-      "name": "agent9-x-mp4/frame-240.png no keys, PAN or client secret",
+      "name": "agent9-x-mp4/frame-237.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-238.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-238.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-239.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-x-mp4/frame-239.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1339,7 +2747,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-001.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-002.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-002.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1347,7 +2763,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-003.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-004.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-004.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1355,7 +2779,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-005.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-006.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-006.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1363,7 +2795,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-007.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-008.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-008.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1371,7 +2811,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-009.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-010.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-010.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1379,7 +2827,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-011.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-012.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-012.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1387,7 +2843,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-013.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-014.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-014.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1395,7 +2859,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-015.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-016.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-016.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1403,7 +2875,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-017.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-018.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-018.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1411,7 +2891,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-019.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-020.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-020.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1419,7 +2907,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-021.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-022.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-022.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1427,7 +2923,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-023.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-024.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-024.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1435,7 +2939,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-025.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-026.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-026.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1443,7 +2955,7 @@
       "ok": true
     },
     {
-      "name": "agent9-square-mp4/frame-028.png no keys, PAN or client secret",
+      "name": "agent9-square-mp4/frame-027.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1451,7 +2963,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-029.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-030.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-030.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1459,7 +2979,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-031.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-032.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-032.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1467,7 +2995,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-033.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-034.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-034.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1475,7 +3011,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-035.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-036.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-036.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1483,7 +3027,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-037.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-038.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-038.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1491,7 +3043,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-039.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-040.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-040.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1499,7 +3059,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-041.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-042.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-042.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1507,7 +3075,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-043.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-044.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-044.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1515,7 +3091,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-045.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-046.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-046.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1523,7 +3107,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-047.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-048.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-048.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1531,7 +3123,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-049.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-050.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-050.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1539,7 +3139,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-051.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-052.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-052.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1547,7 +3155,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-053.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-054.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-054.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1555,7 +3171,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-055.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-056.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-056.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1563,7 +3187,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-057.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-058.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-058.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1571,7 +3203,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-059.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-060.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-060.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1579,7 +3219,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-061.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-062.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-062.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1587,7 +3235,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-063.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-064.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-064.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1595,7 +3251,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-065.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-066.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-066.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1603,7 +3267,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-067.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-068.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-068.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1611,7 +3283,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-069.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-070.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-070.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1619,7 +3299,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-071.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-072.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-072.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1627,7 +3315,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-073.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-074.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-074.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1635,7 +3331,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-075.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-076.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-076.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1643,7 +3347,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-077.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-078.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-078.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1651,7 +3363,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-079.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-080.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-080.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1659,7 +3379,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-081.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-082.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-082.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1667,7 +3395,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-083.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-084.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-084.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1675,7 +3411,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-085.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-086.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-086.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1683,7 +3427,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-087.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-088.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-088.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1691,7 +3443,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-089.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-090.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-090.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1699,7 +3459,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-091.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-092.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-092.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1707,7 +3475,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-093.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-094.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-094.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1715,7 +3491,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-095.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-096.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-096.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1723,7 +3507,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-097.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-098.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-098.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1731,7 +3523,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-099.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-100.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-100.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1739,7 +3539,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-101.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-102.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-102.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1747,7 +3555,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-103.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-104.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-104.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1755,7 +3571,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-105.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-106.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-106.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1763,7 +3587,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-107.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-108.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-108.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1771,7 +3603,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-109.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-110.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-110.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1779,7 +3619,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-111.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-112.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-112.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1787,7 +3635,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-113.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-114.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-114.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1795,7 +3651,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-115.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-116.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-116.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1803,7 +3667,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-117.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-118.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-118.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1811,7 +3683,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-119.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-120.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-120.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1819,7 +3699,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-121.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-122.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-122.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1827,7 +3715,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-123.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-124.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-124.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1835,7 +3731,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-125.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-126.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-126.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1843,7 +3747,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-127.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-128.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-128.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1851,7 +3763,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-129.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-130.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-130.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1859,7 +3779,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-131.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-132.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-132.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1867,7 +3795,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-133.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-134.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-134.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1875,7 +3811,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-135.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-136.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-136.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1883,7 +3827,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-137.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-138.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-138.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1891,7 +3843,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-139.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-140.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-140.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1899,7 +3859,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-141.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-142.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-142.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1907,7 +3875,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-143.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-144.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-144.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1915,7 +3891,23 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-145.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-146.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-146.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-147.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-147.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1923,7 +3915,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-149.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-150.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-150.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1931,7 +3931,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-151.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-152.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-152.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1939,7 +3947,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-153.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-154.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-154.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1947,7 +3963,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-155.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-156.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-156.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1955,7 +3979,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-157.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-158.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-158.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1963,7 +3995,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-159.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-160.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-160.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1971,7 +4011,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-161.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-162.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-162.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1979,7 +4027,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-163.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-164.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-164.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1987,7 +4043,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-165.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-166.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-166.png no stray memory/header text",
       "ok": true
     },
     {
@@ -1995,7 +4059,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-167.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-168.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-168.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2003,7 +4075,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-169.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-170.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-170.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2011,7 +4091,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-171.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-172.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-172.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2019,7 +4107,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-173.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-174.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-174.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2027,7 +4123,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-175.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-176.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-176.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2035,7 +4139,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-177.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-178.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-178.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2043,7 +4155,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-179.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-180.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-180.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2051,7 +4171,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-181.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-182.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-182.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2059,7 +4187,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-183.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-184.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-184.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2067,7 +4203,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-185.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-186.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-186.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2075,7 +4219,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-187.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-188.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-188.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2083,7 +4235,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-189.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-190.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-190.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2091,7 +4251,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-191.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-192.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-192.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2099,7 +4267,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-193.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-194.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-194.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2107,7 +4283,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-195.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-196.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-196.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2115,7 +4299,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-197.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-198.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-198.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2123,7 +4315,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-199.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-200.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-200.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2131,7 +4331,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-201.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-202.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-202.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2139,7 +4347,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-203.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-204.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-204.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2147,7 +4363,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-205.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-206.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-206.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2155,7 +4379,23 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-207.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-208.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-208.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-209.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-209.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2163,7 +4403,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-210.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-211.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-211.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2171,7 +4419,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-212.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-213.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-213.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2179,7 +4435,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-214.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-215.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-215.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2187,7 +4451,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-216.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-217.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-217.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2195,7 +4467,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-218.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-219.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-219.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2203,7 +4483,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-220.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-221.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-221.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2211,7 +4499,23 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-222.png no stray memory/header text",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-223.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-223.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-224.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-224.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2219,7 +4523,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-225.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-226.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-226.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2227,11 +4539,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-227.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-229.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-square-mp4/frame-230.png no keys, PAN or client secret",
+      "name": "agent9-square-mp4/frame-229.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2239,7 +4555,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-234.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-235.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-235.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2247,7 +4571,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-236.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-237.png no keys, PAN or client secret",
+      "ok": true
+    },
+    {
+      "name": "agent9-square-mp4/frame-237.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2255,11 +4587,15 @@
       "ok": true
     },
     {
+      "name": "agent9-square-mp4/frame-238.png no stray memory/header text",
+      "ok": true
+    },
+    {
       "name": "agent9-square-mp4/frame-239.png no keys, PAN or client secret",
       "ok": true
     },
     {
-      "name": "agent9-square-mp4/frame-240.png no keys, PAN or client secret",
+      "name": "agent9-square-mp4/frame-239.png no stray memory/header text",
       "ok": true
     },
     {
@@ -2270,18 +4606,18 @@
   "loopBoundaries": [
     {
       "file": "agent9.gif",
-      "meanAbsoluteRGBError": 0.0462890625,
-      "largeDifferenceFraction": 0.000029296875
+      "meanAbsoluteRGBError": 0.06305338541666666,
+      "largeDifferenceFraction": 0.000048828125
     },
     {
       "file": "agent9-x.mp4",
-      "meanAbsoluteRGBError": 0.03683268229166667,
+      "meanAbsoluteRGBError": 0.042141927083333336,
       "largeDifferenceFraction": 0.000009765625
     },
     {
       "file": "agent9-square.mp4",
-      "meanAbsoluteRGBError": 0.05804361979166667,
-      "largeDifferenceFraction": 0.000029296875
+      "meanAbsoluteRGBError": 0.08161783854166667,
+      "largeDifferenceFraction": 0.000048828125
     }
   ],
   "security": "Every decoded frame covered by exact-image deduplication and OCR; no key, full card number, client secret or known credential/app-origin value detected. Raw OCR stays ignored."

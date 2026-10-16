@@ -24,13 +24,14 @@ try{
  core=`[0:v]split=2[p][s];[p]trim=start=${beat.proofVisibleAt+.3}:duration=1,setpts=PTS-STARTPTS,fps=30,trim=end_frame=30[p1];[s]trim=start=${beat.start}:end=${beat.end},setpts=(PTS-STARTPTS)*${7/(beat.end-beat.start)},fps=30,tpad=stop_mode=clone:stop_duration=0.1,trim=end_frame=210[s1];[p1][s1]concat=n=2:v=1:a=0,fps=30,setsar=1[v]`;
 }
 ff(['-i',source,'-filter_complex',core,'-map','[v]','-an','-frames:v','240','-c:v','libx264','-crf','16','-preset','fast','-pix_fmt','yuv420p',work+'/loop-master.mp4']);
-// Constant crops only. All exports retain the £80 decline row and approved:false.
-const gifFilter='crop=1080:1080:536:0,scale=1200:1200:flags=lanczos,fps=15';
+// Constant crops omit the clipped memory/header line above the conversation.
+// Keep the reply, Stripe proof and composer inside every export.
+const gifFilter='crop=960:960:596:120,scale=1200:1200:flags=lanczos,fps=15';
 ff(['-i',work+'/loop-master.mp4','-vf',gifFilter+',palettegen=max_colors=192:stats_mode=diff:reserve_transparent=0','-frames:v','1',work+'/palette.png']);
 ff(['-i',work+'/loop-master.mp4','-i',work+'/palette.png','-filter_complex',`[0:v]${gifFilter}[v];[v][1:v]paletteuse=dither=sierra2_4a:diff_mode=rectangle`,'-an','-loop','0',out+'/agent9.gif']);
 for(const [name,filter]of[
- ['agent9-x.mp4','crop=1440:810:356:0,scale=1280:720:flags=lanczos'],
- ['agent9-square.mp4','crop=1080:1080:536:0,scale=1080:1080:flags=lanczos'],
+ ['agent9-x.mp4','crop=1680:945:236:124,scale=1280:720:flags=lanczos'],
+ ['agent9-square.mp4','crop=960:960:596:120,scale=1080:1080:flags=lanczos'],
 ])ff(['-i',work+'/loop-master.mp4','-vf',filter,'-an','-r','30','-frames:v','240','-c:v','libx264','-crf','18','-preset','slow','-pix_fmt','yuv420p','-movflags','+faststart',out+'/'+name]);
 const info=[];
 for(const [name,w,h,fps,limit]of[['agent9.gif',1200,1200,15,8000000],['agent9-x.mp4',1280,720,30,15000000],['agent9-square.mp4',1080,1080,30,15000000]]){
