@@ -1,4 +1,10 @@
-<p align="center"><img src="public/heysalad-logo-black.svg" alt="HeySalad" height="48"></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/logo-light.svg">
+    <img src="assets/logo-light.svg" alt="HeySalad" height="48">
+  </picture>
+</p>
 
 <h1 align="center">Sally</h1>
 <p align="center"><b>Give your AI a card it can't misuse.</b></p>
@@ -6,6 +12,7 @@
 
 <!-- HERO: add assets/demo.gif (15–20s: Sally shops, then the card declines £80), then uncomment:
 <p align="center"><img src="assets/demo.gif" alt="Sally restocks the kitchen; the card declines £80" width="720"></p>
+(Use a GIF with solid frames; it reads the same in light and dark mode.)
 -->
 
 Sally is an open-source money agent. You write the rules in plain English in [`policy.md`](policy.md). Sally checks every spend against them **before** Stripe is touched, and her Stripe Issuing card enforces the same limits again at the card network. The AI can ask; it can't override.
@@ -71,7 +78,9 @@ flowchart LR
   P -->|over limit| H[You approve]
   H --> S
   S --> L[Audit: every pound, every clause]
-  style P fill:#ed4c4c,color:#fff,stroke:#ed4c4c
+  classDef hs fill:none,stroke:#ed4c4c,stroke-width:1.5px
+  class A,R,S,H,L hs
+  style P fill:#ed4c4c,color:#ffffff,stroke:#ed4c4c
 ```
 Stripe: PaymentIntents, Checkout, Payment Links, Invoicing, Issuing, Connect, Billing and shared payment tokens, through the [Stripe Agent Toolkit](https://github.com/stripe/ai). Memory: [Cognee](https://cognee.ai) (optional). Test mode only.
 
