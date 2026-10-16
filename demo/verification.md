@@ -17,3 +17,5 @@ The complete capture/edit command `npm run demo` produced both final videos at *
 Official unmodified Stripe slate SVG c243d6a693df3a3678a8353d89199d0c7fdb5efc7d93983dea77166c5ba75f36-256: `c243d6a693df3a3678a8353d89199d0c7fdb5efc7d93983dea77166c5ba75f36`.
 
 Rebuild instructions: [README](README.md). Proof timestamps and lines: [table](out/proof-table.md). No deployment or merge is part of this work.
+
+PR: [#10](https://github.com/Hey-Salad/agent-offramp/pull/10), stacked on #8, open for review and unmerged.

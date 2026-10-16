@@ -34,15 +34,15 @@ For every product, persist capture BEFORE/action/proof timestamps, final timelin
 
 At PR #8 head 21d5452, the hosted UI has Stripe output panels, but chat does not route Checkout, Issuing, Connect, Billing or token commands. Toolkit may fall back to SDK. These are real capability gaps, not scenes to fake. Add honest chat routes and compact real Stripe proof views in the PR. A local real-Stripe test recording is possible after those changes; a live Modal recording needs the changed app deployed first. Deployment requires separate user authorization. Until that target is ready, scenes remain unrecorded.
 
-- [ ] Shotlist commit precedes the first recording.
-- [ ] All nine chat actions execute against real Stripe test mode; unsupported paths fail closed.
-- [ ] Each scene has fresh BEFORE/action/AFTER timestamps and separate source/rendered clips.
-- [ ] At each VO product-name timestamp, a real object's full id and relevant status are readable.
-- [ ] Toolkit proof records actual toolkit execution; no fallback substitution.
-- [ ] Official Stripe wordmark is unchanged; white/ink UI, HeySalad upper left, no pink background, captions or camera motion.
-- [ ] Jessica VO, exact opening and closing; final duration 50–60 seconds; last slate exactly 4 seconds.
-- [ ] Fixed 1920×1080 and content-centred 1080×1920 exports; all nine proof frames and prefix-only table saved and attached to a PR.
-- [ ] Build/type checks, tests and runtime assertions pass. No merge or deployment implied by the PR.
+- [x] Shotlist commit precedes the first recording.
+- [x] All nine chat actions execute against real Stripe test mode; unsupported paths fail closed.
+- [x] Each scene has fresh BEFORE/action/AFTER timestamps and separate source/rendered clips.
+- [x] At each VO product-name timestamp, a real object's full id and relevant status are readable.
+- [x] Toolkit proof records actual toolkit execution; no fallback substitution.
+- [x] Official Stripe wordmark is unchanged; white/ink UI, HeySalad upper left, no pink background, captions or camera motion.
+- [x] Jessica VO, exact opening and closing; final duration 50–60 seconds; last slate exactly 4 seconds.
+- [x] Fixed 1920×1080 and content-centred 1080×1920 exports; all nine proof frames and prefix-only table saved and attached to a PR.
+- [x] Build/type checks, tests and runtime assertions pass. No merge or deployment implied by the PR.
 
 ## Approved target update (before recording)
 
