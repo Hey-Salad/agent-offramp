@@ -1,5 +1,5 @@
-# Sally (HeySalad)
-> Open-source money agent. Spends within a written policy (policy.md) using Stripe test mode, holds anything over a limit for a human, and explains every pound.
+# Agent 9 (open source, by HeySalad)
+> Spend rules and virtual cards for AI agents. Every spend is checked against a written policy (policy.md) before Stripe is called, a Stripe Issuing virtual card enforces the same limits, anything over a limit is held for a human, and every pound is explained. Stripe test mode only. Example agent: Sally.
 
 ## Use
 - MCP stdio: `SALLY_URL=http://localhost:3000 npx tsx src/mcp.ts`; HTTP: `<base>/mcp`
@@ -9,6 +9,6 @@
 
 ## Docs
 - [README](README.md)
-- [AGENTS.md](AGENTS.md): calling Sally from another agent
+- [AGENTS.md](AGENTS.md): calling Agent 9 from another agent
 - [policy.md](policy.md): the rules
 - [examples/](examples/): walkthroughs and a forkable policy

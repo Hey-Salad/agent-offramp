@@ -1,7 +1,7 @@
 {
   "name": "agent-offramp",
   "version": "1.0.0",
-  "description": "Sally: give your AI a card it can't misuse. Policy-bound money agent on Stripe (test mode).",
+  "description": "Agent 9: spend rules and virtual cards for AI agents, on 9 Stripe products (test mode). Open source by HeySalad.",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
