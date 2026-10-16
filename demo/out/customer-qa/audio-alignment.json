@@ -1,0 +1,82 @@
+[
+  {
+    "product": "Opening",
+    "offsetSeconds": 0,
+    "correlation": 0.9999887309460983
+  },
+  {
+    "product": "PaymentIntents",
+    "offsetSeconds": 0,
+    "correlation": 0.9864008421204628
+  },
+  {
+    "product": "Checkout",
+    "offsetSeconds": 0,
+    "correlation": 0.9765159406951383
+  },
+  {
+    "product": "Payment Links",
+    "offsetSeconds": 0,
+    "correlation": 0.9999940430156705
+  },
+  {
+    "product": "Invoicing",
+    "offsetSeconds": 0,
+    "correlation": 0.9999894771155935
+  },
+  {
+    "product": "Issuing",
+    "offsetSeconds": 0,
+    "correlation": 0.9856381090153015
+  },
+  {
+    "product": "Connect",
+    "offsetSeconds": 0,
+    "correlation": 0.9999803145857826
+  },
+  {
+    "product": "Billing",
+    "offsetSeconds": 0,
+    "correlation": 0.999988943898502
+  },
+  {
+    "product": "Shared payment tokens",
+    "offsetSeconds": 0,
+    "correlation": 0.9999840813371644
+  },
+  {
+    "product": "Agent Toolkit",
+    "offsetSeconds": 0,
+    "correlation": 0.9999868179171795
+  },
+  {
+    "product": "Customer receipt",
+    "offsetSeconds": 0,
+    "correlation": 0.990609485450369
+  },
+  {
+    "product": "Customer Checkout",
+    "offsetSeconds": 0,
+    "correlation": 0.9782177726943634
+  },
+  {
+    "product": "Deposit payment link",
+    "offsetSeconds": 0,
+    "correlation": 0.9999491436578227
+  },
+  {
+    "product": "Hosted invoice",
+    "offsetSeconds": 0,
+    "correlation": 0.9999867097029002
+  },
+  {
+    "product": "Invoice PDF",
+    "offsetSeconds": 0,
+    "correlation": 0.9829044927968393
+  },
+  {
+    "product": "Closing",
+    "offsetSeconds": 0,
+    "correlation": 0.9842095041097796
+  }
+]

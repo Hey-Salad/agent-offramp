@@ -1,0 +1,13 @@
+{
+  "testMode": true,
+  "invoicePrefix": "in_",
+  "invoiceNumber": "LSUDSQEO-0001",
+  "source": "Actual Download invoice control on the paid Stripe test invoice shown in the walkthrough",
+  "files": [
+    {
+      "name": "agent9-test-invoice.pdf",
+      "bytes": 132492,
+      "sha256": "5a99544acc5bd023dd8d312409744ecbf6f4d7fdd65e1a9714ad81b10ff17650"
+    }
+  ]
+}

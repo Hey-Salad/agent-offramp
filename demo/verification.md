@@ -1,44 +1,29 @@
-# Agent 9 verification
+# Verified Agent 9 demos
 
-## Hosted chat-card update
+The original chat now offers nine fixed business examples, each ending in a real Stripe test result. The deployed test app is verified at ff8b87fe50c4e0df8c3261c0f99961f9901c74fe; later commits change recording/evidence/docs only. PR #10 remains unmerged on codex/agent9-demo, stacked on #8.
 
-The user explicitly requested deployment of card spending in the original chat. The app was deployed from PR #10 to its existing Modal test endpoint, with the exact commit verified through `/api/build`. No local Issuing key was used and no PR was merged. A fresh hosted request **Spend £80 at Ocado** returned a real `iauth_`, status `closed`, `approved: false`, GBP 8000 and `livemode: false`; the actual card's £50 controls were verified before authorization. The response says **Declined · No money taken**, and inline Stripe output exposes only selected safe fields plus the last four digits.
+| Artifact | Dimensions | Runtime | Bytes |
+| --- | --- | ---: | ---: |
+| agent9-demo.mp4 | 1920×1080 | 59.133s | 1771196 |
+| agent9-demo-vertical.mp4 | 1080×1920 | 59.133s | 2312140 |
+| agent9-walkthrough.mp4 | 1920×1080 | 89.167s | 3222025 |
+| agent9-walkthrough-vertical.mp4 | 1080×1920 | 89.167s | 4617901 |
 
-`npm run test:chat-card` checks deterministic parsing, foreign-currency refusal, real-object validation, no fake decline on missing credentials, authorization wording, secret minimization, persistent audit and concurrent response isolation. Its missing-key browser check makes no Stripe calls. Type checks and Agent 9 tests pass. Hosted read-only UI checks: 63/63.
+The user explicitly requested the final videos and document in Git. All four MP4s and the actual downloaded invoice PDF are committed; README links them. Raw captures, voice caches, credentials and private deployment logs stay ignored. assets.json and documents/manifest.json record SHA256 hashes.
 
-The Issuing scene in the overview and combined video now uses this chat recording. Both full-video runtimes and voice timestamps are unchanged. `npm run demo -- --edit-only` rebuilds the 59.133s overview and 108.100s combined formats from the real saved sources. The social GIF/X clips are rebuilt by `npm run demo:social`; see [social evidence](social.md) for all-frame checks, sizes and light/dark README screenshots. Previous card-page proof is superseded by the new chat proof.
+## Observed checks
 
-## Combined chat-first cut — 16 October 2026
+- npm run lint: pass. No separate application build exists; hosted runtime executes the TS app.
+- npm run test:agent9: unsupported/live-object refusal and workspace opt-in pass.
+- npm run test:chat-card: card parsing, policy, real-object validation, no-key refusal, concurrency and browser failure state pass. No local Issuing call.
+- npm run test:chat-examples: nine exact mappings, altered-amount refusal, chooser Send gate, all nine no-key HTTP requests, safe links and inline proof pass.
+- All nine hosted chat requests match persisted Stripe readbacks and policy/audits; strict actual Toolkit and real Issuing decline verified. Three public Stripe pages load, and the chooser has nine options without executing on selection.
+- 279/279 overview video checks pass: 59.133s, product/proof/voice order, PCM voice alignment, dimensions, one audio/no subtitles, readable complete ids/statuses, two-second frame scans and no app origins/login pages/keys/client secrets/full card numbers. OCR id visibility allows I/l/1 ambiguity and ≤5% transcription error; exact ids independently match persisted readbacks.
+- 272/272 longer-walkthrough checks pass: 89.167s; actual receipt, unpaid Checkout, deposit payment page, paid invoice details and real PDF. Original nine chat proof frames remain pixel-identical; overview MP4 hashes remain unchanged. Final narration is measured against source PCM in both formats.
+- Actual Download invoice event produces a valid PDF; Poppler render and extracted invoice letters/digits/amount match the visible hosted invoice. Stripe PDF font maps hyphens to NUL in text extraction, so separators are normalized. Invoice number and amount remain readable in both final PDF proof frames. Each separately recorded PDF view has its own verified download hash.
+- Empty Stripe form hints (1234 repeated) are empty placeholders, not entered card data. No form is filled or submitted. Native Stripe/PDF pages keep their own styling; app scenes are white/ink. No caption/subtitle overlays, music, camera zoom or pan. PDF viewer opens at a fixed reading scale before proof.
+- The existing 8s GIF and two social videos remain unchanged, with their earlier committed all-frame checks and light/dark README previews.
 
-The final `npm run demo -- --combine-only` run passed **332 checks** and exported both formats at **108.100 seconds**. The longer runtime follows the user's subsequent request to combine the overview with step-by-step original chat journeys. The original 59.133-second overview remains under the ignored `demo/out/overview/`.
+## Review evidence
 
-- Four real requests were typed into the original hosted Chat in headed Chromium: restock, a six-guest booking, a £120 customer invoice draft, and the matched supplier invoice. Continuous recordings include the actual response-to-document navigation, split into eight clips from measured browser/sync-marker timestamps. No response or document was fabricated.
-- Read-back from the hosted app's Stripe output API verifies the new PaymentIntent (`succeeded`), Payment Link (`active`), customer invoice (`draft`) and supplier invoice (`paid`) all have `livemode: false`. Held restock items remain held; the customer draft was not sent; the deposit checkout was not paid. No payment details were entered.
-- Every original product proof frame is byte-identical to the preserved overview proof, in both formats. The first nine products and their voice timestamps are unchanged. Opening remains 6 seconds; the single final slate is exactly 4 seconds.
-- 19 voice files correlate with final narration at **0.9765 or better**, with measured **zero offset**. Landscape and portrait audio match. Jessica Gallagher's Irish voice remains at natural speed 1. No captions, subtitle streams, music or camera motion.
-- 1920×1080 and 1080×1920 exports. Fixed crops follow the content for each hard cut; the invoice detail panel cuts to its download controls when named. Portrait excludes the navigation. Native Stripe customer pages retain authentic branding; the original app uses white/ink capture CSS without modifying data.
-- Extracted **110 two-second frames** plus **34 proof frames**, checked for login text and exposed app origins. Automated flat-area colour checks find no pink backgrounds. Visually inspected the new proof frames/contact sheets, checkout form and invoice downloads. A checkout loading-placeholder issue found in the first visual pass was fixed by waiting for the actual payment form, then re-recording that journey.
-- `npm run lint`, syntax checks on the added JavaScript modules, and `npm run test:agent9` pass. Read-only hosted UI checks: **63/63**. The full Stripe test suite was not run because it includes local Issuing actions, which the user excluded.
-- Capture plans were committed before recording (`a2d122b`, chat-first clarification `d67405e`). Credentials, raw clips, voice caches and final videos remain ignored. Updated timing JSON, proof table, new evidence frames and QA summaries are included in PR #10. No merge or deployment.
-
-## Original overview validation (preserved separately)
-
-The complete capture/edit command `npm run demo` produced both final videos at **59.133 seconds**. The final verification run passed **201 checks**.
-
-- 1920×1080 landscape; 1080×1920 portrait. Headed Chromium source: 1920×1200, scale 1. Fixed content crop, no sidebar in portrait.
-- All nine products recorded in order, with real BEFORE/action/AFTER timings in [beats.json](out/beats.json). The shotlist was committed first: 5ae466c; approved split documented in cde2b96.
-- Eight scenes use the local app and real Stripe test objects. Issuing uses the user-approved hosted app button and its real Stripe output panel. No Issuing key or Issuing action runs locally in the pipeline.
-- Fresh Stripe readbacks confirm test mode. The £80 authorization is closed with approved=false and a spending-controls decline. Connect includes an actual source-matched transfer and £3 application fee. Transfer settlement currency is shown separately from the GBP charge.
-- Agent Toolkit's customer, invoice and item writes really use its tools, with no fallback accepted for this scene. Checkout also records its actual Toolkit/SDK execution path.
-- Jessica Gallagher (Irish), eleven_multilingual_v2, natural speed 1. Character alignment sets product-name frame times; PCM correlation measures zero voice offset for every scene. Both formats have identical narration.
-- Opening card: exactly 0–6s. HeySalad closing slate: exactly the final 4s. Opening and closing spoken text match the request.
-- Individually reviewed all 18 product proof frames at full size and both two-second contact sheets, plus opening/closing frames. IDs and relevant statuses are readable in both formats; no captions, subtitles, zoom, pan, pink backgrounds, login pages or visible app URLs.
-- Automated OCR checks all 60 two-second samples and all 18 proof frames for login/URL text; flat-area colour checks reject pink backgrounds. ffprobe checks streams, dimensions, duration and starts.
-- The added workspace is disabled by default; the runner opts in with AGENT9_DEMO=1. New chat requests and real results are persisted in the existing audit store under recording rule D1. Type checks and fail-closed Agent 9 tests pass. Existing read-only UI regression tests: 63/63. The existing full test script was not run because it would trigger local Issuing, contrary to the user's instruction.
-- Raw recordings, audio caches and final MP4s stay ignored. The PR includes all 18 proof PNGs, the prefix-only table, timing JSON, contact sheets and machine evidence. Environment values and credential files are excluded.
-
-Official unmodified Stripe slate SVG c243d6a693df3a3678a8353d89199d0c7fdb5efc7d93983dea77166c5ba75f36-256: `c243d6a693df3a3678a8353d89199d0c7fdb5efc7d93983dea77166c5ba75f36`.
-
-Rebuild instructions: [README](README.md). Proof timestamps and lines: [table](out/proof-table.md). No deployment or merge is part of this work.
-
-PR: [#10](https://github.com/Hey-Salad/agent-offramp/pull/10), stacked on #8, open for review and unmerged.
+[Product proof table](out/proof-table.md), [real beats](out/beats.json), [nine chat proof frames](out/proof/), [customer proof table](out/customer-proof-table.md), [customer timestamps](out/customer-beats.json), [customer proof frames](out/customer-proof/), [PDF hash](out/documents/manifest.json), [video hashes](out/assets.json). The two-second contact sheets and OCR/PCM reports are committed in out/qa and out/customer-qa.

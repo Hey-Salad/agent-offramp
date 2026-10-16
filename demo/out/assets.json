@@ -1,0 +1,34 @@
+[
+  {
+    "file": "agent9-demo.mp4",
+    "width": 1920,
+    "height": 1080,
+    "seconds": 59.133333,
+    "bytes": 1771196,
+    "sha256": "7744c2edeaa47da3eae530e9e758fd4ad00fd3246808983ce70dc4d3dbcc3f11"
+  },
+  {
+    "file": "agent9-demo-vertical.mp4",
+    "width": 1080,
+    "height": 1920,
+    "seconds": 59.133333,
+    "bytes": 2312140,
+    "sha256": "bd15f9499f81e3b90962374ed9e291a66618b69d7fef1c2c3134d807875401ec"
+  },
+  {
+    "file": "agent9-walkthrough.mp4",
+    "width": 1920,
+    "height": 1080,
+    "seconds": 89.166667,
+    "bytes": 3222025,
+    "sha256": "a23101238f5e773cf308a59878a1f9a58be32aaa257d8e1092a1a268c8abbbc7"
+  },
+  {
+    "file": "agent9-walkthrough-vertical.mp4",
+    "width": 1080,
+    "height": 1920,
+    "seconds": 89.166667,
+    "bytes": 4617901,
+    "sha256": "ea9559cf7ac0f641d42aa960331abeec901c18e05d25b44884a5b0dc383cb87a"
+  }
+]

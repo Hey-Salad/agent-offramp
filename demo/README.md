@@ -1,10 +1,10 @@
 # Agent 9 demo pipeline
 
-`npm run demo` builds `demo/out/agent9-demo.mp4` (1920×1080) and `agent9-demo-vertical.mp4` (1080×1920), showing **all nine Stripe products through the original chat**. Target 50–60 seconds. See [nine-chat shotlist](nine-chat-shotlist.md) and [behavior/checks](nine-chat.md).
+`npm run demo` builds `demo/out/agent9-demo.mp4` (1920×1080) and `agent9-demo-vertical.mp4` (1080×1920), showing **all nine Stripe products through the original chat**. The primary overview is 59.133 seconds. It also builds `agent9-walkthrough.mp4` and `agent9-walkthrough-vertical.mp4`, extending the nine chat scenes with actual customer receipts, Checkout, deposit links, hosted invoice details and a downloaded invoice PDF. See [nine-chat shotlist](nine-chat-shotlist.md) and [behavior/checks](nine-chat.md).
 
 ## Setup
 
-Install Node dependencies with `npm ci`, Chromium with `npx playwright install chromium`, and system `ffmpeg`/`ffprobe` and `tesseract`. Run from a graphical desktop: Chromium is headed. The browser viewport and recording are 1920×1200 at device scale 1.
+Install Node dependencies with `npm ci`, Chromium with `npx playwright install chromium`, and system `ffmpeg`/`ffprobe` and `tesseract`. Customer PDF capture also needs Python 3 with `pypdf` and Poppler (`pdftoppm`). Run from a graphical desktop: Chromium is headed. The browser viewport and recording are 1920×1200 at device scale 1.
 
 Set these environment variables, or put them in the ignored `demo/.env` (chmod 600). Never put values in shell arguments, logs, screenshots or Git:
 
@@ -22,6 +22,8 @@ npm run demo -- --scene=9
 npm run demo -- --resume
 npm run demo -- --edit-only
 npm run demo -- --verify-only
+npm run demo -- --overview-only
+npm run demo -- --walkthrough-only
 node demo/legacy-run.mjs # previous mixed-interface / extended walkthrough pipeline
 ```
 
@@ -65,3 +67,11 @@ The walkthrough types four real requests in the original hosted Chat: restock; t
 `npm run demo:social` builds and checks the eight-second Issuing loop from the combined recording: `demo/out/agent9.gif`, `agent9-x.mp4`, and `agent9-square.mp4`. The small social files are committed for README/X use; full-length video and private captures remain ignored. See [candidate choices and verification](social.md). The GIF is embedded near the top of the repository README. Theme previews and all-frame security checks are under `demo/out/gif-proof/`.
 
 The hosted Issuing scene now uses the original chat (`Spend £80 at Ocado`) rather than the standalone card page, following the user's later direction. `demo/chat-card-record.mjs` captures a separate chat journey and actual response/proof timestamps. Social exports prefer that verified source when present. The full overview and combined video also use the chat recording for Issuing; their lengths and voice timings stay unchanged. See [chat-card deployment and checks](chat-card.md).
+
+## Customer-facing pages and PDF
+
+The [customer shotlist](customer-shotlist.md) preserves the short overview and records separate actual customer journeys. `--walkthrough-only` refreshes those journeys using the existing overview; `--edit-only --walkthrough-only` re-edits them without creating new test objects. The invoice PDF is downloaded using Stripe’s real Download invoice button, checked against the invoice number and amount, hashed, and opened in Chromium’s native viewer. Its fixed document scale fits the portrait crop; there is no camera zoom. A draft invoice is never represented as having a finalized PDF. The paid invoice is a separate, matching supplier-invoice test example. Empty Stripe card-field placeholders are never entered card numbers. No Checkout is submitted.
+
+## GitHub assets
+
+At the user's request, the four final MP4s and matching test invoice PDF are committed on the PR branch. Raw recordings, voice caches, credentials, private deployment logs and intermediate clips remain ignored. The PDF export hash are in `demo/out/documents/manifest.json`. `npm run demo` refreshes the exports; explicitly stage the four MP4s and `documents/` after rebuilding because `demo/out/` remains ignored by default.

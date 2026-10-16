@@ -17,7 +17,7 @@ Use one headed Playwright journey per task. For each measured stage retain a sho
 - Existing 59.133s overview stays intact and passes its existing checks.
 - Separate landscape and portrait `agent9-walkthrough` exports retain all nine chat scenes and add all five customer stages.
 - Real links are clicked, Stripe Dashboard is blocked, empty payment fields stay empty.
-- Downloaded PDF is application/pdf; displayed bytes match the download hash and matching real test invoice; PDF text/render includes the correct invoice/amount.
+- Downloaded file has a valid %PDF- header and parses in Poppler (Stripe serves application/octet-stream); displayed bytes match the download hash and matching real test invoice; PDF text/render includes the correct invoice/amount.
 - Proof frames for all five customer stages, both formats; narration measured against final audio; two-second extracts inspected for secrets, login screens, app origin and cropping.
 - Public Stripe placeholders (e.g. 1234 1234 1234 1234) are empty form hints, not filled card data. Checks distinguish these from an entered card number.
 - Shotlist, scripts, safe timestamps and proof evidence committed to PR #10; no merge.

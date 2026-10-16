@@ -14,7 +14,11 @@
   <img src="demo/out/agent9.gif" alt="Agent 9 demo: card declines an overspend" width="720">
 </p>
 
-**Nine business tasks, one chat:** pay suppliers, collect a payment, take a deposit, invoice a customer, control card spending, pay a partner, start a subscription, use a scoped token, and run Stripe agent tools. Each example shows its real Stripe test result. [Chat examples and video pipeline](demo/nine-chat.md).
+**Nine business tasks, one chat:** pay suppliers, collect a payment, take a deposit, invoice a customer, control card spending, pay a partner, start a subscription, use a scoped token, and run Stripe agent tools. Each example shows its real Stripe test result. [Chat examples and video pipeline](demo/nine-chat.md). A separate [customer walkthrough](demo/customer-pages.md) opens the real receipts, payment pages and invoice PDF.
+
+Watch or download: [59s chat demo](demo/out/agent9-demo.mp4) · [89s customer walkthrough](demo/out/agent9-walkthrough.mp4) · [vertical demo](demo/out/agent9-demo-vertical.mp4) · [vertical walkthrough](demo/out/agent9-walkthrough-vertical.mp4).
+
+Real Stripe test document: [invoice PDF](demo/out/documents/agent9-test-invoice.pdf). The walkthrough also opens the actual customer receipt. No real-money payment.
 
 Write your agent's spending rules in plain English in [`policy.md`](policy.md). Agent 9 checks every spend against them **before** Stripe is touched, then a Stripe Issuing virtual card enforces the same limits again at the card network. The AI can ask; it can't override. The example agent in the demo is Sally, who restocks a kitchen.
 

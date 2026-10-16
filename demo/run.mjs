@@ -7,9 +7,12 @@ import {prepareVenue} from './setup.mjs';
 import {edit} from './edit.mjs';
 import {verify} from './verify.mjs';
 import {verifyNineChat} from './nine-chat-check.mjs';
+import {customers} from './customer-run.mjs';
 dotenv.config({path:'demo/.env',quiet:true});
 const root=path.resolve('demo/work/nine-chat'),out=path.resolve('demo/out');
 try{
+ const walkthroughOnly=process.argv.includes('--walkthrough-only');
+ if(!walkthroughOnly){
  await fs.mkdir(root,{recursive:true});
  const editOnly=process.argv.includes('--edit-only'),verifyOnly=process.argv.includes('--verify-only');
  if(!editOnly&&!verifyOnly){
@@ -32,4 +35,6 @@ try{
   await fs.rm(out+'/proof',{recursive:true,force:true});await edit(root,out);
  }
  await verify(out,root);await verifyNineChat();
+ }
+ if(!process.argv.includes('--overview-only'))await customers({editOnly:process.argv.includes('--edit-only'),verifyOnly:process.argv.includes('--verify-only')});
 }catch(e){let message=String(e.message).replace(/https?:\S+/g,'[private URL]');for(const[k,v]of Object.entries(process.env))if(v&&(k.includes('KEY')||k==='APP_URL'))message=message.replaceAll(v,'[redacted]');console.error(message);process.exitCode=1}
