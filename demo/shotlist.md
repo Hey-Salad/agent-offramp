@@ -43,3 +43,7 @@ At PR #8 head 21d5452, the hosted UI has Stripe output panels, but chat does not
 - [ ] Jessica VO, exact opening and closing; final duration 50–60 seconds; last slate exactly 4 seconds.
 - [ ] Fixed 1920×1080 and content-centred 1080×1920 exports; all nine proof frames and prefix-only table saved and attached to a PR.
 - [ ] Build/type checks, tests and runtime assertions pass. No merge or deployment implied by the PR.
+
+## Approved target update (before recording)
+
+The user approved local recording with real Stripe test objects for eight scenes. They explicitly instructed that Issuing be recorded on the hosted app instead: click **£80 at Ocado**, then open its newest real decline in **Stripe output**. This scene therefore uses the hosted card button rather than a missing hosted chat command. No Issuing key is copied or used locally. `APP_URL` supplies that hosted origin privately. The capture stylesheet changes presentation to white/ink and limits visible history to the newest real row and authorization; it never changes Stripe data or inserts proof. The local workspace at `/agent9` is part of this PR, not a deployment claim.
