@@ -9,6 +9,7 @@ import { mountRestaurant } from "./restaurant.js";
 import { mountTwilio } from "./twilio.js";
 import { mountMcp } from "./mcp.js";
 import { mountShop } from "./shop.js";
+import { mountUi, CSS } from "./ui.js";
 import { mountStripeExtra, decideAuthorization, stripeX, stripeI } from "./stripe-extra.js";
 
 const app = express();
@@ -37,6 +38,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 mountMcp(app);
 mountStripeExtra(app);
+mountUi(app);
 // Cognee memory: preferences, past orders and spend decisions.
 app.post("/api/memory/remember", async (req, res) => { const t = String(req.body?.text || "").slice(0, 4000); if (!t) return res.status(400).json({ error: "text required" }); res.json(await remember(t)); });
 app.post("/api/memory/recall", async (req, res) => { const q = String(req.body?.query || "").slice(0, 1000); if (!q) return res.status(400).json({ error: "query required" }); res.json(await recall(q)); });
@@ -225,7 +227,7 @@ app.get("/policy", (_q, res) => res.type("text/plain").send(fs.readFileSync("pol
 app.get("/shop", (_q, res) => res.send(home()));
 app.post("/", (req, res) => { const r = createRun(req.body.text, "web"); res.redirect(`/approve/${r.id}`); });
 
-const css = `body{font-family:system-ui;background:#fff8f6;color:#1f1416;max-width:860px;margin:auto;padding:24px}h1{color:#ed4c4c}.card{background:#fff;border:2px solid #faa09a;border-radius:14px;padding:16px;margin:12px 0}table{width:100%;border-collapse:collapse}td,th{padding:6px;border-bottom:1px solid #faa09a;text-align:left;font-size:14px}.approved{color:#1f1416}.blocked{color:#ed4c4c;text-decoration:line-through}.needs_approval{color:#b8573f}button,.btn{background:#ed4c4c;color:#fff8f6;border:0;border-radius:10px;padding:12px 20px;font-size:16px;cursor:pointer;text-decoration:none}.bar{height:14px;background:#faa09a;border-radius:7px}.fill{height:14px;background:#ed4c4c;border-radius:7px}pre{white-space:pre-wrap;font-size:12px}a{color:#ed4c4c}input[type=text]{width:70%;padding:10px;border:2px solid #faa09a;border-radius:8px}`;
+const css = CSS;
 const esc = (s: any) => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
 function home() {
   return `<!doctype html><title>Off-Ramp</title><style>${css}</style><h1>🥗 Off-Ramp</h1><p>Agents shop. Humans pay. Every pound explained.</p>

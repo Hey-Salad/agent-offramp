@@ -1,0 +1,14 @@
+# Sally (HeySalad)
+> Open-source money agent. Spends within a written policy (policy.md) using Stripe test mode, holds anything over a limit for a human, and explains every pound.
+
+## Use
+- MCP stdio: `SALLY_URL=http://localhost:3000 npx tsx src/mcp.ts`; HTTP: `<base>/mcp`
+- Tools: restock, shop, book_table, pay_supplier_invoice, prepare_invoice, send_invoice, email_shopping_list_draft, approve, get_audit, get_policy, remember, recall, issue_card, pay_venue, subscribe_sally_plus, pay_with_shared_token
+- HTTP: POST /api/chat {"text": "..."}; GET /api/records/:id; GET /policy
+- Pages: /money /payments /receipt/:id /card /invoices /billing /connect /audit
+
+## Docs
+- [README](README.md)
+- [AGENTS.md](AGENTS.md): calling Sally from another agent
+- [policy.md](policy.md): the rules
+- [examples/](examples/): walkthroughs and a forkable policy

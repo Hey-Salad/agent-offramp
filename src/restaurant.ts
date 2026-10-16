@@ -5,6 +5,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import { memory, recall } from "./memory.js";
 import { stripeWrite } from "./toolkit.js";
+import { layout, recordPage, auditPage, CSS } from "./ui.js";
 
 export const RPOLICY = {
   weeklyCapGBP: 150, approvalThresholdGBP: 25, licensedForAlcohol: false,
@@ -224,7 +225,7 @@ export function mountRestaurant(app: Express, stripe: Stripe | null, BASE: strin
   app.get("/heysalad-logo-black.svg", (_q, res) => res.sendFile("heysalad-logo-black.svg", { root: "public" }));
 }
 
-export const css = `body{font-family:system-ui;background:#fff8f6;color:#1f1416;max-width:900px;margin:auto;padding:24px}h1,h2{color:#ed4c4c}.card{background:#fff;border:2px solid #faa09a;border-radius:18px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}button,.btn{background:#ed4c4c;color:#fff8f6;border:0;border-radius:999px;padding:12px 22px;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}.ghost{background:#faa09a;color:#1f1416}table{width:100%;border-collapse:collapse}td,th{padding:6px;border-bottom:1px solid #faa09a;text-align:left;font-size:14px}.blocked{color:#ed4c4c;text-decoration:line-through}.pill{border-radius:999px;background:#faa09a;padding:2px 10px;font-size:12px}a{color:#ed4c4c}pre{white-space:pre-wrap;font-size:12px}input{padding:10px;border:2px solid #faa09a;border-radius:999px;width:70%}`;
+export const css = CSS;
 const esc = (s: any) => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
 function links(s: any) {
   const out: string[] = [];
@@ -232,26 +233,11 @@ function links(s: any) {
   walk(s); return out.join(" ");
 }
 function homePage() {
-  return `<!doctype html><title>Sally for restaurants</title><style>${css}</style><h1>🥗 Sally for restaurants</h1><p>One agent. A written policy. Real Stripe (test) money. Every pound explained.</p>
+  return layout("Classic", `<h1>Sally for restaurants</h1><p>One agent. A written policy. Real Stripe (test) money. Every pound explained.</p>
 <div class="grid">
 <div class="card"><h3>1 · Restock</h3><p>Sally restocks the kitchen. Within policy she pays; big items wait for you.</p><button onclick="go('/demo/restock')">Restock the kitchen</button></div>
 <div class="card"><h3>2 · Host booking</h3><input id="bk" value="Table for 6 Saturday 8pm"><p>Groups of 6+ pay a £10/head deposit.</p><button onclick="go('/demo/booking',{text:bk.value})">Take booking</button></div>
 <div class="card"><h3>3 · Supplier invoice</h3><p>Sally checks the invoice against the PO, then pays it.</p><button onclick="go('/demo/invoice')">Pay matching invoice</button><br><br><button class="ghost" onclick="go('/demo/invoice',{mismatch:1})">Try mismatched one</button></div>
 </div><p id="msg"></p><p><a class="btn ghost" href="/audit">Every pound (audit)</a> <a class="btn ghost" href="/policy">policy.md</a></p>
-<script>async function go(u,b){msg.textContent='Sally is working…';const r=await fetch(u,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b||{})});const j=await r.json();location='/r/'+j.id}</script>`;
-}
-function recordPage(r: any) {
-  const rows = r.decisions.map((d: any) => `<tr class="${d.status}"><td>${esc(d.name)}${d.supplier ? ` <span class="pill">${esc(d.supplier)}</span>` : ""}</td><td>${gbp(d.price)}</td><td>${esc(d.status.replace("_", " "))}</td><td>${d.clause}</td><td><a href="#" onclick="why(${JSON.stringify(esc(d.sku || d.name))});return false">Why?</a></td></tr>`).join("");
-  const act = r.status === "awaiting_human" ? `<form method="post" action="/r/${r.id}/approve" class="card"><p>Sally stopped: something needs a human (see flagged lines).</p><button>Approve &amp; pay</button></form>` : "";
-  const dinr = r.status === "awaiting_diner" ? `<div class="card"><p>Send this to the diner (pay with 4242 4242 4242 4242):</p><a class="btn" target=_blank href="${esc(r.stripe.paymentLink.url)}">Pay £${r.total} deposit</a> <a class="btn ghost" href="/r/${r.id}/paid">Check payment</a></div>` : "";
-  return `<!doctype html><title>${r.id}</title><style>${css}</style><p><a href="/">← Sally</a></p><h1>${esc(r.demo)} · ${gbp(r.total)} · <span class="pill">${esc(r.status)}</span></h1>
-<div class="card"><b>Request:</b> “${esc(r.request)}”<p>${links(r.stripe) || "No Stripe object yet"}</p></div>${act}${dinr}
-<div class="card"><table><tr><th>Line</th><th>£</th><th>Decision</th><th>Clause</th><th></th></tr>${rows}</table><p id="w" class="pill" style="display:block;padding:10px"></p></div>
-<div class="card"><h3>Audit trail</h3><pre>${esc(JSON.stringify(r.audit, null, 2))}</pre></div>
-<script>async function why(q){const j=await (await fetch('/r/${r.id}/why?q='+encodeURIComponent(q))).json();w.textContent='Sally: '+j.answer}</script>`;
-}
-function auditPage() {
-  const rs = memory.all().filter((r: any) => r.demo);
-  const rows = rs.flatMap((r: any) => r.decisions.filter((d: any) => d.price > 0).map((d: any) => `<tr class="${d.status}"><td><a href="/r/${r.id}">${r.id}</a></td><td>${esc(r.demo)}</td><td>${esc(d.name)}</td><td>${gbp(d.price)}</td><td>${esc(d.status)}</td><td>${d.clause}</td><td>${esc(d.reason)}</td></tr>`)).join("");
-  return `<!doctype html><title>Audit</title><style>${css}</style><p><a href="/">← Sally</a></p><h1>Every pound</h1><div class="card"><table><tr><th>Record</th><th>Demo</th><th>Line</th><th>£</th><th>Decision</th><th>Clause</th><th>Why</th></tr>${rows}</table></div>`;
+<script>async function go(u,b){msg.textContent='Sally is working…';const r=await fetch(u,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b||{})});const j=await r.json();location='/r/'+j.id}</script>`, "/");
 }

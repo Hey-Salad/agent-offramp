@@ -1,162 +1,78 @@
-<p align="center"><img src="public/heysalad-logo-black.svg" alt="HeySalad" height="56"></p>
+<p align="center"><img src="public/heysalad-logo-black.svg" alt="HeySalad" height="48"></p>
 
-<h1 align="center">Sally by HeySalad</h1>
-<p align="center"><b>The AI agent that spends your money like you would, and can explain every pound.</b></p>
+<h1 align="center">Sally</h1>
+<p align="center"><b>Give your AI a card it can't misuse.</b></p>
+<p align="center">Tell Sally “restock the kitchen”. She pays what's within your policy and holds the rest for you, then explains every pound.</p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Stripe-test%20mode-635bff?style=for-the-badge" alt="Stripe test mode">
-  <img src="https://img.shields.io/badge/MCP-16%20tools-111?style=for-the-badge" alt="MCP">
-</p>
+<!-- HERO: add assets/demo.gif (15–20s: Sally shops, then the card declines £80), then uncomment:
+<p align="center"><img src="assets/demo.gif" alt="Sally restocks the kitchen; the card declines £80" width="720"></p>
+-->
 
-Sally restocks the kitchen, takes deposits, pays supplier invoices and shops real grocers in her own cloud browser. She works by chat, SMS, voice or any MCP client. Every action passes a written spending policy **before** Stripe is touched. Anything over the limit waits for a human, and every pound gets an audit trail that cites the policy clause behind it.
+Sally is an open-source money agent. You write the rules in plain English in [`policy.md`](policy.md). Sally checks every spend against them **before** Stripe is touched, and her Stripe Issuing card enforces the same limits again at the card network. The AI can ask; it can't override.
 
-**Track:** Agents that spend
+## Use it three ways
 
-## Features
-| | What Sally does | Stripe |
+**1. In your AI (MCP).** Works with Claude, Cursor, Codex and ChatGPT.
+```bash
+npm install && npm run dev                      # start Sally on :3000
+claude mcp add sally -e SALLY_URL=http://localhost:3000 -- npx tsx src/mcp.ts
+```
+Cursor / Claude Desktop:
+```json
+{ "mcpServers": { "sally": { "command": "npx", "args": ["tsx", "/path/to/sally/src/mcp.ts"], "env": { "SALLY_URL": "http://localhost:3000" } } } }
+```
+Or point any MCP client at `<your-url>/mcp` (Streamable HTTP).
+
+**2. Run locally.**
+```bash
+cp .env.example .env    # add a Stripe TEST key (sk_test_...)
+npm install && npm run dev
+open http://localhost:3000
+```
+
+**3. Self-host on Modal.** Put your keys in Modal secrets (see `modal_app.py`), then `modal deploy modal_app.py`. Sally refuses to start with a live key.
+
+## Try to make Sally overspend
+These are real cases from the code. Run them and watch them fail.
+
+| You try | Sally says | Rule |
 |---|---|---|
-| 🛒 **Restock** | Builds the basket, auto-pays items within policy, holds anything over £25 for approval | PaymentIntents |
-| 🍽️ **Bookings** | Groups of 6+ get a £10/head deposit link, and allergies go to staff | Payment Links / Checkout |
-| 🧾 **Supplier invoices** | 3-way PO check, then pays. Mismatches wait for a human | Invoicing |
-| 📤 **Bill customers** | Drafts and sends invoices. Over £500 needs approval | Invoicing |
-| 🤖 **Autonomous shop** | Shops Ocado and Waitrose live in a Modal cloud browser, basket only | n/a |
-| 🧠 **Memory** | Remembers preferences, past orders and spend decisions with Cognee | n/a |
-| 🔌 **Use Sally in your AI** | 16 tools over MCP (`/mcp`) for Claude, Cursor, ChatGPT and more | Agent toolkit |
-| 🔍 **Explains every pound** | `/audit`, `/r/:id/why` and a live audit panel | IDs on every line |
+| £80 on her card at Ocado | Declined by Stripe: over £50 per authorisation | P2 + Issuing spending controls |
+| £10 at an off-licence | Declined by Stripe: category not allowed | P3 + Issuing allowed categories |
+| Wine in the restock | Blocked: no premises licence | R4 |
+| Truffle oil from Amazon | Blocked: not an approved supplier | R3 |
+| £32.50 olive oil | Held for your OK: over £25 per item | R2 |
+| Supplier invoice with a £35 surcharge not on the PO | Held: invoice doesn't match the purchase order | I2 |
+| Send a £600 customer invoice | Held: over £500 needs approval | I4 |
+| Shared payment token over its limit | Refused before Stripe is called | P2 |
+| “Table for 8, one nut allergy” | Goes to staff, not the agent | H2 |
 
-## Architecture
+Found a way round the policy? [Open an issue](../../issues) with the prompt. That's a bug, and we want it.
+
+## The 16 MCP tools
+`restock` · `shop` · `book_table` · `pay_supplier_invoice` · `prepare_invoice` · `send_invoice` · `email_shopping_list_draft` · `approve` · `get_audit` · `get_policy` · `remember` · `recall` · `issue_card` · `pay_venue` · `subscribe_sally_plus` · `pay_with_shared_token`
+
+Every tool calls Sally's own API, so `policy.md` always runs server-side.
+
+## See the money
+Every Stripe object has a page, linked from the top nav: `/money` (overview), `/payments` and `/receipt/:id`, `/card` (Issuing authorisations), `/invoices`, `/billing`, `/connect`, `/audit`. Each one links to the matching test-mode object in your Stripe dashboard.
+
+## Make it yours
+- Fork [`examples/policy.md`](examples/policy.md) and change the numbers.
+- Walkthroughs: [restock](examples/restock.md) · [booking deposit](examples/booking-deposit.md) · [supplier invoice](examples/supplier-invoice.md) · [grocery shop](examples/grocery-shop.md)
+- Calling Sally from another agent: [AGENTS.md](AGENTS.md) · for LLMs: [llms.txt](llms.txt)
+
+## How it works
 ```mermaid
 flowchart LR
-  U[Chat · SMS · Voice] --> R[Sally router]
-  M[MCP clients<br/>Claude · Cursor · ChatGPT] -->|/mcp| R
-  R --> P{{Policy engine<br/>policy.md}}
-  P -->|within policy| S[(Stripe test mode<br/>PaymentIntents · Checkout · Invoicing)]
-  P -->|over limit| H[Human approval]
+  A[Chat · SMS · Voice · MCP] --> R[Sally]
+  R --> P{{policy.md}}
+  P -->|within policy| S[(Stripe test mode)]
+  P -->|over limit| H[You approve]
   H --> S
-  R --> B[Modal cloud browser<br/>Sally extension · live view]
-  R <--> C[(Cognee memory)]
-  S --> A[Audit trail<br/>/audit · /r/:id/why]
-  P --> A
+  S --> L[Audit: every pound, every clause]
   style P fill:#ed4c4c,color:#fff,stroke:#ed4c4c
-  style R fill:#fff0f0,stroke:#ed4c4c
 ```
+Stripe: PaymentIntents, Checkout, Payment Links, Invoicing, Issuing, Connect, Billing and shared payment tokens, through the [Stripe Agent Toolkit](https://github.com/stripe/ai). Memory: [Cognee](https://cognee.ai) (optional). Test mode only.
 
-## A spend, with approval and audit
-```mermaid
-sequenceDiagram
-  actor User
-  participant Sally
-  participant Policy as Policy engine
-  participant Stripe as Stripe (test)
-  participant Audit
-  User->>Sally: "Restock the kitchen"
-  Sally->>Policy: basket (amounts from policy, never the model)
-  Policy-->>Sally: £18 OK (R1) · £40 held (R2 > £25)
-  Sally->>Stripe: pay £18
-  Stripe-->>Sally: PaymentIntent pi_…
-  Sally->>Audit: log decision + clause + Stripe ID
-  Sally-->>User: "Paid £18. £40 needs your OK"
-  User->>Sally: Approve
-  Sally->>Stripe: pay £40
-  Sally->>Audit: approved by human + pi_…
-  Sally-->>User: Done, here's why for every pound
-```
-
-## Stripe features used
-| Feature | Status | Where in the code |
-|---|---|---|
-| **Payments** (PaymentIntents) | ✅ Built | Restock auto-pay and approved items, autonomous shop (`restaurant.ts`, `shop.ts`) |
-| **Checkout** | ✅ Built | `checkout.sessions.create` for approvals and payments (`server.ts`) |
-| **Payment Links** | ✅ Built | Booking deposits for 6+ (`restaurant.ts`) |
-| **Invoicing** | ✅ Built | Supplier invoices created, finalised and paid, plus customer invoices drafted and sent (`restaurant.ts`) |
-| **Agent toolkit / MCP** | ✅ Built | `@stripe/agent-toolkit` plus Sally's 16 tools at `/mcp` (`mcp.ts`, `toolkit.ts`) |
-| **Issuing** (virtual cards) | ✅ Built | `issue_card`: Sally's virtual card on an Issuing-for-Connect connected account, with spending controls mirroring policy.md (£50 per authorisation, £200 weekly, grocery and restaurants only). Verified with test authorisations: £12 grocery approved, £80 and a liquor store declined by Stripe. An `issuing_authorization.request` webhook applies the same rules. Uses `STRIPE_ISSUING_KEY` (falls back to `STRIPE_SECRET_KEY`) |
-| **Connect** | ✅ Built | Venue connected account plus a destination charge with a HeySalad application fee (`pay_venue`) |
-| **Billing** | ✅ Built | Sally Plus £9/month via Products, Prices and Subscriptions (`subscribe_sally_plus`) |
-| **Shared payment tokens** | ✅ Built | Scoped, expiring SPT charged via PaymentIntent (`pay_with_shared_token`). In test mode the grant comes from Stripe's test helper |
-
-Stripe test mode only: `sk_test_` is enforced at deploy.
-
-## How we built it
-- **Stack:** Node 20 + TypeScript (Express via `tsx`), with one chat UI (`public/chat.html`). Twilio handles SMS and voice, and OpenAI Realtime handles talking to Sally.
-- **Policy engine:** `policy.md` rules (R1–R4, H1, I1–I4, S1) run in code **before** any Stripe call. Amounts come from policy and the basket, never the model, and anything over a limit goes to human approval.
-- **Stripe test mode:** real test objects (PaymentIntents, Checkout Sessions, Payment Links, Customers, Invoices), with webhooks confirming payment.
-- **Audit log:** every decision is appended with its policy clause and Stripe ID, shown live in the panel, at `/audit` and at `/r/:id/why`.
-- **MCP:** Sally is an MCP server (stdio + Streamable HTTP `/mcp`) with 16 tools: restock, book_table, pay_supplier_invoice, prepare_invoice, send_invoice, email_shopping_list_draft, approve, get_audit, get_policy, shop, remember, recall, issue_card, pay_venue, subscribe_sally_plus and pay_with_shared_token. Every tool calls Sally's own API, so the policy can't be bypassed.
-- **Modal:** the app runs on Modal (`modal_app.py`, with a volume-backed `data/`). Sally's cloud browser is a Modal sandbox running Playwright Chromium, the Sally extension and a noVNC live view, which shop Ocado and Waitrose basket-only.
-
-## Cognee memory
-Sally stores shopping preferences, past orders and spending decisions in [Cognee](https://cognee.ai) and recalls them when she plans a shop or explains a spend. Set `COGNEE_API_KEY` and `COGNEE_BASE_URL` (your tenant URL). Without them, Sally falls back to her local store, so the demo never blocks.
-
-## Brand
-<img src="https://img.shields.io/badge/-%23ed4c4c-ed4c4c?style=flat-square" alt="#ed4c4c"> HeySalad red `#ed4c4c` · <img src="https://img.shields.io/badge/-%23111111-111111?style=flat-square" alt="#111"> ink `#111111` · white
-
----
-
-Built on **Stripe Agent Toolkit — [github.com/stripe/ai](https://github.com/stripe/ai)** (`@stripe/agent-toolkit`, MIT). Stripe test mode only. MIT licensed.
-
-## 3 demos (type them in the chat, or text/call the Twilio number)
-1. **Restock the kitchen** — Sally builds the basket, pays what is within policy (R1–R4), holds anything over £25 (R2), blocks alcohol and unapproved suppliers. Tap **Approve & pay** (or text `YES <id>`) for the rest.
-2. **Table for 6 Saturday 8pm** — groups of 6+ get a £10/head deposit Stripe Payment Link (H1). No human raises the bill. Allergy mentions go to staff.
-3. **Pay the Bidfood invoice** — Sally checks supplier + purchase order (I1–I3), then creates and pays a Stripe invoice. Mismatches wait for a human.
-
-## How it maps to judging
-| Criterion | Where |
-|---|---|
-| Money moves in Stripe test mode | PaymentIntents, Payment Links, Customers, Invoices + invoice items: real test objects |
-| Autonomy within policy | `policy.md` rules run in code **before** any Stripe call; amounts come from policy, never the model; over-limit → human |
-| Explains every pound | Live audit panel, `/r/:id/why`, `/audit`, every line cites a clause |
-| Product & creativity | One agent across chat, SMS and voice for a real restaurant |
-
-## Quickstart
-```bash
-npm install
-cp .env.example .env   # STRIPE_SECRET_KEY=sk_test_...
-npm run dev            # http://localhost:3000
-```
-
-## Twilio (SMS + voice)
-Set `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_PHONE_NUMBER`, `PUBLIC_URL` in `.env`. On the number in the Twilio console:
-- Messaging webhook: `POST {PUBLIC_URL}/sms`
-- Voice webhook: `POST {PUBLIC_URL}/voice`
-
-Requests are signature-checked when `TWILIO_AUTH_TOKEN` is set. Phone triggers appear live in the web chat.
-
-## For other agents
-See [AGENTS.md](AGENTS.md): `POST /api/chat {"text": "..."}`.
-
-## Voice (talk to Sally)
-Tap the mic in the composer. With `OPENAI_API_KEY` set, the browser opens an **OpenAI Realtime** (`gpt-realtime`, WebRTC) session using a 2-minute ephemeral secret from `POST /api/realtime/session`; the key never leaves the server. The model only picks a tool (`restock`, `book_table`, `pay_supplier_invoice`, `prepare_invoice`, `send_invoice`, `email_shopping_list_draft`, `approve`); the browser runs it through `/api/chat`, so policy and Stripe calls stay server-side. Sessions auto-stop after 2 minutes idle. Without a key it falls back to the browser Web Speech API (en-GB) + speechSynthesis.
-
-Try: "prepare an invoice for Acme Ltd £120 for catering", "send the invoice", "do the shopping", "email me the shopping list" (draft only, never sent).
-
-## Use Sally in your AI
-
-Sally is also an MCP server, so Claude, Cursor, Codex and ChatGPT can use her as a plugin. Every tool calls Sally's own API, so `policy.md` is enforced on the server: an AI can ask, but it can't override the policy.
-
-Tools: `restock`, `book_table`, `pay_supplier_invoice`, `prepare_invoice`, `send_invoice`, `email_shopping_list_draft`, `approve(id)`, `get_audit`, `get_policy`. Each one returns a short summary, the record as JSON and the Stripe link.
-
-- **stdio:** `SALLY_URL=http://localhost:3000 npx tsx src/mcp.ts` (run `npm run dev` first)
-- **HTTP (Streamable):** `<PUBLIC_URL>/mcp`
-
-**Claude Desktop** (`claude_desktop_config.json`) and **Cursor** (`.cursor/mcp.json`):
-```json
-{ "mcpServers": { "sally": { "command": "npx", "args": ["tsx", "/path/to/agent-offramp/src/mcp.ts"], "env": { "SALLY_URL": "http://localhost:3000" } } } }
-```
-**Claude Code:** `claude mcp add --transport http sally <PUBLIC_URL>/mcp`
-(or locally: `claude mcp add sally -e SALLY_URL=http://localhost:3000 -- npx tsx src/mcp.ts`)
-
-**Codex** (`~/.codex/config.toml`):
-```toml
-[mcp_servers.sally]
-command = "npx"
-args = ["tsx", "/path/to/agent-offramp/src/mcp.ts"]
-env = { SALLY_URL = "http://localhost:3000" }
-```
-**ChatGPT:** Settings → Connectors (developer mode) → add a custom connector with the URL `<PUBLIC_URL>/mcp`.
-
-To test it, run `npx tsx scripts/mcp-test.ts`. This lists the tools and calls `restock` and `get_audit` over both stdio and HTTP.
-
-## Next
-
-- **Sally Spend** ([github.com/Hey-Salad/sally-spend](https://github.com/Hey-Salad/sally-spend)): a Stripe Issuing test virtual card whose per-payment and monthly limits and MCC allowlist are enforced by the card itself, plus an audit that cites the policy clause for each decision.
+[Contributing](CONTRIBUTING.md) · MIT licence · Built by [HeySalad](https://heysalad.io)
