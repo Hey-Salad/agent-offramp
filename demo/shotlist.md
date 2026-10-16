@@ -47,3 +47,22 @@ At PR #8 head 21d5452, the hosted UI has Stripe output panels, but chat does not
 ## Approved target update (before recording)
 
 The user approved local recording with real Stripe test objects for eight scenes. They explicitly instructed that Issuing be recorded on the hosted app instead: click **£80 at Ocado**, then open its newest real decline in **Stripe output**. This scene therefore uses the hosted card button rather than a missing hosted chat command. No Issuing key is copied or used locally. `APP_URL` supplies that hosted origin privately. The capture stylesheet changes presentation to white/ink and limits visible history to the newest real row and authorization; it never changes Stripe data or inserts proof. The local workspace at `/agent9` is part of this PR, not a deployment claim.
+
+## Combined walkthrough cut — 16 October, before recording
+
+The user requested the original-interface processes **in the video, combined with the existing video**. Keep the completed 59.13s nine-product overview, remove its closing slate, insert the following original-interface walkthrough, then restore the same 4s closing. This extended cut intentionally exceeds the original 50–60s overview budget; preserve the overview separately. Target combined runtime: 95–115s, natural speech and readable pages. No captions, music, zoom or animated crops. Hard cuts only.
+
+These are existing real test records, explicitly described as examples, not newly performed payments. Capture live browser navigation, never animate screenshots. The source is the original hosted app and its actual public Stripe documents. Do not approve held payments, send invoices or enter payment details. Native Stripe page branding remains unchanged. A presentation-only stylesheet makes the original app white/ink and its content column portrait-safe, without altering any data or labels.
+
+| Scene | Before → action → after | Voice line | Target |
+| --- | --- | --- | --- |
+| W1 Restock example | Open existing original restock record; show paid, held and blocked item decisions | Here is a restock in the original app. Paid purchases and items needing approval stay separate. | 6–7s |
+| W2 Itemised receipt | Click Receipt from that record → app receipt, item amounts and policy clauses | Open the itemised receipt to see each purchase and the rule behind it. | 5–6s |
+| W3 Stripe receipt | Click Stripe receipt → real test receipt, amount and payment details | Then open Stripe's receipt, with the amount and payment details. | 4–5s |
+| W4 Booking link | Existing six-guest booking record → actual deposit link ready, sixty pounds | For six guests, Sally prepares a sixty-pound deposit link. | 4–5s |
+| W5 Customer checkout | Click Payment link → actual Stripe Sandbox checkout, unpaid | Open it to see your customer's secure checkout, ready for payment. | 4–5s |
+| W6 Invoice draft | Original Invoices list → real £120 draft row with identifier and status | Customer invoices start as drafts, ready for your review. | 4–5s |
+| W7 Supplier checks | Open existing £184.60 paid supplier-bill record → three line items and clauses | For supplier bills, the app shows the checks against your order. | 4–5s |
+| W8 Invoice documents | Click Stripe invoice → existing paid test invoice → expand payment details | Open a paid example to see the invoice, line items and downloadable receipt. | 6–7s |
+
+Acceptance before publishing: preserve every original nine-product clip and its proof; keep opening and final slate; new voice names a document only after it appears; measure actual browser phases in beats JSON; extract new proof images from both final videos; inspect every two-second frame for login pages, exposed app origins, cropping and styling; correlate every added voice line with final audio; probe both export dimensions/runtime/no subtitles; update PR #10 without merge or deployment.
