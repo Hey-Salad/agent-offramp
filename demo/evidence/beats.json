@@ -1,82 +1,85 @@
 {
-  "schema": 2,
+  "schema": 3,
   "captions": false,
   "audioPlaybackRate": 1,
+  "provider": "elevenlabs",
+  "model": "eleven_multilingual_v2",
+  "voice": "Megan",
+  "voiceId": "45Ax8wdajmGTaLOJAJwK",
   "syntheticVoice": true,
-  "model": "gpt-4o-mini-tts",
-  "voice": "marin",
+  "speed": 1,
   "fps": 30,
   "timeline": [
     {
       "id": "hook",
       "text": "Save time and money. I gave my AI a credit card.",
       "start": 0,
-      "end": 3.966666666666667,
-      "duration": 3.966666666666667,
-      "voiceDuration": 3.94475,
+      "end": 3.6,
+      "duration": 3.6,
+      "voiceDuration": 3.57575,
       "playbackRate": 1
     },
     {
       "id": "basket",
       "text": "Sally restocks the kitchen, pays Waitrose, and holds anything that needs my approval.",
-      "start": 3.966666666666667,
-      "end": 9.166666666666666,
-      "duration": 5.199999999999999,
-      "voiceDuration": 5.19325,
+      "start": 3.6,
+      "end": 8.233333333333333,
+      "duration": 4.633333333333333,
+      "voiceDuration": 4.606083,
       "playbackRate": 1
     },
     {
       "id": "approve",
       "text": "This item is over twenty-five pounds, so she asks me first. One click, and it's paid.",
-      "start": 9.166666666666666,
-      "end": 14.6,
-      "duration": 5.433333333333334,
-      "voiceDuration": 5.426958,
+      "start": 8.233333333333333,
+      "end": 14.4,
+      "duration": 6.166666666666668,
+      "voiceDuration": 6.1375,
       "playbackRate": 1
     },
     {
       "id": "attempt",
       "text": "Then I tried eighty pounds at Ocado, and ten pounds at an off-licence.",
-      "start": 14.6,
-      "end": 19.833333333333332,
-      "duration": 5.2333333333333325,
-      "voiceDuration": 5.205958,
+      "start": 14.4,
+      "end": 18.466666666666665,
+      "duration": 4.066666666666665,
+      "voiceDuration": 4.047104,
       "playbackRate": 1
     },
     {
       "id": "declines",
       "text": "Both declined, by the card itself. The spending limits stay in place.",
-      "start": 19.833333333333332,
-      "end": 24.466666666666665,
-      "duration": 4.633333333333333,
-      "voiceDuration": 4.625625,
+      "start": 18.466666666666665,
+      "end": 22.866666666666667,
+      "duration": 4.400000000000002,
+      "voiceDuration": 4.377083,
       "playbackRate": 1
     },
     {
       "id": "receipt",
       "text": "Every payment has a receipt, so I can see where my money went.",
-      "start": 24.466666666666665,
-      "end": 27.733333333333334,
-      "duration": 3.2666666666666693,
-      "voiceDuration": 3.247,
+      "start": 22.866666666666667,
+      "end": 26.066666666666666,
+      "duration": 3.1999999999999993,
+      "voiceDuration": 3.170458,
       "playbackRate": 1
     },
     {
       "id": "audit",
       "text": "Every decision shows the rule behind it.",
-      "start": 27.733333333333334,
-      "end": 30.433333333333334,
-      "duration": 2.6999999999999993,
-      "voiceDuration": 2.687583,
+      "start": 26.066666666666666,
+      "end": 28.2,
+      "duration": 2.133333333333333,
+      "voiceDuration": 2.109375,
       "playbackRate": 1
     },
     {
       "id": "slate",
       "text": "Give your AI a card it can't misuse.",
-      "start": 30.433333333333334,
-      "end": 33.53333333333333,
-      "duration": 3.099999999999998,
-      "voiceDuration": 3.09875,
+      "start": 28.2,
+      "end": 30.533333333333335,
+      "duration": 2.3333333333333357,
+      "voiceDuration": 2.307104,
       "playbackRate": 1
     }
   ],
@@ -84,12 +87,12 @@
     {
       "format": "landscape",
       "clock": "Monotonic action clock aligned to blackdetect marker; 25fps capture resolution",
-      "syncEnd": 3.44,
+      "syncEnd": 3.52,
       "beats": [
         {
           "id": "hook",
-          "start": 3.4421083749999997,
-          "end": 4.172696083,
+          "start": 3.5221747909999994,
+          "end": 4.295330083,
           "focus": {
             "x": 960,
             "y": 880
@@ -98,8 +101,8 @@
         },
         {
           "id": "basket",
-          "start": 4.172749874999999,
-          "end": 8.462420333,
+          "start": 4.295431333,
+          "end": 8.532251958000002,
           "focus": {
             "x": 707.5,
             "y": 507.9375
@@ -108,8 +111,8 @@
         },
         {
           "id": "approve",
-          "start": 8.462531958,
-          "end": 12.108599540999998,
+          "start": 8.532318083,
+          "end": 12.130231625,
           "focus": {
             "x": 707.5,
             "y": 776.0625
@@ -118,8 +121,8 @@
         },
         {
           "id": "attempt",
-          "start": 12.108794999999999,
-          "end": 17.456361541,
+          "start": 12.130336625,
+          "end": 17.454189,
           "focus": {
             "x": 960,
             "y": 880
@@ -128,8 +131,8 @@
         },
         {
           "id": "declines",
-          "start": 17.456515666,
-          "end": 22.479092375,
+          "start": 17.454312791,
+          "end": 22.288755833000003,
           "focus": {
             "x": 960,
             "y": 880
@@ -138,8 +141,8 @@
         },
         {
           "id": "receipt",
-          "start": 22.479167333000003,
-          "end": 31.064518708,
+          "start": 22.288814458,
+          "end": 29.151827125000004,
           "focus": {
             "x": 960,
             "y": 880
@@ -148,8 +151,8 @@
         },
         {
           "id": "audit",
-          "start": 31.064545041000002,
-          "end": 35.744772958,
+          "start": 29.151862249999997,
+          "end": 33.738702333,
           "focus": {
             "x": 960,
             "y": 880
@@ -158,8 +161,8 @@
         },
         {
           "id": "slate",
-          "start": 35.74480033299999,
-          "end": 37.462791166,
+          "start": 33.738724791,
+          "end": 35.467869,
           "focus": {
             "x": 960,
             "y": 367.15625
@@ -175,8 +178,8 @@
       "beats": [
         {
           "id": "hook",
-          "start": 2.722873541000001,
-          "end": 3.4373845000000003,
+          "start": 2.722230250000001,
+          "end": 3.4350771249999963,
           "focus": {
             "x": 960,
             "y": 880
@@ -185,8 +188,8 @@
         },
         {
           "id": "basket",
-          "start": 3.437419041000001,
-          "end": 7.586768707999996,
+          "start": 3.435182667000001,
+          "end": 7.843177832999995,
           "focus": {
             "x": 931.25,
             "y": 507.9375
@@ -195,8 +198,8 @@
         },
         {
           "id": "approve",
-          "start": 7.5867980830000015,
-          "end": 11.186675499999998,
+          "start": 7.843232457999999,
+          "end": 11.456963041999996,
           "focus": {
             "x": 931.25,
             "y": 776.0625
@@ -205,8 +208,8 @@
         },
         {
           "id": "attempt",
-          "start": 11.186706957999997,
-          "end": 16.586918541,
+          "start": 11.456984041999997,
+          "end": 16.961147417,
           "focus": {
             "x": 960,
             "y": 880
@@ -215,8 +218,8 @@
         },
         {
           "id": "declines",
-          "start": 16.586948208000003,
-          "end": 21.499307082999998,
+          "start": 16.961188875,
+          "end": 21.833874749999993,
           "focus": {
             "x": 960,
             "y": 880
@@ -225,8 +228,8 @@
         },
         {
           "id": "receipt",
-          "start": 21.499345540999993,
-          "end": 28.370375249999995,
+          "start": 21.833913083,
+          "end": 28.842089666999993,
           "focus": {
             "x": 960,
             "y": 880
@@ -235,8 +238,8 @@
         },
         {
           "id": "audit",
-          "start": 28.370404332999996,
-          "end": 32.800388250000005,
+          "start": 28.842114749999993,
+          "end": 33.3909455,
           "focus": {
             "x": 960,
             "y": 880
@@ -245,8 +248,8 @@
         },
         {
           "id": "slate",
-          "start": 32.80040974999999,
-          "end": 34.517510375,
+          "start": 33.390976417,
+          "end": 35.10776395799999,
           "focus": {
             "x": 960,
             "y": 367.15625

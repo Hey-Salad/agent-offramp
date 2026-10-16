@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { OUT, WORK, ff, assert, json } from './lib.mjs';
-export const normalize = text => text.toLowerCase().replace(/-/g, ' ').replace(/80/g, 'eighty').replace(/25/g, 'twenty five').replace(/10/g, 'ten').replace(/[^a-z\s]/g, '').replace(/\s+/g, ' ').trim();
+export const normalize = text => text.toLowerCase().replace(/£\s*(80|25|10)\b/g, '$1 pounds').replace(/-/g, ' ').replace(/80/g, 'eighty').replace(/25/g, 'twenty five').replace(/10/g, 'ten').replace(/[^a-z\s]/g, '').replace(/\s+/g, ' ').trim();
 export async function alignment(timeline) {
   // Decode the exported AAC, rather than trusting the pre-mux narration files.
   const audio = `${WORK}/final-voice.wav`;

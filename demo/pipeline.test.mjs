@@ -1,9 +1,10 @@
 import test from 'node:test';
 import { strict as assert } from 'node:assert';
 import { timeline, validateEnv, lines } from './lib.mjs';
-const env = { APP_URL: 'https://example.invalid', OPENAI_API_KEY: 'test-only' };
+import { normalize } from './alignment.mjs';
+const env = { APP_URL: 'https://example.invalid', OPENAI_API_KEY: 'test-only', ELEVENLABS_API_KEY: 'test-only' };
 test('configuration rejects missing credentials, credentials in URLs, dashboard and live Stripe keys', () => {
-  for (const input of [{}, { ...env, OPENAI_API_KEY: '' }, { ...env, APP_URL: 'https://user:password@example.invalid' }, { ...env, APP_URL: 'https://dashboard.stripe.com' }, { ...env, STRIPE_SECRET_KEY: 'sk_live_example' }, { ...env, STRIPE_ISSUING_KEY: 'sk_live_example' }]) assert.throws(() => validateEnv(input));
+  for (const input of [{}, { ...env, OPENAI_API_KEY: '' }, { ...env, ELEVENLABS_API_KEY: '' }, { ...env, APP_URL: 'https://user:password@example.invalid' }, { ...env, APP_URL: 'https://dashboard.stripe.com' }, { ...env, STRIPE_SECRET_KEY: 'sk_live_example' }, { ...env, STRIPE_ISSUING_KEY: 'sk_live_example' }]) assert.throws(() => validateEnv(input));
   assert.equal(validateEnv(env), 'https://example.invalid');
 });
 test('cuts preserve natural audio speed and round up only to complete video frames', () => {
@@ -21,4 +22,10 @@ test('cuts preserve natural audio speed and round up only to complete video fram
 });
 test('invalid or implausible TTS duration fails instead of stretching narration', () => {
   for (const d of [[], Array(8).fill(0), Array(8).fill(0.1), Array(8).fill(20)]) assert.throws(() => timeline(d));
+});
+
+test('spoken sterling amounts compare equally with transcription currency notation', () => {
+  assert.equal(normalize('£25'), normalize('twenty-five pounds'));
+  assert.equal(normalize('£80'), normalize('eighty pounds'));
+  assert.equal(normalize('£10'), normalize('ten pounds'));
 });

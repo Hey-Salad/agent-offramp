@@ -29,7 +29,8 @@ export function validateEnv(env) {
   let u; try { u = new URL(env.APP_URL); } catch { throw new Error('APP_URL must be an absolute HTTP(S) URL.'); }
   assert(['http:', 'https:'].includes(u.protocol) && !u.username && !u.password && !u.search && !u.hash, 'APP_URL must have no credentials, query or fragment.');
   assert(u.hostname !== 'dashboard.stripe.com', 'Stripe dashboard recording is forbidden.');
-  assert(env.OPENAI_API_KEY, 'OPENAI_API_KEY is required for Marin narration.');
+  assert(env.ELEVENLABS_API_KEY, 'ELEVENLABS_API_KEY is required for British narration.');
+  assert(env.OPENAI_API_KEY, 'OPENAI_API_KEY is required for audio alignment verification.');
   for (const k of ['STRIPE_SECRET_KEY', 'STRIPE_ISSUING_KEY']) if (env[k]) assert(env[k].startsWith('sk_test_'), 'Only Stripe test keys are permitted.');
   return u.origin;
 }
