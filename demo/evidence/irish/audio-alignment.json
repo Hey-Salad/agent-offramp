@@ -1,0 +1,68 @@
+{
+  "method": "Whisper word timestamps from final decoded AAC; <=5% word error, line boundaries within 750ms; identical audio in both exports",
+  "wordErrorRate": 0.01,
+  "differences": [
+    {
+      "expected": "licence",
+      "heard": "license"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "hook",
+      "shotStart": 0,
+      "speechStart": 0,
+      "shotEnd": 5.266666666666667,
+      "speechEnd": 5
+    },
+    {
+      "id": "basket",
+      "shotStart": 5.266666666666667,
+      "speechStart": 5.340000152587891,
+      "shotEnd": 9.533333333333333,
+      "speechEnd": 9.460000038146973
+    },
+    {
+      "id": "approve",
+      "shotStart": 9.533333333333333,
+      "speechStart": 9.579999923706055,
+      "shotEnd": 14.8,
+      "speechEnd": 14.680000305175781
+    },
+    {
+      "id": "attempt",
+      "shotStart": 14.8,
+      "speechStart": 14.819999694824219,
+      "shotEnd": 18.666666666666668,
+      "speechEnd": 18.559999465942383
+    },
+    {
+      "id": "declines",
+      "shotStart": 18.666666666666668,
+      "speechStart": 18.65999984741211,
+      "shotEnd": 23,
+      "speechEnd": 22.559999465942383
+    },
+    {
+      "id": "receipt",
+      "shotStart": 23,
+      "speechStart": 23.1200008392334,
+      "shotEnd": 26.266666666666666,
+      "speechEnd": 25.959999084472656
+    },
+    {
+      "id": "audit",
+      "shotStart": 26.266666666666666,
+      "speechStart": 26.299999237060547,
+      "shotEnd": 28.366666666666667,
+      "speechEnd": 28.31999969482422
+    },
+    {
+      "id": "slate",
+      "shotStart": 28.366666666666667,
+      "speechStart": 28.31999969482422,
+      "shotEnd": 30.7,
+      "speechEnd": 30.600000381469727
+    }
+  ]
+}
